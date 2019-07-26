@@ -26,6 +26,7 @@ import { ClientConfigurationErrorMessage } from "../src/error/ClientConfiguratio
 import { InteractionRequiredAuthErrorMessage } from "../src/error/InteractionRequiredAuthError";
 import { TEST_URIS, TEST_DATA_CLIENT_INFO, TEST_HASHES, TEST_TOKENS, TEST_CONFIG, TEST_TOKEN_LIFETIMES } from "./TestConstants";
 import { IdToken } from "../src/IdToken";
+import TelemetryManager from "../src/telemetry/TelemetryManager";
 
 type kv = {
     [key: string]: string;
@@ -180,13 +181,13 @@ describe("UserAgentApplication.ts Class", function () {
             expect(msal.telemetryManager).to.not.be.undefined;
             expect(msal.telemetryManager).to.not.be.null;
         });
-        it("telemetry manager doesn't exis in UAA when not configured", () => {
+        it("telemetry manager exists in UAA when not configured", () => {
             msal = new UserAgentApplication({
                 auth: {
                     clientId: TEST_CONFIG.MSAL_CLIENT_ID
                 }
             });
-            expect(msal.telemetryManager).to.be.null;
+            expect(msal.telemetryManager).to.be.instanceOf(TelemetryManager);
         });
     });
 

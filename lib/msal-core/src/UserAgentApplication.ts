@@ -24,7 +24,9 @@ import { ServerError } from "./error/ServerError";
 import { InteractionRequiredAuthError } from "./error/InteractionRequiredAuthError";
 import { AuthResponse, buildResponseStateOnly } from "./AuthResponse";
 import TelemetryManager from "./telemetry/TelemetryManager";
-import { TelemetryPlatform, TelemetryConfig } from './telemetry/TelemetryTypes';
+import { TelemetryPlatform, TelemetryConfig } from "./telemetry/TelemetryTypes";
+import ApiEvent, { API_CODE, API_EVENT_IDENTIFIER } from "./telemetry/ApiEvent";
+import uuid = require('uuid');
  // default authority
 const DEFAULT_AUTHORITY = "https://login.microsoftonline.com/common";
 
@@ -340,14 +342,30 @@ export class UserAgentApplication {
    * To renew idToken, please pass clientId as the only scope in the Authentication Parameters
    */
   acquireTokenRedirect(request: AuthenticationParameters): void {
+    const correlationId = (request && request.correlationId) || uuid.v4();
+    const event = new ApiEvent(correlationId, this.logger);
+    event.apiCode = API_CODE.AcquireTokenRedirect;
+    event.apiEventIdentifier = API_EVENT_IDENTIFIER.AcquireTokenRedirect;
+    this.telemetryManager.startEvent(event);
     if (!request) {
-      throw ClientConfigurationError.createEmptyRequestError();
+      const error = ClientConfigurationError.createEmptyRequestError();
+      event.apiErrorCode = error.errorCode;
+      this.telemetryManager.stopEvent(event);
+      this.telemetryManager.flush(correlationId);
+      throw error;
     }
 
     // Throw error if callbacks are not set before redirect
     if (!this.redirectCallbacksSet) {
-      throw ClientConfigurationError.createRedirectCallbacksNotSetError();
+      const error = ClientConfigurationError.createRedirectCallbacksNotSetError();
+      event.apiErrorCode = error.errorCode;
+      this.telemetryManager.stopEvent(event);
+      this.telemetryManager.flush(correlationId);
+      throw error;
     }
+    // stop here since we have to redirect and flush
+    this.telemetryManager.stopEvent(event);
+    this.telemetryManager.flush(correlationId);
     this.acquireTokenInteractive(Constants.interactionTypeRedirect, false, request);
   }
 
@@ -359,8 +377,22 @@ export class UserAgentApplication {
    * @returns {Promise.<AuthResponse>} - a promise that is fulfilled when this function has completed, or rejected if an error was raised. Returns the {@link AuthResponse} object
    */
   loginPopup(request?: AuthenticationParameters): Promise<AuthResponse> {
+    const correlationId = request.correlationId || uuid.v4();
+    const event = new ApiEvent(correlationId, this.logger);
+    event.apiCode = API_CODE.LoginPopup;
+    event.apiEventIdentifier = API_EVENT_IDENTIFIER.LoginPopup;
+    console.log(this.telemetryManager);
+    this.telemetryManager.startEvent(event);
     return new Promise<AuthResponse>((resolve, reject) => {
       this.acquireTokenInteractive(Constants.interactionTypePopup, true, request, resolve, reject);
+    })
+    .catch((err: AuthError) => {
+      event.apiErrorCode = err.errorCode;
+      throw err;
+    })
+    .finally(() => {
+      this.telemetryManager.stopEvent(event);
+      this.telemetryManager.flush(correlationId);
     });
   }
 
@@ -372,12 +404,28 @@ export class UserAgentApplication {
    * @returns {Promise.<AuthResponse>} - a promise that is fulfilled when this function has completed, or rejected if an error was raised. Returns the {@link AuthResponse} object
    */
   acquireTokenPopup(request: AuthenticationParameters): Promise<AuthResponse> {
+    const correlationId = (request && request.correlationId) || uuid.v4();
+    const event = new ApiEvent(correlationId, this.logger);
+    event.apiCode = API_CODE.AcquireTokenPopup;
+    event.apiEventIdentifier = API_EVENT_IDENTIFIER.AcquireTokenPopup;
+    this.telemetryManager.startEvent(event);
     if (!request) {
-      throw ClientConfigurationError.createEmptyRequestError();
+      const error = ClientConfigurationError.createEmptyRequestError();
+      event.apiErrorCode = error.errorCode;
+      this.telemetryManager.stopEvent(event);
+      this.telemetryManager.flush(correlationId);
+      throw error;
     }
-
     return new Promise<AuthResponse>((resolve, reject) => {
       this.acquireTokenInteractive(Constants.interactionTypePopup, false, request, resolve, reject);
+    })
+    .catch((err: AuthError) => {
+      event.apiErrorCode = err.errorCode;
+      throw err;
+    })
+    .finally(() => {
+      this.telemetryManager.stopEvent(event);
+      this.telemetryManager.flush(correlationId);
     });
   }
 
@@ -2414,7 +2462,15 @@ export class UserAgentApplication {
 
   private getTelemetryManagerFromConfig(config: TelemetryOptions, clientId: string): TelemetryManager {
     if (!config) { // if unset
-      return null
+      return new TelemetryManager({
+        platform: {
+          sdk: "msal.js", // TODO need to be able to override this for angular, react, etc
+          sdkVersion: Utils.getLibraryVersion(),
+          applicationName: '',
+          applicationVersion: ''
+        },
+        clientId: null
+      }, () => {});
     }
     // if set then validate
     const { applicationName, applicationVersion, telemetryEmitter } = config;
