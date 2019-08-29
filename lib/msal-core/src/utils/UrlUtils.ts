@@ -224,7 +224,8 @@ export class UrlUtils {
             parameters.hasOwnProperty(Constants.errorDescription) ||
             parameters.hasOwnProperty(Constants.error) ||
             parameters.hasOwnProperty(Constants.accessToken) ||
-            parameters.hasOwnProperty(Constants.idToken)
+            parameters.hasOwnProperty(Constants.idToken) ||
+            parameters.hasOwnProperty("code")
         );
     }
 

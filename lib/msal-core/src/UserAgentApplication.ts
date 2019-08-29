@@ -30,7 +30,8 @@ import { InteractionRequiredAuthError } from "./error/InteractionRequiredAuthErr
 import { AuthResponse, buildResponseStateOnly } from "./AuthResponse";
 import TelemetryManager from "./telemetry/TelemetryManager";
 import { TelemetryPlatform, TelemetryConfig } from "./telemetry/TelemetryTypes";
-
+import { CryptoUtils } from "./utils/CryptoUtils";
+import * as base64 from "base64-js";
 
 // default authority
 const DEFAULT_AUTHORITY = "https://login.microsoftonline.com/common";
@@ -387,6 +388,90 @@ export class UserAgentApplication {
     }
 
     //#region Acquire Token
+
+    async acquireTokenAuthCode(request: AuthenticationParameters) : Promise<string> {
+        // construct url for iframe
+        // https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=245e9392-c666-4d51-8f8a-bfd9e55b2456&code_challenge=Upy9-yQ_mW_StrAkqrGFlZidSTDErYfLYq7pijCWi3A&redirect_uri=msal%3A%2F%2Fauth%2F&scope=user.read%20mail.read&state=6534x&code_challenge_method=S256&response_type=code&response_mode=query
+        const base = "https://login.microsoftonline.com/63e09883-14dd-4799-a7b9-b6b551741cb2/oauth2/v2.0/authorize?";
+        const clientId = this.clientId;
+        const redirect_uri = encodeURIComponent(this.getRedirectUri());
+        const scopes = request.scopes; //.concat([ clientId ]);
+        const state = request.state || Math.random().toString(36).substr(7);
+        const code_challenge_method = "S256";
+        const response_type = "code";
+        const response_mode = "fragment";
+
+        function urlSafe(buffer: ArrayBuffer): string {
+            const encoded = base64.fromByteArray(new Uint8Array(buffer));
+            return encoded.replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
+        }
+
+        const CHARSET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        function bufferToString(buffer: Uint8Array) {
+            const state = [];
+            for (let i = 0; i < buffer.byteLength; i += 1) {
+                const index = buffer[i] % CHARSET.length;
+                state.push(CHARSET[index]);
+            }
+            return state.join("");
+        }
+
+        const random = window.crypto.getRandomValues(new Uint8Array(32));
+        const randomString = bufferToString(random);
+        const PKCECodeVerifier = randomString;
+        // console.log("PKCECodeVerifier", PKCECodeVerifier);
+
+        const encoder = new TextEncoder();
+        const digestBuffer = await window.crypto.subtle.digest("SHA-256", encoder.encode(randomString));
+        const PKCECodeChallenge = urlSafe(digestBuffer);
+        const code_challenge = PKCECodeChallenge;
+        // console.log("PKCECodeChallenge", PKCECodeChallenge);
+
+        const url = `${base}client_id=${clientId}&code_challenge=${encodeURIComponent(code_challenge)}&redirect_uri=${redirect_uri}&scope=${encodeURIComponent(scopes.join(" "))}&state=${state}&code_challenge_method=${code_challenge_method}&response_type=${response_type}&response_mode=${response_mode}`;
+        // console.log(url);
+
+        // show iframe
+        const popup = this.openPopup(url, "Auth Code", Constants.popUpWidth, Constants.popUpHeight);
+        // const frame = await IframeUtils.loadFrame(url, "Auth Code", 6000, this.logger);
+        // const popup = frame.contentWindow;
+
+        // parse code from redirect
+        const hash = await IframeUtils.monitorWindowForHash(popup, this.config.system.loadFrameTimeout);
+
+        popup.close();
+
+        const code = hash.split("=")[1].split("&")[0];
+
+        const formData = {
+            client_id: clientId,
+            redirect_uri: this.getRedirectUri(),
+            grant_type: "authorization_code",
+            scope: scopes.join(" "),
+            code: code,
+            code_verifier: PKCECodeVerifier,
+            client_secret: "",
+            state: state
+        };
+
+        const headers = new Headers()
+        headers.append("Content-type", "application/x-www-form-urlencoded")
+
+        const accessToken = await fetch("https://login.microsoftonline.com/63e09883-14dd-4799-a7b9-b6b551741cb2/oauth2/v2.0/token", {
+            method: "POST",
+            headers,
+            credentials: "include",
+            body: Object.keys(formData).reduce((body, key) => {
+                return body.concat([`${key}=${formData[key]}`])
+            }, []).join("&")
+        })
+            .then(resp =>{
+                return resp.json();
+            });
+        // console.log(accessToken);
+
+        return accessToken;
+
+    }
 
     /**
    * Use when initiating the login process or when you want to obtain an access_token for your API,
