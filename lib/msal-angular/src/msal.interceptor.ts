@@ -19,7 +19,7 @@ export class MsalInterceptor implements HttpInterceptor {
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         var scopes = this.auth.getScopesForEndpoint(req.url);
-        this.auth.verbose('Url: ' + req.url + ' maps to scopes: ' + scopes);
+        this.auth.getLogger().verbose(`Url: ${req.url} maps to scopes: ${scopes}`);
         if (scopes === null) {
             return next.handle(req);
         }
