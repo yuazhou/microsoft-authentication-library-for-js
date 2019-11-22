@@ -1,0 +1,12 @@
+{
+  "name": "microsoft-authentication-libraries-for-js",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.16.4"
+  },
+  "scripts": {
+    "postinstall": "lerna bootstrap && lerna run build:modules --no-private",
+    "clean": "lerna run clean --no-private && lerna clean"
+  },
+  "dependencies": {}
+}
