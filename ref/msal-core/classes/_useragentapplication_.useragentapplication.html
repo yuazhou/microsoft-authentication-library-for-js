@@ -114,9 +114,11 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_useragentapplication_.useragentapplication.html#getlogininprogress" class="tsd-kind-icon">get<wbr>Login<wbr>InProgress</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_useragentapplication_.useragentapplication.html#getpostlogoutredirecturi" class="tsd-kind-icon">get<wbr>Post<wbr>Logout<wbr>Redirect<wbr>Uri</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_useragentapplication_.useragentapplication.html#getredirecturi" class="tsd-kind-icon">get<wbr>Redirect<wbr>Uri</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_useragentapplication_.useragentapplication.html#handleredirectcallback" class="tsd-kind-icon">handle<wbr>Redirect<wbr>Callback</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_useragentapplication_.useragentapplication.html#loginpopup" class="tsd-kind-icon">login<wbr>Popup</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_useragentapplication_.useragentapplication.html#loginredirect" class="tsd-kind-icon">login<wbr>Redirect</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_useragentapplication_.useragentapplication.html#logout" class="tsd-kind-icon">logout</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_useragentapplication_.useragentapplication.html#setlogger" class="tsd-kind-icon">set<wbr>Logger</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_useragentapplication_.useragentapplication.html#urlcontainshash" class="tsd-kind-icon">url<wbr>Contains<wbr>Hash</a></li>
 							</ul>
 						</section>
@@ -135,38 +137,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L181">UserAgentApplication.ts:181</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L183">src/UserAgentApplication.ts:183</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>constructor</dt>
-									<dd><p>Constructor for the UserAgentApplication used to instantiate the UserAgentApplication object</p>
-										<p>Important attributes in the Configuration object for auth are:</p>
-										<ul>
-											<li>clientID: the application ID of your application.
-											You can obtain one by registering your application with our Application registration portal : <a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview">https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview</a></li>
-											<li>authority: the authority URL for your application.</li>
-										</ul>
-										<p>In Azure AD, authority is a URL indicating the Azure active directory that MSAL uses to obtain tokens.
-											It is of the form <a href="https://login.microsoftonline.com/&lt;Enter_the_Tenant_Info_Here&gt;">https://login.microsoftonline.com/&lt;Enter_the_Tenant_Info_Here&gt;</a>.
-											If your application supports Accounts in one organizational directory, replace &quot;Enter_the_Tenant_Info_Here&quot; value with the Tenant Id or Tenant name (for example, contoso.microsoft.com).
-											If your application supports Accounts in any organizational directory, replace &quot;Enter_the_Tenant_Info_Here&quot; value with organizations.
-											If your application supports Accounts in any organizational directory and personal Microsoft accounts, replace &quot;Enter_the_Tenant_Info_Here&quot; value with common.
-										To restrict support to Personal Microsoft accounts only, replace &quot;Enter_the_Tenant_Info_Here&quot; value with consumers.</p>
-										<p>In Azure B2C, authority is of the form https://&lt;instance&gt;/tfp/&lt;tenant&gt;/&lt;policyName&gt;/</p>
-									</dd>
-								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>configuration: <a href="../modules/_configuration_.html#configuration" class="tsd-signature-type">Configuration</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<div class="lead">
-											<p>object for the MSAL UserAgentApplication instance</p>
-										</div>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_useragentapplication_.useragentapplication.html" class="tsd-signature-type">UserAgentApplication</a></h4>
@@ -187,7 +166,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L170">UserAgentApplication.ts:170</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L172">src/UserAgentApplication.ts:172</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -201,7 +180,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L161">UserAgentApplication.ts:161</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L163">src/UserAgentApplication.ts:163</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -233,7 +212,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L365">UserAgentApplication.ts:365</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L367">src/UserAgentApplication.ts:367</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -264,7 +243,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L333">UserAgentApplication.ts:333</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L335">src/UserAgentApplication.ts:335</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -292,7 +271,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L600">UserAgentApplication.ts:600</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L593">src/UserAgentApplication.ts:593</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -325,7 +304,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L1659">UserAgentApplication.ts:1659</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L1675">src/UserAgentApplication.ts:1675</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -336,9 +315,7 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="_account_.account.html" class="tsd-signature-type">Account</a></h4>
-							<ul>
-								<li>the account object stored in MSAL</li>
-							</ul>
+							<p><a href="_account_.account.html">Account</a> - the account object stored in MSAL</p>
 						</li>
 					</ul>
 				</section>
@@ -352,7 +329,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L1701">UserAgentApplication.ts:1701</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L1717">src/UserAgentApplication.ts:1717</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -374,7 +351,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L179">UserAgentApplication.ts:179</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L181">src/UserAgentApplication.ts:181</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -383,7 +360,7 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Authority</span></h4>
-							<p>authority instance</p>
+							<p>{@link Authority} authority instance</p>
 						</li>
 					</ul>
 				</section>
@@ -397,7 +374,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L1943">UserAgentApplication.ts:1943</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L1967">src/UserAgentApplication.ts:1967</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -406,6 +383,7 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="../modules/_configuration_.html#configuration" class="tsd-signature-type">Configuration</a></h4>
+							<p><a href="../modules/_configuration_.html#configuration">Configuration</a></p>
 						</li>
 					</ul>
 				</section>
@@ -419,7 +397,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L1843">UserAgentApplication.ts:1843</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L1859">src/UserAgentApplication.ts:1859</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -442,7 +420,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L1931">UserAgentApplication.ts:1931</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L1955">src/UserAgentApplication.ts:1955</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -466,7 +444,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L1915">UserAgentApplication.ts:1915</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L1939">src/UserAgentApplication.ts:1939</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -487,6 +465,29 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="handleredirectcallback" class="tsd-anchor"></a>
+					<h3>handle<wbr>Redirect<wbr>Callback</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Redirect<wbr>Callback<span class="tsd-signature-symbol">(</span>authCallback<span class="tsd-signature-symbol">: </span><a href="../modules/_useragentapplication_.html#authresponsecallback" class="tsd-signature-type">authResponseCallback</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L255">src/UserAgentApplication.ts:255</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>authCallback: <a href="../modules/_useragentapplication_.html#authresponsecallback" class="tsd-signature-type">authResponseCallback</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="loginpopup" class="tsd-anchor"></a>
 					<h3>login<wbr>Popup</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -496,7 +497,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L346">UserAgentApplication.ts:346</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L348">src/UserAgentApplication.ts:348</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -527,7 +528,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L321">UserAgentApplication.ts:321</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L323">src/UserAgentApplication.ts:323</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -555,7 +556,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L899">UserAgentApplication.ts:899</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L910">src/UserAgentApplication.ts:910</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -564,6 +565,37 @@
 									Default behaviour is to redirect the user to <code>window.location.href</code>.</p>
 								</div>
 							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setlogger" class="tsd-anchor"></a>
+					<h3>set<wbr>Logger</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Logger<span class="tsd-signature-symbol">(</span>logger<span class="tsd-signature-symbol">: </span><a href="_logger_.logger.html" class="tsd-signature-type">Logger</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L1925">src/UserAgentApplication.ts:1925</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the logger callback.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>logger: <a href="_logger_.logger.html" class="tsd-signature-type">Logger</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Logger callback</p>
+									</div>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -578,7 +610,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L282">UserAgentApplication.ts:282</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/UserAgentApplication.ts#L284">src/UserAgentApplication.ts:284</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -607,7 +639,7 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_useragentapplication_.html">"<wbr>User<wbr>Agent<wbr>Application"</a>
+						<a href="../modules/_useragentapplication_.html">&quot;<wbr>User<wbr>Agent<wbr>Application&quot;</a>
 						<ul>
 							<li class=" tsd-kind-module tsd-parent-kind-external-module tsd-is-not-exported">
 								<a href="../modules/_useragentapplication_.__global.html">__global</a>
@@ -660,6 +692,9 @@
 								<a href="_useragentapplication_.useragentapplication.html#getredirecturi" class="tsd-kind-icon">get<wbr>Redirect<wbr>Uri</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_useragentapplication_.useragentapplication.html#handleredirectcallback" class="tsd-kind-icon">handle<wbr>Redirect<wbr>Callback</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_useragentapplication_.useragentapplication.html#loginpopup" class="tsd-kind-icon">login<wbr>Popup</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -667,6 +702,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_useragentapplication_.useragentapplication.html#logout" class="tsd-kind-icon">logout</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_useragentapplication_.useragentapplication.html#setlogger" class="tsd-kind-icon">set<wbr>Logger</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_useragentapplication_.useragentapplication.html#urlcontainshash" class="tsd-kind-icon">url<wbr>Contains<wbr>Hash</a>
@@ -704,6 +742,7 @@
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -752,7 +791,7 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>

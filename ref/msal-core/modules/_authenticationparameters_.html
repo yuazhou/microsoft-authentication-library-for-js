@@ -90,10 +90,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
 					<a name="authenticationparameters" class="tsd-anchor"></a>
 					<h3>Authentication<wbr>Parameters</h3>
-					<div class="tsd-signature tsd-kind-icon">Authentication<wbr>Parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<div class="tsd-signature tsd-kind-icon">Authentication<wbr>Parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>account<span class="tsd-signature-symbol">?: </span><a href="../classes/_account_.account.html" class="tsd-signature-type">Account</a><span class="tsd-signature-symbol">; </span>authority<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>claimsRequest<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>correlationId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>extraQueryParameters<span class="tsd-signature-symbol">?: </span><a href="_msaltypes_.html#stringdict" class="tsd-signature-type">StringDict</a><span class="tsd-signature-symbol">; </span>extraScopesToConsent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>forceRefresh<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>loginHint<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>prompt<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>redirectStartPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>redirectUri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>sid<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>state<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/AuthenticationParameters.ts#L13">AuthenticationParameters.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/AuthenticationParameters.ts#L13">src/AuthenticationParameters.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -134,6 +134,9 @@
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> prompt<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
 							</li>
 							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> redirect<wbr>Start<wbr>Page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> redirect<wbr>Uri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
 							</li>
 							<li class="tsd-parameter">
@@ -161,7 +164,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/AuthenticationParameters.ts#L29">AuthenticationParameters.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/AuthenticationParameters.ts#L30">src/AuthenticationParameters.ts:30</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -183,7 +186,7 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_authenticationparameters_.html">"<wbr>Authentication<wbr>Parameters"</a>
+						<a href="_authenticationparameters_.html">&quot;<wbr>Authentication<wbr>Parameters&quot;</a>
 					</li>
 				</ul>
 			</nav>
@@ -212,6 +215,7 @@
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -260,7 +264,7 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>

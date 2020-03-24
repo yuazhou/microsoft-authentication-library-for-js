@@ -102,13 +102,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Logger<span class="tsd-signature-symbol">(</span>localCallback<span class="tsd-signature-symbol">: </span><a href="../interfaces/_logger_.iloggercallback.html" class="tsd-signature-type">ILoggerCallback</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_logger_.logger.html" class="tsd-signature-type">Logger</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Logger<span class="tsd-signature-symbol">(</span>localCallback<span class="tsd-signature-symbol">: </span><a href="../interfaces/_logger_.iloggercallback.html" class="tsd-signature-type">ILoggerCallback</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>correlationId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>level<span class="tsd-signature-symbol">?: </span><a href="../enums/_logger_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol">; </span>piiLoggingEnabled<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_logger_.logger.html" class="tsd-signature-type">Logger</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/Logger.ts#L46">Logger.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/Logger.ts#L46">src/Logger.ts:46</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -117,7 +117,7 @@
 									<h5>localCallback: <a href="../interfaces/_logger_.iloggercallback.html" class="tsd-signature-type">ILoggerCallback</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <span class="tsd-signature-symbol">{ </span>correlationId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>level<span class="tsd-signature-symbol">?: </span><a href="../enums/_logger_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol">; </span>piiLoggingEnabled<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = {}</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
 											<h5><span class="tsd-flag ts-flagOptional">Optional</span> correlation<wbr>Id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
@@ -148,7 +148,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/Logger.ts#L150">Logger.ts:150</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/Logger.ts#L150">src/Logger.ts:150</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -164,7 +164,7 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_logger_.html">"<wbr>Logger"</a>
+						<a href="../modules/_logger_.html">&quot;<wbr>Logger&quot;</a>
 					</li>
 				</ul>
 			</nav>
@@ -208,6 +208,7 @@
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -256,7 +257,7 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
