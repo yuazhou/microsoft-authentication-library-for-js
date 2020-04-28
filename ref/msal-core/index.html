@@ -70,7 +70,7 @@
 				<table>
 					<thead>
 						<tr>
-							<th><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/guidedsetups/active-directory-javascriptspa">Getting Started</a></th>
+							<th><a href="https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-javascriptspa">Getting Started</a></th>
 							<th><a href="https://aka.ms/aaddevv2">AAD Docs</a></th>
 							<th><a href="https://azuread.github.io/microsoft-authentication-library-for-js/ref/msal-core/">Library Reference</a></th>
 							<th><a href="README.md#community-help-and-support">Support</a></th>
@@ -78,7 +78,7 @@
 						</tr>
 					</thead>
 				</table>
-				<p>The MSAL library for JavaScript enables client-side JavaScript web applications, running in a web browser, to authenticate users using <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-overview">Azure AD</a> work and school accounts (AAD), Microsoft personal accounts (MSA) and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-overview#identity-providers">Azure AD B2C</a> service. It also enables your app to get tokens to access <a href="https://www.microsoft.com/enterprise">Microsoft Cloud</a> services such as <a href="https://graph.microsoft.io">Microsoft Graph</a>.</p>
+				<p>MSAL for JavaScript enables client-side JavaScript web applications, running in a web browser, to authenticate users using <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-overview">Azure AD</a> work and school accounts (AAD), Microsoft personal accounts (MSA) and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through <a href="https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-overview#identity-providers">Azure AD B2C</a> service. It also enables your app to get tokens to access <a href="https://www.microsoft.com/enterprise">Microsoft Cloud</a> services such as <a href="https://graph.microsoft.io">Microsoft Graph</a>.</p>
 				<p><a href="https://www.npmjs.com/package/msal"><img src="https://img.shields.io/npm/v/msal.svg?style=flat" alt="npm version"></a><a href="https://nodei.co/npm/msal/"><img src="https://img.shields.io/npm/dm/msal.svg" alt="npm version"></a><a href="https://coveralls.io/github/AzureAD/microsoft-authentication-library-for-js?branch=dev"><img src="https://coveralls.io/repos/github/AzureAD/microsoft-authentication-library-for-js/badge.svg?branch=dev" alt="Coverage Status"></a></p>
 				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 					<h2>Installation</h2>
@@ -90,57 +90,57 @@
 				<a href="#via-latest-microsoft-cdn-version" id="via-latest-microsoft-cdn-version" style="color: inherit; text-decoration: none;">
 					<h3>Via Latest Microsoft CDN Version:</h3>
 				</a>
-				<a href="#latest-compiled-and-minified-javascript" id="latest-compiled-and-minified-javascript" style="color: inherit; text-decoration: none;">
-					<h4>Latest compiled and minified JavaScript</h4>
+				<a href="#latest-compiled-and-minified-javascript-us-west-region" id="latest-compiled-and-minified-javascript-us-west-region" style="color: inherit; text-decoration: none;">
+					<h4>Latest compiled and minified JavaScript (US West region)</h4>
 				</a>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msauth.net/lib/1.2.0/js/msal.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msauth.net/lib/1.2.0/js/msal.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
-				<a href="#alternate-region-urls" id="alternate-region-urls" style="color: inherit; text-decoration: none;">
-					<h4>Alternate region URLs</h4>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msauth.net/lib/1.3.0/js/msal.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msauth.net/lib/1.3.0/js/msal.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<a href="#alternate-region-urls-europe-region" id="alternate-region-urls-europe-region" style="color: inherit; text-decoration: none;">
+					<h4>Alternate region URLs (Europe region)</h4>
 				</a>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msftauth.net/lib/1.2.0/js/msal.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msftauth.net/lib/1.2.0/js/msal.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msftauth.net/lib/1.3.0/js/msal.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msftauth.net/lib/1.3.0/js/msal.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 				<a href="#via-latest-microsoft-cdn-version-with-sri-hash" id="via-latest-microsoft-cdn-version-with-sri-hash" style="color: inherit; text-decoration: none;">
 					<h3>Via Latest Microsoft CDN Version (with SRI Hash):</h3>
 				</a>
-				<a href="#latest-compiled-and-minified-javascript-1" id="latest-compiled-and-minified-javascript-1" style="color: inherit; text-decoration: none;">
+				<a href="#latest-compiled-and-minified-javascript" id="latest-compiled-and-minified-javascript" style="color: inherit; text-decoration: none;">
 					<h4>Latest compiled and minified JavaScript</h4>
 				</a>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msauth.net/lib/1.2.0/js/msal.js"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha384-LSjD9o5MhT3UejOHZ5BJrlAp3TxNM6z68DPYw3o7Q3ApJviS9kOGP0oQyTaJJd9O"</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msauth.net/lib/1.2.0/js/msal.min.js"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha384-bUAfT3zjpyf+nuTqeGYWk7ZKN6E89ouvkiXth6G45RG55uQERls6TtStVOBM6v4O"</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
-				<a href="#alternate-region-urls-1" id="alternate-region-urls-1" style="color: inherit; text-decoration: none;">
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msauth.net/lib/1.3.0/js/msal.js"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha384-xeOjp8/l8VazdeNFRbrC9LWPR1InyrS8E1Na/0lv6V2r09iwX6vJC47FXlczokMi"</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msauth.net/lib/1.3.0/js/msal.min.js"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha384-CffO5BkITSJhYPN8BUPR9pm6G6FQyzwV5n9JCMtcP98ik6IHSMJSAZPE2JO3AXDh"</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<a href="#alternate-region-urls" id="alternate-region-urls" style="color: inherit; text-decoration: none;">
 					<h4>Alternate region URLs</h4>
 				</a>
 				<p>To help ensure reliability, Microsoft provides a second CDN:</p>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msftauth.net/lib/1.2.0/js/msal.js"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha384-LSjD9o5MhT3UejOHZ5BJrlAp3TxNM6z68DPYw3o7Q3ApJviS9kOGP0oQyTaJJd9O"</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msftauth.net/lib/1.2.0/js/msal.min.js"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha384-bUAfT3zjpyf+nuTqeGYWk7ZKN6E89ouvkiXth6G45RG55uQERls6TtStVOBM6v4O"</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msftauth.net/lib/1.3.0/js/msal.js"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha384-xeOjp8/l8VazdeNFRbrC9LWPR1InyrS8E1Na/0lv6V2r09iwX6vJC47FXlczokMi"</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msftauth.net/lib/1.3.0/js/msal.min.js"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha384-CffO5BkITSJhYPN8BUPR9pm6G6FQyzwV5n9JCMtcP98ik6IHSMJSAZPE2JO3AXDh"</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 				<p>Below is an example of how to use one CDN as a fallback when the other CDN is not working:</p>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msauth.net/lib/1.2.0/js/msal.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msauth.net/lib/1.3.0/js/msal.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="javascript">
-    <span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> Msal === <span class="hljs-string">'undefined'</span>)<span class="hljs-built_in">document</span>.write(<span class="hljs-built_in">unescape</span>(<span class="hljs-string">"%3Cscript src='https://alcdn.msftauth.net/lib/1.2.0/js/msal.js' type='text/javascript' %3E%3C/script%3E"</span>));
+    <span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> Msal === <span class="hljs-string">'undefined'</span>)<span class="hljs-built_in">document</span>.write(<span class="hljs-built_in">unescape</span>(<span class="hljs-string">"%3Cscript src='https://alcdn.msftauth.net/lib/1.3.0/js/msal.js' type='text/javascript' %3E%3C/script%3E"</span>));
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 				<p><strong>Note:</strong> This method of using <code>document.write</code> may be blocked in certain browsers in certain situations. More information can be found <a href="https://www.chromestatus.com/feature/5718547946799104">here</a>.</p>
 				<a href="#notes" id="notes" style="color: inherit; text-decoration: none;">
 					<h4>Notes:</h4>
 				</a>
 				<ul>
-					<li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity (SRI)</a> attributes are optional in the script tag.</li>
+					<li><a href="https://developer.mozilla.org/docs/Web/Security/Subresource_Integrity">Subresource Integrity (SRI)</a> attributes are optional in the script tag.</li>
 					<li>All hashes are unique to the version of MSAL. You can find the previous hashes on the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki/MSAL-JS-CDN-URL-and-SRI-Hash">MSAL Wiki page</a>.</li>
 					<li>We recommend including the SRI Hash with all script tags when using <code>msal.js</code> or <code>msal.min.js</code> (including when using a third-party CDN). When providing the SRI Hash, you <em>must</em> also provide the <code>crossorigin=&quot;anonymous&quot;</code> field in the same tag.</li>
 				</ul>
 				<p>Internet Explorer does not have native <code>Promise</code> support, and so you will need to include a polyfill for promises such as <code>bluebird</code>.</p>
 				<pre><code><span class="hljs-comment">&lt;!-- IE support: add promises polyfill before msal.js  --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.4/bluebird.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre><p>See here for more details on <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki/FAQs#q4-what-browsers-is-msaljs-supported-on">supported browsers and known compatability issues</a>.</p>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.4/bluebird.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre><p>See here for more details on <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki/FAQs#q5-what-browsers-is-msaljs-supported-on">supported browsers and known compatibility issues</a>.</p>
 				<a href="#what-to-expect-from-this-library" id="what-to-expect-from-this-library" style="color: inherit; text-decoration: none;">
 					<h2>What To Expect From This Library</h2>
 				</a>
 				<p>Msal support on Javascript is a collection of libraries. <code>msal-core</code> or just simply <code>msal</code>, is the framework agnostic core library. Once our core 1.x+ is stabilized, we are going to bring our <code>msal-angular</code> library with the latest 1.x improvements.  We are planning to deprecate support for <code>msal-angularjs</code> based on usage trends of the framework and the library indicating increased adoption of Angular 2+ instead of Angular 1x. After our current libraries are up to standards, we will begin balancing new feature requests, with new platforms such as <code>react</code> and <code>node.js</code>.</p>
-				<p>Our goal is to communicate extremely well with the community and to take their opinions into account. We would like to get to a monthly minor release schedule, with patches comming as often as needed.  The level of communication, planning, and granularity we want to get to will be a work in progress.</p>
+				<p>Our goal is to communicate extremely well with the community and to take their opinions into account. We would like to get to a monthly minor release schedule, with patches coming as often as needed.  The level of communication, planning, and granularity we want to get to will be a work in progress.</p>
 				<p>Please check our <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki#roadmap">roadmap</a> to see what we are working on and what we are tracking next.</p>
 				<a href="#oauth-20-and-the-implicit-flow" id="oauth-20-and-the-implicit-flow" style="color: inherit; text-decoration: none;">
 					<h2>OAuth 2.0 and the Implicit Flow</h2>
 				</a>
-				<p>Msal implments the <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-implicit-grant-flow">Implicit Grant Flow</a>, as defined by the OAuth 2.0 protocol and is <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc">OpenID</a> compliant.</p>
+				<p>Msal implements the <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-implicit-grant-flow">Implicit Grant Flow</a>, as defined by the OAuth 2.0 protocol and is <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-protocols-oidc">OpenID</a> compliant.</p>
 				<p>Our goal is that the library abstracts enough of the protocol away so that you can get plug and play authentication, but it is important to know and understand the implicit flow from a security perspective.
 					The implicit flow runs in the context of a web browser which cannot manage client secrets securely. It is optimized for single page apps and has one less hop between client and server so tokens are returned directly to the browser. These aspects make it naturally less secure.
 				These security concerns are mitigated per standard practices such as- use of short lived tokens (and so no refresh tokens are returned), the library requiring a registered redirect URI for the app, library matching the request and response with a unique nonce and state parameter.</p>
@@ -156,15 +156,15 @@
 					<h2>Usage</h2>
 				</a>
 				<p>The example below walks you through how to login a user and acquire a token to be used for Microsoft&#39;s Graph Api.</p>
-				<a href="#prerequisite" id="prerequisite" style="color: inherit; text-decoration: none;">
-					<h4>Prerequisite</h4>
+				<a href="#prerequisites" id="prerequisites" style="color: inherit; text-decoration: none;">
+					<h4>Prerequisites</h4>
 				</a>
-				<p>Before using MSAL.js you will need to <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app">register an application in Azure AD</a> to get a valid <code>clientId</code> for configuration, and to register the routes that your app will accept redirect traffic on.</p>
+				<p>Before using MSAL.js you will need to <a href="https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app">register an application in Azure AD</a> to get a valid <code>clientId</code> for configuration, and to register the routes that your app will accept redirect traffic on.</p>
 				<a href="#1-instantiate-the-useragentapplication" id="1-instantiate-the-useragentapplication" style="color: inherit; text-decoration: none;">
 					<h4>1. Instantiate the UserAgentApplication</h4>
 				</a>
 				<p><code>UserAgentApplication</code> can be configured with a variety of different options, detailed in our <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki/MSAL.js-1.0.0-api-release#configuration-options">Wiki</a>, but the only required parameter is <code>auth.clientId</code>.</p>
-				<p>After instantiating your instance, if you plan on using a redirect flow (<code>loginRedirect</code> and <code>acquireTokenRedirect</code>), you must register a callback handlers  using <code>handleRedirectCallback(authCallback)</code> where <code>authCallback = function(AuthError, AuthResponse)</code>. The callback function is called after the authentication request is completed either successfully or with a failure. This is not required for the popup flows since they return promises.</p>
+				<p>After instantiating your instance, if you plan on using a redirect flow in MSAL 1.2.x or earlier (<code>loginRedirect</code> and <code>acquireTokenRedirect</code>), you must register a callback handler using <code>handleRedirectCallback(authCallback)</code> where <code>authCallback = function(AuthError, AuthResponse)</code>. As of MSAL 1.3.0 this is optional. The callback function is called after the authentication request is completed either successfully or with a failure. This is not required for the popup flows since they return promises.</p>
 				<pre><code class="language-JavaScript">    <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> Msal <span class="hljs-keyword">from</span> <span class="hljs-string">"msal"</span>;
     <span class="hljs-comment">// if using cdn version, 'Msal' will be available in the global scope</span>
 
@@ -180,12 +180,12 @@
         <span class="hljs-comment">// handle redirect response or error</span>
     });
 </code></pre>
-				<p>For details on the configuration options, read <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-js-initializing-client-applications">Initializing client applications with MSAL.js</a>.</p>
+				<p>For details on the configuration options, read <a href="https://docs.microsoft.com/azure/active-directory/develop/msal-js-initializing-client-applications">Initializing client applications with MSAL.js</a>.</p>
 				<a href="#2-login-the-user" id="2-login-the-user" style="color: inherit; text-decoration: none;">
 					<h4>2. Login the user</h4>
 				</a>
 				<p>Your app must login the user with either the <code>loginPopup</code> or the <code>loginRedirect</code> method to establish user context.</p>
-				<p>When the login methods are called and the authentication of the user is completed by the Azure AD service, an <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/id-tokens">id token</a> is returned which is used to identify the user with some basic information.</p>
+				<p>When the login methods are called and the authentication of the user is completed by the Azure AD service, an <a href="https://docs.microsoft.com/azure/active-directory/develop/id-tokens">id token</a> is returned which is used to identify the user with some basic information.</p>
 				<p>When you login a user, you can pass in scopes that the user can pre consent to on login, however this is not required. Please note that consenting to scopes on login, does not return an access_token for these scopes, but gives you the opportunity to obtain a token silently with these scopes passed in, with no further interaction from the user.</p>
 				<p>It is best practice to only request scopes you need when you need them, a concept called dynamic consent. While this can create more interactive consent for users in your application, it also reduces drop-off from users that may be uneasy granting a large list of permissions for features they are not yet using.</p>
 				<p>AAD will only allow you to get consent for 3 resources at a time, although you can request many scopes within a resource.
@@ -202,10 +202,28 @@
             <span class="hljs-comment">// handle error</span>
         });
 </code></pre>
+				<a href="#ssosilent" id="ssosilent" style="color: inherit; text-decoration: none;">
+					<h5>ssoSilent</h5>
+				</a>
+				<p>If you are confident that the user has an existing session and would like to establish user context without prompting for interaction, you can invoke <code>ssoSilent</code> with a <code>loginHint</code> or <code>sid</code> (available as an <a href="https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims">optional claim</a>) and MSAL will attempt to silently SSO to the existing session and establish user context.</p>
+				<p>Note, if there is no active session for the given <code>loginHint</code> or <code>sid</code>, an error will be thrown, which should be handled by invoking an interactive login method (<code>loginPopup</code> or <code>loginRedirect</code>).</p>
+				<p>Example:</p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> ssoRequest = {
+    <span class="hljs-attr">loginHint</span>: <span class="hljs-string">"user@example.com"</span>
+};
+
+msalInstance.ssoSilent(ssoRequest)
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> {
+        <span class="hljs-comment">// session silently established</span>
+    })
+    .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> {
+        <span class="hljs-comment">// handle error by invoking an interactive login method</span>
+        msalInstance.loginPopup(ssoRequest);
+    });</code></pre>
 				<a href="#3-get-an-access-token-to-call-an-api" id="3-get-an-access-token-to-call-an-api" style="color: inherit; text-decoration: none;">
 					<h4>3. Get an access token to call an API</h4>
 				</a>
-				<p>In MSAL, you can get access tokens for the APIs your app needs to call using the <code>acquireTokenSilent</code> method which makes a silent request(without prompting the user with UI) to Azure AD to obtain an access token. The Azure AD service then returns an <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens">access token</a> containing the user consented scopes to allow your app to securely call the API.</p>
+				<p>In MSAL, you can get access tokens for the APIs your app needs to call using the <code>acquireTokenSilent</code> method which makes a silent request (without prompting the user with UI) to Azure AD to obtain an access token. The Azure AD service then returns an <a href="https://docs.microsoft.com/azure/active-directory/develop/access-tokens">access token</a> containing the user consented scopes to allow your app to securely call the API.</p>
 				<p>You can use <code>acquireTokenRedirect</code> or <code>acquireTokenPopup</code> to initiate interactive requests, although, it is best practice to only show interactive experiences if you are unable to obtain a token silently due to interaction required errors. If you are using an interactive token call, it must match the login method used in your application. (<code>loginPopup</code>=&gt; <code>acquireTokenPopup</code>, <code>loginRedirect</code> =&gt; <code>acquireTokenRedirect</code>).</p>
 				<p>If the <code>acquireTokenSilent</code> call fails with an error of type <code>InteractionRequiredAuthError</code> you will need to initiate an interactive request.  This could happen for many reasons including scopes that have been revoked, expired tokens, or password changes.</p>
 				<p><code>acquireTokenSilent</code> will look for a valid token in the cache, and if it is close to expiring or does not exist, will automatically try to refresh it for you.</p>
@@ -256,7 +274,7 @@
 				<a href="#security-reporting" id="security-reporting" style="color: inherit; text-decoration: none;">
 					<h2>Security Reporting</h2>
 				</a>
-				<p>If you find a security issue with our libraries or services please report it to <a href="mailto:secure@microsoft.com">secure@microsoft.com</a> with as much detail as possible. Your submission may be eligible for a bounty through the <a href="http://aka.ms/bugbounty">Microsoft Bounty</a> program. Please do not post security issues to GitHub Issues or any other public site. We will contact you shortly upon receiving the information. We encourage you to get notifications of when security incidents occur by visiting <a href="https://technet.microsoft.com/en-us/security/dd252948">this page</a> and subscribing to Security Advisory Alerts.</p>
+				<p>If you find a security issue with our libraries or services please report it to <a href="mailto:secure@microsoft.com">secure@microsoft.com</a> with as much detail as possible. Your submission may be eligible for a bounty through the <a href="http://aka.ms/bugbounty">Microsoft Bounty</a> program. Please do not post security issues to GitHub Issues or any other public site. We will contact you shortly upon receiving the information. We encourage you to get notifications of when security incidents occur by visiting <a href="https://technet.microsoft.com/security/dd252948">this page</a> and subscribing to Security Advisory Alerts.</p>
 				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
 					<h2>License</h2>
 				</a>

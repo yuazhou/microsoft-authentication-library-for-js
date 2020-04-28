@@ -90,8 +90,11 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_telemetry_telemetrymanager_.telemetrymanager.html#createandstartapievent" class="tsd-kind-icon">create<wbr>And<wbr>Start<wbr>Api<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_telemetry_telemetrymanager_.telemetrymanager.html#createandstarthttpevent" class="tsd-kind-icon">create<wbr>And<wbr>Start<wbr>Http<wbr>Event</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_telemetry_telemetrymanager_.telemetrymanager.html#flush" class="tsd-kind-icon">flush</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_telemetry_telemetrymanager_.telemetrymanager.html#startevent" class="tsd-kind-icon">start<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_telemetry_telemetrymanager_.telemetrymanager.html#stopandflushapievent" class="tsd-kind-icon">stop<wbr>And<wbr>Flush<wbr>Api<wbr>Event</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_telemetry_telemetrymanager_.telemetrymanager.html#stopevent" class="tsd-kind-icon">stop<wbr>Event</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_telemetry_telemetrymanager_.telemetrymanager.html#gettelemetrymanagerstub" class="tsd-kind-icon">get<wbr>Telemetrymanager<wbr>Stub</a></li>
 							</ul>
@@ -111,7 +114,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/telemetry/TelemetryManager.ts#L35">src/telemetry/TelemetryManager.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/telemetry/TelemetryManager.ts#L38">src/telemetry/TelemetryManager.ts:38</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -131,6 +134,64 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="createandstartapievent" class="tsd-anchor"></a>
+					<h3>create<wbr>And<wbr>Start<wbr>Api<wbr>Event</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>And<wbr>Start<wbr>Api<wbr>Event<span class="tsd-signature-symbol">(</span>correlationId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, apiEventIdentifier<span class="tsd-signature-symbol">: </span><a href="../enums/_telemetry_apievent_.api_event_identifier.html" class="tsd-signature-type">API_EVENT_IDENTIFIER</a>, logger<span class="tsd-signature-symbol">: </span><a href="_logger_.logger.html" class="tsd-signature-type">Logger</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_telemetry_apievent_.apievent.html" class="tsd-signature-type">ApiEvent</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/telemetry/TelemetryManager.ts#L136">src/telemetry/TelemetryManager.ts:136</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>apiEventIdentifier: <a href="../enums/_telemetry_apievent_.api_event_identifier.html" class="tsd-signature-type">API_EVENT_IDENTIFIER</a></h5>
+								</li>
+								<li>
+									<h5>logger: <a href="_logger_.logger.html" class="tsd-signature-type">Logger</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_telemetry_apievent_.apievent.html" class="tsd-signature-type">ApiEvent</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="createandstarthttpevent" class="tsd-anchor"></a>
+					<h3>create<wbr>And<wbr>Start<wbr>Http<wbr>Event</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>And<wbr>Start<wbr>Http<wbr>Event<span class="tsd-signature-symbol">(</span>correlation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, httpMethod<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_telemetry_httpevent_.httpevent.html" class="tsd-signature-type">HttpEvent</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/telemetry/TelemetryManager.ts#L151">src/telemetry/TelemetryManager.ts:151</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>correlation: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>httpMethod: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_telemetry_httpevent_.httpevent.html" class="tsd-signature-type">HttpEvent</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="flush" class="tsd-anchor"></a>
 					<h3>flush</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -140,7 +201,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/telemetry/TelemetryManager.ts#L97">src/telemetry/TelemetryManager.ts:97</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/telemetry/TelemetryManager.ts#L100">src/telemetry/TelemetryManager.ts:100</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -163,13 +224,45 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/telemetry/TelemetryManager.ts#L74">src/telemetry/TelemetryManager.ts:74</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/telemetry/TelemetryManager.ts#L77">src/telemetry/TelemetryManager.ts:77</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>event: <a href="_telemetry_telemetryevent_.telemetryevent.html" class="tsd-signature-type">TelemetryEvent</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="stopandflushapievent" class="tsd-anchor"></a>
+					<h3>stop<wbr>And<wbr>Flush<wbr>Api<wbr>Event</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">stop<wbr>And<wbr>Flush<wbr>Api<wbr>Event<span class="tsd-signature-symbol">(</span>correlationId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, apiEvent<span class="tsd-signature-symbol">: </span><a href="_telemetry_apievent_.apievent.html" class="tsd-signature-type">ApiEvent</a>, wasSuccessful<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, errorCode<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/telemetry/TelemetryManager.ts#L142">src/telemetry/TelemetryManager.ts:142</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>apiEvent: <a href="_telemetry_apievent_.apievent.html" class="tsd-signature-type">ApiEvent</a></h5>
+								</li>
+								<li>
+									<h5>wasSuccessful: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> errorCode: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -186,7 +279,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/telemetry/TelemetryManager.ts#L82">src/telemetry/TelemetryManager.ts:82</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/telemetry/TelemetryManager.ts#L85">src/telemetry/TelemetryManager.ts:85</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -209,7 +302,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/telemetry/TelemetryManager.ts#L58">src/telemetry/TelemetryManager.ts:58</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/telemetry/TelemetryManager.ts#L61">src/telemetry/TelemetryManager.ts:61</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -246,10 +339,19 @@
 								<a href="_telemetry_telemetrymanager_.telemetrymanager.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_telemetry_telemetrymanager_.telemetrymanager.html#createandstartapievent" class="tsd-kind-icon">create<wbr>And<wbr>Start<wbr>Api<wbr>Event</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_telemetry_telemetrymanager_.telemetrymanager.html#createandstarthttpevent" class="tsd-kind-icon">create<wbr>And<wbr>Start<wbr>Http<wbr>Event</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_telemetry_telemetrymanager_.telemetrymanager.html#flush" class="tsd-kind-icon">flush</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_telemetry_telemetrymanager_.telemetrymanager.html#startevent" class="tsd-kind-icon">start<wbr>Event</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_telemetry_telemetrymanager_.telemetrymanager.html#stopandflushapievent" class="tsd-kind-icon">stop<wbr>And<wbr>Flush<wbr>Api<wbr>Event</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_telemetry_telemetrymanager_.telemetrymanager.html#stopevent" class="tsd-kind-icon">stop<wbr>Event</a>
