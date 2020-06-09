@@ -85,6 +85,9 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_authority_authorityfactory_.authorityfactory.html#createinstance" class="tsd-kind-icon">Create<wbr>Instance</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_authority_authorityfactory_.authorityfactory.html#getmetadata" class="tsd-kind-icon">get<wbr>Metadata</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_authority_authorityfactory_.authorityfactory.html#savemetadatafromconfig" class="tsd-kind-icon">save<wbr>Metadata<wbr>From<wbr>Config</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_authority_authorityfactory_.authorityfactory.html#savemetadatafromnetwork" class="tsd-kind-icon">save<wbr>Metadata<wbr>From<wbr>Network</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_authority_authorityfactory_.authorityfactory.html#setknownauthorities" class="tsd-kind-icon">set<wbr>Known<wbr>Authorities</a></li>
 							</ul>
 						</section>
@@ -97,13 +100,13 @@
 					<a name="createinstance" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> Create<wbr>Instance</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">Create<wbr>Instance<span class="tsd-signature-symbol">(</span>authorityUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, validateAuthority<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Authority</span></li>
+						<li class="tsd-signature tsd-kind-icon">Create<wbr>Instance<span class="tsd-signature-symbol">(</span>authorityUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, validateAuthority<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, authorityMetadata<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Authority</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/authority/AuthorityFactory.ts#L51">src/authority/AuthorityFactory.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/authority/AuthorityFactory.ts#L85">src/authority/AuthorityFactory.ts:85</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -120,8 +123,89 @@
 								<li>
 									<h5>validateAuthority: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> authorityMetadata: <span class="tsd-signature-type">string</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Authority</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="getmetadata" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Metadata</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Metadata<span class="tsd-signature-symbol">(</span>authorityUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ITenantDiscoveryResponse</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/authority/AuthorityFactory.ts#L38">src/authority/AuthorityFactory.ts:38</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>authorityUrl: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ITenantDiscoveryResponse</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="savemetadatafromconfig" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> save<wbr>Metadata<wbr>From<wbr>Config</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">save<wbr>Metadata<wbr>From<wbr>Config<span class="tsd-signature-symbol">(</span>authorityUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, authorityMetadataJson<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/authority/AuthorityFactory.ts#L42">src/authority/AuthorityFactory.ts:42</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>authorityUrl: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>authorityMetadataJson: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="savemetadatafromnetwork" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> save<wbr>Metadata<wbr>From<wbr>Network</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">save<wbr>Metadata<wbr>From<wbr>Network<span class="tsd-signature-symbol">(</span>authorityInstance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Authority</span>, telemetryManager<span class="tsd-signature-symbol">: </span><a href="_telemetry_telemetrymanager_.telemetrymanager.html" class="tsd-signature-type">TelemetryManager</a>, correlationId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ITenantDiscoveryResponse</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/authority/AuthorityFactory.ts#L32">src/authority/AuthorityFactory.ts:32</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>authorityInstance: <span class="tsd-signature-type">Authority</span></h5>
+								</li>
+								<li>
+									<h5>telemetryManager: <a href="_telemetry_telemetrymanager_.telemetrymanager.html" class="tsd-signature-type">TelemetryManager</a></h5>
+								</li>
+								<li>
+									<h5>correlationId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ITenantDiscoveryResponse</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -135,7 +219,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/authority/AuthorityFactory.ts#L20">src/authority/AuthorityFactory.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-core/src/authority/AuthorityFactory.ts#L24">src/authority/AuthorityFactory.ts:24</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -178,6 +262,15 @@
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_authority_authorityfactory_.authorityfactory.html#createinstance" class="tsd-kind-icon">Create<wbr>Instance</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_authority_authorityfactory_.authorityfactory.html#getmetadata" class="tsd-kind-icon">get<wbr>Metadata</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_authority_authorityfactory_.authorityfactory.html#savemetadatafromconfig" class="tsd-kind-icon">save<wbr>Metadata<wbr>From<wbr>Config</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_authority_authorityfactory_.authorityfactory.html#savemetadatafromnetwork" class="tsd-kind-icon">save<wbr>Metadata<wbr>From<wbr>Network</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_authority_authorityfactory_.authorityfactory.html#setknownauthorities" class="tsd-kind-icon">set<wbr>Known<wbr>Authorities</a>
