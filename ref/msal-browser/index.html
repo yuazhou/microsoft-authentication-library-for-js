@@ -40,8 +40,6 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -79,7 +77,7 @@
 				</table>
 				<ol>
 					<li><a href="#about">About</a></li>
-					<li><a href="./FAQ.md">FAQ</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/FAQ.md">FAQ</a></li>
 					<li><a href="#releases">Releases</a></li>
 					<li><a href="#prerequisites">Prerequisites</a></li>
 					<li><a href="#installation">Installation</a></li>
@@ -91,7 +89,7 @@
 					</li>
 					<li><a href="#samples">Samples</a></li>
 					<li><a href="#build-and-test">Build and Test</a></li>
-					<li><a href="#oauth-2.0-and-the-implicit-flow-vs-authorization-code-flow-with-pkce">Authorization Code vs Implicit</a></li>
+					<li><a href="#implicit-flow-vs-authorization-code-flow-with-pkce">Authorization Code vs Implicit</a></li>
 					<li><a href="#security-reporting">Security Reporting</a></li>
 					<li><a href="#license">License</a></li>
 					<li><a href="#we-value-and-adhere-to-the-microsoft-open-source-code-of-conduct">Code of Conduct</a></li>
@@ -99,14 +97,16 @@
 				<a href="#about" id="about" style="color: inherit; text-decoration: none;">
 					<h2>About</h2>
 				</a>
+				<p><strong>Important:</strong> MSAL.js 2.0 with Authorization Code Flow is <strong>not</strong> yet available for B2C tenants (coming soon).</p>
+				<p>Want to join our Private Preview and test out the lastest changes to the Azure Portal? Fill out <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR_XA414hlD9MhfBiqanxI2JUOElQMk1LUjNBWDY4R0w3MFlPR0FIMkxMVC4u">this form</a></p>
 				<p>The MSAL library for JavaScript enables client-side JavaScript applications to authenticate users using <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-overview">Azure AD</a> work and school accounts (AAD), Microsoft personal accounts (MSA) and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through <a href="https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-overview#identity-providers">Azure AD B2C</a> service. It also enables your app to get tokens to access <a href="https://www.microsoft.com/enterprise">Microsoft Cloud</a> services such as <a href="https://graph.microsoft.io">Microsoft Graph</a>.</p>
-				<p>The <code>msal-browser</code> package described by the code in this folder uses the <a href="../msal-common/"><code>msal-common</code> package</a> as a dependency to enable authentication in Javascript Single-Page Applications without backend servers. This version of the library uses the OAuth 2.0 Authorization Code Flow with PKCE. To read more about this protocol, as well as the differences between implicit flow and authorization code flow, see the section <a href="#oauth-2.0-and-the-implicit-flow-vs-authorization-code-flow-with-pkce">below</a>. If you are looking for the version of the library that uses the implicit flow, please see the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-core"><code>msal-core</code> library</a>.</p>
-				<p>This is an improvement upon the current <code>msal-core</code> library which will utilize the authorization code flow in the browser. Most features available in the old library will be available in this one, but there are nuances to the authentication flow in both. The <code>msal-browser</code> package does NOT support the implicit flow.</p>
-				<p><strong>IMPORTANT:</strong> Please be aware that this is not a production ready library. We are making changes in the portal to ensure we can deliver a polished end-to-end experience.</p>
+				<p>The <code>@azure/msal-browser</code> package described by the code in this folder uses the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-common"><code>@azure/msal-common</code> package</a> as a dependency to enable authentication in Javascript Single-Page Applications without backend servers. This version of the library uses the OAuth 2.0 Authorization Code Flow with PKCE. To read more about this protocol, as well as the differences between implicit flow and authorization code flow, see the section <a href="#implicit-flow-vs-authorization-code-flow-with-pkce">below</a>. If you are looking for the version of the library that uses the implicit flow, please see the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-core"><code>msal-core</code> library</a>.</p>
+				<p>This is an improvement upon the current <code>msal-core</code> library which will utilize the authorization code flow in the browser. Most features available in the old library will be available in this one, but there are nuances to the authentication flow in both. The <code>@azure/msal-browser</code> package does NOT support the implicit flow.</p>
+				<p><strong>IMPORTANT:</strong> Please be aware that this is not a production ready library. We are making changes in the <a href="https://azure.microsoft.com/en-us/features/azure-portal/">Azure portal</a> to ensure we can deliver a polished end-to-end experience.</p>
 				<a href="#faq" id="faq" style="color: inherit; text-decoration: none;">
 					<h2>FAQ</h2>
 				</a>
-				<p>See <a href="./FAQ.md">here</a>.</p>
+				<p>See <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/FAQ.md">here</a>.</p>
 				<a href="#releases" id="releases" style="color: inherit; text-decoration: none;">
 					<h2>Releases</h2>
 				</a>
@@ -121,31 +121,31 @@
 						</tr>
 					</thead>
 					<tbody><tr>
-							<td></td>
-							<td>msal-browser v2.0.0-beta</td>
+							<td>July 6th, 2020 (Tentative)</td>
+							<td>@azure/msal-browser v2.0.0</td>
 							<td>No release notes yet</td>
-							<td>Beta version of the <code>msal-browser</code> package; relies on <code>msal-common</code> v1.0.0-beta</td>
+							<td>Full version of the <code>@azure/msal-browser</code> package; relies on <code>@azure/msal-common</code> v1.0.0</td>
+						</tr>
+						<tr>
+							<td>May 11, 2020</td>
+							<td>@azure/msal-browser v2.0.0-beta</td>
+							<td>No release notes yet</td>
+							<td>Beta version of the <code>@azure/msal-browser</code> package; relies on <code>@azure/msal-common</code> v1.0.0-beta</td>
 						</tr>
 						<tr>
 							<td>January 17, 2020</td>
-							<td>msal-browser v2.0.0-alpha</td>
+							<td>@azure/msal-browser v2.0.0-alpha</td>
 							<td>No release notes yet</td>
-							<td>Alpha version of the <code>msal-browser</code> package with authorization code flow for SPAs working in dev; relies on msal-common v1.0.0-alpha</td>
+							<td>Alpha version of the <code>@azure/msal-browser</code> package with authorization code flow for SPAs working in dev; relies on msal-common v1.0.0-alpha</td>
 						</tr>
 				</tbody></table>
 				<a href="#prerequisites" id="prerequisites" style="color: inherit; text-decoration: none;">
 					<h2>Prerequisites</h2>
 				</a>
 				<ul>
-					<li><p><code>msal-browser</code> is meant to be used in <a href="https://docs.microsoft.com/azure/active-directory/develop/scenario-spa-overview">Single-Page Application scenarios</a>.</p>
+					<li><p><code>@azure/msal-browser</code> is meant to be used in <a href="https://docs.microsoft.com/azure/active-directory/develop/scenario-spa-overview">Single-Page Application scenarios</a>.</p>
 					</li>
-					<li><p>Before using <code>msal-browser</code> you will need to <a href="https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app">register an application in Azure AD</a> to get a valid <code>clientId</code> for configuration, and to register the routes that your app will accept redirect traffic on.</p>
-					</li>
-					<li><p>Once you have registered your application, you will need to do two things in order to ensure MSAL 2.0 will successfully retrieve tokens:</p>
-						<ol>
-							<li>Change your redirect URI type to enable CORS. You can do this by going to the manifest editor for your app registration in the portal, finding the <code>replyUrlsWithType</code> section and changing the type of your redirect URI to <code>SPA</code>. This may remove the redirect URIs from the Authentication tab - that&#39;s OK! We are working on getting UI set up for this.</li>
-							<li>Ensure your <code>Default Client Type</code> settings have &quot;Treat application as public client&quot; set to &quot;Yes&quot;. </li>
-						</ol>
+					<li><p>Before using <code>@azure/msal-browser</code> you will need to <a href="hhttps://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-app-registration">register a Single Page Application in Azure AD</a> to get a valid <code>clientId</code> for configuration, and to register the routes that your app will accept redirect traffic on.</p>
 					</li>
 				</ul>
 				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
@@ -164,31 +164,30 @@
 				<a href="#migrating-from-previous-msal-versions" id="migrating-from-previous-msal-versions" style="color: inherit; text-decoration: none;">
 					<h3>Migrating from Previous MSAL Versions</h3>
 				</a>
-				<p>If you have MSAL v1.x currently running in your application, you can follow the instructions <a href="./docs/v1migration.md">here</a> to migrate your application to using the <code>msal-browser</code> package.</p>
+				<p>If you have MSAL v1.x currently running in your application, you can follow the instructions <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/v1-migration.md">here</a> to migrate your application to using the <code>@azure/msal-browser</code> package.</p>
 				<a href="#msal-basics" id="msal-basics" style="color: inherit; text-decoration: none;">
 					<h3>MSAL Basics</h3>
 				</a>
 				<ol>
-					<li><a href="./docs/initialization.md">Initialization</a></li>
-					<li><a href="./docs/loginuser.md">Logging in a User</a></li>
-					<li><a href="./docs/acquiretoken.md">Acquiring and Using an Access Token</a></li>
-					<li><a href="./docs/tokenlifetimes.md">Managing Token Lifetimes</a></li>
-					<li><a href="./docs/logout.md">Logging Out a User</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/initialization.md">Initialization</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/login-user.md">Logging in a User</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/acquire-token.md">Acquiring and Using an Access Token</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/token-lifetimes.md">Managing Token Lifetimes</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/logout.md">Logging Out a User</a></li>
 				</ol>
 				<a href="#advanced-topics" id="advanced-topics" style="color: inherit; text-decoration: none;">
 					<h3>Advanced Topics</h3>
 				</a>
 				<ul>
-					<li><a href="./docs/configuration.md">Configuration Options</a></li>
-					<li><a href="./docs/requestresponseobject.md">Request and Response Details</a></li>
-					<li><a href="./docs/caching.md">Cache Storage</a></li>
-					<li><a href="./docs/logging.md">Logging</a></li>
-					<li><a href="./docs/networkclient.md">Network Client</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/configuration.md">Configuration Options</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/request-response-object.md">Request and Response Details</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/caching.md">Cache Storage</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/performance.md">Performance Enhancements</a></li>
 				</ul>
 				<a href="#samples" id="samples" style="color: inherit; text-decoration: none;">
 					<h2>Samples</h2>
 				</a>
-				<p>The <a href="../../samples/VanillaJSTestApp2.0"><code>VanillaJSTestApp2.0</code> folder</a> contains sample applications for our libraries. You can run any sample by changing the <code>authConfig.js</code> file in the respective folder to match your app registration and running the <code>npm</code> command <code>npm start -- -s &lt;sample-name&gt; -p &lt;port&gt;</code>. </p>
+				<p>The <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples"><code>VanillaJSTestApp2.0</code> folder</a> contains sample applications for our libraries. You can run any sample by changing the <code>authConfig.js</code> file in the respective folder to match your app registration and running the <code>npm</code> command <code>npm start -- -s &lt;sample-name&gt; -p &lt;port&gt;</code>. </p>
 				<p>Here is a complete list of samples for the MSAL.js 2.x library:</p>
 				<table>
 					<thead>
@@ -199,12 +198,27 @@
 						</tr>
 					</thead>
 					<tbody><tr>
-							<td><a href="../../samples/VanillaJSTestApp2.0/default">Basic Auth Sample</a></td>
-							<td>A vanilla Javascript sample showing basic usage of the MSAL 2.0 library (<code>msal-browser</code> package) with the Microsoft Graph API.</td>
+							<td><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/VanillaJSTestApp2.0/app/default">Basic Auth Sample</a></td>
+							<td>A vanilla Javascript sample showing basic usage of the MSAL 2.0 library (<code>@azure/msal-browser</code> package) with the Microsoft Graph API.</td>
 							<td><code>npm start -- -s default</code></td>
 						</tr>
+						<tr>
+							<td><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/VanillaJSTestApp2.0/app/multipleResources">Multiple Resources Sample</a></td>
+							<td>A vanilla JS sample showing usage of MSAL 2.0 with authentication on page load with a redirect.</td>
+							<td><code>npm start -- -s multipleResources</code></td>
+						</tr>
+						<tr>
+							<td><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/VanillaJSTestApp2.0/app/onPageLoad">On Page Load Sample</a></td>
+							<td>A vanilla JS sample showing usage of MSAL 2.0 with authentication on page load with a redirect.</td>
+							<td><code>npm start -- -s onPageLoad</code></td>
+						</tr>
+						<tr>
+							<td><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/VanillaJSTestApp2.0/app/ssoSilent">ssoSilent() Sample</a></td>
+							<td>A vanilla JS sample showing usage of the ssoSilent API, allowing you to sign in a user silently if a context exists on the authentication server.</td>
+							<td><code>npm start -- -s ssoSilent</code></td>
+						</tr>
 				</tbody></table>
-				<p>More instructions to run the sample can be found in the <a href="../../samples/VanillaJSTestApp2.0/README.md"><code>README.md</code> file</a> of the VanillaJSTestApp2.0 folder.</p>
+				<p>More instructions to run the samples can be found in the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/VanillaJSTestApp2.0/Readme.md"><code>README.md</code> file</a> of the VanillaJSTestApp2.0 folder.</p>
 				<a href="#build-and-test" id="build-and-test" style="color: inherit; text-decoration: none;">
 					<h2>Build and Test</h2>
 				</a>
@@ -234,22 +248,22 @@ npm run build:all</code></pre>
 				<a href="#running-tests" id="running-tests" style="color: inherit; text-decoration: none;">
 					<h3>Running Tests</h3>
 				</a>
-				<p><code>msal-browser</code> uses <a href="https://mochajs.org/">mocha</a> and <a href="https://www.chaijs.com/">chai</a> to run unit tests, as well as Istanbul&#39;s <a href="https://github.com/istanbuljs/nyc">nyc</a> tool for code coverage.</p>
+				<p><code>@azure/msal-browser</code> uses <a href="https://mochajs.org/">mocha</a> and <a href="https://www.chaijs.com/">chai</a> to run unit tests, as well as Istanbul&#39;s <a href="https://github.com/istanbuljs/nyc">nyc</a> tool for code coverage.</p>
 				<pre><code class="language-javascript"><span class="hljs-comment">// To run tests</span>
 npm test
 <span class="hljs-comment">// To run tests with code coverage</span>
 npm run test:coverage:only</code></pre>
 				<ul>
-					<li>If you are having issues with <code>lerna</code>, change to the msal-browser directory and run the commands directly there.</li>
+					<li>If you are having issues with <code>lerna</code>, change to the <code>msal-browser</code> directory and run the commands directly there.</li>
 				</ul>
-				<a href="#oauth-20-and-the-implicit-flow-vs-authorization-code-flow-with-pkce" id="oauth-20-and-the-implicit-flow-vs-authorization-code-flow-with-pkce" style="color: inherit; text-decoration: none;">
-					<h2>OAuth 2.0 and the Implicit Flow vs Authorization Code Flow with PKCE</h2>
+				<a href="#implicit-flow-vs-authorization-code-flow-with-pkce" id="implicit-flow-vs-authorization-code-flow-with-pkce" style="color: inherit; text-decoration: none;">
+					<h2>Implicit Flow vs Authorization Code Flow with PKCE</h2>
 				</a>
 				<p>MSAL.js 1.x implemented the <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-implicit-grant-flow">Implicit Grant Flow</a>, as defined by the OAuth 2.0 protocol and <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-protocols-oidc">OpenID</a>.</p>
 				<p>Our goal is that the library abstracts enough of the protocol away so that you can get plug and play authentication, but it is important to know and understand the implicit flow from a security perspective. The MSAL 1.x client for single-page applications runs in the context of a web browser which cannot manage client secrets securely. It uses the implicit flow, which optimized for single page apps and has one less hop between client and server so tokens are returned directly to the browser. These aspects make it naturally less secure. These security concerns are mitigated per standard practices such as- use of short lived tokens (and so no refresh tokens are returned), the library requiring a registered redirect URI for the app, library matching the request and response with a unique nonce and state parameter. You can read more about the <a href="https://tools.ietf.org/html/draft-ietf-oauth-browser-based-apps-04#section-9.8.6">disadvantages of the implicit flow here</a>.</p>
 				<p>The MSAL library will now support the Authorization Code Flow with PKCE for Browser-Based Applications without a backend web server.
 				We plan to continue support for the implicit flow in the <code>msal-core</code> library.</p>
-				<p>You can learn further details about <code>msal-browser</code> functionality documented in our <a href="./docs">docs folder</a> and find complete <a href="#samples">code samples</a>.</p>
+				<p>You can learn further details about <code>@azure/msal-browser</code> functionality documented in our <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-browser/docs">docs folder</a> and find complete <a href="#samples">code samples</a>.</p>
 				<a href="#security-reporting" id="security-reporting" style="color: inherit; text-decoration: none;">
 					<h2>Security Reporting</h2>
 				</a>
@@ -270,71 +284,83 @@ npm run test:coverage:only</code></pre>
 					<li class="globals  ">
 						<a href="globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_app_configuration_.html">&quot;app/<wbr>Configuration&quot;</a>
+					<li class="label tsd-is-external">
+						<span>Internals</span>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_app_publicclientapplication_.html">&quot;app/<wbr>Public<wbr>Client<wbr>Application&quot;</a>
+						<a href="modules/_src_app_publicclientapplication_.html">&quot;src/app/<wbr>Public<wbr>Client<wbr>Application&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_cache_browserstorage_.html">&quot;cache/<wbr>Browser<wbr>Storage&quot;</a>
+						<a href="modules/_src_cache_browserstorage_.html">&quot;src/cache/<wbr>Browser<wbr>Storage&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_crypto_browsercrypto_.html">&quot;crypto/<wbr>Browser<wbr>Crypto&quot;</a>
+						<a href="modules/_src_config_configuration_.html">&quot;src/config/<wbr>Configuration&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_crypto_cryptoops_.html">&quot;crypto/<wbr>Crypto<wbr>Ops&quot;</a>
+						<a href="modules/_src_crypto_browsercrypto_.html">&quot;src/crypto/<wbr>Browser<wbr>Crypto&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_crypto_guidgenerator_.html">&quot;crypto/<wbr>Guid<wbr>Generator&quot;</a>
+						<a href="modules/_src_crypto_cryptoops_.html">&quot;src/crypto/<wbr>Crypto<wbr>Ops&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_crypto_pkcegenerator_.html">&quot;crypto/<wbr>Pkce<wbr>Generator&quot;</a>
+						<a href="modules/_src_crypto_guidgenerator_.html">&quot;src/crypto/<wbr>Guid<wbr>Generator&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_encode_base64decode_.html">&quot;encode/<wbr>Base64<wbr>Decode&quot;</a>
+						<a href="modules/_src_crypto_pkcegenerator_.html">&quot;src/crypto/<wbr>Pkce<wbr>Generator&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_encode_base64encode_.html">&quot;encode/<wbr>Base64<wbr>Encode&quot;</a>
+						<a href="modules/_src_encode_base64decode_.html">&quot;src/encode/<wbr>Base64<wbr>Decode&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_error_browserautherror_.html">&quot;error/<wbr>Browser<wbr>Auth<wbr>Error&quot;</a>
+						<a href="modules/_src_encode_base64encode_.html">&quot;src/encode/<wbr>Base64<wbr>Encode&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_error_browserconfigurationautherror_.html">&quot;error/<wbr>Browser<wbr>Configuration<wbr>Auth<wbr>Error&quot;</a>
+						<a href="modules/_src_error_browserautherror_.html">&quot;src/error/<wbr>Browser<wbr>Auth<wbr>Error&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_index_.html">&quot;index&quot;</a>
+						<a href="modules/_src_error_browserconfigurationautherror_.html">&quot;src/error/<wbr>Browser<wbr>Configuration<wbr>Auth<wbr>Error&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_interaction_handler_interactionhandler_.html">&quot;interaction_<wbr>handler/<wbr>Interaction<wbr>Handler&quot;</a>
+						<a href="modules/_src_index_.html">&quot;src/index&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_interaction_handler_popuphandler_.html">&quot;interaction_<wbr>handler/<wbr>Popup<wbr>Handler&quot;</a>
+						<a href="modules/_src_interaction_handler_interactionhandler_.html">&quot;src/interaction_<wbr>handler/<wbr>Interaction<wbr>Handler&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_interaction_handler_redirecthandler_.html">&quot;interaction_<wbr>handler/<wbr>Redirect<wbr>Handler&quot;</a>
+						<a href="modules/_src_interaction_handler_popuphandler_.html">&quot;src/interaction_<wbr>handler/<wbr>Popup<wbr>Handler&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_network_fetchclient_.html">&quot;network/<wbr>Fetch<wbr>Client&quot;</a>
+						<a href="modules/_src_interaction_handler_redirecthandler_.html">&quot;src/interaction_<wbr>handler/<wbr>Redirect<wbr>Handler&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_network_xhrclient_.html">&quot;network/<wbr>Xhr<wbr>Client&quot;</a>
+						<a href="modules/_src_interaction_handler_silenthandler_.html">&quot;src/interaction_<wbr>handler/<wbr>Silent<wbr>Handler&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_types_authcallback_.html">&quot;types/<wbr>Auth<wbr>Callback&quot;</a>
+						<a href="modules/_src_network_fetchclient_.html">&quot;src/network/<wbr>Fetch<wbr>Client&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_utils_browserconstants_.html">&quot;utils/<wbr>Browser<wbr>Constants&quot;</a>
+						<a href="modules/_src_network_xhrclient_.html">&quot;src/network/<wbr>Xhr<wbr>Client&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_utils_browserstringutils_.html">&quot;utils/<wbr>Browser<wbr>String<wbr>Utils&quot;</a>
+						<a href="modules/_src_types_authcallback_.html">&quot;src/types/<wbr>Auth<wbr>Callback&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_utils_browserutils_.html">&quot;utils/<wbr>Browser<wbr>Utils&quot;</a>
+						<a href="modules/_src_utils_browserconstants_.html">&quot;src/utils/<wbr>Browser<wbr>Constants&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_utils_mathutils_.html">&quot;utils/<wbr>Math<wbr>Utils&quot;</a>
+						<a href="modules/_src_utils_browserstringutils_.html">&quot;src/utils/<wbr>Browser<wbr>String<wbr>Utils&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_src_utils_browserutils_.html">&quot;src/utils/<wbr>Browser<wbr>Utils&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_src_utils_mathutils_.html">&quot;src/utils/<wbr>Math<wbr>Utils&quot;</a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Externals</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="modules/_package_.html">&quot;package&quot;</a>
 					</li>
 				</ul>
 			</nav>
