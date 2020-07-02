@@ -102,7 +102,7 @@
 					<div class="tsd-signature tsd-kind-icon">Auth<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>authority<span class="tsd-signature-symbol">?: </span><a href="../classes/_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a><span class="tsd-signature-symbol">; </span>clientId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>cloudDiscoveryMetadata<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>knownAuthorities<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L43">src/config/ClientConfiguration.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L46">src/config/ClientConfiguration.ts:46</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -138,7 +138,7 @@
 					<div class="tsd-signature tsd-kind-icon">Client<wbr>Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>authOptions<span class="tsd-signature-symbol">: </span><a href="_src_config_clientconfiguration_.html#authoptions" class="tsd-signature-type">AuthOptions</a><span class="tsd-signature-symbol">; </span>cryptoInterface<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a><span class="tsd-signature-symbol">; </span>libraryInfo<span class="tsd-signature-symbol">?: </span><a href="_src_config_clientconfiguration_.html#libraryinfo-1" class="tsd-signature-type">LibraryInfo</a><span class="tsd-signature-symbol">; </span>loggerOptions<span class="tsd-signature-symbol">?: </span><a href="_src_config_clientconfiguration_.html#loggeroptions-1" class="tsd-signature-type">LoggerOptions</a><span class="tsd-signature-symbol">; </span>networkInterface<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">INetworkModule</span><span class="tsd-signature-symbol">; </span>storageInterface<span class="tsd-signature-symbol">?: </span><a href="../classes/_src_cache_cachemanager_.cachemanager.html" class="tsd-signature-type">CacheManager</a><span class="tsd-signature-symbol">; </span>systemOptions<span class="tsd-signature-symbol">?: </span><a href="_src_config_clientconfiguration_.html#systemoptions-1" class="tsd-signature-type">SystemOptions</a><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L27">src/config/ClientConfiguration.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L30">src/config/ClientConfiguration.ts:30</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -147,10 +147,13 @@
 						</div>
 						<p>This object allows you to configure important elements of MSAL functionality:</p>
 						<ul>
-							<li>Logger:        Logging for application</li>
-							<li>Storage:       Storage implementation</li>
-							<li>Network:       Network implementation</li>
-							<li>Crypto:        Implementation of crypto functions</li>
+							<li>authOptions                - Authentication for application</li>
+							<li>cryptoInterface            - Implementation of crypto functions</li>
+							<li>libraryInfo                - Library-specific options</li>
+							<li>loggerOptions              - Logging for application</li>
+							<li>networkInterface           - Network implementation</li>
+							<li>storageInterface           - Storage implementation</li>
+							<li>systemOptions              - Storage options</li>
 						</ul>
 					</div>
 					<div class="tsd-type-declaration">
@@ -186,12 +189,12 @@
 					<div class="tsd-signature tsd-kind-icon">Library<wbr>Info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>cpu<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>os<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>sku<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>version<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L90">src/config/ClientConfiguration.ts:90</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L93">src/config/ClientConfiguration.ts:93</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Use this to configure the telemetry info about the library</p>
+							<p>Use this to configure the library-specific options</p>
 						</div>
 					</div>
 					<div class="tsd-type-declaration">
@@ -218,7 +221,7 @@
 					<div class="tsd-signature tsd-kind-icon">Logger<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>logLevel<span class="tsd-signature-symbol">?: </span><a href="../enums/_src_logger_logger_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol">; </span>loggerCallback<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_src_logger_logger_.iloggercallback.html" class="tsd-signature-type">ILoggerCallback</a><span class="tsd-signature-symbol">; </span>piiLoggingEnabled<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L81">src/config/ClientConfiguration.ts:81</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L84">src/config/ClientConfiguration.ts:84</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -252,12 +255,12 @@
 					<div class="tsd-signature tsd-kind-icon">System<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>telemetry<span class="tsd-signature-symbol">?: </span><a href="_src_config_clientconfiguration_.html#telemetryoptions" class="tsd-signature-type">TelemetryOptions</a><span class="tsd-signature-symbol">; </span>tokenRenewalOffsetSeconds<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L69">src/config/ClientConfiguration.ts:69</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L72">src/config/ClientConfiguration.ts:72</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Use this to configure the library specific options in the Configuration object</p>
+							<p>Use this to configure token renewal and telemetry info in the Configuration object</p>
 						</div>
 						<ul>
 							<li>tokenRenewalOffsetSeconds    - Sets the window of offset needed to renew the token before expiry</li>
@@ -282,7 +285,7 @@
 					<div class="tsd-signature tsd-kind-icon">Telemetry<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>applicationName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>applicationVersion<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L57">src/config/ClientConfiguration.ts:57</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L60">src/config/ClientConfiguration.ts:60</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -320,7 +323,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L161">src/config/ClientConfiguration.ts:161</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L164">src/config/ClientConfiguration.ts:164</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -418,7 +421,7 @@
 					<div class="tsd-signature tsd-kind-icon">DEFAULT_<wbr>SYSTEM_<wbr>OPTIONS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L104">src/config/ClientConfiguration.ts:104</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L107">src/config/ClientConfiguration.ts:107</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -427,7 +430,7 @@
 						<div class="tsd-signature tsd-kind-icon">telemetry<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> = null</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L106">src/config/ClientConfiguration.ts:106</a></li>
+								<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L109">src/config/ClientConfiguration.ts:109</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -437,7 +440,7 @@
 						<div class="tsd-signature tsd-kind-icon">token<wbr>Renewal<wbr>Offset<wbr>Seconds<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = DEFAULT_TOKEN_RENEWAL_OFFSET_SEC</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L105">src/config/ClientConfiguration.ts:105</a></li>
+								<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/config/ClientConfiguration.ts#L108">src/config/ClientConfiguration.ts:108</a></li>
 							</ul>
 						</aside>
 					</section>
