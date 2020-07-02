@@ -85,13 +85,25 @@
 					<div class="tsd-signature tsd-kind-icon">Authorization<wbr>Code<wbr>Request<span class="tsd-signature-symbol">:</span> <a href="_src_request_baseauthrequest_.html#baseauthrequest" class="tsd-signature-type">BaseAuthRequest</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>codeVerifier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>correlationId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>redirectUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/AuthorizationCodeRequest.ts#L31">src/request/AuthorizationCodeRequest.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/AuthorizationCodeRequest.ts#L24">src/request/AuthorizationCodeRequest.ts:24</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>TODO:</p>
+							<p>AuthorizationCodeRequest: Request object passed by user to acquire a token from the server exchanging a valid authorization code
+							(second leg of OAuth2.0 Authorization Code flow)</p>
 						</div>
+						<ul>
+							<li><p>redirectUri:             The redirect URI of your app, where the authority will redirect to after the user inputs credentials</p>
+							<pre><code>                     <span class="hljs-keyword">and</span> consents. It must exactly match <span class="hljs-literal">one</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> redirect URIs you registered <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> portal.</code></pre></li>
+							<li><p>code:                    The authorization_code that the user acquired in the first leg of the flow.</p>
+							</li>
+							<li><p>codeVerifier:            The same code_verifier that was used to obtain the authorization_code.</p>
+								<pre><code>                     Required <span class="hljs-keyword">if</span> PKCE was used <span class="hljs-keyword">in</span> the authorization code grant request.
+                     For more information, see the PKCE RFC: https:<span class="hljs-regexp">//</span>tools.ietf.org<span class="hljs-regexp">/html/</span>rfc7636</code></pre></li>
+							<li><p>correlationId:           Unique GUID set per request to trace a request end-to-end for telemetry purposes</p>
+							</li>
+						</ul>
 					</div>
 				</section>
 			</section>

@@ -106,6 +106,13 @@
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>AuthOptions: Use this to configure the auth options in the Configuration object</p>
+						</div>
+						<ul>
+							<li>clientId                    - Client ID of your app registered with our Application registration portal : <a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview">https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredAppsPreview</a> in Microsoft Identity Platform</li>
+							<li>authority                   - You can configure a specific authority, defaults to &quot; &quot; or &quot;<a href="https://login.microsoftonline.com/common&quot;">https://login.microsoftonline.com/common&quot;</a></li>
+						</ul>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -135,6 +142,16 @@
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>ClientConfiguration: Use the configuration object to configure MSAL Modules and initialize the base interfaces for MSAL.</p>
+						</div>
+						<p>This object allows you to configure important elements of MSAL functionality:</p>
+						<ul>
+							<li>Logger:        Logging for application</li>
+							<li>Storage:       Storage implementation</li>
+							<li>Network:       Network implementation</li>
+							<li>Crypto:        Implementation of crypto functions</li>
+						</ul>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -173,6 +190,15 @@
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>LibraryInfo: Use this to configure the telemetry info about the library</p>
+							<ul>
+								<li>sku                            -</li>
+								<li>version                        -</li>
+								<li>cpu                            -</li>
+								<li>os                             -</li>
+							</ul>
+						</div>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -202,6 +228,14 @@
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>LoggerOptions: Use this to configure the logging that MSAL does, by configuring logger options in the Configuration object</p>
+						</div>
+						<ul>
+							<li>loggerCallback                - Callback for logger</li>
+							<li>piiLoggingEnabled             - Sets whether pii logging is enabled</li>
+							<li>logLevel                      - Sets the level at which logging happens</li>
+						</ul>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -228,6 +262,13 @@
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>SystemOptions: Use this to configure the library specific options in the Configuration object</p>
+						</div>
+						<ul>
+							<li>tokenRenewalOffsetSeconds    - Sets the window of offset needed to renew the token before expiry</li>
+							<li>telemetry                    - Telemetry options for library network requests</li>
+						</ul>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -251,6 +292,14 @@
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>TelemetryOptions: Use this to configure the telemetry options in the Configuration object</p>
+						</div>
+						<ul>
+							<li>applicationName              - Name of the consuming apps application</li>
+							<li>applicationVersion           - Version of the consuming application</li>
+							<li>telemetryEmitter             - Function where telemetry events are flushed to</li>
+						</ul>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
