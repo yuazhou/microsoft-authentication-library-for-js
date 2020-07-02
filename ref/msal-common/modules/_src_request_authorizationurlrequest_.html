@@ -85,24 +85,25 @@
 					<div class="tsd-signature tsd-kind-icon">Authorization<wbr>Url<wbr>Request<span class="tsd-signature-symbol">:</span> <a href="_src_request_baseauthrequest_.html#baseauthrequest" class="tsd-signature-type">BaseAuthRequest</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>claims<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>codeChallenge<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>codeChallengeMethod<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>correlationId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>domainHint<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>extraQueryParameters<span class="tsd-signature-symbol">?: </span><a href="_src_utils_msaltypes_.html#stringdict" class="tsd-signature-type">StringDict</a><span class="tsd-signature-symbol">; </span>extraScopesToConsent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>loginHint<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>nonce<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>prompt<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>redirectUri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>responseMode<span class="tsd-signature-symbol">?: </span><a href="../enums/_src_utils_constants_.responsemode.html" class="tsd-signature-type">ResponseMode</a><span class="tsd-signature-symbol">; </span>state<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/AuthorizationUrlRequest.ts#L33">src/request/AuthorizationUrlRequest.ts:33</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/AuthorizationUrlRequest.ts#L31">src/request/AuthorizationUrlRequest.ts:31</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Request object passed by user to retrieve a Code from the server (first leg of authorization code grant flow)</p>
 						</div>
-						<p>= redirectUri                - The redirect URI where authentication responses can be received by your application. It must exactly match one of the redirect URIs registered in the Azure portal.</p>
 						<ul>
+							<li>redirectUri                - The redirect URI where authentication responses can be received by your application. It must exactly match one of the redirect URIs registered in the Azure portal.</li>
 							<li>extraScopesToConsent       - Scopes for a different resource when the user needs consent upfront.</li>
 							<li>responseMode               - Specifies the method that should be used to send the authentication result to your app. Can be query, form_post, or fragment. If no value is passed in, it defaults to query.</li>
 							<li>codeChallenge              - Used to secure authorization code grant via Proof of Key for Code Exchange (PKCE). For more information, see the PKCE RCF:<a href="https://tools.ietf.org/html/rfc7636">https://tools.ietf.org/html/rfc7636</a></li>
 							<li>codeChallengeMethod        - The method used to encode the code verifier for the code challenge parameter. Can be &quot;plain&quot; or &quot;S256&quot;. If excluded, code challenge is assumed to be plaintext. For more information, see the PKCE RCF: <a href="https://tools.ietf.org/html/rfc7636">https://tools.ietf.org/html/rfc7636</a></li>
 							<li>state                      - A value included in the request that is also returned in the token response. A randomly generated unique value is typically used for preventing cross site request forgery attacks. The state is also used to encode information about the user&#39;s state in the app before the authentication request occurred.</li>
-							<li>prompt                     - Indicates the type of user interaction that is required.<pre><code>                           login: will force the<span class="hljs-built_in"> user </span><span class="hljs-keyword">to</span> enter their credentials on that request, negating single-sign on
-                           none:  will ensure that the<span class="hljs-built_in"> user </span>isn<span class="hljs-string">&#x27;t presented with any interactive prompt. if request can&#x27;</span>t be completed via single-sign on, the endpoint will return an interaction_required <span class="hljs-builtin-name">error</span>
-                           consent: will the trigger the OAuth consent dialog after the<span class="hljs-built_in"> user </span>signs <span class="hljs-keyword">in</span>, asking the<span class="hljs-built_in"> user </span><span class="hljs-keyword">to</span> grant permissions <span class="hljs-keyword">to</span> the app
-                           select_account: will interrupt single <span class="hljs-attribute">sign-</span>=on providing account selection experience listing all the accounts <span class="hljs-keyword">in</span> session <span class="hljs-keyword">or</span> any remembered accounts <span class="hljs-keyword">or</span> an option <span class="hljs-keyword">to</span> choose <span class="hljs-keyword">to</span> use a different account</code></pre></li>
+							<li>prompt                     - Indicates the type of user interaction that is required.
+								login: will force the user to enter their credentials on that request, negating single-sign on
+								none:  will ensure that the user isn&#39;t presented with any interactive prompt. if request can&#39;t be completed via single-sign on, the endpoint will return an interaction_required error
+								consent: will the trigger the OAuth consent dialog after the user signs in, asking the user to grant permissions to the app
+							select_account: will interrupt single sign-=on providing account selection experience listing all the accounts in session or any remembered accounts or an option to choose to use a different account</li>
 							<li>loginHint                  - Can be used to pre-fill the username/email address field of the sign-in page for the user, if you know the username/email address ahead of time. Often apps use this parameter during re-authentication, having already extracted the username from a previous sign-in using the preferred_username claim.</li>
 							<li>domainHint                 - Provides a hint about the tenant or domain that the user should use to sign in. The value of the domain hint is a registered domain for the tenant.</li>
 							<li>extraQueryParameters       - String to string map of custom query parameters.</li>
@@ -110,14 +111,6 @@
 							<li>nonce                      - A value included in the request that is returned in the id token. A randomly generated unique value is typically used to mitigate replay attacks.</li>
 							<li>correlationId              - Unique GUID set per request to trace a request end-to-end for telemetry purposes</li>
 						</ul>
-						<dl class="tsd-comment-tags">
-							<dt>param</dt>
-							<dd><p>Comment goes here</p>
-							</dd>
-							<dt>typeparam</dt>
-							<dd><p>Comment goes here</p>
-							</dd>
-						</dl>
 					</div>
 				</section>
 			</section>
