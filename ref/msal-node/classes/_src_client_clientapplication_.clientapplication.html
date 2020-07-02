@@ -85,16 +85,35 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_src_client_clientapplication_.clientapplication.html#logger" class="tsd-kind-icon">logger</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_client_clientapplication_.clientapplication.html#acquiretokenbycode" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByCode</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_client_clientapplication_.clientapplication.html#acquiretokenbyrefreshtoken" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByRefresh<wbr>Token</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_client_clientapplication_.clientapplication.html#getallaccounts" class="tsd-kind-icon">get<wbr>All<wbr>Accounts</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_client_clientapplication_.clientapplication.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_client_clientapplication_.clientapplication.html#getauthcodeurl" class="tsd-kind-icon">get<wbr>Auth<wbr>Code<wbr>Url</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_client_clientapplication_.clientapplication.html#getcachemanager" class="tsd-kind-icon">get<wbr>Cache<wbr>Manager</a></li>
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="logger" class="tsd-anchor"></a>
+					<h3>logger</h3>
+					<div class="tsd-signature tsd-kind-icon">logger<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Logger</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L37">src/client/ClientApplication.ts:37</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -109,7 +128,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L81">src/client/ClientApplication.ts:81</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L88">src/client/ClientApplication.ts:88</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -143,7 +162,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L99">src/client/ClientApplication.ts:99</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L108">src/client/ClientApplication.ts:108</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -167,19 +186,36 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getallaccounts" class="tsd-anchor"></a>
-					<h3>get<wbr>All<wbr>Accounts</h3>
+					<a name="acquiretokensilent" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>Silent</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Accounts<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AccountInfo</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Silent<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SilentFlowRequest</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L184">src/client/ClientApplication.ts:184</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L129">src/client/ClientApplication.ts:129</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">AccountInfo</span><span class="tsd-signature-symbol">[]</span></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Acquires a token silently when a user specifies the account the token is requested for.</p>
+								</div>
+								<p>This API expects the user to provide an account object and looks into the cache to retrieve the token if present.
+									There is also an optional &quot;forceRefresh&quot; boolean the user can send, to bypass the cache for access_token and id_token
+									In case the refresh_token is expired or not found, an error is thrown
+								and the guidance is for the user to call any interactive token acquisition API (eg: acquireTokenByCode())</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>request: <span class="tsd-signature-type">SilentFlowRequest</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -193,7 +229,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L61">src/client/ClientApplication.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L66">src/client/ClientApplication.ts:66</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -228,7 +264,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L109">src/client/ClientApplication.ts:109</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L139">src/client/ClientApplication.ts:139</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_src_cache_tokencache_.tokencache.html" class="tsd-signature-type">TokenCache</a></h4>
@@ -315,6 +351,9 @@
 					<li class="current tsd-kind-class tsd-parent-kind-module">
 						<a href="_src_client_clientapplication_.clientapplication.html" class="tsd-kind-icon">Client<wbr>Application</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_src_client_clientapplication_.clientapplication.html#logger" class="tsd-kind-icon">logger</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_client_clientapplication_.clientapplication.html#acquiretokenbycode" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByCode</a>
 							</li>
@@ -322,7 +361,7 @@
 								<a href="_src_client_clientapplication_.clientapplication.html#acquiretokenbyrefreshtoken" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByRefresh<wbr>Token</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_src_client_clientapplication_.clientapplication.html#getallaccounts" class="tsd-kind-icon">get<wbr>All<wbr>Accounts</a>
+								<a href="_src_client_clientapplication_.clientapplication.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_client_clientapplication_.clientapplication.html#getauthcodeurl" class="tsd-kind-icon">get<wbr>Auth<wbr>Code<wbr>Url</a>
@@ -351,6 +390,7 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
