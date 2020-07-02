@@ -82,7 +82,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="authorizationcoderequest" class="tsd-anchor"></a>
 					<h3>Authorization<wbr>Code<wbr>Request</h3>
-					<div class="tsd-signature tsd-kind-icon">Authorization<wbr>Code<wbr>Request<span class="tsd-signature-symbol">:</span> <a href="_src_request_baseauthrequest_.html#baseauthrequest" class="tsd-signature-type">BaseAuthRequest</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>codeVerifier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>correlationId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>redirectUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">Authorization<wbr>Code<wbr>Request<span class="tsd-signature-symbol">:</span> <a href="_src_request_baseauthrequest_.html#baseauthrequest" class="tsd-signature-type">BaseAuthRequest</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>codeVerifier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>redirectUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
 							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/AuthorizationCodeRequest.ts#L18">src/request/AuthorizationCodeRequest.ts:18</a></li>
@@ -95,10 +95,10 @@
 						<ul>
 							<li>scopes                  - A space-separated array of scopes for the same resource.</li>
 							<li>authority:              - URL of the authority, the security token service (STS) from which MSAL will acquire tokens. If authority is set on client application object, this will override that value. Overriding the value will cause for authority validation to happen each time. If the same authority will be used for all request, set on the application object instead of the requests.</li>
+							<li>correlationId           - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
 							<li>redirectUri             - The redirect URI of your app, where the authority will redirect to after the user inputs credentials and consents. It must exactly match one of the redirect URIs you registered in the portal.</li>
 							<li>code                    - The authorization_code that the user acquired in the first leg of the flow.</li>
 							<li>codeVerifier            - The same code_verifier that was used to obtain the authorization_code. Required if PKCE was used in the authorization code grant request.For more information, see the PKCE RFC: <a href="https://tools.ietf.org/html/rfc7636">https://tools.ietf.org/html/rfc7636</a></li>
-							<li>correlationId           - Unique GUID set per request to trace a request end-to-end for telemetry purposes</li>
 						</ul>
 					</div>
 				</section>

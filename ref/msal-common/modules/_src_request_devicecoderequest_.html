@@ -85,17 +85,20 @@
 					<div class="tsd-signature tsd-kind-icon">Device<wbr>Code<wbr>Request<span class="tsd-signature-symbol">:</span> <a href="_src_request_baseauthrequest_.html#baseauthrequest" class="tsd-signature-type">BaseAuthRequest</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>cancel<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>deviceCodeCallback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><a href="_src_response_devicecoderesponse_.html#devicecoderesponse" class="tsd-signature-type">DeviceCodeResponse</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/DeviceCodeRequest.ts#L15">src/request/DeviceCodeRequest.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/DeviceCodeRequest.ts#L17">src/request/DeviceCodeRequest.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Parameters for Oauth2 device code flow.</p>
+							<ul>
+								<li>scopes                     - A space-separated array of scopes for the same resource.</li>
+								<li>authority:                 - URL of the authority, the security token service (STS) from which MSAL will acquire tokens. If authority is set on client application object, this will override that value. Overriding the value will cause for authority validation to happen each time. If the same authority will be used for all request, set on the application object instead of the requests.</li>
+								<li>correlationId              - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
+								<li>deviceCodeCallback         - Callback containing device code response. Message should be shown to end user. End user can then navigate to the verification_uri, input the user_code, and input credentials.</li>
+								<li>cancel                     - Boolean to cancel polling of device code endpoint. While the user authenticates on a separate device, MSAL polls the the token endpoint of security token service for the interval specified in the device code response (usually 15 minutes). To stop polling and cancel the request, set cancel=true.</li>
+							</ul>
 						</div>
-						<ul>
-							<li>deviceCodeCallback         - Callback containing device code response. Message should be shown to end user. End user can then navigate to the verification_uri, input the user_code, and input credentials.</li>
-							<li>cancel                     - Boolean to cancel polling of device code endpoint. While the user authenticates on a separate device, MSAL polls the the token endpoint of security token service for the interval specified in the device code response (usually 15 minutes). To stop polling and cancel the request, set cancel=true.</li>
-						</ul>
 					</div>
 				</section>
 			</section>
