@@ -125,8 +125,6 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>request: <a href="../modules/_src_index_.html#authorizationcoderequest" class="tsd-signature-type">AuthorizationCodeRequest</a></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -158,8 +156,6 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>request: <a href="../modules/_src_index_.html#refreshtokenrequest" class="tsd-signature-type">RefreshTokenRequest</a></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -186,14 +182,12 @@
 								<p>This API expects the user to provide an account object and looks into the cache to retrieve the token if present.
 									There is also an optional &quot;forceRefresh&quot; boolean the user can send, to bypass the cache for access_token and id_token
 									In case the refresh_token is expired or not found, an error is thrown
-								and the guidance is for the user to call any interactive token acquisition API (eg: acquireTokenByCode())</p>
+								and the guidance is for the user to call any interactive token acquisition API (eg: acquireTokenByCode()).</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>request: <span class="tsd-signature-type">SilentFlowRequest</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -221,14 +215,12 @@
 								</div>
 								<p>Once the user inputs their credentials and consents, the authority will send a response to the redirect URI
 									sent in the request and should contain an authorization code, which can then be used to acquire tokens via
-								acquireToken(AuthorizationCodeRequest)</p>
+								acquireToken(AuthorizationCodeRequest).</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>request: <span class="tsd-signature-type">AuthorizationUrlRequest</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -250,7 +242,7 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Gets the cache manager for the application</p>
+									<p>Gets the cache manager for the application.</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="_src_cache_tokencache_.tokencache.html" class="tsd-signature-type">TokenCache</a></h4>
