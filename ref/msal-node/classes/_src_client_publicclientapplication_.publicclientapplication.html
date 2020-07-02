@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Class to be used to acquire tokens for public client applications (desktop, mobile). Public client applications
+						<p>This class is to be used to acquire tokens for public client applications (desktop, mobile). Public client applications
 						are not trusted to safely store application secrets, and therefore can only request tokens in the name of an user.</p>
 					</div>
 				</div>
@@ -136,15 +136,17 @@
 										<li>authority: the authority URL for your application.</li>
 									</ul>
 								</div>
-								<p>AAD authorities are of the form <a href="https://login.microsoftonline.com/%7BEnter_the_Tenant_Info_Here%7D">https://login.microsoftonline.com/{Enter_the_Tenant_Info_Here}</a>
-									If your application supports Accounts in one organizational directory, replace &quot;Enter_the_Tenant_Info_Here&quot; value with the Tenant Id or Tenant name (for example, contoso.microsoft.com).
-									If your application supports Accounts in any organizational directory, replace &quot;Enter_the_Tenant_Info_Here&quot; value with organizations.
-									If your application supports Accounts in any organizational directory and personal Microsoft accounts, replace &quot;Enter_the_Tenant_Info_Here&quot; value with common.
-								To restrict support to Personal Microsoft accounts only, replace &quot;Enter_the_Tenant_Info_Here&quot; value with consumers.</p>
+								<p>AAD authorities are of the form <a href="https://login.microsoftonline.com/%7BEnter_the_Tenant_Info_Here%7D">https://login.microsoftonline.com/{Enter_the_Tenant_Info_Here}</a>.</p>
+								<ul>
+									<li>If your application supports Accounts in one organizational directory, replace &quot;Enter_the_Tenant_Info_Here&quot; value with the Tenant Id or Tenant name (for example, contoso.microsoft.com).</li>
+									<li>If your application supports Accounts in any organizational directory, replace &quot;Enter_the_Tenant_Info_Here&quot; value with organizations.</li>
+									<li>If your application supports Accounts in any organizational directory and personal Microsoft accounts, replace &quot;Enter_the_Tenant_Info_Here&quot; value with common.</li>
+									<li>To restrict support to Personal Microsoft accounts only, replace &quot;Enter_the_Tenant_Info_Here&quot; value with consumers.</li>
+								</ul>
 								<p>Azure B2C authorities are of the form https://{instance}/{tenant}/{policy}. Each policy is considered
-									it&#39;s own authority. You will have to set the all of the knownAuthorities at the time of the client application
+									its own authority. You will have to set the all of the knownAuthorities at the time of the client application
 								construction.</p>
-								<p>ADFS authorities are of the form https://{instance}/adfs</p>
+								<p>ADFS authorities are of the form https://{instance}/adfs.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -170,7 +172,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#acquiretokenbycode">acquireTokenByCode</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L88">src/client/ClientApplication.ts:88</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L84">src/client/ClientApplication.ts:84</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -178,7 +180,7 @@
 									<p>Acquires a token by exchanging the Authorization Code received from the first step of OAuth2.0
 									Authorization Code flow.</p>
 								</div>
-								<p>getAuthCodeUrl(AuthorizationCodeUrlRequest) can be used to create the URL for the first step of OAuth2.0
+								<p><code>getAuthCodeUrl(AuthorizationCodeUrlRequest)</code> can be used to create the URL for the first step of OAuth2.0
 									Authorization Code flow. Ensure that values for redirectUri and scopes in AuthorizationCodeUrlRequest and
 								AuthorizationCodeRequest are the same.</p>
 							</div>
@@ -202,15 +204,15 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/PublicClientApplication.ts#L47">src/client/PublicClientApplication.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/PublicClientApplication.ts#L45">src/client/PublicClientApplication.ts:45</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Acquires token from the authority using OAuth2.0 device code flow.
-										Flow is designed for devices that do not have access to a browser or have input constraints.
-										The authorization server issues DeviceCode object with a verification code, an end-user code
-										and the end-user verification URI. DeviceCode object is provided through callback, end-user should be
+									<p>Acquires a token from the authority using OAuth2.0 device code flow.
+										This flow is designed for devices that do not have access to a browser or have input constraints.
+										The authorization server issues a DeviceCode object with a verification code, an end-user code,
+										and the end-user verification URI. The DeviceCode object is provided through a callback, and the end-user should be
 										instructed to use another device to navigate to the verification URI to input credentials.
 										Since the client cannot receive incoming requests, it polls the authorization server repeatedly
 									until the end-user completes input of credentials.</p>
@@ -237,15 +239,15 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#acquiretokenbyrefreshtoken">acquireTokenByRefreshToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L108">src/client/ClientApplication.ts:108</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L103">src/client/ClientApplication.ts:103</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Acquires a token by exchanging the refresh token provided for a new set of tokens.</p>
 								</div>
-								<p>This API is provided only for scenarios where you would like to migrate from ADAL to MSAL. Instead, it is
-									recommended that you use acquireTokenSilent() for silent scenarios. When using acquireTokenSilent, MSAL will
+								<p>This API is provided only for scenarios where you would like to migrate from ADAL to MSAL. Otherwise, it is
+									recommended that you use <code>acquireTokenSilent()</code> for silent scenarios. When using <code>acquireTokenSilent()</code>, MSAL will
 								handle the caching and refreshing of tokens automatically.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -269,7 +271,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#acquiretokensilent">acquireTokenSilent</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L129">src/client/ClientApplication.ts:129</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L123">src/client/ClientApplication.ts:123</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -277,9 +279,9 @@
 									<p>Acquires a token silently when a user specifies the account the token is requested for.</p>
 								</div>
 								<p>This API expects the user to provide an account object and looks into the cache to retrieve the token if present.
-									There is also an optional &quot;forceRefresh&quot; boolean the user can send, to bypass the cache for access_token and id_token
+									There is also an optional &quot;forceRefresh&quot; boolean the user can send to bypass the cache for access_token and id_token.
 									In case the refresh_token is expired or not found, an error is thrown
-								and the guidance is for the user to call any interactive token acquisition API (eg: acquireTokenByCode()).</p>
+								and the guidance is for the user to call any interactive token acquisition API (eg: <code>acquireTokenByCode()</code>).</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -302,18 +304,18 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#getauthcodeurl">getAuthCodeUrl</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L66">src/client/ClientApplication.ts:66</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L64">src/client/ClientApplication.ts:64</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Creates the URL of the authorization request letting the user input credentials and consent to the
-										application. The URL target the /authorize endpoint of the authority configured in the
+									<p>Creates the URL of the authorization request, letting the user input credentials and consent to the
+										application. The URL targets the /authorize endpoint of the authority configured in the
 									application object.</p>
 								</div>
 								<p>Once the user inputs their credentials and consents, the authority will send a response to the redirect URI
 									sent in the request and should contain an authorization code, which can then be used to acquire tokens via
-								acquireToken(AuthorizationCodeRequest).</p>
+								<code>acquireTokenByCode(AuthorizationCodeRequest)</code>.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -336,7 +338,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#getcachemanager">getCacheManager</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L142">src/client/ClientApplication.ts:142</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L136">src/client/ClientApplication.ts:136</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
