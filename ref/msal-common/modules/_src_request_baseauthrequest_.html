@@ -85,37 +85,30 @@
 					<div class="tsd-signature tsd-kind-icon">Base<wbr>Auth<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>authority<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>correlationId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/BaseAuthRequest.ts#L6">src/request/BaseAuthRequest.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/BaseAuthRequest.ts#L12">src/request/BaseAuthRequest.ts:12</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>BaseAuthRequest</p>
+							<ul>
+								<li>scopes                  - Array of scopes the application is requesting access to.</li>
+								<li>authority               - URL of the authority, the security token service (STS) from which MSAL will acquire tokens. Defaults to <a href="https://login.microsoftonline.com/common">https://login.microsoftonline.com/common</a>. If using the same authority for all request, authority should set on client application object and not request, to avoid resolving authority endpoints multiple times.</li>
+								<li>correlationId           - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
+							</ul>
+						</div>
+					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> authority<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<div class="lead">
-										<p>Url of the authority which the application acquires tokens from. Defaults to
-											<a href="https://login.microsoftonline.com/common">https://login.microsoftonline.com/common</a>. If using the same authority for all request, authority should set
-										on client application object and not request, to avoid resolving authority endpoints multiple times.</p>
-									</div>
-								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> correlation<wbr>Id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<div class="lead">
-										<p>Unique GUID set per request to trace a request end-to-end for telemetry purposes</p>
-									</div>
-								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<div class="lead">
-										<p>Scopes the application is requesting access to.</p>
-									</div>
-								</div>
 							</li>
 						</ul>
 					</div>
