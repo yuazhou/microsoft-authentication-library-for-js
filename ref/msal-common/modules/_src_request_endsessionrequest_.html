@@ -85,9 +85,20 @@
 					<div class="tsd-signature tsd-kind-icon">End<wbr>Session<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>account<span class="tsd-signature-symbol">?: </span><a href="_src_account_accountinfo_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol">; </span>authority<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>correlationId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>postLogoutRedirectUri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/EndSessionRequest.ts#L8">src/request/EndSessionRequest.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/EndSessionRequest.ts#L15">src/request/EndSessionRequest.ts:15</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>EndSessionRequest</p>
+							<ul>
+								<li>account                - Account object that will be logged out of. All tokens tied to this account will be cleared.</li>
+								<li>postLogoutRedirectUri  - URI to navigate to after logout page.</li>
+								<li>authority              - Authority to send logout request to.</li>
+								<li>correlationId          - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
+							</ul>
+						</div>
+					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">

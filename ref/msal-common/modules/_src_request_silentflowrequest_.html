@@ -85,19 +85,18 @@
 					<div class="tsd-signature tsd-kind-icon">Silent<wbr>Flow<wbr>Request<span class="tsd-signature-symbol">:</span> <a href="_src_request_baseauthrequest_.html#baseauthrequest" class="tsd-signature-type">BaseAuthRequest</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>account<span class="tsd-signature-symbol">: </span><a href="_src_account_accountinfo_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol">; </span>forceRefresh<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/SilentFlowRequest.ts#L18">src/request/SilentFlowRequest.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/SilentFlowRequest.ts#L17">src/request/SilentFlowRequest.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>SilentFlow parameters passed by the user to retrieve credentials silently</p>
 							<ul>
-								<li>scopes                 - Scopes the application is requesting access to.</li>
+								<li>scopes                 - Array of scopes the application is requesting access to.</li>
 								<li>authority              - Url of the authority which the application acquires tokens from.</li>
 								<li>correlationId          - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
 								<li>account                - Account entity to lookup the credentials.</li>
 								<li>forceRefresh           - Forces silent requests to make network calls if true.</li>
-								<li>redirectUri            - The redirect URI where authentication responses can be received by your application. It must exactly match one of the redirect URIs registered in the Azure portal.</li>
 							</ul>
 						</div>
 					</div>
