@@ -40,6 +40,8 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -96,6 +98,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_utils_browserutils_.browserutils.html#getcurrenturi" class="tsd-kind-icon">get<wbr>Current<wbr>Uri</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_utils_browserutils_.browserutils.html#isiniframe" class="tsd-kind-icon">is<wbr>InIframe</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_utils_browserutils_.browserutils.html#navigatewindow" class="tsd-kind-icon">navigate<wbr>Window</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_utils_browserutils_.browserutils.html#replacehash" class="tsd-kind-icon">replace<wbr>Hash</a></li>
 							</ul>
 						</section>
 					</div>
@@ -113,7 +116,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L68">msal-browser/src/utils/BrowserUtils.ts:68</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L78">msal-browser/src/utils/BrowserUtils.ts:78</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -158,7 +161,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L79">msal-browser/src/utils/BrowserUtils.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L89">msal-browser/src/utils/BrowserUtils.ts:89</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -180,7 +183,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L56">msal-browser/src/utils/BrowserUtils.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L66">msal-browser/src/utils/BrowserUtils.ts:66</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -202,7 +205,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L49">msal-browser/src/utils/BrowserUtils.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L59">msal-browser/src/utils/BrowserUtils.ts:59</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -224,7 +227,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L40">msal-browser/src/utils/BrowserUtils.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L50">msal-browser/src/utils/BrowserUtils.ts:50</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -273,6 +276,34 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="replacehash" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> replace<wbr>Hash</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">replace<wbr>Hash<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L40">msal-browser/src/utils/BrowserUtils.ts:40</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Replaces current hash with hash from provided url</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -313,6 +344,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_src_utils_browserutils_.browserutils.html#navigatewindow" class="tsd-kind-icon">navigate<wbr>Window</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_src_utils_browserutils_.browserutils.html#replacehash" class="tsd-kind-icon">replace<wbr>Hash</a>
 							</li>
 						</ul>
 					</li>

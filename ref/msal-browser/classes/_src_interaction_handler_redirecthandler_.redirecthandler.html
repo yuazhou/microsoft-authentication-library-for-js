@@ -40,6 +40,8 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -168,7 +170,7 @@
 					<a name="initiateauthrequest" class="tsd-anchor"></a>
 					<h3>initiate<wbr>Auth<wbr>Request</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">initiate<wbr>Auth<wbr>Request<span class="tsd-signature-symbol">(</span>requestUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, authCodeRequest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthorizationCodeRequest</span>, browserCrypto<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ICrypto</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Window</span></li>
+						<li class="tsd-signature tsd-kind-icon">initiate<wbr>Auth<wbr>Request<span class="tsd-signature-symbol">(</span>requestUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, authCodeRequest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthorizationCodeRequest</span>, redirectStartPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, browserCrypto<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ICrypto</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Window</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -190,6 +192,9 @@
 								</li>
 								<li>
 									<h5>authCodeRequest: <span class="tsd-signature-type">AuthorizationCodeRequest</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> redirectStartPage: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> browserCrypto: <span class="tsd-signature-type">ICrypto</span></h5>

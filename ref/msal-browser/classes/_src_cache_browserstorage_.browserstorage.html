@@ -40,6 +40,8 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -131,6 +133,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_src_cache_browserstorage_.browserstorage.html#getkeys" class="tsd-kind-icon">get<wbr>Keys</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_cache_browserstorage_.browserstorage.html#removeaccount" class="tsd-kind-icon">remove<wbr>Account</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_cache_browserstorage_.browserstorage.html#removeaccountcontext" class="tsd-kind-icon">remove<wbr>Account<wbr>Context</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_cache_browserstorage_.browserstorage.html#removeallaccounts" class="tsd-kind-icon">remove<wbr>All<wbr>Accounts</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_cache_browserstorage_.browserstorage.html#removeappmetadata" class="tsd-kind-icon">remove<wbr>App<wbr>Metadata</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_cache_browserstorage_.browserstorage.html#removecredential" class="tsd-kind-icon">remove<wbr>Credential</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_src_cache_browserstorage_.browserstorage.html#removeitem" class="tsd-kind-icon">remove<wbr>Item</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_cache_browserstorage_.browserstorage.html#resetrequestcache" class="tsd-kind-icon">reset<wbr>Request<wbr>Cache</a></li>
@@ -231,7 +235,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CacheManager.clear</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/cache/BrowserStorage.ts#L214">msal-browser/src/cache/BrowserStorage.ts:214</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/cache/BrowserStorage.ts#L212">msal-browser/src/cache/BrowserStorage.ts:212</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -312,7 +316,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CacheManager.containsKey</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/cache/BrowserStorage.ts#L200">msal-browser/src/cache/BrowserStorage.ts:200</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/cache/BrowserStorage.ts#L198">msal-browser/src/cache/BrowserStorage.ts:198</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -431,7 +435,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_cache_browserstorage_.browserstorage.html">BrowserStorage</a>.<a href="_src_cache_browserstorage_.browserstorage.html#getaccount">getAccount</a></p>
 								<ul>
-									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:69</li>
+									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:68</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -462,7 +466,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_cache_browserstorage_.browserstorage.html">BrowserStorage</a>.<a href="_src_cache_browserstorage_.browserstorage.html#getaccountsfilteredby">getAccountsFilteredBy</a></p>
 								<ul>
-									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:82</li>
+									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:81</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -485,14 +489,14 @@
 					<a name="getallaccounts" class="tsd-anchor"></a>
 					<h3>get<wbr>All<wbr>Accounts</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Accounts<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AccountInfo</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Accounts<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_cache_browserstorage_.browserstorage.html">BrowserStorage</a>.<a href="_src_cache_browserstorage_.browserstorage.html#getallaccounts">getAllAccounts</a></p>
 								<ul>
-									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:44</li>
+									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:43</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -500,7 +504,7 @@
 									<p>Returns all accounts in cache</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">AccountInfo</span><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -620,7 +624,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_cache_browserstorage_.browserstorage.html">BrowserStorage</a>.<a href="_src_cache_browserstorage_.browserstorage.html#getcredential">getCredential</a></p>
 								<ul>
-									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:74</li>
+									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:73</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -651,7 +655,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_cache_browserstorage_.browserstorage.html">BrowserStorage</a>.<a href="_src_cache_browserstorage_.browserstorage.html#getcredentialsfilteredby">getCredentialsFilteredBy</a></p>
 								<ul>
-									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:100</li>
+									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:99</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -680,7 +684,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CacheManager.getItem</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/cache/BrowserStorage.ts#L139">msal-browser/src/cache/BrowserStorage.ts:139</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/cache/BrowserStorage.ts#L138">msal-browser/src/cache/BrowserStorage.ts:138</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -745,7 +749,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CacheManager.getKeys</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/cache/BrowserStorage.ts#L207">msal-browser/src/cache/BrowserStorage.ts:207</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/cache/BrowserStorage.ts#L205">msal-browser/src/cache/BrowserStorage.ts:205</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -768,7 +772,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_cache_browserstorage_.browserstorage.html">BrowserStorage</a>.<a href="_src_cache_browserstorage_.browserstorage.html#removeaccount">removeAccount</a></p>
 								<ul>
-									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:115</li>
+									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:122</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -797,7 +801,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_cache_browserstorage_.browserstorage.html">BrowserStorage</a>.<a href="_src_cache_browserstorage_.browserstorage.html#removeaccountcontext">removeAccountContext</a></p>
 								<ul>
-									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:120</li>
+									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:127</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -818,6 +822,52 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="removeallaccounts" class="tsd-anchor"></a>
+					<h3>remove<wbr>All<wbr>Accounts</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>All<wbr>Accounts<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_src_cache_browserstorage_.browserstorage.html">BrowserStorage</a>.<a href="_src_cache_browserstorage_.browserstorage.html#removeallaccounts">removeAllAccounts</a></p>
+								<ul>
+									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:117</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes all accounts and related tokens from cache.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="removeappmetadata" class="tsd-anchor"></a>
+					<h3>remove<wbr>App<wbr>Metadata</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>App<wbr>Metadata<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_src_cache_browserstorage_.browserstorage.html">BrowserStorage</a>.<a href="_src_cache_browserstorage_.browserstorage.html#removeappmetadata">removeAppMetadata</a></p>
+								<ul>
+									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:113</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes all app metadata objects from cache.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="removecredential" class="tsd-anchor"></a>
 					<h3>remove<wbr>Credential</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -828,7 +878,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_cache_browserstorage_.browserstorage.html">BrowserStorage</a>.<a href="_src_cache_browserstorage_.browserstorage.html#removecredential">removeCredential</a></p>
 								<ul>
-									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:125</li>
+									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:132</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -859,7 +909,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides CacheManager.removeItem</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/cache/BrowserStorage.ts#L188">msal-browser/src/cache/BrowserStorage.ts:188</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/cache/BrowserStorage.ts#L186">msal-browser/src/cache/BrowserStorage.ts:186</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -914,14 +964,14 @@
 					<a name="savecacherecord" class="tsd-anchor"></a>
 					<h3>save<wbr>Cache<wbr>Record</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">save<wbr>Cache<wbr>Record<span class="tsd-signature-symbol">(</span>cacheRecord<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CacheRecord</span>, responseScopes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ScopeSet</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">save<wbr>Cache<wbr>Record<span class="tsd-signature-symbol">(</span>cacheRecord<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CacheRecord</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_cache_browserstorage_.browserstorage.html">BrowserStorage</a>.<a href="_src_cache_browserstorage_.browserstorage.html#savecacherecord">saveCacheRecord</a></p>
 								<ul>
-									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:49</li>
+									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:48</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -935,9 +985,6 @@
 									<h5>cacheRecord: <span class="tsd-signature-type">CacheRecord</span></h5>
 									<div class="tsd-comment tsd-typography">
 									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> responseScopes: <span class="tsd-signature-type">ScopeSet</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1119,7 +1166,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_cache_browserstorage_.browserstorage.html">BrowserStorage</a>.<a href="_src_cache_browserstorage_.browserstorage.html#toobject">toObject</a></p>
 								<ul>
-									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:172</li>
+									<li>Defined in msal-common/dist/src/cache/CacheManager.d.ts:184</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1241,6 +1288,12 @@
 								<a href="_src_cache_browserstorage_.browserstorage.html#removeaccountcontext" class="tsd-kind-icon">remove<wbr>Account<wbr>Context</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_src_cache_browserstorage_.browserstorage.html#removeallaccounts" class="tsd-kind-icon">remove<wbr>All<wbr>Accounts</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_src_cache_browserstorage_.browserstorage.html#removeappmetadata" class="tsd-kind-icon">remove<wbr>App<wbr>Metadata</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_src_cache_browserstorage_.browserstorage.html#removecredential" class="tsd-kind-icon">remove<wbr>Credential</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
@@ -1274,6 +1327,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_src_cache_browserstorage_.html#cookie_life_multiplier" class="tsd-kind-icon">COOKIE_<wbr>LIFE_<wbr>MULTIPLIER</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

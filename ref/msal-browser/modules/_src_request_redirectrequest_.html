@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;src/app/PublicClientApplication&quot; | @azure/msal-browser</title>
+	<title>&quot;src/request/RedirectRequest&quot; | @azure/msal-browser</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_src_app_publicclientapplication_.html">&quot;src/app/PublicClientApplication&quot;</a>
+					<a href="_src_request_redirectrequest_.html">&quot;src/request/RedirectRequest&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;src/app/PublicClientApplication&quot;</h1>
+			<h1>External module &quot;src/request/RedirectRequest&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -71,11 +71,52 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Classes</h3>
+							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_src_app_publicclientapplication_.publicclientapplication.html" class="tsd-kind-icon">Public<wbr>Client<wbr>Application</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_src_request_redirectrequest_.html#redirectrequest" class="tsd-kind-icon">Redirect<wbr>Request</a></li>
 							</ul>
 						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="redirectrequest" class="tsd-anchor"></a>
+					<h3>Redirect<wbr>Request</h3>
+					<div class="tsd-signature tsd-kind-icon">Redirect<wbr>Request<span class="tsd-signature-symbol">:</span> <a href="_src_index_.html#authorizationurlrequest" class="tsd-signature-type">AuthorizationUrlRequest</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>redirectStartPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/request/RedirectRequest.ts#L34">msal-browser/src/request/RedirectRequest.ts:34</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>RedirectRequest: Request object passed by user to retrieve a Code from the
+							server (first leg of authorization code grant flow) with a full page redirect.</p>
+						</div>
+						<ul>
+							<li>scopes                     - Array of scopes the application is requesting access to.</li>
+							<li>authority                  - Url of the authority which the application acquires tokens from.</li>
+							<li>correlationId              - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
+							<li>redirectUri                - The redirect URI where authentication responses can be received by your application. It must exactly match one of the redirect URIs registered in the Azure portal.</li>
+							<li>extraScopesToConsent       - Scopes for a different resource when the user needs consent upfront.</li>
+							<li>responseMode               - Specifies the method that should be used to send the authentication result to your app. Can be query, form_post, or fragment. If no value is passed in, it defaults to query.</li>
+							<li>codeChallenge              - Used to secure authorization code grant via Proof of Key for Code Exchange (PKCE). For more information, see the PKCE RCF:<a href="https://tools.ietf.org/html/rfc7636">https://tools.ietf.org/html/rfc7636</a></li>
+							<li>codeChallengeMethod        - The method used to encode the code verifier for the code challenge parameter. Can be &quot;plain&quot; or &quot;S256&quot;. If excluded, code challenge is assumed to be plaintext. For more information, see the PKCE RCF: <a href="https://tools.ietf.org/html/rfc7636">https://tools.ietf.org/html/rfc7636</a></li>
+							<li>state                      - A value included in the request that is also returned in the token response. A randomly generated unique value is typically used for preventing cross site request forgery attacks. The state is also used to encode information about the user&#39;s state in the app before the authentication request occurred.</li>
+							<li>prompt                     - Indicates the type of user interaction that is required.<pre><code>   login: will force the<span class="hljs-built_in"> user </span><span class="hljs-keyword">to</span> enter their credentials on that request, negating single-sign on
+   none:  will ensure that the<span class="hljs-built_in"> user </span>isn<span class="hljs-string">'t presented with any interactive prompt. if request can'</span>t be completed via single-sign on, the endpoint will return an interaction_required <span class="hljs-builtin-name">error</span>
+   consent: will the trigger the OAuth consent dialog after the<span class="hljs-built_in"> user </span>signs <span class="hljs-keyword">in</span>, asking the<span class="hljs-built_in"> user </span><span class="hljs-keyword">to</span> grant permissions <span class="hljs-keyword">to</span> the app
+   select_account: will interrupt single <span class="hljs-attribute">sign-</span>=on providing account selection experience listing all the accounts <span class="hljs-keyword">in</span> session <span class="hljs-keyword">or</span> any remembered accounts <span class="hljs-keyword">or</span> an option <span class="hljs-keyword">to</span> choose <span class="hljs-keyword">to</span> use a different account</code></pre></li>
+							<li>loginHint                  - Can be used to pre-fill the username/email address field of the sign-in page for the user, if you know the username/email address ahead of time. Often apps use this parameter during re-authentication, having already extracted the username from a previous sign-in using the preferred_username claim.</li>
+							<li>sid                        - Session ID, unique identifier for the session. Available as an optional claim on ID tokens.</li>
+							<li>domainHint                 - Provides a hint about the tenant or domain that the user should use to sign in. The value of the domain hint is a registered domain for the tenant.</li>
+							<li>extraQueryParameters       - String to string map of custom query parameters.</li>
+							<li>claims                     - In cases where Azure AD tenant admin has enabled conditional access policies, and the policy has not been met, exceptions will contain claims that need to be consented to.</li>
+							<li>nonce                      - A value included in the request that is returned in the id token. A randomly generated unique value is typically used to mitigate replay attacks.</li>
+							<li>redirectStartPage          - The page that should be returned to after loginRedirect or acquireTokenRedirect. This should only be used if this is different from the redirectUri and will default to the page that initiates the request. When the navigateToLoginRequestUrl config option is set to false this parameter will be ignored.</li>
+						</ul>
 					</div>
 				</section>
 			</section>
@@ -87,14 +128,14 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_src_app_publicclientapplication_.html">&quot;src/app/<wbr>Public<wbr>Client<wbr>Application&quot;</a>
+						<a href="_src_request_redirectrequest_.html">&quot;src/request/<wbr>Redirect<wbr>Request&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/_src_app_publicclientapplication_.publicclientapplication.html" class="tsd-kind-icon">Public<wbr>Client<wbr>Application</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="_src_request_redirectrequest_.html#redirectrequest" class="tsd-kind-icon">Redirect<wbr>Request</a>
 					</li>
 				</ul>
 			</nav>

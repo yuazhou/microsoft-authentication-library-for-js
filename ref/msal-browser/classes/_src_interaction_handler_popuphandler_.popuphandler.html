@@ -40,6 +40,8 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -103,7 +105,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_interaction_handler_popuphandler_.popuphandler.html#handlecoderesponse" class="tsd-kind-icon">handle<wbr>Code<wbr>Response</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_src_interaction_handler_popuphandler_.popuphandler.html#initiateauthrequest" class="tsd-kind-icon">initiate<wbr>Auth<wbr>Request</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_interaction_handler_popuphandler_.popuphandler.html#monitorwindowforhash" class="tsd-kind-icon">monitor<wbr>Window<wbr>For<wbr>Hash</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_interaction_handler_popuphandler_.popuphandler.html#monitorpopupforhash" class="tsd-kind-icon">monitor<wbr>Popup<wbr>For<wbr>Hash</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_interaction_handler_popuphandler_.popuphandler.html#unloadwindow" class="tsd-kind-icon">unload<wbr>Window</a></li>
 							</ul>
 						</section>
@@ -208,10 +210,10 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="monitorwindowforhash" class="tsd-anchor"></a>
-					<h3>monitor<wbr>Window<wbr>For<wbr>Hash</h3>
+					<a name="monitorpopupforhash" class="tsd-anchor"></a>
+					<h3>monitor<wbr>Popup<wbr>For<wbr>Hash</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">monitor<wbr>Window<wbr>For<wbr>Hash<span class="tsd-signature-symbol">(</span>contentWindow<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Window</span>, timeout<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, urlNavigate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">monitor<wbr>Popup<wbr>For<wbr>Hash<span class="tsd-signature-symbol">(</span>popupWindow<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Window</span>, timeout<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -228,7 +230,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>contentWindow: <span class="tsd-signature-type">Window</span></h5>
+									<h5>popupWindow: <span class="tsd-signature-type">Window</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>window that is being monitored</p>
 									</div>
@@ -237,12 +239,6 @@
 									<h5>timeout: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>milliseconds until timeout</p>
-									</div>
-								</li>
-								<li>
-									<h5>urlNavigate: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>url that was navigated to</p>
 									</div>
 								</li>
 							</ul>
@@ -308,7 +304,7 @@
 								<a href="_src_interaction_handler_popuphandler_.popuphandler.html#initiateauthrequest" class="tsd-kind-icon">initiate<wbr>Auth<wbr>Request</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_src_interaction_handler_popuphandler_.popuphandler.html#monitorwindowforhash" class="tsd-kind-icon">monitor<wbr>Window<wbr>For<wbr>Hash</a>
+								<a href="_src_interaction_handler_popuphandler_.popuphandler.html#monitorpopupforhash" class="tsd-kind-icon">monitor<wbr>Popup<wbr>For<wbr>Hash</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_interaction_handler_popuphandler_.popuphandler.html#unloadwindow" class="tsd-kind-icon">unload<wbr>Window</a>
