@@ -12,6 +12,10 @@ export const BrowserConfigurationAuthErrorMessage = {
         code: "storage_not_supported",
         desc: "Given storage configuration option was not supported."
     },
+    browserStorageInitError: {
+        code: "browser_storage_init_failed",
+        desc: "Browser storage was not initialized. Falling back to inMemoryStorage."
+    },
     customStorageNotImplementedError: {
         code: "custom_storage_not_implemented",
         desc: "Custom storage was selected but no implementation was passed. Please see the docs here: <TODO: Put docs location here>"
@@ -43,5 +47,9 @@ export class BrowserConfigurationAuthError extends AuthError {
      */
     static createCustomStorageNotImplementedError(): BrowserConfigurationAuthError {
         return new BrowserConfigurationAuthError(BrowserConfigurationAuthErrorMessage.customStorageNotImplementedError.code, BrowserConfigurationAuthErrorMessage.customStorageNotImplementedError.desc);
+    }
+    
+    static createBrowserStorageInitError(givenError: string): BrowserConfigurationAuthError {
+        return new BrowserConfigurationAuthError(BrowserConfigurationAuthErrorMessage.browserStorageInitError.code, `${BrowserConfigurationAuthErrorMessage.browserStorageInitError.desc} Failed With: ${givenError}`);
     }
 }

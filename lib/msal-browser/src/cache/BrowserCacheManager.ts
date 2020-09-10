@@ -2,13 +2,14 @@
  * Copyright (c) Microsoft Corporation. All rights reserved.
  * Licensed under the MIT License.
  */
-import { Constants, PersistentCacheKeys, StringUtils, AuthorizationCodeRequest, ICrypto, CacheSchemaType, AccountEntity, IdTokenEntity, CredentialType, AccessTokenEntity, RefreshTokenEntity, AppMetadataEntity, CacheManager, CredentialEntity, ThrottlingEntity, ServerTelemetryCacheValue } from "@azure/msal-common";
+import { Constants, PersistentCacheKeys, StringUtils, AuthorizationCodeRequest, ICrypto, CacheSchemaType, AccountEntity, IdTokenEntity, CredentialType, AccessTokenEntity, RefreshTokenEntity, AppMetadataEntity, CacheManager, CredentialEntity, ThrottlingEntity, ServerTelemetryCacheValue, Logger } from "@azure/msal-common";
 import { CacheOptions } from "../config/Configuration";
 import { BrowserAuthError } from "../error/BrowserAuthError";
-import { BrowserConfigurationAuthError } from "../error/BrowserConfigurationAuthError";
+import { BrowserConfigurationAuthError, BrowserConfigurationAuthErrorMessage } from "../error/BrowserConfigurationAuthError";
 import { BrowserConstants, TemporaryCacheKeys } from "../utils/BrowserConstants";
 import { BrowserStorage } from "./BrowserStorage";
-import { IWindowStorage } from "./IWindowStorage";
+import { ICacheStorage } from "./ICacheStorage";
+import { InMemoryStorage } from "./InMemoryStorage";
 
 // Cookie life calculation (hours * minutes * seconds * ms)
 const COOKIE_LIFE_MULTIPLIER = 24 * 60 * 60 * 1000;
@@ -20,24 +21,33 @@ const COOKIE_LIFE_MULTIPLIER = 24 * 60 * 60 * 1000;
  */
 export class BrowserCacheManager extends CacheManager {
 
+    private logger: Logger;
     // Cache configuration, either set by user or default values.
     private cacheConfig: CacheOptions;
     // Window storage object (either local or sessionStorage)
-    private browserStorage: IWindowStorage;
+    private cacheStorage: ICacheStorage;
     // Client id of application. Used in cache keys to partition cache correctly in the case of multiple instances of MSAL.
     private clientId: string;
+    
 
-    constructor(clientId: string, cacheConfig: CacheOptions) {
+    constructor(clientId: string, cacheConfig: CacheOptions, logger: Logger) {
         super();
+        this.logger = logger;
 
         if (cacheConfig.cacheLocation === BrowserConstants.CACHE_LOCATION_CUSTOM) {
             if (!cacheConfig.customStorage) {
                 throw BrowserConfigurationAuthError.createCustomStorageNotImplementedError();
             }
 
-            this.browserStorage = cacheConfig.customStorage;
+            this.cacheStorage = cacheConfig.customStorage;
         } else {
-            this.browserStorage = new BrowserStorage(cacheConfig.cacheLocation);
+            try {
+                this.cacheStorage = new BrowserStorage(cacheConfig.cacheLocation);
+            } catch (e) {
+                const authError = BrowserConfigurationAuthError.createBrowserStorageInitError(e);
+                this.logger.warning(`${authError}`);
+                this.cacheStorage = new InMemoryStorage();
+            }
         }
 
         this.cacheConfig = cacheConfig;
@@ -57,10 +67,10 @@ export class BrowserCacheManager extends CacheManager {
         const errorKey = `${Constants.CACHE_PREFIX}.${PersistentCacheKeys.ERROR}`;
         const errorDescKey = `${Constants.CACHE_PREFIX}.${PersistentCacheKeys.ERROR_DESC}`;
 
-        const idTokenValue = this.browserStorage.getWindowStorageItem(idTokenKey);
-        const clientInfoValue = this.browserStorage.getWindowStorageItem(clientInfoKey);
-        const errorValue = this.browserStorage.getWindowStorageItem(errorKey);
-        const errorDescValue = this.browserStorage.getWindowStorageItem(errorDescKey);
+        const idTokenValue = this.cacheStorage.getItem(idTokenKey);
+        const clientInfoValue = this.cacheStorage.getItem(clientInfoKey);
+        const errorValue = this.cacheStorage.getItem(errorKey);
+        const errorDescValue = this.cacheStorage.getItem(errorDescKey);
 
         const values = [idTokenValue, clientInfoValue, errorValue, errorDescValue];
         const keysToMigrate = [PersistentCacheKeys.ID_TOKEN, PersistentCacheKeys.CLIENT_INFO, PersistentCacheKeys.ERROR, PersistentCacheKeys.ERROR_DESC];
@@ -101,11 +111,11 @@ export class BrowserCacheManager extends CacheManager {
             case CacheSchemaType.ACCOUNT:
             case CacheSchemaType.CREDENTIAL:
             case CacheSchemaType.APP_METADATA:
-                this.browserStorage.setWindowStorageItem(key, JSON.stringify(value));
+                this.cacheStorage.setItem(key, JSON.stringify(value));
                 break;
             case CacheSchemaType.TEMPORARY: {
                 const stringVal = value as string;
-                this.browserStorage.setWindowStorageItem(key, stringVal);
+                this.cacheStorage.setItem(key, stringVal);
                 if (this.cacheConfig.storeAuthStateInCookie) {
                     this.setItemCookie(key, stringVal);
                 }
@@ -113,7 +123,7 @@ export class BrowserCacheManager extends CacheManager {
             }
             case CacheSchemaType.THROTTLING:
             case CacheSchemaType.TELEMETRY: {
-                this.browserStorage.setWindowStorageItem(key, JSON.stringify(value));
+                this.cacheStorage.setItem(key, JSON.stringify(value));
                 break;
             }
             default: {
@@ -128,7 +138,7 @@ export class BrowserCacheManager extends CacheManager {
      * @param key
      */
     getItem(key: string, type: string): string | object {
-        const value = this.browserStorage.getWindowStorageItem(key);
+        const value = this.cacheStorage.getItem(key);
         if (StringUtils.isEmpty(value)) {
             return null;
         }
@@ -182,7 +192,7 @@ export class BrowserCacheManager extends CacheManager {
      * @param key
      */
     removeItem(key: string): boolean {
-        this.browserStorage.removeWindowStorageItem(key);
+        this.cacheStorage.removeItem(key);
         if (this.cacheConfig.storeAuthStateInCookie) {
             this.clearItemCookie(key);
         }
@@ -194,14 +204,14 @@ export class BrowserCacheManager extends CacheManager {
      * @param key
      */
     containsKey(key: string): boolean {
-        return this.browserStorage.windowStorageContainsItem(key);
+        return this.cacheStorage.containsKey(key);
     }
 
     /**
      * Gets all keys in cache.
      */
     getKeys(): string[] {
-        return this.browserStorage.getWindowStorageKeys();
+        return this.cacheStorage.getKeys();
     }
 
     /**
@@ -213,7 +223,7 @@ export class BrowserCacheManager extends CacheManager {
         const allKeys = this.getKeys();
         allKeys.forEach((cacheKey: string) => {
             // Check if key contains msal prefix; For now, we are clearing all the cache items created by MSAL.js
-            if (this.browserStorage.windowStorageContainsItem(cacheKey) && ((cacheKey.indexOf(Constants.CACHE_PREFIX) !== -1) || (cacheKey.indexOf(this.clientId) !== -1))) {
+            if (this.cacheStorage.containsKey(cacheKey) && ((cacheKey.indexOf(Constants.CACHE_PREFIX) !== -1) || (cacheKey.indexOf(this.clientId) !== -1))) {
                 this.removeItem(cacheKey);
             }
         });

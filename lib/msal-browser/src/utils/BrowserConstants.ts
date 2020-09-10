@@ -13,6 +13,8 @@ export const BrowserConstants = {
     CACHE_LOCATION_LOCAL: "localStorage",
     // Session storage constant string
     CACHE_LOCATION_SESSION: "sessionStorage",
+    // In memory storage constant string
+    CACHE_LOCATION_IN_MEMORY: "inMemoryStorage",
     // Custom storage constant string
     CACHE_LOCATION_CUSTOM: "customStorage",
     // Interaction status key (only used for browsers)

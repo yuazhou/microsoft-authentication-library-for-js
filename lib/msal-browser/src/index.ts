@@ -1,7 +1,7 @@
 // App and config
 export { PublicClientApplication } from "./app/PublicClientApplication";
 export { Configuration } from "./config/Configuration";
-export { IWindowStorage } from "./cache/IWindowStorage";
+export { ICacheStorage } from "./cache/ICacheStorage";
 
 // Browser Errors
 export { BrowserAuthError, BrowserAuthErrorMessage } from "./error/BrowserAuthError";

@@ -3,12 +3,12 @@
  * Licensed under the MIT License.
  */
 
-import { IWindowStorage } from "./IWindowStorage";
+import { ICacheStorage } from "./ICacheStorage";
 import { BrowserConfigurationAuthError } from "../error/BrowserConfigurationAuthError";
 import { BrowserConstants } from "../utils/BrowserConstants";
 import { BrowserUtils } from "../utils/BrowserUtils";
 
-export class BrowserStorage implements IWindowStorage {
+export class BrowserStorage implements ICacheStorage {
 
     private _windowStorage: Storage;
     private cacheLocation: string;
@@ -52,7 +52,7 @@ export class BrowserStorage implements IWindowStorage {
      * Get the item from the window storage object matching the given key.
      * @param key 
      */
-    getWindowStorageItem(key: string): string {
+    getItem(key: string): string {
         BrowserUtils.blockNonBrowserEnvironment();
         return this.windowStorage.getItem(key);
     }
@@ -62,7 +62,7 @@ export class BrowserStorage implements IWindowStorage {
      * @param key 
      * @param value 
      */
-    setWindowStorageItem(key: string, value: string): void {
+    setItem(key: string, value: string): void {
         BrowserUtils.blockNonBrowserEnvironment();
         this.windowStorage.setItem(key, value);
     }
@@ -71,7 +71,7 @@ export class BrowserStorage implements IWindowStorage {
      * Removes the item in the window storage object matching the given key.
      * @param key 
      */
-    removeWindowStorageItem(key: string): void {
+    removeItem(key: string): void {
         BrowserUtils.blockNonBrowserEnvironment();
         this.windowStorage.removeItem(key);
     }
@@ -79,7 +79,7 @@ export class BrowserStorage implements IWindowStorage {
     /**
      * Get all the keys from the window storage object as an iterable array of strings.
      */
-    getWindowStorageKeys(): string[] {
+    getKeys(): string[] {
         BrowserUtils.blockNonBrowserEnvironment();
         return Object.keys(this.windowStorage);
     }
@@ -88,7 +88,7 @@ export class BrowserStorage implements IWindowStorage {
      * Returns true or false if the given key is present in the cache.
      * @param key 
      */
-    windowStorageContainsItem(key: string): boolean {
+    containsKey(key: string): boolean {
         BrowserUtils.blockNonBrowserEnvironment();
         return this.windowStorage.hasOwnProperty(key);
     }

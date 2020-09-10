@@ -74,11 +74,11 @@ export abstract class ClientApplication {
         // Initialize the network module class.
         this.networkClient = this.config.system.networkClient;
 
-        // Initialize the browser storage class.
-        this.browserStorage = new BrowserCacheManager(this.config.auth.clientId, this.config.cache);
-
         // Initialize logger
         this.logger = new Logger(this.config.system.loggerOptions);
+
+        // Initialize the browser storage class.
+        this.browserStorage = new BrowserCacheManager(this.config.auth.clientId, this.config.cache);
 
         // Initialize default authority instance
         TrustedAuthority.setTrustedAuthoritiesFromConfig(this.config.auth.knownAuthorities, this.config.auth.cloudDiscoveryMetadata);
