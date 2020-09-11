@@ -30,7 +30,7 @@ export class BrowserCacheManager extends CacheManager {
     private clientId: string;
     
 
-    constructor(clientId: string, cacheConfig: CacheOptions, logger: Logger) {
+    constructor(clientId: string, cacheConfig: CacheOptions, logger?: Logger) {
         super();
         this.logger = logger;
 
