@@ -2,10 +2,10 @@
  * Copyright (c) Microsoft Corporation. All rights reserved.
  * Licensed under the MIT License.
  */
-import { Constants, PersistentCacheKeys, StringUtils, AuthorizationCodeRequest, ICrypto, CacheSchemaType, AccountEntity, IdTokenEntity, CredentialType, AccessTokenEntity, RefreshTokenEntity, AppMetadataEntity, CacheManager, CredentialEntity, ThrottlingEntity, ServerTelemetryCacheValue, Logger } from "@azure/msal-common";
+import { Constants, PersistentCacheKeys, StringUtils, AuthorizationCodeRequest, ICrypto, CacheSchemaType, AccountEntity, IdTokenEntity, CredentialType, AccessTokenEntity, RefreshTokenEntity, AppMetadataEntity, CacheManager, CredentialEntity, ThrottlingEntity, ServerTelemetryCacheValue, Logger, ValidCacheType } from "@azure/msal-common";
 import { CacheOptions } from "../config/Configuration";
 import { BrowserAuthError } from "../error/BrowserAuthError";
-import { BrowserConfigurationAuthError, BrowserConfigurationAuthErrorMessage } from "../error/BrowserConfigurationAuthError";
+import { BrowserConfigurationAuthError } from "../error/BrowserConfigurationAuthError";
 import { BrowserConstants, TemporaryCacheKeys } from "../utils/BrowserConstants";
 import { BrowserStorage } from "./BrowserStorage";
 import { ICacheStorage } from "./ICacheStorage";
@@ -14,7 +14,9 @@ import { InMemoryStorage } from "./InMemoryStorage";
 // Cookie life calculation (hours * minutes * seconds * ms)
 const COOKIE_LIFE_MULTIPLIER = 24 * 60 * 60 * 1000;
 
-/**
+export type CacheKVStore = Record<string, ValidCacheType>;
+
+/** 
  * This class implements the cache storage interface for MSAL through browser local or session storage.
  * Cookies are only used if storeAuthStateInCookie is true, and are only used for
  * parameters such as state and nonce, generally.
@@ -33,28 +35,31 @@ export class BrowserCacheManager extends CacheManager {
     constructor(clientId: string, cacheConfig: CacheOptions, logger?: Logger) {
         super();
         this.logger = logger;
-
-        if (cacheConfig.cacheLocation === BrowserConstants.CACHE_LOCATION_CUSTOM) {
-            if (!cacheConfig.customStorage) {
-                throw BrowserConfigurationAuthError.createCustomStorageNotImplementedError();
-            }
-
-            this.cacheStorage = cacheConfig.customStorage;
-        } else {
-            try {
-                this.cacheStorage = new BrowserStorage(cacheConfig.cacheLocation);
-            } catch (e) {
-                const authError = BrowserConfigurationAuthError.createBrowserStorageInitError(e);
-                this.logger.warning(`${authError}`);
-                this.cacheStorage = new InMemoryStorage();
-            }
-        }
+        
+        this.cacheStorage = this.getCacheStorageObject(cacheConfig.cacheLocation)
 
         this.cacheConfig = cacheConfig;
         this.clientId = clientId;
 
         // Migrate any cache entries from older versions of MSAL.
         this.migrateCacheEntries();
+    }
+
+    /**
+     * Initializes and returns the correct cachestorage object.
+     * @param cacheLocation 
+     */
+    private getCacheStorageObject(cacheLocation: string): ICacheStorage {
+        if (cacheLocation !== BrowserConstants.CACHE_LOCATION_IN_MEMORY) {
+            try {
+                return new BrowserStorage(cacheLocation);
+            } catch (e) {
+                const authError = BrowserConfigurationAuthError.createBrowserStorageInitError(e);
+                this.logger.warning(`${authError}`);
+            }
+        }
+
+        return new InMemoryStorage();        
     }
 
     /**
@@ -67,10 +72,10 @@ export class BrowserCacheManager extends CacheManager {
         const errorKey = `${Constants.CACHE_PREFIX}.${PersistentCacheKeys.ERROR}`;
         const errorDescKey = `${Constants.CACHE_PREFIX}.${PersistentCacheKeys.ERROR_DESC}`;
 
-        const idTokenValue = this.cacheStorage.getItem(idTokenKey);
-        const clientInfoValue = this.cacheStorage.getItem(clientInfoKey);
-        const errorValue = this.cacheStorage.getItem(errorKey);
-        const errorDescValue = this.cacheStorage.getItem(errorDescKey);
+        const idTokenValue = this.cacheStorage.getItem(idTokenKey) as string;
+        const clientInfoValue = this.cacheStorage.getItem(clientInfoKey) as string;
+        const errorValue = this.cacheStorage.getItem(errorKey) as string;
+        const errorDescValue = this.cacheStorage.getItem(errorDescKey) as string;
 
         const values = [idTokenValue, clientInfoValue, errorValue, errorDescValue];
         const keysToMigrate = [PersistentCacheKeys.ID_TOKEN, PersistentCacheKeys.CLIENT_INFO, PersistentCacheKeys.ERROR, PersistentCacheKeys.ERROR_DESC];
@@ -86,7 +91,7 @@ export class BrowserCacheManager extends CacheManager {
      */
     private migrateCacheEntry(newKey: string, value: string): void {
         if (value) {
-            this.setItem(this.generateCacheKey(newKey), value, CacheSchemaType.TEMPORARY);
+            this.setItem(this.generateCacheKey(newKey), value);
         }
     }
 
@@ -105,13 +110,24 @@ export class BrowserCacheManager extends CacheManager {
      * @param key
      * @param value
      */
-    setItem(key: string, value: string | object, type: string): void {
+    setItem(key: string, value: ValidCacheType): void {
+        this.cacheStorage.setItem(key, value);
+        if (typeof value === "string") {
+            const stringVal = value as string;
+            this.cacheStorage.setItem(key, stringVal);
+            if (this.cacheConfig.storeAuthStateInCookie) {
+                this.setItemCookie(key, stringVal);
+            }
+        }
+        /**
         // save the cacheItem
         switch (type) {
             case CacheSchemaType.ACCOUNT:
             case CacheSchemaType.CREDENTIAL:
             case CacheSchemaType.APP_METADATA:
-                this.cacheStorage.setItem(key, JSON.stringify(value));
+            case CacheSchemaType.THROTTLING:
+            case CacheSchemaType.TELEMETRY:
+                
                 break;
             case CacheSchemaType.TEMPORARY: {
                 const stringVal = value as string;
@@ -121,15 +137,11 @@ export class BrowserCacheManager extends CacheManager {
                 }
                 break;
             }
-            case CacheSchemaType.THROTTLING:
-            case CacheSchemaType.TELEMETRY: {
-                this.cacheStorage.setItem(key, JSON.stringify(value));
-                break;
-            }
             default: {
                 throw BrowserAuthError.createInvalidCacheTypeError();
             }
         }
+        */
     }
 
     /**
@@ -137,11 +149,22 @@ export class BrowserCacheManager extends CacheManager {
      * Will retrieve frm cookies if storeAuthStateInCookie is set to true.
      * @param key
      */
-    getItem(key: string, type: string): string | object {
+    getItem(key: string): ValidCacheType {
+        if (this.cacheConfig.storeAuthStateInCookie) {
+            const itemCookie = this.getItemCookie(key);
+            if (!StringUtils.isEmpty(itemCookie)) {
+                return itemCookie;
+            }
+        }
+
         const value = this.cacheStorage.getItem(key);
-        if (StringUtils.isEmpty(value)) {
+        if (!value || StringUtils.isEmpty(value as string)) {
             return null;
         }
+
+        return value;
+
+        /**
         switch (type) {
             case CacheSchemaType.ACCOUNT: {
                 const account = new AccountEntity();
@@ -184,6 +207,7 @@ export class BrowserCacheManager extends CacheManager {
                 throw BrowserAuthError.createInvalidCacheTypeError();
             }
         }
+        */
     }
 
     /**
@@ -334,18 +358,18 @@ export class BrowserCacheManager extends CacheManager {
     setAuthorityCache(authority: string, state: string): void {
         // Cache authorityKey
         const authorityKey = this.generateAuthorityKey(state);
-        this.setItem(this.generateCacheKey(authorityKey), authority, CacheSchemaType.TEMPORARY);
+        this.setItem(this.generateCacheKey(authorityKey), authority);
     }
 
     /**
      * Gets the cached authority based on the cached state. Returns empty if no cached state found.
      */
     getCachedAuthority(): string {
-        const state = this.getItem(this.generateCacheKey(TemporaryCacheKeys.REQUEST_STATE), CacheSchemaType.TEMPORARY) as string;
+        const state = this.getItem(this.generateCacheKey(TemporaryCacheKeys.REQUEST_STATE)) as string;
         if (!state) {
             return null;
         }
-        return this.getItem(this.generateCacheKey(this.generateAuthorityKey(state)), CacheSchemaType.TEMPORARY) as string;
+        return this.getItem(this.generateCacheKey(this.generateAuthorityKey(state))) as string;
     }
 
     /**
@@ -355,10 +379,10 @@ export class BrowserCacheManager extends CacheManager {
      */
     updateCacheEntries(state: string, nonce: string, authorityInstance: string): void {
         // Cache the request state
-        this.setItem(this.generateCacheKey(TemporaryCacheKeys.REQUEST_STATE), state, CacheSchemaType.TEMPORARY);
+        this.setItem(this.generateCacheKey(TemporaryCacheKeys.REQUEST_STATE), state);
 
         // Cache the nonce
-        this.setItem(this.generateCacheKey(this.generateNonceKey(state)), nonce, CacheSchemaType.TEMPORARY);
+        this.setItem(this.generateCacheKey(this.generateNonceKey(state)), nonce);
 
         // Cache authorityKey
         this.setAuthorityCache(authorityInstance, state);
@@ -388,12 +412,12 @@ export class BrowserCacheManager extends CacheManager {
     cleanRequest(): void {
         // Interaction is completed - remove interaction status.
         this.removeItem(this.generateCacheKey(BrowserConstants.INTERACTION_STATUS_KEY));
-        const cachedState = this.getItem(this.generateCacheKey(TemporaryCacheKeys.REQUEST_STATE), CacheSchemaType.TEMPORARY) as string;
+        const cachedState = this.getItem(this.generateCacheKey(TemporaryCacheKeys.REQUEST_STATE)) as string;
         this.resetRequestCache(cachedState || "");
     }
 
     cacheCodeRequest(authCodeRequest: AuthorizationCodeRequest, browserCrypto: ICrypto): void {
-        this.setItem(this.generateCacheKey(TemporaryCacheKeys.REQUEST_PARAMS), browserCrypto.base64Encode(JSON.stringify(authCodeRequest)), CacheSchemaType.TEMPORARY);
+        this.setItem(this.generateCacheKey(TemporaryCacheKeys.REQUEST_PARAMS), browserCrypto.base64Encode(JSON.stringify(authCodeRequest)));
     }
 
     /**
@@ -402,13 +426,13 @@ export class BrowserCacheManager extends CacheManager {
     getCachedRequest(state: string, browserCrypto: ICrypto): AuthorizationCodeRequest {
         try {
             // Get token request from cache and parse as TokenExchangeParameters.
-            const encodedTokenRequest = this.getItem(this.generateCacheKey(TemporaryCacheKeys.REQUEST_PARAMS), CacheSchemaType.TEMPORARY) as string;
+            const encodedTokenRequest = this.getItem(this.generateCacheKey(TemporaryCacheKeys.REQUEST_PARAMS)) as string;
             const parsedRequest = JSON.parse(browserCrypto.base64Decode(encodedTokenRequest)) as AuthorizationCodeRequest;
             this.removeItem(this.generateCacheKey(TemporaryCacheKeys.REQUEST_PARAMS));
             // Get cached authority and use if no authority is cached with request.
             if (StringUtils.isEmpty(parsedRequest.authority)) {
                 const authorityKey: string = this.generateAuthorityKey(state);
-                const cachedAuthority: string = this.getItem(this.generateCacheKey(authorityKey), CacheSchemaType.TEMPORARY) as string;
+                const cachedAuthority: string = this.getItem(this.generateCacheKey(authorityKey)) as string;
                 parsedRequest.authority = cachedAuthority;
             }
             return parsedRequest;

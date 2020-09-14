@@ -38,12 +38,12 @@ export abstract class InteractionHandler {
         }
 
         // Handle code response.
-        const requestState = this.browserStorage.getItem(this.browserStorage.generateCacheKey(TemporaryCacheKeys.REQUEST_STATE), CacheSchemaType.TEMPORARY) as string;
+        const requestState = this.browserStorage.getItem(this.browserStorage.generateCacheKey(TemporaryCacheKeys.REQUEST_STATE)) as string;
         const authCode = this.authModule.handleFragmentResponse(locationHash, requestState);
         
         // Get cached items
         const cachedNonceKey = this.browserStorage.generateNonceKey(requestState);
-        const cachedNonce = this.browserStorage.getItem(this.browserStorage.generateCacheKey(cachedNonceKey), CacheSchemaType.TEMPORARY) as string;
+        const cachedNonce = this.browserStorage.getItem(this.browserStorage.generateCacheKey(cachedNonceKey)) as string;
 
         // Assign code to request
         this.authCodeRequest.code = authCode;

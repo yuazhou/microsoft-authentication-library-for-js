@@ -3,9 +3,9 @@
  * Licensed under the MIT License.
  */
 
-import { AccountCache, AccountFilter, CredentialFilter, CredentialCache } from "./utils/CacheTypes";
+import { AccountCache, AccountFilter, CredentialFilter, CredentialCache, ValidCacheType } from "./utils/CacheTypes";
 import { CacheRecord } from "./entities/CacheRecord";
-import { CacheSchemaType, CredentialType, Constants, APP_METADATA } from "../utils/Constants";
+import { CredentialType, Constants, APP_METADATA } from "../utils/Constants";
 import { CredentialEntity } from "./entities/CredentialEntity";
 import { ScopeSet } from "../request/ScopeSet";
 import { AccountEntity } from "./entities/AccountEntity";
@@ -29,25 +29,25 @@ export abstract class CacheManager implements ICacheManager {
      * @param key
      * @param value
      */
-    abstract setItem(key: string, value: string | object, type?: string): void;
+    abstract setItem(key: string, value: ValidCacheType): void;
 
     /**
      * Function which retrieves item from cache.
      * @param key
      */
-    abstract getItem(key: string, type?: string): string | object;
+    abstract getItem(key: string): ValidCacheType;
 
     /**
      * Function to remove an item from cache given its key.
      * @param key
      */
-    abstract removeItem(key: string, type?: string): boolean;
+    abstract removeItem(key: string): boolean;
 
     /**
      * Function which returns boolean whether cache contains a specific key.
      * @param key
      */
-    abstract containsKey(key: string, type?: string): boolean;
+    abstract containsKey(key: string): boolean;
 
     /**
      * Function which retrieves all current keys from the cache.
@@ -130,8 +130,7 @@ export abstract class CacheManager implements ICacheManager {
         const key = account.generateAccountKey();
         this.setItem(
             key,
-            account,
-            CacheSchemaType.ACCOUNT
+            account
         );
     }
 
@@ -143,8 +142,7 @@ export abstract class CacheManager implements ICacheManager {
         const key = credential.generateCredentialKey();
         this.setItem(
             key,
-            credential,
-            CacheSchemaType.CREDENTIAL
+            credential
         );
     }
 
@@ -178,8 +176,9 @@ export abstract class CacheManager implements ICacheManager {
      * @param key
      */
     getAccount(key: string): AccountEntity {
-        const account = this.getItem(key, CacheSchemaType.ACCOUNT) as AccountEntity;
-        return account;
+        const cachedObj = this.getItem(key) as AccountEntity;
+        const account = new AccountEntity();
+        return (CacheManager.toObject(account, cachedObj) as AccountEntity);
     }
 
     /**
@@ -187,7 +186,9 @@ export abstract class CacheManager implements ICacheManager {
      * @param key
      */
     getCredential(key: string): CredentialEntity | null {
-        return this.getItem(key, CacheSchemaType.CREDENTIAL) as CredentialEntity;
+        const cachedObj = this.getItem(key) as CredentialEntity;
+        const credential = new CredentialEntity();
+        return (CacheManager.toObject(credential, cachedObj) as CredentialEntity);
     }
 
     /**
@@ -364,7 +365,10 @@ export abstract class CacheManager implements ICacheManager {
 
             // Attempt retrieval
             try {
-                entity = this.getItem(cacheKey, CacheSchemaType.CREDENTIAL) as CredentialEntity;
+                const cachedCredential = this.getItem(cacheKey) as CredentialEntity;
+                const credential = new CredentialEntity();
+                entity = CacheManager.toObject(credential, cachedCredential) as CredentialEntity;
+                // this.getItem(cacheKey) as CredentialEntity;
             } catch (e) {
                 return;
             }
@@ -424,7 +428,7 @@ export abstract class CacheManager implements ICacheManager {
         const allCacheKeys = this.getKeys();
         allCacheKeys.forEach((cacheKey) => {
             if (this.isAppMetadata(cacheKey)) {
-                this.removeItem(cacheKey, CacheSchemaType.APP_METADATA);
+                this.removeItem(cacheKey);
             }
         });
 
@@ -456,7 +460,7 @@ export abstract class CacheManager implements ICacheManager {
         if (!account) {
             throw ClientAuthError.createNoAccountFoundError();
         }
-        return (this.removeAccountContext(account) && this.removeItem(accountKey, CacheSchemaType.ACCOUNT));
+        return (this.removeAccountContext(account) && this.removeItem(accountKey));
     }
 
     /**
@@ -473,7 +477,7 @@ export abstract class CacheManager implements ICacheManager {
                 return;
             }
 
-            const cacheEntity: CredentialEntity = this.getItem(cacheKey, CacheSchemaType.CREDENTIAL) as CredentialEntity;
+            const cacheEntity: CredentialEntity = this.getItem(cacheKey) as CredentialEntity;
 
             if (!!cacheEntity && accountId === cacheEntity.generateAccountId()) {
                 this.removeCredential(cacheEntity);
@@ -489,7 +493,7 @@ export abstract class CacheManager implements ICacheManager {
      */
     removeCredential(credential: CredentialEntity): boolean {
         const key = credential.generateCredentialKey();
-        return this.removeItem(key, CacheSchemaType.CREDENTIAL);
+        return this.removeItem(key);
     }
 
     /**
@@ -594,7 +598,7 @@ export abstract class CacheManager implements ICacheManager {
         // Attempt retrieval
         let entity: AccountEntity;
         try {
-            entity = this.getItem(key, CacheSchemaType.ACCOUNT) as AccountEntity;
+            entity = this.getItem(key) as AccountEntity;
         } catch (e) {
             return null;
         }
@@ -633,7 +637,7 @@ export class DefaultStorageClass extends CacheManager {
         const notImplErr = "Storage interface - setItem() has not been implemented for the cacheStorage interface.";
         throw AuthError.createUnexpectedError(notImplErr);
     }
-    getItem(): string | object {
+    getItem(): ValidCacheType {
         const notImplErr = "Storage interface - getItem() has not been implemented for the cacheStorage interface.";
         throw AuthError.createUnexpectedError(notImplErr);
     }

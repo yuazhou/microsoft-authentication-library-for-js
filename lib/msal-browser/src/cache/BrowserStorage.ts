@@ -7,6 +7,7 @@ import { ICacheStorage } from "./ICacheStorage";
 import { BrowserConfigurationAuthError } from "../error/BrowserConfigurationAuthError";
 import { BrowserConstants } from "../utils/BrowserConstants";
 import { BrowserUtils } from "../utils/BrowserUtils";
+import { ValidCacheType } from "@azure/msal-common";
 
 export class BrowserStorage implements ICacheStorage {
 
@@ -52,7 +53,7 @@ export class BrowserStorage implements ICacheStorage {
      * Get the item from the window storage object matching the given key.
      * @param key 
      */
-    getItem(key: string): string {
+    getItem(key: string): ValidCacheType {
         BrowserUtils.blockNonBrowserEnvironment();
         return this.windowStorage.getItem(key);
     }
@@ -62,9 +63,13 @@ export class BrowserStorage implements ICacheStorage {
      * @param key 
      * @param value 
      */
-    setItem(key: string, value: string): void {
+    setItem(key: string, value: ValidCacheType): void {
         BrowserUtils.blockNonBrowserEnvironment();
-        this.windowStorage.setItem(key, value);
+        if (typeof value === "string") {
+            this.windowStorage.setItem(key, value);
+        } else {
+            this.windowStorage.setItem(key, JSON.stringify(value));
+        }
     }
 
     /**

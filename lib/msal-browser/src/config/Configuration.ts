@@ -43,7 +43,6 @@ export type BrowserAuthOptions = {
 export type CacheOptions = {
     cacheLocation?: string;
     storeAuthStateInCookie?: boolean;
-    customStorage?: ICacheStorage;
 };
 
 /**
@@ -95,8 +94,7 @@ const DEFAULT_AUTH_OPTIONS: BrowserAuthOptions = {
 // Default cache options for browser
 const DEFAULT_CACHE_OPTIONS: CacheOptions = {
     cacheLocation: BrowserConstants.CACHE_LOCATION_SESSION,
-    storeAuthStateInCookie: false,
-    customStorage: null
+    storeAuthStateInCookie: false
 };
 
 // Default logger options for browser

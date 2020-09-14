@@ -60,7 +60,7 @@ export class ServerTelemetryManager {
             lastRequests.errors.shift();
         }
 
-        this.cacheManager.setItem(this.telemetryCacheKey, lastRequests, CacheSchemaType.TELEMETRY);
+        this.cacheManager.setItem(this.telemetryCacheKey, lastRequests);
 
         return;
     }
@@ -69,7 +69,7 @@ export class ServerTelemetryManager {
         const lastRequests = this.getLastRequests();
         lastRequests.cacheHits += 1;
 
-        this.cacheManager.setItem(this.telemetryCacheKey, lastRequests, CacheSchemaType.TELEMETRY);
+        this.cacheManager.setItem(this.telemetryCacheKey, lastRequests);
         return lastRequests.cacheHits;
     }
 
@@ -80,7 +80,7 @@ export class ServerTelemetryManager {
             errorCount: 0,
             cacheHits: 0            
         };
-        const lastRequests = this.cacheManager.getItem(this.telemetryCacheKey, CacheSchemaType.TELEMETRY) as ServerTelemetryCacheValue;
+        const lastRequests = this.cacheManager.getItem(this.telemetryCacheKey) as ServerTelemetryCacheValue;
         
         return lastRequests || initialValue;
     }

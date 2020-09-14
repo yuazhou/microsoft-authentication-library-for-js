@@ -1,18 +1,20 @@
+import { ValidCacheType } from "@azure/msal-common";
+import { CacheKVStore } from "./BrowserCacheManager";
 import { ICacheStorage } from "./ICacheStorage";
 
 export class InMemoryStorage implements ICacheStorage {
 
-    private inMemoryStorage: Record<string, string>;
+    private inMemoryStorage: CacheKVStore;
 
     constructor() {
         this.inMemoryStorage = {};
     }
 
-    getItem(key: string): string {
-        return this.inMemoryStorage[key]
+    getItem(key: string): ValidCacheType {
+        return this.inMemoryStorage[key];
     }
 
-    setItem(key: string, value: string): void {
+    setItem(key: string, value: ValidCacheType): void {
         this.inMemoryStorage[key] = value;
     }
 
