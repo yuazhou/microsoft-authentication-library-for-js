@@ -86,6 +86,7 @@
 						clientInfo: Full base64 encoded client info received from ESTS
 						lastModificationTime: last time this entity was modified in the cache
 						lastModificationApp:
+						oboAssertion: access token passed in as part of OBO request
 					}</p>
 				</div>
 			</section>
@@ -112,6 +113,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_src_cache_entities_accountentity_.accountentity.html#lastmodificationtime" class="tsd-kind-icon">last<wbr>Modification<wbr>Time</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_src_cache_entities_accountentity_.accountentity.html#localaccountid" class="tsd-kind-icon">local<wbr>Account<wbr>Id</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_src_cache_entities_accountentity_.accountentity.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_src_cache_entities_accountentity_.accountentity.html#oboassertion" class="tsd-kind-icon">obo<wbr>Assertion</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_src_cache_entities_accountentity_.accountentity.html#realm" class="tsd-kind-icon">realm</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_src_cache_entities_accountentity_.accountentity.html#username" class="tsd-kind-icon">username</a></li>
 							</ul>
@@ -126,6 +128,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_cache_entities_accountentity_.accountentity.html#createadfsaccount" class="tsd-kind-icon">createADFSAccount</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_cache_entities_accountentity_.accountentity.html#createaccount" class="tsd-kind-icon">create<wbr>Account</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_cache_entities_accountentity_.accountentity.html#generateaccountcachekey" class="tsd-kind-icon">generate<wbr>Account<wbr>Cache<wbr>Key</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_cache_entities_accountentity_.accountentity.html#isaccountentity" class="tsd-kind-icon">is<wbr>Account<wbr>Entity</a></li>
 							</ul>
 						</section>
 					</div>
@@ -139,7 +142,7 @@
 					<div class="tsd-signature tsd-kind-icon">authority<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L47">src/cache/entities/AccountEntity.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L48">src/cache/entities/AccountEntity.ts:48</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -149,7 +152,7 @@
 					<div class="tsd-signature tsd-kind-icon">client<wbr>Info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L49">src/cache/entities/AccountEntity.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L50">src/cache/entities/AccountEntity.ts:50</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -159,7 +162,7 @@
 					<div class="tsd-signature tsd-kind-icon">environment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L43">src/cache/entities/AccountEntity.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L44">src/cache/entities/AccountEntity.ts:44</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -169,7 +172,7 @@
 					<div class="tsd-signature tsd-kind-icon">home<wbr>Account<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L42">src/cache/entities/AccountEntity.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L43">src/cache/entities/AccountEntity.ts:43</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -179,7 +182,7 @@
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Modification<wbr>App<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L51">src/cache/entities/AccountEntity.ts:51</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L52">src/cache/entities/AccountEntity.ts:52</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -189,7 +192,7 @@
 					<div class="tsd-signature tsd-kind-icon">last<wbr>Modification<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L50">src/cache/entities/AccountEntity.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L51">src/cache/entities/AccountEntity.ts:51</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -199,7 +202,7 @@
 					<div class="tsd-signature tsd-kind-icon">local<wbr>Account<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L45">src/cache/entities/AccountEntity.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L46">src/cache/entities/AccountEntity.ts:46</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -209,7 +212,17 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L48">src/cache/entities/AccountEntity.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L49">src/cache/entities/AccountEntity.ts:49</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="oboassertion" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> obo<wbr>Assertion</h3>
+					<div class="tsd-signature tsd-kind-icon">obo<wbr>Assertion<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L53">src/cache/entities/AccountEntity.ts:53</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -219,7 +232,7 @@
 					<div class="tsd-signature tsd-kind-icon">realm<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L44">src/cache/entities/AccountEntity.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L45">src/cache/entities/AccountEntity.ts:45</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -229,7 +242,7 @@
 					<div class="tsd-signature tsd-kind-icon">username<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L46">src/cache/entities/AccountEntity.ts:46</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L47">src/cache/entities/AccountEntity.ts:47</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -246,7 +259,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L56">src/cache/entities/AccountEntity.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L58">src/cache/entities/AccountEntity.ts:58</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -268,7 +281,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L64">src/cache/entities/AccountEntity.ts:64</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L66">src/cache/entities/AccountEntity.ts:66</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -290,7 +303,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L76">src/cache/entities/AccountEntity.ts:76</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L78">src/cache/entities/AccountEntity.ts:78</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -312,7 +325,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L95">src/cache/entities/AccountEntity.ts:95</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L97">src/cache/entities/AccountEntity.ts:97</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -328,13 +341,13 @@
 					<a name="createadfsaccount" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> createADFSAccount</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">createADFSAccount<span class="tsd-signature-symbol">(</span>authority<span class="tsd-signature-symbol">: </span><a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a>, idToken<span class="tsd-signature-symbol">: </span><a href="_src_account_idtoken_.idtoken.html" class="tsd-signature-type">IdToken</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_cache_entities_accountentity_.accountentity.html" class="tsd-signature-type">AccountEntity</a></li>
+						<li class="tsd-signature tsd-kind-icon">createADFSAccount<span class="tsd-signature-symbol">(</span>authority<span class="tsd-signature-symbol">: </span><a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a>, idToken<span class="tsd-signature-symbol">: </span><a href="_src_account_authtoken_.authtoken.html" class="tsd-signature-type">AuthToken</a>, oboAssertion<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_cache_entities_accountentity_.accountentity.html" class="tsd-signature-type">AccountEntity</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L165">src/cache/entities/AccountEntity.ts:165</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L175">src/cache/entities/AccountEntity.ts:175</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -348,9 +361,12 @@
 									<h5>authority: <a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a></h5>
 								</li>
 								<li>
-									<h5>idToken: <a href="_src_account_idtoken_.idtoken.html" class="tsd-signature-type">IdToken</a></h5>
+									<h5>idToken: <a href="_src_account_authtoken_.authtoken.html" class="tsd-signature-type">AuthToken</a></h5>
 									<div class="tsd-comment tsd-typography">
 									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> oboAssertion: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_src_cache_entities_accountentity_.accountentity.html" class="tsd-signature-type">AccountEntity</a></h4>
@@ -361,13 +377,13 @@
 					<a name="createaccount" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>Account</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Account<span class="tsd-signature-symbol">(</span>clientInfo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, authority<span class="tsd-signature-symbol">: </span><a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a>, idToken<span class="tsd-signature-symbol">: </span><a href="_src_account_idtoken_.idtoken.html" class="tsd-signature-type">IdToken</a>, crypto<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_cache_entities_accountentity_.accountentity.html" class="tsd-signature-type">AccountEntity</a></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Account<span class="tsd-signature-symbol">(</span>clientInfo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, authority<span class="tsd-signature-symbol">: </span><a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a>, idToken<span class="tsd-signature-symbol">: </span><a href="_src_account_authtoken_.authtoken.html" class="tsd-signature-type">AuthToken</a>, crypto<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a>, oboAssertion<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_cache_entities_accountentity_.accountentity.html" class="tsd-signature-type">AccountEntity</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L125">src/cache/entities/AccountEntity.ts:125</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L128">src/cache/entities/AccountEntity.ts:128</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -384,10 +400,13 @@
 									<h5>authority: <a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a></h5>
 								</li>
 								<li>
-									<h5>idToken: <a href="_src_account_idtoken_.idtoken.html" class="tsd-signature-type">IdToken</a></h5>
+									<h5>idToken: <a href="_src_account_authtoken_.authtoken.html" class="tsd-signature-type">AuthToken</a></h5>
 								</li>
 								<li>
 									<h5>crypto: <a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> oboAssertion: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_src_cache_entities_accountentity_.accountentity.html" class="tsd-signature-type">AccountEntity</a></h4>
@@ -404,7 +423,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L108">src/cache/entities/AccountEntity.ts:108</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L111">src/cache/entities/AccountEntity.ts:111</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -421,6 +440,36 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="isaccountentity" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Account<wbr>Entity</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Account<wbr>Entity<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/entities/AccountEntity.ts#L208">src/cache/entities/AccountEntity.ts:208</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Validates an entity: checks for all expected params</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>entity: <span class="tsd-signature-type">object</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -469,6 +518,9 @@
 								<a href="_src_cache_entities_accountentity_.accountentity.html#name" class="tsd-kind-icon">name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_src_cache_entities_accountentity_.accountentity.html#oboassertion" class="tsd-kind-icon">obo<wbr>Assertion</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_src_cache_entities_accountentity_.accountentity.html#realm" class="tsd-kind-icon">realm</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -494,6 +546,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_src_cache_entities_accountentity_.accountentity.html#generateaccountcachekey" class="tsd-kind-icon">generate<wbr>Account<wbr>Cache<wbr>Key</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_src_cache_entities_accountentity_.accountentity.html#isaccountentity" class="tsd-kind-icon">is<wbr>Account<wbr>Entity</a>
 							</li>
 						</ul>
 					</li>

@@ -85,7 +85,7 @@
 					<div class="tsd-signature tsd-kind-icon">Device<wbr>Code<wbr>Request<span class="tsd-signature-symbol">:</span> <a href="_src_request_baseauthrequest_.html#baseauthrequest" class="tsd-signature-type">BaseAuthRequest</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>cancel<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>deviceCodeCallback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><a href="_src_response_devicecoderesponse_.html#devicecoderesponse" class="tsd-signature-type">DeviceCodeResponse</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/DeviceCodeRequest.ts#L17">src/request/DeviceCodeRequest.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/DeviceCodeRequest.ts#L19">src/request/DeviceCodeRequest.ts:19</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -97,6 +97,8 @@
 								<li>correlationId              - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
 								<li>deviceCodeCallback         - Callback containing device code response. Message should be shown to end user. End user can then navigate to the verification_uri, input the user_code, and input credentials.</li>
 								<li>cancel                     - Boolean to cancel polling of device code endpoint. While the user authenticates on a separate device, MSAL polls the the token endpoint of security token service for the interval specified in the device code response (usually 15 minutes). To stop polling and cancel the request, set cancel=true.</li>
+								<li>resourceRequestMethod      - HTTP Request type used to request data from the resource (i.e. &quot;GET&quot;, &quot;POST&quot;, etc.).  Used for proof-of-possession flows.</li>
+								<li>resourceRequestUri         - URI that token will be used for. Used for proof-of-possession flows.</li>
 							</ul>
 						</div>
 					</div>

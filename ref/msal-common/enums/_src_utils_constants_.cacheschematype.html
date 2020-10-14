@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Credentail Type stored in the cache</p>
+						<p>Credential Type stored in the cache</p>
 					</div>
 				</div>
 			</section>
@@ -81,10 +81,16 @@
 						<section class="tsd-index-section ">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.cacheschematype.html#access_token" class="tsd-kind-icon">ACCESS_<wbr>TOKEN</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.cacheschematype.html#account" class="tsd-kind-icon">ACCOUNT</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.cacheschematype.html#app_meta_data" class="tsd-kind-icon">APP_<wbr>META_<wbr>DATA</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.cacheschematype.html#app_metadata" class="tsd-kind-icon">APP_<wbr>METADATA</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.cacheschematype.html#credential" class="tsd-kind-icon">CREDENTIAL</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.cacheschematype.html#id_token" class="tsd-kind-icon">ID_<wbr>TOKEN</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.cacheschematype.html#refresh_token" class="tsd-kind-icon">REFRESH_<wbr>TOKEN</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.cacheschematype.html#telemetry" class="tsd-kind-icon">TELEMETRY</a></li>
 								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.cacheschematype.html#temporary" class="tsd-kind-icon">TEMPORARY</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.cacheschematype.html#throttling" class="tsd-kind-icon">THROTTLING</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.cacheschematype.html#undefined" class="tsd-kind-icon">UNDEFINED</a></li>
 							</ul>
 						</section>
 					</div>
@@ -93,22 +99,32 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="access_token" class="tsd-anchor"></a>
+					<h3>ACCESS_<wbr>TOKEN</h3>
+					<div class="tsd-signature tsd-kind-icon">ACCESS_<wbr>TOKEN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;AccessToken&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L233">src/utils/Constants.ts:233</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
 					<a name="account" class="tsd-anchor"></a>
 					<h3>ACCOUNT</h3>
 					<div class="tsd-signature tsd-kind-icon">ACCOUNT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;Account&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L225">src/utils/Constants.ts:225</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L230">src/utils/Constants.ts:230</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="app_meta_data" class="tsd-anchor"></a>
-					<h3>APP_<wbr>META_<wbr>DATA</h3>
-					<div class="tsd-signature tsd-kind-icon">APP_<wbr>META_<wbr>DATA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;AppMetadata&quot;</span></div>
+					<a name="app_metadata" class="tsd-anchor"></a>
+					<h3>APP_<wbr>METADATA</h3>
+					<div class="tsd-signature tsd-kind-icon">APP_<wbr>METADATA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;AppMetadata&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L227">src/utils/Constants.ts:227</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L235">src/utils/Constants.ts:235</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -118,7 +134,37 @@
 					<div class="tsd-signature tsd-kind-icon">CREDENTIAL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;Credential&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L226">src/utils/Constants.ts:226</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L231">src/utils/Constants.ts:231</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="id_token" class="tsd-anchor"></a>
+					<h3>ID_<wbr>TOKEN</h3>
+					<div class="tsd-signature tsd-kind-icon">ID_<wbr>TOKEN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;IdToken&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L232">src/utils/Constants.ts:232</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="refresh_token" class="tsd-anchor"></a>
+					<h3>REFRESH_<wbr>TOKEN</h3>
+					<div class="tsd-signature tsd-kind-icon">REFRESH_<wbr>TOKEN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;RefreshToken&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L234">src/utils/Constants.ts:234</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="telemetry" class="tsd-anchor"></a>
+					<h3>TELEMETRY</h3>
+					<div class="tsd-signature tsd-kind-icon">TELEMETRY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;Telemetry&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L237">src/utils/Constants.ts:237</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -128,7 +174,27 @@
 					<div class="tsd-signature tsd-kind-icon">TEMPORARY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;TempCache&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L228">src/utils/Constants.ts:228</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L236">src/utils/Constants.ts:236</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="throttling" class="tsd-anchor"></a>
+					<h3>THROTTLING</h3>
+					<div class="tsd-signature tsd-kind-icon">THROTTLING<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;Throttling&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L239">src/utils/Constants.ts:239</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="undefined" class="tsd-anchor"></a>
+					<h3>UNDEFINED</h3>
+					<div class="tsd-signature tsd-kind-icon">UNDEFINED<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;Undefined&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L238">src/utils/Constants.ts:238</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -154,6 +220,9 @@
 						<a href="_src_utils_constants_.aadserverparamkeys.html" class="tsd-kind-icon">AADServer<wbr>Param<wbr>Keys</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="_src_utils_constants_.authenticationscheme.html" class="tsd-kind-icon">Authentication<wbr>Scheme</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="_src_utils_constants_.cacheaccounttype.html" class="tsd-kind-icon">Cache<wbr>Account<wbr>Type</a>
 					</li>
 				</ul>
@@ -162,16 +231,34 @@
 						<a href="_src_utils_constants_.cacheschematype.html" class="tsd-kind-icon">Cache<wbr>Schema<wbr>Type</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_src_utils_constants_.cacheschematype.html#access_token" class="tsd-kind-icon">ACCESS_<wbr>TOKEN</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="_src_utils_constants_.cacheschematype.html#account" class="tsd-kind-icon">ACCOUNT</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_src_utils_constants_.cacheschematype.html#app_meta_data" class="tsd-kind-icon">APP_<wbr>META_<wbr>DATA</a>
+								<a href="_src_utils_constants_.cacheschematype.html#app_metadata" class="tsd-kind-icon">APP_<wbr>METADATA</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="_src_utils_constants_.cacheschematype.html#credential" class="tsd-kind-icon">CREDENTIAL</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_src_utils_constants_.cacheschematype.html#id_token" class="tsd-kind-icon">ID_<wbr>TOKEN</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_src_utils_constants_.cacheschematype.html#refresh_token" class="tsd-kind-icon">REFRESH_<wbr>TOKEN</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_src_utils_constants_.cacheschematype.html#telemetry" class="tsd-kind-icon">TELEMETRY</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
 								<a href="_src_utils_constants_.cacheschematype.html#temporary" class="tsd-kind-icon">TEMPORARY</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_src_utils_constants_.cacheschematype.html#throttling" class="tsd-kind-icon">THROTTLING</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_src_utils_constants_.cacheschematype.html#undefined" class="tsd-kind-icon">UNDEFINED</a>
 							</li>
 						</ul>
 					</li>
@@ -181,6 +268,9 @@
 						<a href="_src_utils_constants_.cachetype.html" class="tsd-kind-icon">Cache<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="_src_utils_constants_.claimsrequestkeys.html" class="tsd-kind-icon">Claims<wbr>Request<wbr>Keys</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="_src_utils_constants_.credentialtype.html" class="tsd-kind-icon">Credential<wbr>Type</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module">
@@ -188,9 +278,6 @@
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="_src_utils_constants_.headernames.html" class="tsd-kind-icon">Header<wbr>Names</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="_src_utils_constants_.idtokenclaimname.html" class="tsd-kind-icon">Id<wbr>Token<wbr>Claim<wbr>Name</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="_src_utils_constants_.persistentcachekeys.html" class="tsd-kind-icon">Persistent<wbr>Cache<wbr>Keys</a>
@@ -205,7 +292,7 @@
 						<a href="_src_utils_constants_.separators.html" class="tsd-kind-icon">Separators</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="../modules/_src_utils_constants_.html#app_meta_data" class="tsd-kind-icon">APP_<wbr>META_<wbr>DATA</a>
+						<a href="../modules/_src_utils_constants_.html#app_metadata" class="tsd-kind-icon">APP_<wbr>METADATA</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
 						<a href="../modules/_src_utils_constants_.html#blacklistedeqparams" class="tsd-kind-icon">BlacklistedEQParams</a>
@@ -216,6 +303,9 @@
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
 						<a href="../modules/_src_utils_constants_.html#codechallengemethodvaluesarray" class="tsd-kind-icon">Code<wbr>Challenge<wbr>Method<wbr>Values<wbr>Array</a>
 					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-module">
+						<a href="../modules/_src_utils_constants_.html#the_family_id" class="tsd-kind-icon">THE_<wbr>FAMILY_<wbr>ID</a>
+					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-module">
 						<a href="../modules/_src_utils_constants_.html#codechallengemethodvalues" class="tsd-kind-icon">Code<wbr>Challenge<wbr>Method<wbr>Values</a>
 					</li>
@@ -223,7 +313,16 @@
 						<a href="../modules/_src_utils_constants_.html#constants" class="tsd-kind-icon">Constants</a>
 					</li>
 					<li class=" tsd-kind-object-literal tsd-parent-kind-module">
+						<a href="../modules/_src_utils_constants_.html#errors" class="tsd-kind-icon">Errors</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-module">
 						<a href="../modules/_src_utils_constants_.html#promptvalue" class="tsd-kind-icon">Prompt<wbr>Value</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-module">
+						<a href="../modules/_src_utils_constants_.html#server_telem_constants" class="tsd-kind-icon">SERVER_<wbr>TELEM_<wbr>CONSTANTS</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-module">
+						<a href="../modules/_src_utils_constants_.html#throttlingconstants" class="tsd-kind-icon">Throttling<wbr>Constants</a>
 					</li>
 				</ul>
 			</nav>

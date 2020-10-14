@@ -82,10 +82,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="refreshtokenrequest" class="tsd-anchor"></a>
 					<h3>Refresh<wbr>Token<wbr>Request</h3>
-					<div class="tsd-signature tsd-kind-icon">Refresh<wbr>Token<wbr>Request<span class="tsd-signature-symbol">:</span> <a href="_src_request_baseauthrequest_.html#baseauthrequest" class="tsd-signature-type">BaseAuthRequest</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>refreshToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">Refresh<wbr>Token<wbr>Request<span class="tsd-signature-symbol">:</span> <a href="_src_request_baseauthrequest_.html#baseauthrequest" class="tsd-signature-type">BaseAuthRequest</a><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>authenticationScheme<span class="tsd-signature-symbol">?: </span><a href="../enums/_src_utils_constants_.authenticationscheme.html" class="tsd-signature-type">AuthenticationScheme</a><span class="tsd-signature-symbol">; </span>refreshToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/RefreshTokenRequest.ts#L15">src/request/RefreshTokenRequest.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/RefreshTokenRequest.ts#L19">src/request/RefreshTokenRequest.ts:19</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -93,9 +93,12 @@
 							<p>RefreshTokenRequest</p>
 							<ul>
 								<li>scopes                  - Array of scopes the application is requesting access to.</li>
+								<li>claims                  - A stringified claims request which will be added to all /authorize and /token calls</li>
 								<li>authority               - URL of the authority, the security token service (STS) from which MSAL will acquire tokens.</li>
 								<li>correlationId           - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
 								<li>refreshToken            - A refresh token returned from a previous request to the Identity provider.</li>
+								<li>resourceRequestMethod      - HTTP Request type used to request data from the resource (i.e. &quot;GET&quot;, &quot;POST&quot;, etc.).  Used for proof-of-possession flows.</li>
+								<li>resourceRequestUri         - URI that token will be used for. Used for proof-of-possession flows.</li>
 							</ul>
 						</div>
 					</div>

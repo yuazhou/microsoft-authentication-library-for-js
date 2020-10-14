@@ -93,6 +93,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_crypto_icrypto_.icrypto.html#base64encode" class="tsd-kind-icon">base64<wbr>Encode</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_crypto_icrypto_.icrypto.html#createnewguid" class="tsd-kind-icon">create<wbr>New<wbr>Guid</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_crypto_icrypto_.icrypto.html#generatepkcecodes" class="tsd-kind-icon">generate<wbr>Pkce<wbr>Codes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_crypto_icrypto_.icrypto.html#getpublickeythumbprint" class="tsd-kind-icon">get<wbr>Public<wbr>Key<wbr>Thumbprint</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_crypto_icrypto_.icrypto.html#signjwt" class="tsd-kind-icon">sign<wbr>Jwt</a></li>
 							</ul>
 						</section>
 					</div>
@@ -110,7 +112,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/crypto/ICrypto.ts#L33">src/crypto/ICrypto.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/crypto/ICrypto.ts#L35">src/crypto/ICrypto.ts:35</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -140,7 +142,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/crypto/ICrypto.ts#L28">src/crypto/ICrypto.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/crypto/ICrypto.ts#L30">src/crypto/ICrypto.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -170,7 +172,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/crypto/ICrypto.ts#L23">src/crypto/ICrypto.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/crypto/ICrypto.ts#L25">src/crypto/ICrypto.ts:25</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -192,7 +194,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/crypto/ICrypto.ts#L37">src/crypto/ICrypto.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/crypto/ICrypto.ts#L39">src/crypto/ICrypto.ts:39</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -201,6 +203,70 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_crypto_icrypto_.html#pkcecodes" class="tsd-signature-type">PkceCodes</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getpublickeythumbprint" class="tsd-anchor"></a>
+					<h3>get<wbr>Public<wbr>Key<wbr>Thumbprint</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Public<wbr>Key<wbr>Thumbprint<span class="tsd-signature-symbol">(</span>resourceRequestMethod<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, resourceRequestUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/crypto/ICrypto.ts#L45">src/crypto/ICrypto.ts:45</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generates an JWK RSA S256 Thumbprint</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>resourceRequestMethod: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>resourceRequestUri: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="signjwt" class="tsd-anchor"></a>
+					<h3>sign<wbr>Jwt</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">sign<wbr>Jwt<span class="tsd-signature-symbol">(</span>payload<span class="tsd-signature-symbol">: </span><a href="../modules/_src_crypto_signedhttprequest_.html#signedhttprequest" class="tsd-signature-type">SignedHttpRequest</a>, kid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/crypto/ICrypto.ts#L50">src/crypto/ICrypto.ts:50</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a signed proof-of-possession token with a given acces token that contains a cnf claim with the required kid.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>payload: <a href="../modules/_src_crypto_signedhttprequest_.html#signedhttprequest" class="tsd-signature-type">SignedHttpRequest</a></h5>
+								</li>
+								<li>
+									<h5>kid: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -235,6 +301,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="_src_crypto_icrypto_.icrypto.html#generatepkcecodes" class="tsd-kind-icon">generate<wbr>Pkce<wbr>Codes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_src_crypto_icrypto_.icrypto.html#getpublickeythumbprint" class="tsd-kind-icon">get<wbr>Public<wbr>Key<wbr>Thumbprint</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_src_crypto_icrypto_.icrypto.html#signjwt" class="tsd-kind-icon">sign<wbr>Jwt</a>
 							</li>
 						</ul>
 					</li>

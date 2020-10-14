@@ -100,12 +100,14 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_scopeset_.scopeset.html#appendscope" class="tsd-kind-icon">append<wbr>Scope</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_scopeset_.scopeset.html#appendscopes" class="tsd-kind-icon">append<wbr>Scopes</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_scopeset_.scopeset.html#asarray" class="tsd-kind-icon">as<wbr>Array</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_scopeset_.scopeset.html#containsonlydefaultscopes" class="tsd-kind-icon">contains<wbr>Only<wbr>Default<wbr>Scopes</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_scopeset_.scopeset.html#containsscope" class="tsd-kind-icon">contains<wbr>Scope</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_scopeset_.scopeset.html#containsscopeset" class="tsd-kind-icon">contains<wbr>Scope<wbr>Set</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_scopeset_.scopeset.html#getscopecount" class="tsd-kind-icon">get<wbr>Scope<wbr>Count</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_scopeset_.scopeset.html#intersectingscopesets" class="tsd-kind-icon">intersecting<wbr>Scope<wbr>Sets</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_scopeset_.scopeset.html#printscopes" class="tsd-kind-icon">print<wbr>Scopes</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_scopeset_.scopeset.html#printscopeslowercase" class="tsd-kind-icon">print<wbr>Scopes<wbr>Lower<wbr>Case</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_scopeset_.scopeset.html#removedefaultscopes" class="tsd-kind-icon">remove<wbr>Default<wbr>Scopes</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_scopeset_.scopeset.html#removescope" class="tsd-kind-icon">remove<wbr>Scope</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_scopeset_.scopeset.html#unionscopesets" class="tsd-kind-icon">union<wbr>Scope<wbr>Sets</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_request_scopeset_.scopeset.html#fromstring" class="tsd-kind-icon">from<wbr>String</a></li>
@@ -126,7 +128,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L17">src/request/ScopeSet.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L18">src/request/ScopeSet.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -152,7 +154,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L79">src/request/ScopeSet.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L101">src/request/ScopeSet.ts:101</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -182,7 +184,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L89">src/request/ScopeSet.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L111">src/request/ScopeSet.ts:111</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -212,7 +214,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L150">src/request/ScopeSet.ts:150</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L185">src/request/ScopeSet.ts:185</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -221,6 +223,28 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="containsonlydefaultscopes" class="tsd-anchor"></a>
+					<h3>contains<wbr>Only<wbr>Default<wbr>Scopes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">contains<wbr>Only<wbr>Default<wbr>Scopes<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L82">src/request/ScopeSet.ts:82</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check if set of scopes contains only the defaults</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -234,7 +258,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L59">src/request/ScopeSet.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L60">src/request/ScopeSet.ts:60</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -264,7 +288,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L67">src/request/ScopeSet.ts:67</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L71">src/request/ScopeSet.ts:71</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -294,7 +318,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L143">src/request/ScopeSet.ts:143</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L178">src/request/ScopeSet.ts:178</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -316,7 +340,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L126">src/request/ScopeSet.ts:126</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L158">src/request/ScopeSet.ts:158</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -346,7 +370,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L159">src/request/ScopeSet.ts:159</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L194">src/request/ScopeSet.ts:194</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -368,7 +392,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L170">src/request/ScopeSet.ts:170</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L205">src/request/ScopeSet.ts:205</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -377,6 +401,29 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removedefaultscopes" class="tsd-anchor"></a>
+					<h3>remove<wbr>Default<wbr>Scopes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Default<wbr>Scopes<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L134">src/request/ScopeSet.ts:134</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes default scopes from set of scopes
+									Primarily used to prevent cache misses if the default scopes are not returned from the server</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -390,7 +437,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L101">src/request/ScopeSet.ts:101</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L123">src/request/ScopeSet.ts:123</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -420,7 +467,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L112">src/request/ScopeSet.ts:112</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L144">src/request/ScopeSet.ts:144</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -450,7 +497,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L37">src/request/ScopeSet.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/ScopeSet.ts#L38">src/request/ScopeSet.ts:38</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -501,6 +548,9 @@
 								<a href="_src_request_scopeset_.scopeset.html#asarray" class="tsd-kind-icon">as<wbr>Array</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_src_request_scopeset_.scopeset.html#containsonlydefaultscopes" class="tsd-kind-icon">contains<wbr>Only<wbr>Default<wbr>Scopes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_request_scopeset_.scopeset.html#containsscope" class="tsd-kind-icon">contains<wbr>Scope</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -517,6 +567,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_request_scopeset_.scopeset.html#printscopeslowercase" class="tsd-kind-icon">print<wbr>Scopes<wbr>Lower<wbr>Case</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_src_request_scopeset_.scopeset.html#removedefaultscopes" class="tsd-kind-icon">remove<wbr>Default<wbr>Scopes</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_request_scopeset_.scopeset.html#removescope" class="tsd-kind-icon">remove<wbr>Scope</a>

@@ -103,18 +103,18 @@
 					<a name="generatelibrarystate" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> generate<wbr>Library<wbr>State</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">generate<wbr>Library<wbr>State<span class="tsd-signature-symbol">(</span>cryptoObj<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Library<wbr>State<span class="tsd-signature-symbol">(</span>cryptoObj<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a>, meta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/ProtocolUtils.ts#L50">src/utils/ProtocolUtils.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/ProtocolUtils.ts#L52">src/utils/ProtocolUtils.ts:52</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Generates the state value used by the library.</p>
+									<p>Generates the state value used by the common library.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -123,6 +123,9 @@
 									<h5>cryptoObj: <a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a></h5>
 									<div class="tsd-comment tsd-typography">
 									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> meta: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -133,13 +136,13 @@
 					<a name="parserequeststate" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> parse<wbr>Request<wbr>State</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">parse<wbr>Request<wbr>State<span class="tsd-signature-symbol">(</span>state<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cryptoObj<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_src_utils_protocolutils_.html#requeststateobject" class="tsd-signature-type">RequestStateObject</a></li>
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Request<wbr>State<span class="tsd-signature-symbol">(</span>cryptoObj<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a>, state<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_src_utils_protocolutils_.html#requeststateobject" class="tsd-signature-type">RequestStateObject</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/ProtocolUtils.ts#L71">src/utils/ProtocolUtils.ts:71</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/ProtocolUtils.ts#L77">src/utils/ProtocolUtils.ts:77</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -150,12 +153,12 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>state: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
 									<h5>cryptoObj: <a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a></h5>
 									<div class="tsd-comment tsd-typography">
 									</div>
+								</li>
+								<li>
+									<h5>state: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../modules/_src_utils_protocolutils_.html#requeststateobject" class="tsd-signature-type">RequestStateObject</a></h4>
@@ -166,13 +169,13 @@
 					<a name="setrequeststate" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> set<wbr>Request<wbr>State</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Request<wbr>State<span class="tsd-signature-symbol">(</span>userState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cryptoObj<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Request<wbr>State<span class="tsd-signature-symbol">(</span>cryptoObj<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a>, userState<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, meta<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/ProtocolUtils.ts#L40">src/utils/ProtocolUtils.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/ProtocolUtils.ts#L42">src/utils/ProtocolUtils.ts:42</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -183,10 +186,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>userState: <span class="tsd-signature-type">string</span></h5>
+									<h5>cryptoObj: <a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a></h5>
 								</li>
 								<li>
-									<h5>cryptoObj: <a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> userState: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> meta: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>

@@ -69,11 +69,87 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Classes</h3>
+							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_src_response_authenticationresult_.authenticationresult.html" class="tsd-kind-icon">Authentication<wbr>Result</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_src_response_authenticationresult_.html#authenticationresult" class="tsd-kind-icon">Authentication<wbr>Result</a></li>
 							</ul>
 						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="authenticationresult" class="tsd-anchor"></a>
+					<h3>Authentication<wbr>Result</h3>
+					<div class="tsd-signature tsd-kind-icon">Authentication<wbr>Result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>accessToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>account<span class="tsd-signature-symbol">: </span><a href="_src_account_accountinfo_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol">; </span>expiresOn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">; </span>extExpiresOn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">; </span>familyId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>fromCache<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>idToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>idTokenClaims<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>state<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>tenantId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>tokenType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>uniqueId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/response/AuthenticationResult.ts#L23">src/response/AuthenticationResult.ts:23</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Result returned from the authority&#39;s token endpoint.</p>
+							<ul>
+								<li>uniqueId               - <code>oid</code> or <code>sub</code> claim from ID token</li>
+								<li>tenantId               - <code>tid</code> claim from ID token</li>
+								<li>scopes                 - Scopes that are validated for the respective token</li>
+								<li>account                - An account object representation of the currently signed-in user</li>
+								<li>idToken                - Id token received as part of the response</li>
+								<li>idTokenClaims          - MSAL-relevant ID token claims</li>
+								<li>accessToken            - Access token received as part of the response</li>
+								<li>fromCache              - Boolean denoting whether token came from cache</li>
+								<li>expiresOn              - Javascript Date object representing relative expiration of access token</li>
+								<li>extExpiresOn           - Javascript Date object representing extended relative expiration of access token in case of server outage</li>
+								<li>state                  - Value passed in by user in request</li>
+								<li>familyId               - Family ID identifier, usually only used for refresh tokens</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>access<wbr>Token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>account<span class="tsd-signature-symbol">: </span><a href="_src_account_accountinfo_.html#accountinfo" class="tsd-signature-type">AccountInfo</a></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>expires<wbr>On<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> ext<wbr>Expires<wbr>On<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Date</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> family<wbr>Id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>from<wbr>Cache<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>id<wbr>Token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>id<wbr>Token<wbr>Claims<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> state<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>tenant<wbr>Id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>token<wbr>Type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>unique<wbr>Id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
 					</div>
 				</section>
 			</section>
@@ -91,8 +167,8 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_src_response_authenticationresult_.authenticationresult.html" class="tsd-kind-icon">Authentication<wbr>Result</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_src_response_authenticationresult_.html#authenticationresult" class="tsd-kind-icon">Authentication<wbr>Result</a>
 					</li>
 				</ul>
 			</nav>
