@@ -62,52 +62,184 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<a href="#microsoft-authentication-library-for-javascript-for-nodemsal-node-for-nodejs-based-web-apps" id="microsoft-authentication-library-for-javascript-for-nodemsal-node-for-nodejs-based-web-apps" style="color: inherit; text-decoration: none;">
-					<h1>Microsoft Authentication Library for JavaScript for Node(msal-node) for Node.js based Web apps</h1>
+				<a href="#microsoft-authentication-library-for-node-msal-node" id="microsoft-authentication-library-for-node-msal-node" style="color: inherit; text-decoration: none;">
+					<h1>Microsoft Authentication Library for Node (msal-node)</h1>
 				</a>
-				<p>Currently <code>msal-node</code> library is under development, Please track the project progress <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/projects/4">here</a>.</p>
-				<a href="#build-library" id="build-library" style="color: inherit; text-decoration: none;">
-					<h3>Build Library</h3>
+				<p><a href="https://www.npmjs.com/package/@azure/msal-node/"><img src="https://img.shields.io/npm/v/@azure/msal-node.svg?style=flat" alt="npm version"></a><a href="https://nodei.co/npm/@azure/msal-node/"><img src="https://img.shields.io/npm/dm/@azure/msal-node.svg" alt="npm version"></a><a href="https://coveralls.io/github/AzureAD/microsoft-authentication-library-for-js?branch=dev"><img src="https://coveralls.io/repos/github/AzureAD/microsoft-authentication-library-for-js/badge.svg?branch=dev" alt="Coverage Status"></a></p>
+				<table>
+					<thead>
+						<tr>
+							<th><a href="https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-javascriptspa" target="_blank">Getting Started</a></th>
+							<th><a href="https://aka.ms/aaddevv2" target="_blank">AAD Docs</a></th>
+							<th><a href="https://azuread.github.io/microsoft-authentication-library-for-js/ref/msal-node/" target="_blank">Library Reference</a></th>
+						</tr>
+					</thead>
+				</table>
+				<p>Currently <code>msal-node</code> is under development, please track the project progress <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/projects/4">here</a>. This documentation is also in progress and will be changing as we release our <code>alpha</code> patches. <strong>We do not recommend using this in a production environment yet</strong>.</p>
+				<ol>
+					<li><a href="#about">About</a></li>
+					<li><a href="#faq">FAQ</a></li>
+					<li><a href="#releases">Releases</a></li>
+					<li><a href="#prerequisites">Prerequisites</a></li>
+					<li><a href="#installation">Installation</a></li>
+					<li><a href="#usage">Usage</a></li>
+					<li><a href="#samples">Samples</a></li>
+					<li><a href="#build-and-test">Build Library</a></li>
+					<li><a href="#security-reporting">Security Reporting</a></li>
+					<li><a href="#license">License</a></li>
+					<li><a href="#we-value-and-adhere-to-the-microsoft-open-source-code-of-conduct">Code of Conduct</a></li>
+				</ol>
+				<a href="#about" id="about" style="color: inherit; text-decoration: none;">
+					<h2>About</h2>
 				</a>
-				<pre><code class="language-javascript"><span class="hljs-comment">// Change to the msal-node package directory</span>
-cd lib/msal-node/
+				<p>MSAL Node enables applications to authenticate users using <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-overview">Azure AD</a> work and school accounts (AAD), Microsoft personal accounts (MSA) and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-overview#identity-providers">Azure AD B2C</a> service. It also enables your app to get tokens to access <a href="https://www.microsoft.com/enterprise">Microsoft Cloud</a> services such as <a href="https://graph.microsoft.io">Microsoft Graph</a>.</p>
+				<a href="#oauth20-grant-types-supported" id="oauth20-grant-types-supported" style="color: inherit; text-decoration: none;">
+					<h3>OAuth2.0 grant types supported:</h3>
+				</a>
+				<p>The current alpha version supports the following ways of acquiring tokens:</p>
+				<a href="#public-client" id="public-client" style="color: inherit; text-decoration: none;">
+					<h4>Public Client:</h4>
+				</a>
+				<ul>
+					<li><a href="https://oauth.net/2/grant-types/authorization-code/">Authorization Code Grant</a> with <a href="https://oauth.net/2/pkce/">PKCE</a> </li>
+					<li><a href="https://oauth.net/2/grant-types/device-code/">Device Code Grant</a></li>
+					<li><a href="https://oauth.net/2/grant-types/refresh-token/">Refresh Token Grant</a></li>
+					<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-acquire-cache-tokens#acquiring-tokens-silently-from-the-cache">Silent Flow</a></li>
+				</ul>
+				<a href="#confidential-client" id="confidential-client" style="color: inherit; text-decoration: none;">
+					<h4>Confidential Client:</h4>
+				</a>
+				<ul>
+					<li><a href="https://oauth.net/2/grant-types/authorization-code/">Authorization Code Grant</a> with a client credential</li>
+					<li><a href="https://oauth.net/2/grant-types/refresh-token/">Refresh Token Grant</a></li>
+					<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-acquire-cache-tokens#acquiring-tokens-silently-from-the-cache">Silent Flow</a></li>
+					<li><a href="https://oauth.net/2/grant-types/client-credentials/">Client Credential Grant</a></li>
+					<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow">On-behalf-of flow</a></li>
+				</ul>
+				<p><strong>[Coming Soon]</strong> In the future we plan to add support for:</p>
+				<ul>
+					<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows#integrated-windows-authentication">Integrated Windows Authentication flow</a></li>
+					<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows#usernamepassword">Username and Password flow</a></li>
+				</ul>
+				<p>More details on different grant types supported by Microsoft authentication libraries in general can be found <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows">here</a>.</p>
+				<a href="#scenarios-supported" id="scenarios-supported" style="color: inherit; text-decoration: none;">
+					<h3>Scenarios supported:</h3>
+				</a>
+				<p>The scenarios supported with this library are:</p>
+				<ul>
+					<li>Desktop app that calls web APIs</li>
+					<li>Web app that calls web APIs </li>
+					<li>Web APIs that call web APIs </li>
+					<li>Daemon apps </li>
+				</ul>
+				<p>More details on scenarios and the authentication flows that map to each of them can be found <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/authentication-flows-app-scenarios">here</a>.</p>
+				<a href="#faq" id="faq" style="color: inherit; text-decoration: none;">
+					<h2>FAQ</h2>
+				</a>
+				<p>See <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/docs/faq.md">here</a>.</p>
+				<a href="#prerequisites" id="prerequisites" style="color: inherit; text-decoration: none;">
+					<h2>Prerequisites</h2>
+				</a>
+				<p>Before using <code>@azure/msal-node</code> you will need to register your app in the azure portal:  </p>
+				<ul>
+					<li><a href="https://docs.microsoft.com/en-us/graph/auth-register-app-v2">App registration</a></li>
+				</ul>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h2>Installation</h2>
+				</a>
+				<a href="#via-npm" id="via-npm" style="color: inherit; text-decoration: none;">
+					<h3>Via NPM:</h3>
+				</a>
+				<pre><code class="language-javascript">npm install @azure/msal-node</code></pre>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<a href="#msal-basics" id="msal-basics" style="color: inherit; text-decoration: none;">
+					<h3>MSAL basics</h3>
+				</a>
+				<ul>
+					<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-client-applications">Understand difference in between Public Client and Confidential Clients</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/docs/initialize-public-client-application.md">Initialize a Public Client Application</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/docs/initialize-confidential-client-application.md">Initialize a Confidential Client Application</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/docs/configuration.md">Configuration</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/request.md">Request</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/response.md">Response</a></li>
+				</ul>
+				<a href="#samples" id="samples" style="color: inherit; text-decoration: none;">
+					<h2>Samples</h2>
+				</a>
+				<p>There are multiple <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/msal-node-samples">samples</a> included in the repository that use MSAL Node to acquire tokens. These samples are currently used for manual testing, and are not meant to be a reference of best practices, therefore use judgement and do not blindly copy this code to any production applications.</p>
+				<ul>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/msal-node-samples/auth-code">auth-code</a>: Express app using OAuth2.0 authorization code flow.</li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/msal-node-samples/device-code">device-code</a>: Command line app using OAuth 2.0 device code flow.</li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/msal-node-samples/refresh-token">refresh-token</a>: Command line app using OAuth 2.0 refresh flow.</li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/msal-node-samples/silent-flow">silent-flow</a>: Express app using OAuth2.0 authorization code flow to acquire a token and store in the token cache, and silent flow to use tokens in the token cache.</li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-node-samples/client-credentials">client-credentials</a>: Daemon app using Oauth 2.0 client credential grant to acquire a token. </li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-node-samples/on-behalf-of">on-behalf-of</a>: Web application uses Oauth 2.0 auth code flow to acquire a token for a Web API. The web API validates the token, and calls Microsoft Graph on behalf of the user who authenticated in the web application.</li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-node-extensions">msal-node-extensions</a>: Uses authorization code flow to acquire tokens then the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/extensions/msal-node-extensions">msal-extensions</a> library to write the MSAL in-memory token cache to disk.</li>
+				</ul>
+				<a href="#build-and-test" id="build-and-test" style="color: inherit; text-decoration: none;">
+					<h2>Build and Test</h2>
+				</a>
+				<ul>
+					<li>If you don&#39;t have <a href="https://github.com/lerna/lerna">lerna</a> installed, run <code>npm install -g lerna</code></li>
+					<li>Run <code>lerna bootstrap</code> from anywhere within <code>microsoft-authentication-library-for-js.git</code>.</li>
+					<li>Navigate to <code>microsoft-authentication-library-for-js/lib/msal-common</code> and run <code>npm run build</code></li>
+					<li>Navigate to <code>microsoft-authentication-library-for-js/lib/msal-node</code> and run <code>npm run build</code></li>
+				</ul>
+				<pre><code class="language-javascript"><span class="hljs-comment">// to link msal-node and msal-common packages</span>
+lerna bootstrap
 
-<span class="hljs-comment">// Ensure you are using the local build of msal-common</span>
-npm link @azure/msal-common
+<span class="hljs-comment">// Change to the msal-node package directory</span>
+cd lib/msal-common/
+
+<span class="hljs-comment">// To run build only for node package</span>
+npm run build
+
+<span class="hljs-comment">// Change to the msal-node package directory</span>
+cd lib/msal-node/
 
 <span class="hljs-comment">// To run build only for node package</span>
 npm run build</code></pre>
-				<p>TBD: Add lerna bootstrap to build common/node in one step</p>
 				<a href="#local-development" id="local-development" style="color: inherit; text-decoration: none;">
-					<h2>Local Development</h2>
+					<h3>Local Development</h3>
 				</a>
-				<p>Below is a list of commands you will probably find useful.</p>
-				<a href="#npm-start" id="npm-start" style="color: inherit; text-decoration: none;">
-					<h3><code>npm start</code></h3>
+				<p>Below is a list of commands you will probably find useful:</p>
+				<a href="#npm-run-buildmoduleswatch" id="npm-run-buildmoduleswatch" style="color: inherit; text-decoration: none;">
+					<h4><code>npm run build:modules:watch</code></h4>
 				</a>
-				<p>Runs the project in development/watch mode. Your project will be rebuilt upon changes. TSDX has a special logger for you convenience. Error messages are pretty printed and formatted for compatibility VS Code&#39;s Problems tab.</p>
-				<img src="https://user-images.githubusercontent.com/4060187/52168303-574d3a00-26f6-11e9-9f3b-71dbec9ebfcb.gif" width="600" />
-				<p>Your library will be rebuilt if you make edits.</p>
+				<p>Runs the project in development/watch mode. Your project will be rebuilt upon changes. TSDX has a special logger for you convenience. Error messages are pretty printed and formatted for compatibility VS Code&#39;s Problems tab. The library will be rebuilt if you make edits.</p>
 				<a href="#npm-run-build" id="npm-run-build" style="color: inherit; text-decoration: none;">
-					<h3><code>npm run build</code></h3>
+					<h4><code>npm run build</code></h4>
 				</a>
 				<p>Bundles the package to the <code>dist</code> folder.
 				The package is optimized and bundled with Rollup into multiple formats (CommonJS, UMD, and ES Module).</p>
-				<img src="https://user-images.githubusercontent.com/4060187/52168322-a98e5b00-26f6-11e9-8cf6-222d716b75ef.gif" width="600" />
+				<a href="#lerna-bootstrap" id="lerna-bootstrap" style="color: inherit; text-decoration: none;">
+					<h4><code>lerna bootstrap</code></h4>
+				</a>
+				<p>If you are running the project in development/watch mode, or have made changes in <code>msal-common</code> and need them reflecting across the project, please run <code>lerna bootstrap</code> to link all the symbols. Please note that <code>npm install</code> will unlink all the code, hence it is advised to run <code>lerna bootstrap</code> post installation.</p>
 				<a href="#npm-run-lint" id="npm-run-lint" style="color: inherit; text-decoration: none;">
-					<h3><code>npm run lint</code></h3>
+					<h4><code>npm run lint</code></h4>
 				</a>
 				<p>Runs eslint with Prettier</p>
 				<a href="#npm-test-npm-run-testcoverage-npm-run-testwatch" id="npm-test-npm-run-testcoverage-npm-run-testwatch" style="color: inherit; text-decoration: none;">
-					<h3><code>npm test</code>, <code>npm run test:coverage</code>, <code>npm run test:watch</code></h3>
+					<h4><code>npm test</code>, <code>npm run test:coverage</code>, <code>npm run test:watch</code></h4>
 				</a>
 				<p>Runs the test watcher (Jest) in an interactive mode.
 					By default, runs tests related to files changed since the last commit.
 				Generate code coverage by adding the flag --coverage. No additional setup needed. Jest can collect code coverage information from entire projects, including untested files.</p>
-				<a href="#tsdx-bootstrap" id="tsdx-bootstrap" style="color: inherit; text-decoration: none;">
-					<h2>TSDX Bootstrap</h2>
+				<a href="#security-reporting" id="security-reporting" style="color: inherit; text-decoration: none;">
+					<h2>Security Reporting</h2>
 				</a>
-				<p>This project was bootstrapped with <a href="https://github.com/jaredpalmer/tsdx">TSDX</a>.</p>
+				<p>If you find a security issue with our libraries or services please report it to <a href="mailto:secure@microsoft.com">secure@microsoft.com</a> with as much detail as possible. Your submission may be eligible for a bounty through the <a href="http://aka.ms/bugbounty">Microsoft Bounty</a> program. Please do not post security issues to GitHub Issues or any other public site. We will contact you shortly upon receiving the information. We encourage you to get notifications of when security incidents occur by visiting <a href="https://technet.microsoft.com/security/dd252948">this page</a> and subscribing to Security Advisory Alerts.</p>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>Copyright (c) Microsoft Corporation.  All rights reserved. Licensed under the MIT License.</p>
+				<a href="#we-value-and-adhere-to-the-microsoft-open-source-code-of-conduct" id="we-value-and-adhere-to-the-microsoft-open-source-code-of-conduct" style="color: inherit; text-decoration: none;">
+					<h2>We Value and Adhere to the Microsoft Open Source Code of Conduct</h2>
+				</a>
+				<p>This project has adopted the <a href="https://opensource.microsoft.com/codeofconduct/">Microsoft Open Source Code of Conduct</a>. For more information see the <a href="https://opensource.microsoft.com/codeofconduct/faq/">Code of Conduct FAQ</a> or contact <a href="mailto:opencode@microsoft.com">opencode@microsoft.com</a> with any additional questions or comments.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -118,9 +250,6 @@ npm run build</code></pre>
 					</li>
 					<li class="label tsd-is-external">
 						<span>Internals</span>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/_src_cache_icacheplugin_.html">&quot;src/cache/ICache<wbr>Plugin&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_src_cache_storage_.html">&quot;src/cache/<wbr>Storage&quot;</a>
@@ -139,6 +268,9 @@ npm run build</code></pre>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_src_client_clientapplication_.html">&quot;src/client/<wbr>Client<wbr>Application&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_src_client_clientassertion_.html">&quot;src/client/<wbr>Client<wbr>Assertion&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_src_client_confidentialclientapplication_.html">&quot;src/client/<wbr>Confidential<wbr>Client<wbr>Application&quot;</a>
@@ -200,9 +332,6 @@ npm run build</code></pre>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>

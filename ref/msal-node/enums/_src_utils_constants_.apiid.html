@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>HttpMethod | @azure/msal-node</title>
+	<title>ApiId | @azure/msal-node</title>
 	<meta name="description" content="Documentation for @azure/msal-node">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,10 +57,10 @@
 					<a href="../modules/_src_utils_constants_.html">&quot;src/utils/Constants&quot;</a>
 				</li>
 				<li>
-					<a href="_src_utils_constants_.httpmethod.html">HttpMethod</a>
+					<a href="_src_utils_constants_.apiid.html">ApiId</a>
 				</li>
 			</ul>
-			<h1>Enumeration HttpMethod</h1>
+			<h1>Enumeration ApiId</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,11 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>http methods</p>
+						<p>API Codes for Telemetry purposes.
+							Before adding a new code you must claim it in the MSAL Telemetry tracker as these number spaces are shared across all MSALs
+							0-99 Silent Flow
+							600-699 Device Code Flow
+						800-899 Auth Code Flow</p>
 					</div>
 				</div>
 			</section>
@@ -81,8 +85,11 @@
 						<section class="tsd-index-section ">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.httpmethod.html#get" class="tsd-kind-icon">GET</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.httpmethod.html#post" class="tsd-kind-icon">POST</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.apiid.html#acquiretokenbyclientcredential" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByClient<wbr>Credential</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.apiid.html#acquiretokenbycode" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByCode</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.apiid.html#acquiretokenbydevicecode" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByDevice<wbr>Code</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.apiid.html#acquiretokenbyrefreshtoken" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByRefresh<wbr>Token</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.apiid.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a></li>
 							</ul>
 						</section>
 					</div>
@@ -91,22 +98,52 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="get" class="tsd-anchor"></a>
-					<h3>GET</h3>
-					<div class="tsd-signature tsd-kind-icon">GET<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;get&quot;</span></div>
+					<a name="acquiretokenbyclientcredential" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>ByClient<wbr>Credential</h3>
+					<div class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>ByClient<wbr>Credential<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 771</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/utils/Constants.ts#L10">msal-node/src/utils/Constants.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/utils/Constants.ts#L62">msal-node/src/utils/Constants.ts:62</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="post" class="tsd-anchor"></a>
-					<h3>POST</h3>
-					<div class="tsd-signature tsd-kind-icon">POST<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;post&quot;</span></div>
+					<a name="acquiretokenbycode" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>ByCode</h3>
+					<div class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>ByCode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 871</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/utils/Constants.ts#L11">msal-node/src/utils/Constants.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/utils/Constants.ts#L59">msal-node/src/utils/Constants.ts:59</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="acquiretokenbydevicecode" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>ByDevice<wbr>Code</h3>
+					<div class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>ByDevice<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 671</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/utils/Constants.ts#L61">msal-node/src/utils/Constants.ts:61</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="acquiretokenbyrefreshtoken" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>ByRefresh<wbr>Token</h3>
+					<div class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>ByRefresh<wbr>Token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 872</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/utils/Constants.ts#L60">msal-node/src/utils/Constants.ts:60</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="acquiretokensilent" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>Silent</h3>
+					<div class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Silent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 62</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/utils/Constants.ts#L58">msal-node/src/utils/Constants.ts:58</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -185,24 +222,33 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="_src_utils_constants_.apiid.html" class="tsd-kind-icon">Api<wbr>Id</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-enum tsd-parent-kind-module">
-						<a href="_src_utils_constants_.httpmethod.html" class="tsd-kind-icon">Http<wbr>Method</a>
+						<a href="_src_utils_constants_.apiid.html" class="tsd-kind-icon">Api<wbr>Id</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_src_utils_constants_.httpmethod.html#get" class="tsd-kind-icon">GET</a>
+								<a href="_src_utils_constants_.apiid.html#acquiretokenbyclientcredential" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByClient<wbr>Credential</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_src_utils_constants_.httpmethod.html#post" class="tsd-kind-icon">POST</a>
+								<a href="_src_utils_constants_.apiid.html#acquiretokenbycode" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByCode</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_src_utils_constants_.apiid.html#acquiretokenbydevicecode" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByDevice<wbr>Code</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_src_utils_constants_.apiid.html#acquiretokenbyrefreshtoken" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByRefresh<wbr>Token</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_src_utils_constants_.apiid.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="_src_utils_constants_.httpmethod.html" class="tsd-kind-icon">Http<wbr>Method</a>
+					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
 						<a href="../modules/_src_utils_constants_.html#random_octet_size" class="tsd-kind-icon">RANDOM_<wbr>OCTET_<wbr>SIZE</a>
 					</li>

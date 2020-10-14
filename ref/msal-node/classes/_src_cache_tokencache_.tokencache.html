@@ -82,6 +82,12 @@
 					</li>
 				</ul>
 			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><span class="tsd-signature-type">ISerializableTokenCache</span></li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -95,13 +101,11 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_cache_tokencache_.tokencache.html#cachehaschanged" class="tsd-kind-icon">cache<wbr>Has<wbr>Changed</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_cache_tokencache_.tokencache.html#deserialize" class="tsd-kind-icon">deserialize</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_cache_tokencache_.tokencache.html#getallaccounts" class="tsd-kind-icon">get<wbr>All<wbr>Accounts</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_cache_tokencache_.tokencache.html#readfrompersistence" class="tsd-kind-icon">read<wbr>From<wbr>Persistence</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_cache_tokencache_.tokencache.html#haschanged" class="tsd-kind-icon">has<wbr>Changed</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_cache_tokencache_.tokencache.html#removeaccount" class="tsd-kind-icon">remove<wbr>Account</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_cache_tokencache_.tokencache.html#serialize" class="tsd-kind-icon">serialize</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_cache_tokencache_.tokencache.html#writetopersistence" class="tsd-kind-icon">write<wbr>ToPersistence</a></li>
 							</ul>
 						</section>
 					</div>
@@ -113,13 +117,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Token<wbr>Cache<span class="tsd-signature-symbol">(</span>storage<span class="tsd-signature-symbol">: </span><a href="_src_cache_storage_.storage.html" class="tsd-signature-type">Storage</a>, logger<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Logger</span>, cachePlugin<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_src_cache_icacheplugin_.icacheplugin.html" class="tsd-signature-type">ICachePlugin</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_cache_tokencache_.tokencache.html" class="tsd-signature-type">TokenCache</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Token<wbr>Cache<span class="tsd-signature-symbol">(</span>storage<span class="tsd-signature-symbol">: </span><a href="_src_cache_storage_.storage.html" class="tsd-signature-type">Storage</a>, logger<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Logger</span>, cachePlugin<span class="tsd-signature-symbol">?: </span><a href="../modules/_src_index_.html#icacheplugin" class="tsd-signature-type">ICachePlugin</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_cache_tokencache_.tokencache.html" class="tsd-signature-type">TokenCache</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/cache/TokenCache.ts#L30">src/cache/TokenCache.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/cache/TokenCache.ts#L29">msal-node/src/cache/TokenCache.ts:29</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -131,7 +135,7 @@
 									<h5>logger: <span class="tsd-signature-type">Logger</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> cachePlugin: <a href="../interfaces/_src_cache_icacheplugin_.icacheplugin.html" class="tsd-signature-type">ICachePlugin</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> cachePlugin: <a href="../modules/_src_index_.html#icacheplugin" class="tsd-signature-type">ICachePlugin</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_src_cache_tokencache_.tokencache.html" class="tsd-signature-type">TokenCache</a></h4>
@@ -142,28 +146,6 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="cachehaschanged" class="tsd-anchor"></a>
-					<h3>cache<wbr>Has<wbr>Changed</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">cache<wbr>Has<wbr>Changed<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/cache/TokenCache.ts#L45">src/cache/TokenCache.ts:45</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Set to true if cache state has changed since last time serialized() or writeToPersistence was called</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="deserialize" class="tsd-anchor"></a>
 					<h3>deserialize</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -173,7 +155,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/cache/TokenCache.ts#L77">src/cache/TokenCache.ts:77</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/cache/TokenCache.ts#L76">msal-node/src/cache/TokenCache.ts:76</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -197,13 +179,13 @@
 					<a name="getallaccounts" class="tsd-anchor"></a>
 					<h3>get<wbr>All<wbr>Accounts</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Accounts<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AccountInfo</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Accounts<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/cache/TokenCache.ts#L151">src/cache/TokenCache.ts:151</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/cache/TokenCache.ts#L94">msal-node/src/cache/TokenCache.ts:94</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -211,30 +193,29 @@
 									<p>API that retrieves all accounts currently in cache to the user</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">AccountInfo</span><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="readfrompersistence" class="tsd-anchor"></a>
-					<h3>read<wbr>From<wbr>Persistence</h3>
+					<a name="haschanged" class="tsd-anchor"></a>
+					<h3>has<wbr>Changed</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>From<wbr>Persistence<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Changed<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/cache/TokenCache.ts#L123">src/cache/TokenCache.ts:123</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/cache/TokenCache.ts#L44">msal-node/src/cache/TokenCache.ts:44</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Calls ICachePlugin.readFromStorage and deserializes JSON to in-memory cache.
-									ICachePlugin must be set on ClientApplication.</p>
+									<p>Set to true if cache state has changed since last time serialize or writeToPersistence was called</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -242,13 +223,13 @@
 					<a name="removeaccount" class="tsd-anchor"></a>
 					<h3>remove<wbr>Account</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">remove<wbr>Account<span class="tsd-signature-symbol">(</span>account<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AccountInfo</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Account<span class="tsd-signature-symbol">(</span>account<span class="tsd-signature-symbol">: </span><a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/cache/TokenCache.ts#L160">src/cache/TokenCache.ts:160</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/cache/TokenCache.ts#L115">msal-node/src/cache/TokenCache.ts:115</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -259,12 +240,12 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>account: <span class="tsd-signature-type">AccountInfo</span></h5>
+									<h5>account: <a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a></h5>
 									<div class="tsd-comment tsd-typography">
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -278,7 +259,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/cache/TokenCache.ts#L52">src/cache/TokenCache.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/cache/TokenCache.ts#L51">msal-node/src/cache/TokenCache.ts:51</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -287,28 +268,6 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="writetopersistence" class="tsd-anchor"></a>
-					<h3>write<wbr>ToPersistence</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>ToPersistence<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/cache/TokenCache.ts#L95">src/cache/TokenCache.ts:95</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Serializes cache into JSON and calls ICachePlugin.writeToStorage. ICachePlugin must be set on ClientApplication</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -322,9 +281,6 @@
 					</li>
 					<li class="label tsd-is-external">
 						<span>Internals</span>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_src_cache_icacheplugin_.html">&quot;src/cache/ICache<wbr>Plugin&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_src_cache_storage_.html">&quot;src/cache/<wbr>Storage&quot;</a>
@@ -343,6 +299,9 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_src_client_clientapplication_.html">&quot;src/client/<wbr>Client<wbr>Application&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_src_client_clientassertion_.html">&quot;src/client/<wbr>Client<wbr>Assertion&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_src_client_confidentialclientapplication_.html">&quot;src/client/<wbr>Confidential<wbr>Client<wbr>Application&quot;</a>
@@ -396,25 +355,19 @@
 								<a href="_src_cache_tokencache_.tokencache.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_src_cache_tokencache_.tokencache.html#cachehaschanged" class="tsd-kind-icon">cache<wbr>Has<wbr>Changed</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_cache_tokencache_.tokencache.html#deserialize" class="tsd-kind-icon">deserialize</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_cache_tokencache_.tokencache.html#getallaccounts" class="tsd-kind-icon">get<wbr>All<wbr>Accounts</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_src_cache_tokencache_.tokencache.html#readfrompersistence" class="tsd-kind-icon">read<wbr>From<wbr>Persistence</a>
+								<a href="_src_cache_tokencache_.tokencache.html#haschanged" class="tsd-kind-icon">has<wbr>Changed</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_cache_tokencache_.tokencache.html#removeaccount" class="tsd-kind-icon">remove<wbr>Account</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_cache_tokencache_.tokencache.html#serialize" class="tsd-kind-icon">serialize</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_src_cache_tokencache_.tokencache.html#writetopersistence" class="tsd-kind-icon">write<wbr>ToPersistence</a>
 							</li>
 						</ul>
 					</li>
@@ -442,9 +395,6 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 			</ul>
 		</div>
 	</div>

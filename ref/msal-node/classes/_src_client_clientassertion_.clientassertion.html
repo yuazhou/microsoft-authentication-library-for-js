@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>GuidGenerator | @azure/msal-node</title>
+	<title>ClientAssertion | @azure/msal-node</title>
 	<meta name="description" content="Documentation for @azure/msal-node">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,24 +54,31 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_src_crypto_guidgenerator_.html">&quot;src/crypto/GuidGenerator&quot;</a>
+					<a href="../modules/_src_client_clientassertion_.html">&quot;src/client/ClientAssertion&quot;</a>
 				</li>
 				<li>
-					<a href="_src_crypto_guidgenerator_.guidgenerator.html">GuidGenerator</a>
+					<a href="_src_client_clientassertion_.clientassertion.html">ClientAssertion</a>
 				</li>
 			</ul>
-			<h1>Class GuidGenerator</h1>
+			<h1>Class ClientAssertion</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Client assertion of type jwt-bearer used in confidential client flows</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">GuidGenerator</span>
+						<span class="target">ClientAssertion</span>
 					</li>
 				</ul>
 			</section>
@@ -82,8 +89,9 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_crypto_guidgenerator_.guidgenerator.html#generateguid" class="tsd-kind-icon">generate<wbr>Guid</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_crypto_guidgenerator_.guidgenerator.html#isguid" class="tsd-kind-icon">is<wbr>Guid</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_client_clientassertion_.clientassertion.html#getjwt" class="tsd-kind-icon">get<wbr>Jwt</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_client_clientassertion_.clientassertion.html#fromassertion" class="tsd-kind-icon">from<wbr>Assertion</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_client_clientassertion_.clientassertion.html#fromcertificate" class="tsd-kind-icon">from<wbr>Certificate</a></li>
 							</ul>
 						</section>
 					</div>
@@ -91,56 +99,81 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="generateguid" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> generate<wbr>Guid</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">generate<wbr>Guid<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getjwt" class="tsd-anchor"></a>
+					<h3>get<wbr>Jwt</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Jwt<span class="tsd-signature-symbol">(</span>cryptoProvider<span class="tsd-signature-symbol">: </span><a href="_src_crypto_cryptoprovider_.cryptoprovider.html" class="tsd-signature-type">CryptoProvider</a>, issuer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, jwtAudience<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/crypto/GuidGenerator.ts#L13">msal-node/src/crypto/GuidGenerator.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientAssertion.ts#L37">msal-node/src/client/ClientAssertion.ts:37</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>RFC4122: The version 4 UUID is meant for generating UUIDs from truly-random or pseudo-random numbers.
-									uuidv4 generates guids from cryprtographically-string random</p>
-								</div>
-							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cryptoProvider: <a href="_src_crypto_cryptoprovider_.cryptoprovider.html" class="tsd-signature-type">CryptoProvider</a></h5>
+								</li>
+								<li>
+									<h5>issuer: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>jwtAudience: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="isguid" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Guid</h3>
+					<a name="fromassertion" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> from<wbr>Assertion</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Guid<span class="tsd-signature-symbol">(</span>guid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">from<wbr>Assertion<span class="tsd-signature-symbol">(</span>assertion<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_client_clientassertion_.clientassertion.html" class="tsd-signature-type">ClientAssertion</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/crypto/GuidGenerator.ts#L21">msal-node/src/crypto/GuidGenerator.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientAssertion.ts#L24">msal-node/src/client/ClientAssertion.ts:24</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>verifies if a string is  GUID</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>guid: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
+									<h5>assertion: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_src_client_clientassertion_.clientassertion.html" class="tsd-signature-type">ClientAssertion</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="fromcertificate" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> from<wbr>Certificate</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">from<wbr>Certificate<span class="tsd-signature-symbol">(</span>thumbprint<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, privateKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_client_clientassertion_.clientassertion.html" class="tsd-signature-type">ClientAssertion</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientAssertion.ts#L30">msal-node/src/client/ClientAssertion.ts:30</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>thumbprint: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>privateKey: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_src_client_clientassertion_.clientassertion.html" class="tsd-signature-type">ClientAssertion</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -173,7 +206,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_src_client_clientapplication_.html">&quot;src/client/<wbr>Client<wbr>Application&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_src_client_clientassertion_.html">&quot;src/client/<wbr>Client<wbr>Assertion&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -188,7 +221,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_src_crypto_cryptoprovider_.html">&quot;src/crypto/<wbr>Crypto<wbr>Provider&quot;</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_src_crypto_guidgenerator_.html">&quot;src/crypto/<wbr>Guid<wbr>Generator&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -222,13 +255,16 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="_src_crypto_guidgenerator_.guidgenerator.html" class="tsd-kind-icon">Guid<wbr>Generator</a>
+						<a href="_src_client_clientassertion_.clientassertion.html" class="tsd-kind-icon">Client<wbr>Assertion</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="_src_crypto_guidgenerator_.guidgenerator.html#generateguid" class="tsd-kind-icon">generate<wbr>Guid</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_src_client_clientassertion_.clientassertion.html#getjwt" class="tsd-kind-icon">get<wbr>Jwt</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="_src_crypto_guidgenerator_.guidgenerator.html#isguid" class="tsd-kind-icon">is<wbr>Guid</a>
+								<a href="_src_client_clientassertion_.clientassertion.html#fromassertion" class="tsd-kind-icon">from<wbr>Assertion</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_src_client_clientassertion_.clientassertion.html#fromcertificate" class="tsd-kind-icon">from<wbr>Certificate</a>
 							</li>
 						</ul>
 					</li>
@@ -250,10 +286,11 @@
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
