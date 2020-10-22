@@ -79,7 +79,10 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_src_crypto_browsercrypto_.html#hash_alg" class="tsd-kind-icon">HASH_<wbr>ALG</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_src_crypto_browsercrypto_.html#modulus_length" class="tsd-kind-icon">MODULUS_<wbr>LENGTH</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_src_crypto_browsercrypto_.html#pkcs1_v15_keygen_alg" class="tsd-kind-icon">PKCS1_<wbr><wbr>V15_<wbr>KEYGEN_<wbr>ALG</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_src_crypto_browsercrypto_.html#public_exponent" class="tsd-kind-icon">PUBLIC_<wbr>EXPONENT</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_src_crypto_browsercrypto_.html#s256_hash_alg" class="tsd-kind-icon">S256_<wbr>HASH_<wbr>ALG</a></li>
 							</ul>
 						</section>
 					</div>
@@ -88,12 +91,47 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="hash_alg" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> HASH_<wbr>ALG</h3>
-					<div class="tsd-signature tsd-kind-icon">HASH_<wbr>ALG<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"SHA-256"</span><span class="tsd-signature-symbol"> = &quot;SHA-256&quot;</span></div>
+					<a name="modulus_length" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> MODULUS_<wbr>LENGTH</h3>
+					<div class="tsd-signature tsd-kind-icon">MODULUS_<wbr>LENGTH<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">2048</span><span class="tsd-signature-symbol"> = 2048</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L9">msal-browser/src/crypto/BrowserCrypto.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L17">msal-browser/src/crypto/BrowserCrypto.ts:17</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="pkcs1_v15_keygen_alg" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> PKCS1_<wbr><wbr>V15_<wbr>KEYGEN_<wbr>ALG</h3>
+					<div class="tsd-signature tsd-kind-icon">PKCS1_<wbr><wbr>V15_<wbr>KEYGEN_<wbr>ALG<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"RSASSA-PKCS1-v1_5"</span><span class="tsd-signature-symbol"> = &quot;RSASSA-PKCS1-v1_5&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L13">msal-browser/src/crypto/BrowserCrypto.ts:13</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>See here for more info on RsaHashedKeyGenParams: <a href="https://developer.mozilla.org/en-US/docs/Web/API/RsaHashedKeyGenParams">https://developer.mozilla.org/en-US/docs/Web/API/RsaHashedKeyGenParams</a></p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="public_exponent" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> PUBLIC_<wbr>EXPONENT</h3>
+					<div class="tsd-signature tsd-kind-icon">PUBLIC_<wbr>EXPONENT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol"> = new Uint8Array([0x01, 0x00, 0x01])</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L19">msal-browser/src/crypto/BrowserCrypto.ts:19</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="s256_hash_alg" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> S256_<wbr>HASH_<wbr>ALG</h3>
+					<div class="tsd-signature tsd-kind-icon">S256_<wbr>HASH_<wbr>ALG<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"SHA-256"</span><span class="tsd-signature-symbol"> = &quot;SHA-256&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L15">msal-browser/src/crypto/BrowserCrypto.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -116,7 +154,16 @@
 						<a href="../classes/_src_crypto_browsercrypto_.browsercrypto.html" class="tsd-kind-icon">Browser<wbr>Crypto</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_src_crypto_browsercrypto_.html#hash_alg" class="tsd-kind-icon">HASH_<wbr>ALG</a>
+						<a href="_src_crypto_browsercrypto_.html#modulus_length" class="tsd-kind-icon">MODULUS_<wbr>LENGTH</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_src_crypto_browsercrypto_.html#pkcs1_v15_keygen_alg" class="tsd-kind-icon">PKCS1_<wbr><wbr>V15_<wbr>KEYGEN_<wbr>ALG</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_src_crypto_browsercrypto_.html#public_exponent" class="tsd-kind-icon">PUBLIC_<wbr>EXPONENT</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_src_crypto_browsercrypto_.html#s256_hash_alg" class="tsd-kind-icon">S256_<wbr>HASH_<wbr>ALG</a>
 					</li>
 				</ul>
 			</nav>

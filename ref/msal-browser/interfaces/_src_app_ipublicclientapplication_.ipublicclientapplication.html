@@ -93,12 +93,15 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#acquiretokenpopup" class="tsd-kind-icon">acquire<wbr>Token<wbr>Popup</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#acquiretokenredirect" class="tsd-kind-icon">acquire<wbr>Token<wbr>Redirect</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#addeventcallback" class="tsd-kind-icon">add<wbr>Event<wbr>Callback</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#getaccountbyhomeid" class="tsd-kind-icon">get<wbr>Account<wbr>ByHome<wbr>Id</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#getaccountbyusername" class="tsd-kind-icon">get<wbr>Account<wbr>ByUsername</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#getallaccounts" class="tsd-kind-icon">get<wbr>All<wbr>Accounts</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#handleredirectpromise" class="tsd-kind-icon">handle<wbr>Redirect<wbr>Promise</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#loginpopup" class="tsd-kind-icon">login<wbr>Popup</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#loginredirect" class="tsd-kind-icon">login<wbr>Redirect</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#logout" class="tsd-kind-icon">logout</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#removeeventcallback" class="tsd-kind-icon">remove<wbr>Event<wbr>Callback</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#ssosilent" class="tsd-kind-icon">sso<wbr>Silent</a></li>
 							</ul>
 						</section>
@@ -111,13 +114,13 @@
 					<a name="acquiretokenpopup" class="tsd-anchor"></a>
 					<h3>acquire<wbr>Token<wbr>Popup</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Popup<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_src_request_popuprequest_.html#popuprequest" class="tsd-signature-type">PopupRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Popup<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_src_request_popuprequest_.html#popuprequest" class="tsd-signature-type">PopupRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L11">msal-browser/src/app/IPublicClientApplication.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L13">msal-browser/src/app/IPublicClientApplication.ts:13</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -126,7 +129,7 @@
 									<h5>request: <a href="../modules/_src_request_popuprequest_.html#popuprequest" class="tsd-signature-type">PopupRequest</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -140,7 +143,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L12">msal-browser/src/app/IPublicClientApplication.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L14">msal-browser/src/app/IPublicClientApplication.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -157,13 +160,13 @@
 					<a name="acquiretokensilent" class="tsd-anchor"></a>
 					<h3>acquire<wbr>Token<wbr>Silent</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Silent<span class="tsd-signature-symbol">(</span>silentRequest<span class="tsd-signature-symbol">: </span><a href="../modules/_src_request_silentrequest_.html#silentrequest" class="tsd-signature-type">SilentRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Silent<span class="tsd-signature-symbol">(</span>silentRequest<span class="tsd-signature-symbol">: </span><a href="../modules/_src_request_silentrequest_.html#silentrequest" class="tsd-signature-type">SilentRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L13">msal-browser/src/app/IPublicClientApplication.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L15">msal-browser/src/app/IPublicClientApplication.ts:15</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -172,7 +175,53 @@
 									<h5>silentRequest: <a href="../modules/_src_request_silentrequest_.html#silentrequest" class="tsd-signature-type">SilentRequest</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="addeventcallback" class="tsd-anchor"></a>
+					<h3>add<wbr>Event<wbr>Callback</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Event<wbr>Callback<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L16">msal-browser/src/app/IPublicClientApplication.ts:16</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getaccountbyhomeid" class="tsd-anchor"></a>
+					<h3>get<wbr>Account<wbr>ByHome<wbr>Id</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Account<wbr>ByHome<wbr>Id<span class="tsd-signature-symbol">(</span>homeAccountId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L18">msal-browser/src/app/IPublicClientApplication.ts:18</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>homeAccountId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -180,13 +229,13 @@
 					<a name="getaccountbyusername" class="tsd-anchor"></a>
 					<h3>get<wbr>Account<wbr>ByUsername</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Account<wbr>ByUsername<span class="tsd-signature-symbol">(</span>userName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Account<wbr>ByUsername<span class="tsd-signature-symbol">(</span>userName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L14">msal-browser/src/app/IPublicClientApplication.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L19">msal-browser/src/app/IPublicClientApplication.ts:19</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -195,7 +244,7 @@
 									<h5>userName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -209,7 +258,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L15">msal-browser/src/app/IPublicClientApplication.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L20">msal-browser/src/app/IPublicClientApplication.ts:20</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -220,16 +269,16 @@
 					<a name="handleredirectpromise" class="tsd-anchor"></a>
 					<h3>handle<wbr>Redirect<wbr>Promise</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Redirect<wbr>Promise<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Redirect<wbr>Promise<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L16">msal-browser/src/app/IPublicClientApplication.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L21">msal-browser/src/app/IPublicClientApplication.ts:21</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -237,22 +286,22 @@
 					<a name="loginpopup" class="tsd-anchor"></a>
 					<h3>login<wbr>Popup</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">login<wbr>Popup<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_src_request_popuprequest_.html#popuprequest" class="tsd-signature-type">PopupRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">login<wbr>Popup<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">?: </span><a href="../modules/_src_request_popuprequest_.html#popuprequest" class="tsd-signature-type">PopupRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L17">msal-browser/src/app/IPublicClientApplication.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L22">msal-browser/src/app/IPublicClientApplication.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>request: <a href="../modules/_src_request_popuprequest_.html#popuprequest" class="tsd-signature-type">PopupRequest</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> request: <a href="../modules/_src_request_popuprequest_.html#popuprequest" class="tsd-signature-type">PopupRequest</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -260,19 +309,19 @@
 					<a name="loginredirect" class="tsd-anchor"></a>
 					<h3>login<wbr>Redirect</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">login<wbr>Redirect<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_src_request_redirectrequest_.html#redirectrequest" class="tsd-signature-type">RedirectRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">login<wbr>Redirect<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">?: </span><a href="../modules/_src_request_redirectrequest_.html#redirectrequest" class="tsd-signature-type">RedirectRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L18">msal-browser/src/app/IPublicClientApplication.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L23">msal-browser/src/app/IPublicClientApplication.ts:23</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>request: <a href="../modules/_src_request_redirectrequest_.html#redirectrequest" class="tsd-signature-type">RedirectRequest</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> request: <a href="../modules/_src_request_redirectrequest_.html#redirectrequest" class="tsd-signature-type">RedirectRequest</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -289,7 +338,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L19">msal-browser/src/app/IPublicClientApplication.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L24">msal-browser/src/app/IPublicClientApplication.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -303,25 +352,48 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="ssosilent" class="tsd-anchor"></a>
-					<h3>sso<wbr>Silent</h3>
+					<a name="removeeventcallback" class="tsd-anchor"></a>
+					<h3>remove<wbr>Event<wbr>Callback</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">sso<wbr>Silent<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_src_index_.html#authorizationurlrequest" class="tsd-signature-type">AuthorizationUrlRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Event<wbr>Callback<span class="tsd-signature-symbol">(</span>callbackId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L20">msal-browser/src/app/IPublicClientApplication.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L17">msal-browser/src/app/IPublicClientApplication.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>request: <a href="../modules/_src_index_.html#authorizationurlrequest" class="tsd-signature-type">AuthorizationUrlRequest</a></h5>
+									<h5>callbackId: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthenticationResult</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="ssosilent" class="tsd-anchor"></a>
+					<h3>sso<wbr>Silent</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">sso<wbr>Silent<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_src_request_ssosilentrequest_.html#ssosilentrequest" class="tsd-signature-type">SsoSilentRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/IPublicClientApplication.ts#L25">msal-browser/src/app/IPublicClientApplication.ts:25</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>request: <a href="../modules/_src_request_ssosilentrequest_.html#ssosilentrequest" class="tsd-signature-type">SsoSilentRequest</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -355,6 +427,12 @@
 								<a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#addeventcallback" class="tsd-kind-icon">add<wbr>Event<wbr>Callback</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#getaccountbyhomeid" class="tsd-kind-icon">get<wbr>Account<wbr>ByHome<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#getaccountbyusername" class="tsd-kind-icon">get<wbr>Account<wbr>ByUsername</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
@@ -371,6 +449,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#logout" class="tsd-kind-icon">logout</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#removeeventcallback" class="tsd-kind-icon">remove<wbr>Event<wbr>Callback</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="_src_app_ipublicclientapplication_.ipublicclientapplication.html#ssosilent" class="tsd-kind-icon">sso<wbr>Silent</a>

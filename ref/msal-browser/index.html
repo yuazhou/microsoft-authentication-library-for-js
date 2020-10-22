@@ -99,7 +99,6 @@
 				<a href="#about" id="about" style="color: inherit; text-decoration: none;">
 					<h2>About</h2>
 				</a>
-				<p><strong>Important:</strong> MSAL.js 2.0 with Authorization Code Flow is <strong>not</strong> yet available for B2C tenants (coming soon).</p>
 				<p>The MSAL library for JavaScript enables client-side JavaScript applications to authenticate users using <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-overview">Azure AD</a> work and school accounts (AAD), Microsoft personal accounts (MSA) and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through <a href="https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-overview#identity-providers">Azure AD B2C</a> service. It also enables your app to get tokens to access <a href="https://www.microsoft.com/enterprise">Microsoft Cloud</a> services such as <a href="https://graph.microsoft.io">Microsoft Graph</a>.</p>
 				<p>The <code>@azure/msal-browser</code> package described by the code in this folder uses the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-common"><code>@azure/msal-common</code> package</a> as a dependency to enable authentication in Javascript Single-Page Applications without backend servers. This version of the library uses the OAuth 2.0 Authorization Code Flow with PKCE. To read more about this protocol, as well as the differences between implicit flow and authorization code flow, see the section <a href="#implicit-flow-vs-authorization-code-flow-with-pkce">below</a>. If you are looking for the version of the library that uses the implicit flow, please see the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-core"><code>msal-core</code> library</a>.</p>
 				<p>This is an improvement upon the current <code>msal-core</code> library which will utilize the authorization code flow in the browser. Most features available in the old library will be available in this one, but there are nuances to the authentication flow in both. The <code>@azure/msal-browser</code> package does NOT support the implicit flow.</p>
@@ -161,18 +160,11 @@
 					<h3>Via NPM:</h3>
 				</a>
 				<pre><code class="language-javascript">npm install @azure/msal-browser</code></pre>
-				<a href="#via-cdn-with-sri-hash" id="via-cdn-with-sri-hash" style="color: inherit; text-decoration: none;">
-					<h3>Via CDN (with SRI Hash):</h3>
+				<a href="#via-cdn" id="via-cdn" style="color: inherit; text-decoration: none;">
+					<h3>Via CDN:</h3>
 				</a>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msauth.net/browser/2.4.0/js/msal-browser.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 				<p>See <a href="./docs/cdn-usage.md">here</a> for more info on how to use this package from the Microsoft CDN.</p>
-				<a href="#compiled" id="compiled" style="color: inherit; text-decoration: none;">
-					<h3>Compiled</h3>
-				</a>
-				<pre><code class="language-javascript">&lt;script src=<span class="hljs-string">"https://alcdn.msauth.net/browser/2.0.0/js/msal-browser.js"</span> integrity=<span class="hljs-string">"sha384-inserthashhere"</span> crossorigin=<span class="hljs-string">"anonymous"</span>&gt;&lt;<span class="hljs-regexp">/script&gt;</span></code></pre>
-				<a href="#minified" id="minified" style="color: inherit; text-decoration: none;">
-					<h3>Minified</h3>
-				</a>
-				<pre><code class="language-javascript">&lt;script src=<span class="hljs-string">"https://alcdn.msauth.net/browser/2.0.0/js/msal-browser.min.js"</span> integrity=<span class="hljs-string">"sha384-inserthashhere"</span> crossorigin=<span class="hljs-string">"anonymous"</span>&gt;&lt;<span class="hljs-regexp">/script&gt;</span></code></pre>
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
 				</a>
@@ -207,6 +199,10 @@
 				<ul>
 					<li>You can run any VanillaJSTestApp2.0 sample by changing the <code>authConfig.js</code> file in the respective folder to match your app registration and running the <code>npm</code> command <code>npm start -- -s &lt;sample-name&gt; -p &lt;port&gt;</code> in the VanillaJSTestApp2.0 folder. </li>
 					<li>You can run the TypescriptTestApp2.0 sample by changing the <code>AuthModule.ts</code> file to match your app registration and running the <code>npm</code> command <code>npm start</code> in the TypescriptTestApp2.0 folder.</li>
+				</ul>
+				<p>Additionally, the <code>msal-angular-v2-samples</code> folder contains an Angular 10 sample app that uses msal-browser. </p>
+				<ul>
+					<li>You can run the angular10-browser sample by changing the <code>app.module.ts</code> file to match your app registration and running the <code>npm</code> command <code>npm start</code> in the angular-10-browser-sample folder.</li>
 				</ul>
 				<p>Here is a complete list of samples for the MSAL.js 2.x library:</p>
 				<table>
@@ -247,45 +243,56 @@
 							<td>A vanilla JS sample showing usage of <code>@azure/msal-browser</code> in an application designed to run in Internet Explorer 11.</td>
 							<td><code>npm start -- -s ie11-sample</code></td>
 						</tr>
+						<tr>
+							<td><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-angular-v2-samples/angular10-browser-sample">Angular 10 Sample</a></td>
+							<td>An Angular 10 sample showing usage of MSAL 2.0 with the Microsoft Graph API.</td>
+							<td><code>npm start</code></td>
+						</tr>
 				</tbody></table>
 				<p>More instructions to run the samples can be found in the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/msal-browser-samples/VanillaJSTestApp2.0/Readme.md"><code>README.md</code> file</a> of the VanillaJSTestApp2.0 folder.</p>
 				<a href="#build-and-test" id="build-and-test" style="color: inherit; text-decoration: none;">
 					<h2>Build and Test</h2>
 				</a>
-				<a href="#build-library" id="build-library" style="color: inherit; text-decoration: none;">
-					<h3>Build Library</h3>
+				<p>See the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/contributing.md"><code>contributing.md</code></a> file for more information. </p>
+				<a href="#linking-local-package-dependencies" id="linking-local-package-dependencies" style="color: inherit; text-decoration: none;">
+					<h3>Linking local package dependencies</h3>
 				</a>
-				<pre><code class="language-javascript"><span class="hljs-comment">// Change to the root of the msal repo</span>
-cd microsoft-authentication-library-<span class="hljs-keyword">for</span>-js/
-<span class="hljs-comment">// Install npm dependencies and bootstrap packages</span>
+				<p>If you are having issues with <code>lerna</code> and wish to use the local version of the <code>@azure/msal-common</code> library (to reflect changes made in both repositories) you can run do the following:</p>
+				<pre><code class="language-bash">// Change to the msal-browser package directory
+<span class="hljs-built_in">cd</span> lib/msal-browser/
+// Install package dependencies
 npm install
-<span class="hljs-comment">// Build library</span>
-npm run build
-<span class="hljs-comment">// To run build only for the browser package</span>
-npm run build -- --scope @azure/msal-browser</code></pre>
-				<a href="#alternate-build-instructions" id="alternate-build-instructions" style="color: inherit; text-decoration: none;">
-					<h4>Alternate Build Instructions</h4>
+// Change to the msal-common package directory
+<span class="hljs-built_in">cd</span> ../msal-common/
+// Install package dependencies
+npm install
+// Prepare the <span class="hljs-built_in">local</span> msal-common package <span class="hljs-keyword">for</span> linking
+npm link
+// Change back to the msal-browser package directory
+<span class="hljs-built_in">cd</span> ../msal-browser/
+// Link to the <span class="hljs-built_in">local</span> build of msal-common
+npm link @azure/msal-common</code></pre>
+				<a href="#building-the-package" id="building-the-package" style="color: inherit; text-decoration: none;">
+					<h3>Building the package</h3>
 				</a>
-				<p>If you are having issues with <code>lerna</code>, you can try the following:</p>
-				<pre><code class="language-javascript"><span class="hljs-comment">// Change to the msal-browser package directory</span>
-cd lib/msal-browser/
-<span class="hljs-comment">// Ensure you are using the local build of msal-common</span>
-npm link @azure/msal-common
-<span class="hljs-comment">// To run build only for browser package</span>
-npm run build
-<span class="hljs-comment">// To run build for common and browser package</span>
+				<p>To build the <code>@azure/msal-browser</code> library, you can do the following:</p>
+				<pre><code class="language-bash">// Change to the msal-browser package directory
+<span class="hljs-built_in">cd</span> lib/msal-browser/
+// To run build only <span class="hljs-keyword">for</span> browser package
+npm run build</code></pre>
+				<p>To build both the <code>@azure/msal-browser</code> library and <code>@azure/msal-common</code> libraries, you can do the following:</p>
+				<pre><code class="language-bash">// Change to the msal-browser package directory
+<span class="hljs-built_in">cd</span> lib/msal-browser/
+// To run build only <span class="hljs-keyword">for</span> browser package
 npm run build:all</code></pre>
 				<a href="#running-tests" id="running-tests" style="color: inherit; text-decoration: none;">
 					<h3>Running Tests</h3>
 				</a>
 				<p><code>@azure/msal-browser</code> uses <a href="https://mochajs.org/">mocha</a> and <a href="https://www.chaijs.com/">chai</a> to run unit tests, as well as Istanbul&#39;s <a href="https://github.com/istanbuljs/nyc">nyc</a> tool for code coverage.</p>
-				<pre><code class="language-javascript"><span class="hljs-comment">// To run tests</span>
-npm test
-<span class="hljs-comment">// To run tests with code coverage</span>
-npm run test:coverage:only</code></pre>
-				<ul>
-					<li>If you are having issues with <code>lerna</code>, change to the <code>msal-browser</code> directory and run the commands directly there.</li>
-				</ul>
+				<pre><code class="language-bash">// To run tests
+npm <span class="hljs-built_in">test</span>
+// To run tests with code coverage
+npm run <span class="hljs-built_in">test</span>:coverage:only</code></pre>
 				<a href="#implicit-flow-vs-authorization-code-flow-with-pkce" id="implicit-flow-vs-authorization-code-flow-with-pkce" style="color: inherit; text-decoration: none;">
 					<h2>Implicit Flow vs Authorization Code Flow with PKCE</h2>
 				</a>
@@ -318,6 +325,9 @@ npm run test:coverage:only</code></pre>
 						<span>Internals</span>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="modules/_src_app_clientapplication_.html">&quot;src/app/<wbr>Client<wbr>Application&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="modules/_src_app_ipublicclientapplication_.html">&quot;src/app/IPublic<wbr>Client<wbr>Application&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -325,6 +335,9 @@ npm run test:coverage:only</code></pre>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_src_cache_browserstorage_.html">&quot;src/cache/<wbr>Browser<wbr>Storage&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_src_cache_databasestorage_.html">&quot;src/cache/<wbr>Database<wbr>Storage&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_src_config_configuration_.html">&quot;src/config/<wbr>Configuration&quot;</a>
@@ -352,6 +365,12 @@ npm run test:coverage:only</code></pre>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_src_error_browserconfigurationautherror_.html">&quot;src/error/<wbr>Browser<wbr>Configuration<wbr>Auth<wbr>Error&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_src_event_eventmessage_.html">&quot;src/event/<wbr>Event<wbr>Message&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_src_event_eventtype_.html">&quot;src/event/<wbr>Event<wbr>Type&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_src_index_.html">&quot;src/index&quot;</a>
@@ -384,7 +403,13 @@ npm run test:coverage:only</code></pre>
 						<a href="modules/_src_request_silentrequest_.html">&quot;src/request/<wbr>Silent<wbr>Request&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="modules/_src_request_ssosilentrequest_.html">&quot;src/request/<wbr>Sso<wbr>Silent<wbr>Request&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="modules/_src_utils_browserconstants_.html">&quot;src/utils/<wbr>Browser<wbr>Constants&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_src_utils_browserprotocolutils_.html">&quot;src/utils/<wbr>Browser<wbr>Protocol<wbr>Utils&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_src_utils_browserstringutils_.html">&quot;src/utils/<wbr>Browser<wbr>String<wbr>Utils&quot;</a>

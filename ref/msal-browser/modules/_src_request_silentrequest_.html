@@ -84,10 +84,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
 					<a name="silentrequest" class="tsd-anchor"></a>
 					<h3>Silent<wbr>Request</h3>
-					<div class="tsd-signature tsd-kind-icon">Silent<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">SilentFlowRequest</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>redirectUri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">Silent<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">SilentFlowRequest</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>extraQueryParameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">StringDict</span><span class="tsd-signature-symbol">; </span>redirectUri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/request/SilentRequest.ts#L20">msal-browser/src/request/SilentRequest.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/request/SilentRequest.ts#L21">msal-browser/src/request/SilentRequest.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -102,6 +102,7 @@
 							<li>correlationId          - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
 							<li>account                - Account entity to lookup the credentials.</li>
 							<li>forceRefresh           - Forces silent requests to make network calls if true.</li>
+							<li>extraQueryParameters   - String to string map of custom query parameters. Only used when renewing the refresh token.</li>
 							<li>redirectUri            - The redirect URI where authentication responses can be received by your application. It must exactly match one of the redirect URIs registered in the Azure portal. Only used for cases where refresh token is expired.</li>
 						</ul>
 					</div>

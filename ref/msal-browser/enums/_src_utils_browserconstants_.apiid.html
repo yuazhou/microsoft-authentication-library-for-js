@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>HTTP_REQUEST_TYPE | @azure/msal-browser</title>
+	<title>ApiId | @azure/msal-browser</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -59,10 +59,10 @@
 					<a href="../modules/_src_utils_browserconstants_.html">&quot;src/utils/BrowserConstants&quot;</a>
 				</li>
 				<li>
-					<a href="_src_utils_browserconstants_.http_request_type.html">HTTP_REQUEST_TYPE</a>
+					<a href="_src_utils_browserconstants_.apiid.html">ApiId</a>
 				</li>
 			</ul>
-			<h1>Enumeration HTTP_REQUEST_TYPE</h1>
+			<h1>Enumeration ApiId</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,10 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>HTTP Request types supported by MSAL.</p>
+						<p>API Codes for Telemetry purposes.
+							Before adding a new code you must claim it in the MSAL Telemetry tracker as these number spaces are shared across all MSALs
+							0-99 Silent Flow
+						800-899 Auth Code Flow</p>
 					</div>
 				</div>
 			</section>
@@ -83,8 +86,12 @@
 						<section class="tsd-index-section ">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_browserconstants_.http_request_type.html#get" class="tsd-kind-icon">GET</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_browserconstants_.http_request_type.html#post" class="tsd-kind-icon">POST</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_browserconstants_.apiid.html#acquiretokenpopup" class="tsd-kind-icon">acquire<wbr>Token<wbr>Popup</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_browserconstants_.apiid.html#acquiretokenredirect" class="tsd-kind-icon">acquire<wbr>Token<wbr>Redirect</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_browserconstants_.apiid.html#acquiretokensilent_authcode" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent_<wbr>auth<wbr>Code</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_browserconstants_.apiid.html#acquiretokensilent_silentflow" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent_<wbr>silent<wbr>Flow</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_browserconstants_.apiid.html#handleredirectpromise" class="tsd-kind-icon">handle<wbr>Redirect<wbr>Promise</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_browserconstants_.apiid.html#ssosilent" class="tsd-kind-icon">sso<wbr>Silent</a></li>
 							</ul>
 						</section>
 					</div>
@@ -93,22 +100,62 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="get" class="tsd-anchor"></a>
-					<h3>GET</h3>
-					<div class="tsd-signature tsd-kind-icon">GET<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;GET&quot;</span></div>
+					<a name="acquiretokenpopup" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>Popup</h3>
+					<div class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Popup<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 862</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserConstants.ts#L36">msal-browser/src/utils/BrowserConstants.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserConstants.ts#L64">msal-browser/src/utils/BrowserConstants.ts:64</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="post" class="tsd-anchor"></a>
-					<h3>POST</h3>
-					<div class="tsd-signature tsd-kind-icon">POST<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;POST&quot;</span></div>
+					<a name="acquiretokenredirect" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>Redirect</h3>
+					<div class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Redirect<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 861</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserConstants.ts#L37">msal-browser/src/utils/BrowserConstants.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserConstants.ts#L63">msal-browser/src/utils/BrowserConstants.ts:63</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="acquiretokensilent_authcode" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>Silent_<wbr>auth<wbr>Code</h3>
+					<div class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Silent_<wbr>auth<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 864</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserConstants.ts#L66">msal-browser/src/utils/BrowserConstants.ts:66</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="acquiretokensilent_silentflow" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>Silent_<wbr>silent<wbr>Flow</h3>
+					<div class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Silent_<wbr>silent<wbr>Flow<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 61</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserConstants.ts#L68">msal-browser/src/utils/BrowserConstants.ts:68</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="handleredirectpromise" class="tsd-anchor"></a>
+					<h3>handle<wbr>Redirect<wbr>Promise</h3>
+					<div class="tsd-signature tsd-kind-icon">handle<wbr>Redirect<wbr>Promise<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 865</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserConstants.ts#L67">msal-browser/src/utils/BrowserConstants.ts:67</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="ssosilent" class="tsd-anchor"></a>
+					<h3>sso<wbr>Silent</h3>
+					<div class="tsd-signature tsd-kind-icon">sso<wbr>Silent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 863</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserConstants.ts#L65">msal-browser/src/utils/BrowserConstants.ts:65</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -127,24 +174,36 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
-						<a href="_src_utils_browserconstants_.apiid.html" class="tsd-kind-icon">Api<wbr>Id</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-enum tsd-parent-kind-external-module">
-						<a href="_src_utils_browserconstants_.http_request_type.html" class="tsd-kind-icon">HTTP_<wbr>REQUEST_<wbr>TYPE</a>
+						<a href="_src_utils_browserconstants_.apiid.html" class="tsd-kind-icon">Api<wbr>Id</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_src_utils_browserconstants_.http_request_type.html#get" class="tsd-kind-icon">GET</a>
+								<a href="_src_utils_browserconstants_.apiid.html#acquiretokenpopup" class="tsd-kind-icon">acquire<wbr>Token<wbr>Popup</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_src_utils_browserconstants_.http_request_type.html#post" class="tsd-kind-icon">POST</a>
+								<a href="_src_utils_browserconstants_.apiid.html#acquiretokenredirect" class="tsd-kind-icon">acquire<wbr>Token<wbr>Redirect</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_src_utils_browserconstants_.apiid.html#acquiretokensilent_authcode" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent_<wbr>auth<wbr>Code</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_src_utils_browserconstants_.apiid.html#acquiretokensilent_silentflow" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent_<wbr>silent<wbr>Flow</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_src_utils_browserconstants_.apiid.html#handleredirectpromise" class="tsd-kind-icon">handle<wbr>Redirect<wbr>Promise</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_src_utils_browserconstants_.apiid.html#ssosilent" class="tsd-kind-icon">sso<wbr>Silent</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+						<a href="_src_utils_browserconstants_.http_request_type.html" class="tsd-kind-icon">HTTP_<wbr>REQUEST_<wbr>TYPE</a>
+					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
 						<a href="_src_utils_browserconstants_.interactiontype.html" class="tsd-kind-icon">Interaction<wbr>Type</a>
 					</li>

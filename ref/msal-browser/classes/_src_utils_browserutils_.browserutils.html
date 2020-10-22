@@ -91,11 +91,13 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_utils_browserutils_.browserutils.html#blocknonbrowserenvironment" class="tsd-kind-icon">block<wbr>Non<wbr>Browser<wbr>Environment</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_utils_browserutils_.browserutils.html#blockreloadinhiddeniframes" class="tsd-kind-icon">block<wbr>Reload<wbr>InHidden<wbr>Iframes</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_utils_browserutils_.browserutils.html#clearhash" class="tsd-kind-icon">clear<wbr>Hash</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_utils_browserutils_.browserutils.html#detectieoredge" class="tsd-kind-icon">detectIEOr<wbr>Edge</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_utils_browserutils_.browserutils.html#getbrowsernetworkclient" class="tsd-kind-icon">get<wbr>Browser<wbr>Network<wbr>Client</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_utils_browserutils_.browserutils.html#getcurrenturi" class="tsd-kind-icon">get<wbr>Current<wbr>Uri</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_utils_browserutils_.browserutils.html#gethomepage" class="tsd-kind-icon">get<wbr>Homepage</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_utils_browserutils_.browserutils.html#isiniframe" class="tsd-kind-icon">is<wbr>InIframe</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_utils_browserutils_.browserutils.html#navigatewindow" class="tsd-kind-icon">navigate<wbr>Window</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_utils_browserutils_.browserutils.html#replacehash" class="tsd-kind-icon">replace<wbr>Hash</a></li>
@@ -107,6 +109,37 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="blocknonbrowserenvironment" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> block<wbr>Non<wbr>Browser<wbr>Environment</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">block<wbr>Non<wbr>Browser<wbr>Environment<span class="tsd-signature-symbol">(</span>isBrowserEnvironment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L113">msal-browser/src/utils/BrowserUtils.ts:113</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Throws error if token requests are made in non-browser environment</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>isBrowserEnvironment: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Flag indicating if environment is a browser.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
 					<a name="blockreloadinhiddeniframes" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> block<wbr>Reload<wbr>InHidden<wbr>Iframes</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -116,7 +149,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L78">msal-browser/src/utils/BrowserUtils.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L101">msal-browser/src/utils/BrowserUtils.ts:101</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -139,7 +172,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L33">msal-browser/src/utils/BrowserUtils.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L42">msal-browser/src/utils/BrowserUtils.ts:42</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -161,7 +194,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L89">msal-browser/src/utils/BrowserUtils.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L122">msal-browser/src/utils/BrowserUtils.ts:122</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -183,7 +216,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L66">msal-browser/src/utils/BrowserUtils.ts:66</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L89">msal-browser/src/utils/BrowserUtils.ts:89</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -205,12 +238,34 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L59">msal-browser/src/utils/BrowserUtils.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L73">msal-browser/src/utils/BrowserUtils.ts:73</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Returns current window URL as redirect uri</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="gethomepage" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Homepage</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Homepage<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L80">msal-browser/src/utils/BrowserUtils.ts:80</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the homepage url for the current window location.</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -227,7 +282,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L50">msal-browser/src/utils/BrowserUtils.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L64">msal-browser/src/utils/BrowserUtils.ts:64</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -243,13 +298,13 @@
 					<a name="navigatewindow" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> navigate<wbr>Window</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">navigate<wbr>Window<span class="tsd-signature-symbol">(</span>urlNavigate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, noHistory<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">navigate<wbr>Window<span class="tsd-signature-symbol">(</span>urlNavigate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, navigationTimeout<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, logger<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Logger</span>, noHistory<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L22">msal-browser/src/utils/BrowserUtils.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L23">msal-browser/src/utils/BrowserUtils.ts:23</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -266,13 +321,19 @@
 									</div>
 								</li>
 								<li>
+									<h5>navigationTimeout: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>logger: <span class="tsd-signature-type">Logger</span></h5>
+								</li>
+								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> noHistory: <span class="tsd-signature-type">boolean</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>boolean flag, uses .replace() instead of .assign() if true</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -286,7 +347,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L40">msal-browser/src/utils/BrowserUtils.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/utils/BrowserUtils.ts#L54">msal-browser/src/utils/BrowserUtils.ts:54</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -325,6 +386,9 @@
 						<a href="_src_utils_browserutils_.browserutils.html" class="tsd-kind-icon">Browser<wbr>Utils</a>
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_src_utils_browserutils_.browserutils.html#blocknonbrowserenvironment" class="tsd-kind-icon">block<wbr>Non<wbr>Browser<wbr>Environment</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_src_utils_browserutils_.browserutils.html#blockreloadinhiddeniframes" class="tsd-kind-icon">block<wbr>Reload<wbr>InHidden<wbr>Iframes</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -338,6 +402,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_src_utils_browserutils_.browserutils.html#getcurrenturi" class="tsd-kind-icon">get<wbr>Current<wbr>Uri</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_src_utils_browserutils_.browserutils.html#gethomepage" class="tsd-kind-icon">get<wbr>Homepage</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_src_utils_browserutils_.browserutils.html#isiniframe" class="tsd-kind-icon">is<wbr>InIframe</a>

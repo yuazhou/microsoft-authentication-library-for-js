@@ -98,8 +98,13 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_crypto_browsercrypto_.browsercrypto.html#exportjwk" class="tsd-kind-icon">export<wbr>Jwk</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_crypto_browsercrypto_.browsercrypto.html#generatekeypair" class="tsd-kind-icon">generate<wbr>Key<wbr>Pair</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_crypto_browsercrypto_.browsercrypto.html#getrandomvalues" class="tsd-kind-icon">get<wbr>Random<wbr>Values</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_crypto_browsercrypto_.browsercrypto.html#importjwk" class="tsd-kind-icon">import<wbr>Jwk</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_crypto_browsercrypto_.browsercrypto.html#sha256digest" class="tsd-kind-icon">sha256<wbr>Digest</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_crypto_browsercrypto_.browsercrypto.html#sign" class="tsd-kind-icon">sign</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_crypto_browsercrypto_.browsercrypto.html#getjwkstring" class="tsd-kind-icon">get<wbr>Jwk<wbr>String</a></li>
 							</ul>
 						</section>
 					</div>
@@ -117,7 +122,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L15">msal-browser/src/crypto/BrowserCrypto.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L27">msal-browser/src/crypto/BrowserCrypto.ts:27</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_src_crypto_browsercrypto_.browsercrypto.html" class="tsd-signature-type">BrowserCrypto</a></h4>
@@ -128,6 +133,67 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="exportjwk" class="tsd-anchor"></a>
+					<h3>export<wbr>Jwk</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">export<wbr>Jwk<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CryptoKey</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">JsonWebKey</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L82">msal-browser/src/crypto/BrowserCrypto.ts:82</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Export key as Json Web Key (JWK)</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>key: <span class="tsd-signature-type">CryptoKey</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">JsonWebKey</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="generatekeypair" class="tsd-anchor"></a>
+					<h3>generate<wbr>Key<wbr>Pair</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Key<wbr>Pair<span class="tsd-signature-symbol">(</span>extractable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, usages<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">KeyUsage</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">CryptoKeyPair</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L69">msal-browser/src/crypto/BrowserCrypto.ts:69</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generates a keypair based on current keygen algorithm config.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>extractable: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>usages: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">KeyUsage</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">CryptoKeyPair</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getrandomvalues" class="tsd-anchor"></a>
 					<h3>get<wbr>Random<wbr>Values</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -137,7 +203,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L37">msal-browser/src/crypto/BrowserCrypto.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L56">msal-browser/src/crypto/BrowserCrypto.ts:56</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -158,6 +224,42 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="importjwk" class="tsd-anchor"></a>
+					<h3>import<wbr>Jwk</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">import<wbr>Jwk<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">JsonWebKey</span>, extractable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, usages<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">KeyUsage</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">CryptoKey</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L93">msal-browser/src/crypto/BrowserCrypto.ts:93</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Imports key as Json Web Key (JWK), can set extractable and usages.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>key: <span class="tsd-signature-type">JsonWebKey</span></h5>
+								</li>
+								<li>
+									<h5>extractable: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>usages: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">KeyUsage</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">CryptoKey</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="sha256digest" class="tsd-anchor"></a>
 					<h3>sha256<wbr>Digest</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -167,7 +269,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L27">msal-browser/src/crypto/BrowserCrypto.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L46">msal-browser/src/crypto/BrowserCrypto.ts:46</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -184,6 +286,69 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="sign" class="tsd-anchor"></a>
+					<h3>sign</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">sign<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CryptoKey</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L107">msal-browser/src/crypto/BrowserCrypto.ts:107</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Signs given data with given key</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>key: <span class="tsd-signature-type">CryptoKey</span></h5>
+								</li>
+								<li>
+									<h5>data: <span class="tsd-signature-type">ArrayBuffer</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ArrayBuffer</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="getjwkstring" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Jwk<wbr>String</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Jwk<wbr>String<span class="tsd-signature-symbol">(</span>jwk<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">JsonWebKey</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/BrowserCrypto.ts#L251">msal-browser/src/crypto/BrowserCrypto.ts:251</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns stringified jwk.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>jwk: <span class="tsd-signature-type">JsonWebKey</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -211,17 +376,41 @@
 								<a href="_src_crypto_browsercrypto_.browsercrypto.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_src_crypto_browsercrypto_.browsercrypto.html#exportjwk" class="tsd-kind-icon">export<wbr>Jwk</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_src_crypto_browsercrypto_.browsercrypto.html#generatekeypair" class="tsd-kind-icon">generate<wbr>Key<wbr>Pair</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_crypto_browsercrypto_.browsercrypto.html#getrandomvalues" class="tsd-kind-icon">get<wbr>Random<wbr>Values</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_src_crypto_browsercrypto_.browsercrypto.html#importjwk" class="tsd-kind-icon">import<wbr>Jwk</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_crypto_browsercrypto_.browsercrypto.html#sha256digest" class="tsd-kind-icon">sha256<wbr>Digest</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_src_crypto_browsercrypto_.browsercrypto.html#sign" class="tsd-kind-icon">sign</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_src_crypto_browsercrypto_.browsercrypto.html#getjwkstring" class="tsd-kind-icon">get<wbr>Jwk<wbr>String</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="../modules/_src_crypto_browsercrypto_.html#hash_alg" class="tsd-kind-icon">HASH_<wbr>ALG</a>
+						<a href="../modules/_src_crypto_browsercrypto_.html#modulus_length" class="tsd-kind-icon">MODULUS_<wbr>LENGTH</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_src_crypto_browsercrypto_.html#pkcs1_v15_keygen_alg" class="tsd-kind-icon">PKCS1_<wbr><wbr>V15_<wbr>KEYGEN_<wbr>ALG</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_src_crypto_browsercrypto_.html#public_exponent" class="tsd-kind-icon">PUBLIC_<wbr>EXPONENT</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="../modules/_src_crypto_browsercrypto_.html#s256_hash_alg" class="tsd-kind-icon">S256_<wbr>HASH_<wbr>ALG</a>
 					</li>
 				</ul>
 			</nav>

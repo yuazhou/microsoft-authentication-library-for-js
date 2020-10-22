@@ -108,6 +108,8 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_crypto_cryptoops_.cryptoops.html#base64encode" class="tsd-kind-icon">base64<wbr>Encode</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_crypto_cryptoops_.cryptoops.html#createnewguid" class="tsd-kind-icon">create<wbr>New<wbr>Guid</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_crypto_cryptoops_.cryptoops.html#generatepkcecodes" class="tsd-kind-icon">generate<wbr>Pkce<wbr>Codes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_crypto_cryptoops_.cryptoops.html#getpublickeythumbprint" class="tsd-kind-icon">get<wbr>Public<wbr>Key<wbr>Thumbprint</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_crypto_cryptoops_.cryptoops.html#signjwt" class="tsd-kind-icon">sign<wbr>Jwt</a></li>
 							</ul>
 						</section>
 					</div>
@@ -125,7 +127,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/CryptoOps.ts#L22">msal-browser/src/crypto/CryptoOps.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/CryptoOps.ts#L41">msal-browser/src/crypto/CryptoOps.ts:41</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_src_crypto_cryptoops_.cryptoops.html" class="tsd-signature-type">CryptoOps</a></h4>
@@ -145,7 +147,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/CryptoOps.ts#L53">msal-browser/src/crypto/CryptoOps.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/CryptoOps.ts#L73">msal-browser/src/crypto/CryptoOps.ts:73</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -175,7 +177,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/CryptoOps.ts#L45">msal-browser/src/crypto/CryptoOps.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/CryptoOps.ts#L65">msal-browser/src/crypto/CryptoOps.ts:65</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -205,7 +207,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/CryptoOps.ts#L37">msal-browser/src/crypto/CryptoOps.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/CryptoOps.ts#L57">msal-browser/src/crypto/CryptoOps.ts:57</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -228,7 +230,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/CryptoOps.ts#L60">msal-browser/src/crypto/CryptoOps.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/CryptoOps.ts#L80">msal-browser/src/crypto/CryptoOps.ts:80</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -237,6 +239,72 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">PkceCodes</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getpublickeythumbprint" class="tsd-anchor"></a>
+					<h3>get<wbr>Public<wbr>Key<wbr>Thumbprint</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Public<wbr>Key<wbr>Thumbprint<span class="tsd-signature-symbol">(</span>resourceRequestMethod<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, resourceRequestUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/CryptoOps.ts#L89">msal-browser/src/crypto/CryptoOps.ts:89</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generates a keypair, stores it and returns a thumbprint</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>resourceRequestMethod: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>resourceRequestUri: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="signjwt" class="tsd-anchor"></a>
+					<h3>sign<wbr>Jwt</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">sign<wbr>Jwt<span class="tsd-signature-symbol">(</span>payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SignedHttpRequest</span>, kid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/CryptoOps.ts#L125">msal-browser/src/crypto/CryptoOps.ts:125</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Signs the given object as a jwt payload with private key retrieved by given kid.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>payload: <span class="tsd-signature-type">SignedHttpRequest</span></h5>
+								</li>
+								<li>
+									<h5>kid: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -275,10 +343,19 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_crypto_cryptoops_.cryptoops.html#generatepkcecodes" class="tsd-kind-icon">generate<wbr>Pkce<wbr>Codes</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_src_crypto_cryptoops_.cryptoops.html#getpublickeythumbprint" class="tsd-kind-icon">get<wbr>Public<wbr>Key<wbr>Thumbprint</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_src_crypto_cryptoops_.cryptoops.html#signjwt" class="tsd-kind-icon">sign<wbr>Jwt</a>
+							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="../modules/_src_crypto_cryptoops_.html#cachedkeypair" class="tsd-kind-icon">Cached<wbr>Key<wbr>Pair</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

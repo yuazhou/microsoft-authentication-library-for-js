@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;src/crypto/CryptoOps&quot; | @azure/msal-browser</title>
+	<title>&quot;src/event/EventMessage&quot; | @azure/msal-browser</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_src_crypto_cryptoops_.html">&quot;src/crypto/CryptoOps&quot;</a>
+					<a href="_src_event_eventmessage_.html">&quot;src/event/EventMessage&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;src/crypto/CryptoOps&quot;</h1>
+			<h1>External module &quot;src/event/EventMessage&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -71,15 +71,12 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Classes</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_src_crypto_cryptoops_.cryptoops.html" class="tsd-kind-icon">Crypto<wbr>Ops</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_src_crypto_cryptoops_.html#cachedkeypair" class="tsd-kind-icon">Cached<wbr>Key<wbr>Pair</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_src_event_eventmessage_.html#eventcallbackfunction" class="tsd-kind-icon">Event<wbr>Callback<wbr>Function</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_src_event_eventmessage_.html#eventerror" class="tsd-kind-icon">Event<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_src_event_eventmessage_.html#eventmessage" class="tsd-kind-icon">Event<wbr>Message</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_src_event_eventmessage_.html#eventpayload" class="tsd-kind-icon">Event<wbr>Payload</a></li>
 							</ul>
 						</section>
 					</div>
@@ -88,31 +85,85 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
-					<a name="cachedkeypair" class="tsd-anchor"></a>
-					<h3>Cached<wbr>Key<wbr>Pair</h3>
-					<div class="tsd-signature tsd-kind-icon">Cached<wbr>Key<wbr>Pair<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>privateKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CryptoKey</span><span class="tsd-signature-symbol">; </span>publicKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CryptoKey</span><span class="tsd-signature-symbol">; </span>requestMethod<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>requestUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<a name="eventcallbackfunction" class="tsd-anchor"></a>
+					<h3>Event<wbr>Callback<wbr>Function</h3>
+					<div class="tsd-signature tsd-kind-icon">Event<wbr>Callback<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><a href="_src_event_eventmessage_.html#eventmessage" class="tsd-signature-type">EventMessage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/crypto/CryptoOps.ts#L16">msal-browser/src/crypto/CryptoOps.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/event/EventMessage.ts#L23">msal-browser/src/event/EventMessage.ts:23</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><a href="_src_event_eventmessage_.html#eventmessage" class="tsd-signature-type">EventMessage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>message: <a href="_src_event_eventmessage_.html#eventmessage" class="tsd-signature-type">EventMessage</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="eventerror" class="tsd-anchor"></a>
+					<h3>Event<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Event<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AuthError</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/event/EventMessage.ts#L21">msal-browser/src/event/EventMessage.ts:21</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="eventmessage" class="tsd-anchor"></a>
+					<h3>Event<wbr>Message</h3>
+					<div class="tsd-signature tsd-kind-icon">Event<wbr>Message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>error<span class="tsd-signature-symbol">: </span><a href="_src_event_eventmessage_.html#eventerror" class="tsd-signature-type">EventError</a><span class="tsd-signature-symbol">; </span>eventType<span class="tsd-signature-symbol">: </span><a href="../enums/_src_event_eventtype_.eventtype.html" class="tsd-signature-type">EventType</a><span class="tsd-signature-symbol">; </span>interactionType<span class="tsd-signature-symbol">: </span><a href="../enums/_src_utils_browserconstants_.interactiontype.html" class="tsd-signature-type">InteractionType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">; </span>payload<span class="tsd-signature-symbol">: </span><a href="_src_event_eventmessage_.html#eventpayload" class="tsd-signature-type">EventPayload</a><span class="tsd-signature-symbol">; </span>timestamp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/event/EventMessage.ts#L11">msal-browser/src/event/EventMessage.ts:11</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
-								<h5>private<wbr>Key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CryptoKey</span></h5>
+								<h5>error<span class="tsd-signature-symbol">: </span><a href="_src_event_eventmessage_.html#eventerror" class="tsd-signature-type">EventError</a></h5>
 							</li>
 							<li class="tsd-parameter">
-								<h5>public<wbr>Key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CryptoKey</span></h5>
+								<h5>event<wbr>Type<span class="tsd-signature-symbol">: </span><a href="../enums/_src_event_eventtype_.eventtype.html" class="tsd-signature-type">EventType</a></h5>
 							</li>
 							<li class="tsd-parameter">
-								<h5>request<wbr>Method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<h5>interaction<wbr>Type<span class="tsd-signature-symbol">: </span><a href="../enums/_src_utils_browserconstants_.interactiontype.html" class="tsd-signature-type">InteractionType</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
 							</li>
 							<li class="tsd-parameter">
-								<h5>request<wbr>Uri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<h5>payload<span class="tsd-signature-symbol">: </span><a href="_src_event_eventmessage_.html#eventpayload" class="tsd-signature-type">EventPayload</a></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>timestamp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
 							</li>
 						</ul>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
+					<a name="eventpayload" class="tsd-anchor"></a>
+					<h3>Event<wbr>Payload</h3>
+					<div class="tsd-signature tsd-kind-icon">Event<wbr>Payload<span class="tsd-signature-symbol">:</span> <a href="_src_request_popuprequest_.html#popuprequest" class="tsd-signature-type">PopupRequest</a><span class="tsd-signature-symbol"> | </span><a href="_src_request_redirectrequest_.html#redirectrequest" class="tsd-signature-type">RedirectRequest</a><span class="tsd-signature-symbol"> | </span><a href="_src_request_silentrequest_.html#silentrequest" class="tsd-signature-type">SilentRequest</a><span class="tsd-signature-symbol"> | </span><a href="_src_request_ssosilentrequest_.html#ssosilentrequest" class="tsd-signature-type">SsoSilentRequest</a><span class="tsd-signature-symbol"> | </span><a href="_src_index_.html#endsessionrequest" class="tsd-signature-type">EndSessionRequest</a><span class="tsd-signature-symbol"> | </span><a href="_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/event/EventMessage.ts#L19">msal-browser/src/event/EventMessage.ts:19</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -123,17 +174,23 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_src_crypto_cryptoops_.html">&quot;src/crypto/<wbr>Crypto<wbr>Ops&quot;</a>
+						<a href="_src_event_eventmessage_.html">&quot;src/event/<wbr>Event<wbr>Message&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/_src_crypto_cryptoops_.cryptoops.html" class="tsd-kind-icon">Crypto<wbr>Ops</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="_src_event_eventmessage_.html#eventcallbackfunction" class="tsd-kind-icon">Event<wbr>Callback<wbr>Function</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="_src_crypto_cryptoops_.html#cachedkeypair" class="tsd-kind-icon">Cached<wbr>Key<wbr>Pair</a>
+						<a href="_src_event_eventmessage_.html#eventerror" class="tsd-kind-icon">Event<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="_src_event_eventmessage_.html#eventmessage" class="tsd-kind-icon">Event<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
+						<a href="_src_event_eventmessage_.html#eventpayload" class="tsd-kind-icon">Event<wbr>Payload</a>
 					</li>
 				</ul>
 			</nav>
