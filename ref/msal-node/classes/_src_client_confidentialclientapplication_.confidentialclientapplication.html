@@ -99,7 +99,9 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_client_confidentialclientapplication_.confidentialclientapplication.html#acquiretokenonbehalfof" class="tsd-kind-icon">acquire<wbr>Token<wbr>OnBehalf<wbr>Of</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_client_confidentialclientapplication_.confidentialclientapplication.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_client_confidentialclientapplication_.confidentialclientapplication.html#getauthcodeurl" class="tsd-kind-icon">get<wbr>Auth<wbr>Code<wbr>Url</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_client_confidentialclientapplication_.confidentialclientapplication.html#getlogger" class="tsd-kind-icon">get<wbr>Logger</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_client_confidentialclientapplication_.confidentialclientapplication.html#gettokencache" class="tsd-kind-icon">get<wbr>Token<wbr>Cache</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_client_confidentialclientapplication_.confidentialclientapplication.html#setlogger" class="tsd-kind-icon">set<wbr>Logger</a></li>
 							</ul>
 						</section>
 					</div>
@@ -118,7 +120,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides ClientApplication.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ConfidentialClientApplication.ts#L19">msal-node/src/client/ConfidentialClientApplication.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ConfidentialClientApplication.ts#L19">src/client/ConfidentialClientApplication.ts:19</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -140,13 +142,13 @@
 					<a name="acquiretokenbyclientcredential" class="tsd-anchor"></a>
 					<h3>acquire<wbr>Token<wbr>ByClient<wbr>Credential</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>ByClient<wbr>Credential<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ClientCredentialRequest</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>ByClient<wbr>Credential<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_src_index_.html#clientcredentialrequest" class="tsd-signature-type">ClientCredentialRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ConfidentialClientApplication.ts#L49">msal-node/src/client/ConfidentialClientApplication.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ConfidentialClientApplication.ts#L49">src/client/ConfidentialClientApplication.ts:49</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -157,7 +159,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>request: <span class="tsd-signature-type">ClientCredentialRequest</span></h5>
+									<h5>request: <a href="../modules/_src_index_.html#clientcredentialrequest" class="tsd-signature-type">ClientCredentialRequest</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -175,7 +177,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#acquiretokenbycode">acquireTokenByCode</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L90">msal-node/src/client/ClientApplication.ts:90</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L90">src/client/ClientApplication.ts:90</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -208,7 +210,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#acquiretokenbyrefreshtoken">acquireTokenByRefreshToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L117">msal-node/src/client/ClientApplication.ts:117</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L117">src/client/ClientApplication.ts:117</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -233,13 +235,13 @@
 					<a name="acquiretokenonbehalfof" class="tsd-anchor"></a>
 					<h3>acquire<wbr>Token<wbr>OnBehalf<wbr>Of</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>OnBehalf<wbr>Of<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">OnBehalfOfRequest</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>OnBehalf<wbr>Of<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_src_index_.html#onbehalfofrequest" class="tsd-signature-type">OnBehalfOfRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ConfidentialClientApplication.ts#L78">msal-node/src/client/ConfidentialClientApplication.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ConfidentialClientApplication.ts#L78">src/client/ConfidentialClientApplication.ts:78</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -256,7 +258,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>request: <span class="tsd-signature-type">OnBehalfOfRequest</span></h5>
+									<h5>request: <a href="../modules/_src_index_.html#onbehalfofrequest" class="tsd-signature-type">OnBehalfOfRequest</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -267,14 +269,14 @@
 					<a name="acquiretokensilent" class="tsd-anchor"></a>
 					<h3>acquire<wbr>Token<wbr>Silent</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Silent<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SilentFlowRequest</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Silent<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_src_index_.html#silentflowrequest" class="tsd-signature-type">SilentFlowRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#acquiretokensilent">acquireTokenSilent</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L145">msal-node/src/client/ClientApplication.ts:145</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L145">src/client/ClientApplication.ts:145</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -289,7 +291,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>request: <span class="tsd-signature-type">SilentFlowRequest</span></h5>
+									<h5>request: <a href="../modules/_src_index_.html#silentflowrequest" class="tsd-signature-type">SilentFlowRequest</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -300,14 +302,14 @@
 					<a name="getauthcodeurl" class="tsd-anchor"></a>
 					<h3>get<wbr>Auth<wbr>Code<wbr>Url</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Auth<wbr>Code<wbr>Url<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthorizationUrlRequest</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Auth<wbr>Code<wbr>Url<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_src_index_.html#authorizationurlrequest" class="tsd-signature-type">AuthorizationUrlRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#getauthcodeurl">getAuthCodeUrl</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L70">msal-node/src/client/ClientApplication.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L70">src/client/ClientApplication.ts:70</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -323,10 +325,33 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>request: <span class="tsd-signature-type">AuthorizationUrlRequest</span></h5>
+									<h5>request: <a href="../modules/_src_index_.html#authorizationurlrequest" class="tsd-signature-type">AuthorizationUrlRequest</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getlogger" class="tsd-anchor"></a>
+					<h3>get<wbr>Logger</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Logger<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Logger</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#getlogger">getLogger</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L174">src/client/ClientApplication.ts:174</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the logger instance</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Logger</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -341,7 +366,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#gettokencache">getTokenCache</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L166">msal-node/src/client/ClientApplication.ts:166</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L166">src/client/ClientApplication.ts:166</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -350,6 +375,38 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="_src_cache_tokencache_.tokencache.html" class="tsd-signature-type">TokenCache</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="setlogger" class="tsd-anchor"></a>
+					<h3>set<wbr>Logger</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Logger<span class="tsd-signature-symbol">(</span>logger<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Logger</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#setlogger">setLogger</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L182">src/client/ClientApplication.ts:182</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Replaces the default logger set in configurations with new Logger with new configurations</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>logger: <span class="tsd-signature-type">Logger</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Logger instance</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -455,7 +512,13 @@
 								<a href="_src_client_confidentialclientapplication_.confidentialclientapplication.html#getauthcodeurl" class="tsd-kind-icon">get<wbr>Auth<wbr>Code<wbr>Url</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_src_client_confidentialclientapplication_.confidentialclientapplication.html#getlogger" class="tsd-kind-icon">get<wbr>Logger</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_src_client_confidentialclientapplication_.confidentialclientapplication.html#gettokencache" class="tsd-kind-icon">get<wbr>Token<wbr>Cache</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_src_client_confidentialclientapplication_.confidentialclientapplication.html#setlogger" class="tsd-kind-icon">set<wbr>Logger</a>
 							</li>
 						</ul>
 					</li>
@@ -495,6 +558,5 @@
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
