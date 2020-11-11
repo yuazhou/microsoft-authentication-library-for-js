@@ -102,6 +102,7 @@
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#canonicalauthorityurlcomponents" class="tsd-kind-icon">canonical<wbr>Authority<wbr>Url<wbr>Components</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#devicecodeendpoint" class="tsd-kind-icon">device<wbr>Code<wbr>Endpoint</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#endsessionendpoint" class="tsd-kind-icon">end<wbr>Session<wbr>Endpoint</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#protocolmode" class="tsd-kind-icon">protocol<wbr>Mode</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#selfsignedjwtaudience" class="tsd-kind-icon">self<wbr>Signed<wbr>Jwt<wbr>Audience</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#tenant" class="tsd-kind-icon">tenant</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#tokenendpoint" class="tsd-kind-icon">token<wbr>Endpoint</a></li>
@@ -124,13 +125,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Authority<span class="tsd-signature-symbol">(</span>authority<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, networkInterface<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">INetworkModule</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Authority<span class="tsd-signature-symbol">(</span>authority<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, networkInterface<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">INetworkModule</span>, protocolMode<span class="tsd-signature-symbol">: </span><a href="../enums/_src_authority_protocolmode_.protocolmode.html" class="tsd-signature-type">ProtocolMode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L144">src/authority/Authority.ts:144</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L33">src/authority/Authority.ts:33</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -140,6 +141,9 @@
 								</li>
 								<li>
 									<h5>networkInterface: <span class="tsd-signature-type">INetworkModule</span></h5>
+								</li>
+								<li>
+									<h5>protocolMode: <a href="../enums/_src_authority_protocolmode_.protocolmode.html" class="tsd-signature-type">ProtocolMode</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a></h4>
@@ -159,7 +163,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L32">src/authority/Authority.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L43">src/authority/Authority.ts:43</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/_src_authority_authoritytype_.authoritytype.html" class="tsd-signature-type">AuthorityType</a></h4>
@@ -176,7 +180,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L79">src/authority/Authority.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L97">src/authority/Authority.ts:97</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -199,7 +203,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L45">src/authority/Authority.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L63">src/authority/Authority.ts:63</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -212,7 +216,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L52">src/authority/Authority.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L70">src/authority/Authority.ts:70</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -240,7 +244,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L61">src/authority/Authority.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L79">src/authority/Authority.ts:79</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -262,7 +266,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L98">src/authority/Authority.ts:98</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L116">src/authority/Authority.ts:116</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -279,7 +283,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L109">src/authority/Authority.ts:109</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L127">src/authority/Authority.ts:127</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -288,6 +292,28 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="protocolmode" class="tsd-anchor"></a>
+					<h3>protocol<wbr>Mode</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> protocolMode<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../enums/_src_authority_protocolmode_.protocolmode.html" class="tsd-signature-type">ProtocolMode</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L56">src/authority/Authority.ts:56</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>ProtocolMode enum representing the way endpoints are constructed.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../enums/_src_authority_protocolmode_.protocolmode.html" class="tsd-signature-type">ProtocolMode</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -301,7 +327,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L120">src/authority/Authority.ts:120</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L138">src/authority/Authority.ts:138</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -323,7 +349,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L72">src/authority/Authority.ts:72</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L90">src/authority/Authority.ts:90</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -345,7 +371,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L90">src/authority/Authority.ts:90</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L108">src/authority/Authority.ts:108</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -370,7 +396,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L156">src/authority/Authority.ts:156</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L167">src/authority/Authority.ts:167</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -392,7 +418,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L192">src/authority/Authority.ts:192</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L203">src/authority/Authority.ts:203</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -414,7 +440,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L203">src/authority/Authority.ts:203</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L214">src/authority/Authority.ts:214</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -474,6 +500,9 @@
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="_src_authority_authority_.authority.html#endsessionendpoint" class="tsd-kind-icon">end<wbr>Session<wbr>Endpoint</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="_src_authority_authority_.authority.html#protocolmode" class="tsd-kind-icon">protocol<wbr>Mode</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="_src_authority_authority_.authority.html#selfsignedjwtaudience" class="tsd-kind-icon">self<wbr>Signed<wbr>Jwt<wbr>Audience</a>

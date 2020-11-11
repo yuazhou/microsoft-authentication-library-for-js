@@ -107,6 +107,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addloginhint" class="tsd-kind-icon">add<wbr>Login<wbr>Hint</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addnonce" class="tsd-kind-icon">add<wbr>Nonce</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addoboassertion" class="tsd-kind-icon">add<wbr>Obo<wbr>Assertion</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addpassword" class="tsd-kind-icon">add<wbr>Password</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addpoptoken" class="tsd-kind-icon">add<wbr>Pop<wbr>Token</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addprompt" class="tsd-kind-icon">add<wbr>Prompt</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addredirecturi" class="tsd-kind-icon">add<wbr>Redirect<wbr>Uri</a></li>
@@ -117,6 +118,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addscopes" class="tsd-kind-icon">add<wbr>Scopes</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addsid" class="tsd-kind-icon">add<wbr>Sid</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addstate" class="tsd-kind-icon">add<wbr>State</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addusername" class="tsd-kind-icon">add<wbr>Username</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#createquerystring" class="tsd-kind-icon">create<wbr>Query<wbr>String</a></li>
 							</ul>
 						</section>
@@ -711,6 +713,36 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addpassword" class="tsd-anchor"></a>
+					<h3>add<wbr>Password</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Password<span class="tsd-signature-symbol">(</span>password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/RequestParameterBuilder.ts#L310">src/request/RequestParameterBuilder.ts:310</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>adds <code>password</code> for Password Grant flow</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>password: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="addpoptoken" class="tsd-anchor"></a>
 					<h3>add<wbr>Pop<wbr>Token</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -720,7 +752,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/RequestParameterBuilder.ts#L302">src/request/RequestParameterBuilder.ts:302</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/RequestParameterBuilder.ts#L318">src/request/RequestParameterBuilder.ts:318</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1004,6 +1036,36 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addusername" class="tsd-anchor"></a>
+					<h3>add<wbr>Username</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Username<span class="tsd-signature-symbol">(</span>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/RequestParameterBuilder.ts#L302">src/request/RequestParameterBuilder.ts:302</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>adds <code>username</code> for Password Grant flow</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>username: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="createquerystring" class="tsd-anchor"></a>
 					<h3>create<wbr>Query<wbr>String</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -1013,7 +1075,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/RequestParameterBuilder.ts#L312">src/request/RequestParameterBuilder.ts:312</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/RequestParameterBuilder.ts#L328">src/request/RequestParameterBuilder.ts:328</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1106,6 +1168,9 @@
 								<a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addoboassertion" class="tsd-kind-icon">add<wbr>Obo<wbr>Assertion</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addpassword" class="tsd-kind-icon">add<wbr>Password</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addpoptoken" class="tsd-kind-icon">add<wbr>Pop<wbr>Token</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -1134,6 +1199,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addstate" class="tsd-kind-icon">add<wbr>State</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#addusername" class="tsd-kind-icon">add<wbr>Username</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_request_requestparameterbuilder_.requestparameterbuilder.html#createquerystring" class="tsd-kind-icon">create<wbr>Query<wbr>String</a>

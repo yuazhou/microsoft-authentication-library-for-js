@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>LogLevel | @azure/msal-common</title>
+	<title>ProtocolMode | @azure/msal-common</title>
 	<meta name="description" content="Documentation for @azure/msal-common">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,13 +54,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_src_logger_logger_.html">&quot;src/logger/Logger&quot;</a>
+					<a href="../modules/_src_authority_protocolmode_.html">&quot;src/authority/ProtocolMode&quot;</a>
 				</li>
 				<li>
-					<a href="_src_logger_logger_.loglevel.html">LogLevel</a>
+					<a href="_src_authority_protocolmode_.protocolmode.html">ProtocolMode</a>
 				</li>
 			</ul>
-			<h1>Enumeration LogLevel</h1>
+			<h1>Enumeration ProtocolMode</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +70,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Log message level.</p>
+						<p>Protocol modes supported by MSAL.</p>
 					</div>
 				</div>
 			</section>
@@ -81,10 +81,8 @@
 						<section class="tsd-index-section ">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_logger_logger_.loglevel.html#error" class="tsd-kind-icon">Error</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_logger_logger_.loglevel.html#info" class="tsd-kind-icon">Info</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_logger_logger_.loglevel.html#verbose" class="tsd-kind-icon">Verbose</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_logger_logger_.loglevel.html#warning" class="tsd-kind-icon">Warning</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_authority_protocolmode_.protocolmode.html#aad" class="tsd-kind-icon">AAD</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_authority_protocolmode_.protocolmode.html#oidc" class="tsd-kind-icon">OIDC</a></li>
 							</ul>
 						</section>
 					</div>
@@ -93,42 +91,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="error" class="tsd-anchor"></a>
-					<h3>Error</h3>
-					<div class="tsd-signature tsd-kind-icon">Error<span class="tsd-signature-symbol">:</span></div>
+					<a name="aad" class="tsd-anchor"></a>
+					<h3>AAD</h3>
+					<div class="tsd-signature tsd-kind-icon">AAD<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;AAD&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/logger/Logger.ts#L24">src/logger/Logger.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/ProtocolMode.ts#L10">src/authority/ProtocolMode.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="info" class="tsd-anchor"></a>
-					<h3>Info</h3>
-					<div class="tsd-signature tsd-kind-icon">Info<span class="tsd-signature-symbol">:</span></div>
+					<a name="oidc" class="tsd-anchor"></a>
+					<h3>OIDC</h3>
+					<div class="tsd-signature tsd-kind-icon">OIDC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;OIDC&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/logger/Logger.ts#L26">src/logger/Logger.ts:26</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="verbose" class="tsd-anchor"></a>
-					<h3>Verbose</h3>
-					<div class="tsd-signature tsd-kind-icon">Verbose<span class="tsd-signature-symbol">:</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/logger/Logger.ts#L27">src/logger/Logger.ts:27</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="warning" class="tsd-anchor"></a>
-					<h3>Warning</h3>
-					<div class="tsd-signature tsd-kind-icon">Warning<span class="tsd-signature-symbol">:</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/logger/Logger.ts#L25">src/logger/Logger.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/ProtocolMode.ts#L11">src/authority/ProtocolMode.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -141,7 +119,7 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="../modules/_src_logger_logger_.html">&quot;src/logger/<wbr>Logger&quot;</a>
+						<a href="../modules/_src_authority_protocolmode_.html">&quot;src/authority/<wbr>Protocol<wbr>Mode&quot;</a>
 					</li>
 				</ul>
 			</nav>
@@ -150,33 +128,18 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-enum tsd-parent-kind-module">
-						<a href="_src_logger_logger_.loglevel.html" class="tsd-kind-icon">Log<wbr>Level</a>
+						<a href="_src_authority_protocolmode_.protocolmode.html" class="tsd-kind-icon">Protocol<wbr>Mode</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_src_logger_logger_.loglevel.html#error" class="tsd-kind-icon">Error</a>
+								<a href="_src_authority_protocolmode_.protocolmode.html#aad" class="tsd-kind-icon">AAD</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_src_logger_logger_.loglevel.html#info" class="tsd-kind-icon">Info</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_src_logger_logger_.loglevel.html#verbose" class="tsd-kind-icon">Verbose</a>
-							</li>
-							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_src_logger_logger_.loglevel.html#warning" class="tsd-kind-icon">Warning</a>
+								<a href="_src_authority_protocolmode_.protocolmode.html#oidc" class="tsd-kind-icon">OIDC</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_src_logger_logger_.logger.html" class="tsd-kind-icon">Logger</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_src_logger_logger_.iloggercallback.html" class="tsd-kind-icon">ILogger<wbr>Callback</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/_src_logger_logger_.html#loggermessageoptions" class="tsd-kind-icon">Logger<wbr>Message<wbr>Options</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
