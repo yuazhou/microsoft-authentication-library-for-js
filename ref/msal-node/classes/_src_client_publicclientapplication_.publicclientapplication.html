@@ -104,6 +104,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_client_publicclientapplication_.publicclientapplication.html#acquiretokenbycode" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByCode</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_client_publicclientapplication_.publicclientapplication.html#acquiretokenbydevicecode" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByDevice<wbr>Code</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_client_publicclientapplication_.publicclientapplication.html#acquiretokenbyrefreshtoken" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByRefresh<wbr>Token</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_client_publicclientapplication_.publicclientapplication.html#acquiretokenbyusernamepassword" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByUsername<wbr>Password</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_client_publicclientapplication_.publicclientapplication.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_client_publicclientapplication_.publicclientapplication.html#getauthcodeurl" class="tsd-kind-icon">get<wbr>Auth<wbr>Code<wbr>Url</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_client_publicclientapplication_.publicclientapplication.html#getlogger" class="tsd-kind-icon">get<wbr>Logger</a></li>
@@ -127,7 +128,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides ClientApplication.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/PublicClientApplication.ts#L15">src/client/PublicClientApplication.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/PublicClientApplication.ts#L15">msal-node/src/client/PublicClientApplication.ts:15</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -174,7 +175,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#acquiretokenbycode">acquireTokenByCode</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L90">src/client/ClientApplication.ts:90</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L90">msal-node/src/client/ClientApplication.ts:90</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -206,7 +207,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/PublicClientApplication.ts#L46">src/client/PublicClientApplication.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/PublicClientApplication.ts#L46">msal-node/src/client/PublicClientApplication.ts:46</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -241,7 +242,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#acquiretokenbyrefreshtoken">acquireTokenByRefreshToken</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L117">src/client/ClientApplication.ts:117</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L117">msal-node/src/client/ClientApplication.ts:117</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -262,6 +263,40 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="acquiretokenbyusernamepassword" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>ByUsername<wbr>Password</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>ByUsername<wbr>Password<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">UsernamePasswordRequest</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/PublicClientApplication.ts#L74">msal-node/src/client/PublicClientApplication.ts:74</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Acquires tokens with password grant by exchanging client applications username and password for credentials</p>
+								</div>
+								<p>The latest OAuth 2.0 Security Best Current Practice disallows the password grant entirely.
+									More details on this recommendation at <a href="https://tools.ietf.org/html/draft-ietf-oauth-security-topics-13#section-3.4">https://tools.ietf.org/html/draft-ietf-oauth-security-topics-13#section-3.4</a>
+									Microsoft&#39;s documentation and recommendations are at:
+								<a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows#usernamepassword">https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows#usernamepassword</a></p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>request: <span class="tsd-signature-type">UsernamePasswordRequest</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="acquiretokensilent" class="tsd-anchor"></a>
 					<h3>acquire<wbr>Token<wbr>Silent</h3>
@@ -273,7 +308,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#acquiretokensilent">acquireTokenSilent</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L145">src/client/ClientApplication.ts:145</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L145">msal-node/src/client/ClientApplication.ts:145</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -306,7 +341,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#getauthcodeurl">getAuthCodeUrl</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L70">src/client/ClientApplication.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L70">msal-node/src/client/ClientApplication.ts:70</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -340,7 +375,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#getlogger">getLogger</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L174">src/client/ClientApplication.ts:174</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L174">msal-node/src/client/ClientApplication.ts:174</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -363,7 +398,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#gettokencache">getTokenCache</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L166">src/client/ClientApplication.ts:166</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L166">msal-node/src/client/ClientApplication.ts:166</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -386,7 +421,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_client_clientapplication_.clientapplication.html">ClientApplication</a>.<a href="_src_client_clientapplication_.clientapplication.html#setlogger">setLogger</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L182">src/client/ClientApplication.ts:182</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/client/ClientApplication.ts#L182">msal-node/src/client/ClientApplication.ts:182</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -498,6 +533,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_src_client_publicclientapplication_.publicclientapplication.html#acquiretokenbyrefreshtoken" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByRefresh<wbr>Token</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_src_client_publicclientapplication_.publicclientapplication.html#acquiretokenbyusernamepassword" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByUsername<wbr>Password</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_src_client_publicclientapplication_.publicclientapplication.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a>
