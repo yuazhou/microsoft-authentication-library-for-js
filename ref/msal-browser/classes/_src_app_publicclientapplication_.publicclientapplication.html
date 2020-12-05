@@ -114,6 +114,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_app_publicclientapplication_.publicclientapplication.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_app_publicclientapplication_.publicclientapplication.html#addeventcallback" class="tsd-kind-icon">add<wbr>Event<wbr>Callback</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_app_publicclientapplication_.publicclientapplication.html#getaccountbyhomeid" class="tsd-kind-icon">get<wbr>Account<wbr>ByHome<wbr>Id</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_app_publicclientapplication_.publicclientapplication.html#getaccountbylocalid" class="tsd-kind-icon">get<wbr>Account<wbr>ByLocal<wbr>Id</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_app_publicclientapplication_.publicclientapplication.html#getaccountbyusername" class="tsd-kind-icon">get<wbr>Account<wbr>ByUsername</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_app_publicclientapplication_.publicclientapplication.html#getallaccounts" class="tsd-kind-icon">get<wbr>All<wbr>Accounts</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_src_app_publicclientapplication_.publicclientapplication.html#getlogger" class="tsd-kind-icon">get<wbr>Logger</a></li>
@@ -270,7 +271,7 @@
 								<p>Implementation of <a href="../interfaces/_src_app_ipublicclientapplication_.ipublicclientapplication.html">IPublicClientApplication</a>.<a href="../interfaces/_src_app_ipublicclientapplication_.ipublicclientapplication.html#addeventcallback">addEventCallback</a></p>
 								<p>Inherited from <a href="_src_app_publicclientapplication_.publicclientapplication.html">PublicClientApplication</a>.<a href="_src_app_publicclientapplication_.publicclientapplication.html#addeventcallback">addEventCallback</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/ClientApplication.ts#L915">msal-browser/src/app/ClientApplication.ts:915</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/ClientApplication.ts#L932">msal-browser/src/app/ClientApplication.ts:932</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -316,6 +317,39 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>homeAccountId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
+							<p><a href="../modules/_src_index_.html#accountinfo">AccountInfo</a> - the account object stored in MSAL</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="getaccountbylocalid" class="tsd-anchor"></a>
+					<h3>get<wbr>Account<wbr>ByLocal<wbr>Id</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Account<wbr>ByLocal<wbr>Id<span class="tsd-signature-symbol">(</span>localAccountId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_src_app_ipublicclientapplication_.ipublicclientapplication.html">IPublicClientApplication</a>.<a href="../interfaces/_src_app_ipublicclientapplication_.ipublicclientapplication.html#getaccountbylocalid">getAccountByLocalId</a></p>
+								<p>Inherited from <a href="_src_app_publicclientapplication_.publicclientapplication.html">PublicClientApplication</a>.<a href="_src_app_publicclientapplication_.publicclientapplication.html#getaccountbylocalid">getAccountByLocalId</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/ClientApplication.ts#L620">msal-browser/src/app/ClientApplication.ts:620</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the signed in account matching localAccountId.
+										(the account object is created at the time of successful login)
+									or null when no matching account is found</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>localAccountId: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="../modules/_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
@@ -396,7 +430,7 @@
 								<p>Implementation of <a href="../interfaces/_src_app_ipublicclientapplication_.ipublicclientapplication.html">IPublicClientApplication</a>.<a href="../interfaces/_src_app_ipublicclientapplication_.ipublicclientapplication.html#getlogger">getLogger</a></p>
 								<p>Inherited from <a href="_src_app_publicclientapplication_.publicclientapplication.html">PublicClientApplication</a>.<a href="_src_app_publicclientapplication_.publicclientapplication.html#getlogger">getLogger</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/ClientApplication.ts#L935">msal-browser/src/app/ClientApplication.ts:935</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/ClientApplication.ts#L952">msal-browser/src/app/ClientApplication.ts:952</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -551,7 +585,7 @@
 								<p>Implementation of <a href="../interfaces/_src_app_ipublicclientapplication_.ipublicclientapplication.html">IPublicClientApplication</a>.<a href="../interfaces/_src_app_ipublicclientapplication_.ipublicclientapplication.html#removeeventcallback">removeEventCallback</a></p>
 								<p>Inherited from <a href="_src_app_publicclientapplication_.publicclientapplication.html">PublicClientApplication</a>.<a href="_src_app_publicclientapplication_.publicclientapplication.html#removeeventcallback">removeEventCallback</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/ClientApplication.ts#L927">msal-browser/src/app/ClientApplication.ts:927</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/ClientApplication.ts#L944">msal-browser/src/app/ClientApplication.ts:944</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -576,7 +610,7 @@
 								<p>Implementation of <a href="../interfaces/_src_app_ipublicclientapplication_.ipublicclientapplication.html">IPublicClientApplication</a>.<a href="../interfaces/_src_app_ipublicclientapplication_.ipublicclientapplication.html#setlogger">setLogger</a></p>
 								<p>Inherited from <a href="_src_app_publicclientapplication_.publicclientapplication.html">PublicClientApplication</a>.<a href="_src_app_publicclientapplication_.publicclientapplication.html#setlogger">setLogger</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/ClientApplication.ts#L943">msal-browser/src/app/ClientApplication.ts:943</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/app/ClientApplication.ts#L960">msal-browser/src/app/ClientApplication.ts:960</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -675,6 +709,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_src_app_publicclientapplication_.publicclientapplication.html#getaccountbyhomeid" class="tsd-kind-icon">get<wbr>Account<wbr>ByHome<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="_src_app_publicclientapplication_.publicclientapplication.html#getaccountbylocalid" class="tsd-kind-icon">get<wbr>Account<wbr>ByLocal<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_src_app_publicclientapplication_.publicclientapplication.html#getaccountbyusername" class="tsd-kind-icon">get<wbr>Account<wbr>ByUsername</a>
