@@ -65,18 +65,62 @@
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
 				<h1 id="microsoft-authentication-library-for-angular">Microsoft Authentication Library for Angular</h1>
-				<p>The MSAL for Angular library is a wrapper of the core MSAL.js library which enables Angular (6+) applications to authenticate enterprise users using Microsoft Azure Active Directory (AAD), Microsoft account users (MSA), users using social identity providers like Facebook, Google, LinkedIn etc. and get access to <a href="https://www.microsoft.com/enterprise">Microsoft Cloud</a> OR <a href="https://graph.microsoft.io">Microsoft Graph</a>.</p>
-				<p><a href="https://travis-ci.org/AzureAD/microsoft-authentication-library-for-js"><img src="https://travis-ci.org/AzureAD/microsoft-authentication-library-for-js.png?branch=dev" alt="Build Status"></a></p>
-				<h2 id="important-note-about-the-msal-angular-preview">Important Note about the MSAL Angular Preview</h2>
-				<p>Please note that during the preview we may make changes to the API, internal cache format, and other mechanisms of this library, which you will be required to take along with bug fixes or feature improvements. This may impact your application. For instance, a change to the cache format may impact your users, such as requiring them to sign in again. An API change may require you to update your code. When we provide the General Availability release we will require you to update to the General Availability version within six months, as applications written using a preview version of library may no longer work.</p>
-				<p>This is an early preview library and we are tracking certain <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/issues?q=is%3Aopen+is%3Aissue+label%3Aangular">known issues and requests</a> which we plan on addressing. Please watch the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki#roadmap">Roadmap</a> for details.</p>
+				<table>
+					<thead>
+						<tr>
+							<th><a href="https://docs.microsoft.com/azure/active-directory/develop/tutorial-v2-angular">Getting Started</a></th>
+							<th><a href="https://aka.ms/aaddevv2">AAD Docs</a></th>
+							<th><a href="https://azuread.github.io/microsoft-authentication-library-for-js/ref/msal-angular/">Library Reference</a></th>
+							<th><a href="README.md#community-help-and-support">Support</a></th>
+							<th><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples">Samples</a></th>
+						</tr>
+					</thead>
+				</table>
+				<p>MSAL for Angular enables client-side Angular web applications, running in a web browser, to authenticate users using <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-overview">Azure AD</a> work and school accounts (AAD), Microsoft personal accounts (MSA) and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through <a href="https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-overview#identity-providers">Azure AD B2C</a> service. It also enables your app to get tokens to access <a href="https://www.microsoft.com/enterprise">Microsoft Cloud</a> services such as <a href="https://graph.microsoft.io">Microsoft Graph</a>.</p>
+				<p><img src="https://img.shields.io/npm/v/@azure/msal-angular" alt="npm (scoped)"><img src="https://img.shields.io/npm/dw/@azure/msal-angular" alt="npm"></p>
 				<h2 id="installation">Installation</h2>
 				<p>The MSAL Angular package is available on NPM:</p>
 				<p><code>npm install msal @azure/msal-angular --save</code></p>
+				<h2 id="guides">Guides</h2>
+				<ul>
+					<li><a href="https://docs.microsoft.com/azure/active-directory/develop/quickstart-v2-angular">Quickstart</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/0.x-1.x-upgrade-guide.md">Upgrade Guide (0.x-1.x)</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/configuration.md">Configuration</a></li>
+				</ul>
+				<h2 id="version-support">Version Support</h2>
+				<p>At a minimum, MSAL Angular will follow the <a href="https://angular.io/guide/releases#support-policy-and-schedule">support schedule of the main Angular project</a>. We may continue to support certain versions of Angular that are no under Active or LTS support from the main Angular project on a version-by-version basis, as defined below.</p>
+				<table>
+					<thead>
+						<tr>
+							<th>MSAL Angular version</th>
+							<th>MSAL support status</th>
+							<th>Supported Angular versions</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td>1.x.x</td>
+							<td>Active development</td>
+							<td>6, 7, 8, 9</td>
+						</tr>
+						<tr>
+							<td>0.x.x</td>
+							<td>In maintenance</td>
+							<td>4, 5</td>
+						</tr>
+				</tbody></table>
+				<h2 id="samples">Samples</h2>
+				<ul>
+					<li><a href="https://github.com/Azure-Samples/active-directory-javascript-singlepageapp-angular">Angular Quickstart</a></li>
+					<li><a href="https://github.com/Azure-Samples/active-directory-b2c-javascript-angular-spa">B2C Angular SPA</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-angular-samples/angular6-sample-app">Angular v6</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-angular-samples/angular7-sample-app">Angular v7</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-angular-samples/angular8-sample-app">Angular v8</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-angular-samples/angular9-sample-app">Angular v9</a></li>
+				</ul>
 				<h2 id="usage">Usage</h2>
-				<h4 id="prerequisite">Prerequisite</h4>
-				<p>Before using MSAL.js, <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app">register an application in Azure AD</a> to get your clientId.</p>
-				<h4 id="1-include-and-initialize-the-msal-module-in-your-app-module-">1. Include and initialize the MSAL module in your app module.</h4>
+				<h3 id="prerequisites">Prerequisites</h3>
+				<p>Before using MSAL.js, <a href="https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app">register an application in Azure AD</a> to get your <code>clientId</code>.</p>
+				<h3 id="1-include-and-initialize-the-msal-module-in-your-app-module-">1. Include and initialize the MSAL module in your app module.</h3>
 				<p>Import MsalModule into app.module.ts. To initialize MSAL module you are required to pass the clientId of your application which you can get from the application registration.</p>
 				<pre><code class="language-js">@NgModule({
     <span class="hljs-attr">imports</span>: [
@@ -90,27 +134,57 @@
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}</code></pre>
 				<h4 id="2-secure-the-routes-in-your-application">2. Secure the routes in your application</h4>
 				<p>You can add authentication to secure specific routes in your application by just adding <code>canActivate : [MsalGuard]</code> to your route definition. It can be added at the parent or child routes.</p>
-				<pre><code class="language-js"> { <span class="hljs-attr">path</span>: <span class="hljs-string">'product'</span>, <span class="hljs-attr">component</span>: ProductComponent, <span class="hljs-attr">canActivate</span> : [MsalGuard],
+				<pre><code class="language-js">{
+    <span class="hljs-attr">path</span>: <span class="hljs-string">'product'</span>,
+    <span class="hljs-attr">component</span>: ProductComponent,
+    <span class="hljs-attr">canActivate</span>: [MsalGuard],
     <span class="hljs-attr">children</span>: [
-      { <span class="hljs-attr">path</span>: <span class="hljs-string">'detail/:id'</span>, <span class="hljs-attr">component</span>: ProductDetailComponent  }
+        {
+            <span class="hljs-attr">path</span>: <span class="hljs-string">'detail/:id'</span>,
+            <span class="hljs-attr">component</span>: ProductDetailComponent
+        }
     ]
-   },
-  { <span class="hljs-attr">path</span>: <span class="hljs-string">'myProfile'</span> ,<span class="hljs-attr">component</span>: MsGraphComponent, <span class="hljs-attr">canActivate</span> : [MsalGuard] },</code></pre>
-				<p>When user visits these routes, the library prompts the user to authenticate.</p>
-				<h4 id="3-get-tokens-for-web-api-calls">3. Get tokens for Web API calls</h4>
-				<p>MSAL Angular allows you to add an Http interceptor (<code>MsalInterceptor</code>) in your app.module.ts as follows. MsalInterceptor will obtain tokens and add them to all your Http requests in API calls except the API endpoints listed as <code>unprotectedResources</code>.</p>
-				<pre><code class="language-js">providers: [
-    ProductService, {
-        <span class="hljs-attr">provide</span>: HTTP_INTERCEPTORS,
-        <span class="hljs-attr">useClass</span>: MsalInterceptor,
-        <span class="hljs-attr">multi</span>: <span class="hljs-literal">true</span>
-    }
-],</code></pre>
+}, {
+    <span class="hljs-attr">path</span>: <span class="hljs-string">'myProfile'</span>,
+    <span class="hljs-attr">component</span>: MsGraphComponent,
+    <span class="hljs-attr">canActivate</span>: [MsalGuard]
+},</code></pre>
+				<p>When a user visits these routes, the library will prompt the user to authenticate.</p>
+				<h3 id="3-get-tokens-for-web-api-calls">3. Get tokens for Web API calls</h3>
+				<p>MSAL Angular allows you to add an Http interceptor (<code>MsalInterceptor</code>) in your <code>app.module.ts</code> as follows. MsalInterceptor will obtain tokens and add them to all your Http requests in API calls based on the <code>protectedResourceMap</code>.</p>
+				<pre><code class="language-js">@NgModule({
+    <span class="hljs-attr">imports</span>: [
+        MsalModule.forRoot({
+            <span class="hljs-attr">auth</span>: {
+                <span class="hljs-attr">clientId</span>: <span class="hljs-string">"Your client ID"</span>
+            }
+        }, {
+            <span class="hljs-attr">protectedResourceMap</span>: [
+                [<span class="hljs-string">'https://graph.microsoft.com/v1.0/me'</span>, [<span class="hljs-string">'user.read'</span>]],
+                [<span class="hljs-string">'https://api.myapplication.com/users/*'</span>, [<span class="hljs-string">'customscope.read'</span>]]
+            ]
+        })
+    ],
+    <span class="hljs-attr">providers</span>: [
+        ProductService, 
+        {
+            <span class="hljs-attr">provide</span>: HTTP_INTERCEPTORS,
+            <span class="hljs-attr">useClass</span>: MsalInterceptor,
+            <span class="hljs-attr">multi</span>: <span class="hljs-literal">true</span>
+        }
+    ]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}</code></pre>
 				<p>Using MsalInterceptor is optional and you can write your own interceptor if you choose to. Alternatively, you can also explicitly acquire tokens using the acquireToken APIs.</p>
-				<h4 id="4-subscribe-to-event-callbacks">4. Subscribe to event callbacks</h4>
-				<p>MSAL wrapper provides below callbacks for various operations. For all callbacks, you need to inject BroadcastService as a dependency in your component/service.</p>
+				<p>As of <code>@azure/msal-angular@1.1.0</code>, <code>protectedResourceMap</code> supports wildcard patterns that are supported by <a href="https://github.com/isaacs/minimatch">minimatch</a>, and <code>unprotectedResources</code> is deprecated and ignored. </p>
+				<p><strong>Note:</strong> When using wildcards, if multiple matching entries are found in the <code>protectedResourceMap</code>, the first match found will be used (based on the order of the <code>protectedResourceMap</code>).</p>
+				<h3 id="4-subscribe-to-event-callbacks">4. Subscribe to event callbacks</h3>
+				<p>MSAL wrapper provides below callbacks for various operations. For all callbacks, you need to inject BroadcastService as a dependency in your component/service and also implement a <code>handleRedirectCallback</code>:</p>
+				<pre><code class="language-js"><span class="hljs-keyword">this</span>.authService.handleRedirectCallback(<span class="hljs-function">(<span class="hljs-params">authError, response</span>) =&gt;</span> {
+    <span class="hljs-comment">// do something here</span>
+});</code></pre>
 				<ol>
-					<li>loginPopup()/loginRedirect using api or using routes.</li>
+					<li>Login-related events (<code>loginPopup</code>/<code>loginRedirect</code>)</li>
 				</ol>
 				<pre><code class="language-js"><span class="hljs-keyword">this</span>.broadcastService.subscribe(<span class="hljs-string">"msal:loginFailure"</span>, payload =&gt; {
     <span class="hljs-comment">// do something here</span>
@@ -120,7 +194,7 @@
     <span class="hljs-comment">// do something here</span>
 });</code></pre>
 				<ol start="2">
-					<li>acquireTokenSilent()/acquireTokenPopup()/acquireTokenRedirect()</li>
+					<li>Token-related events (<code>acquireTokenSilent()</code>/<code>acquireTokenPopup()</code>/<code>acquireTokenRedirect()</code>)</li>
 				</ol>
 				<pre><code class="language-js"><span class="hljs-keyword">this</span>.broadcastService.subscribe(<span class="hljs-string">"msal:acquireTokenSuccess"</span>, payload =&gt; {
     <span class="hljs-comment">// do something here</span>
@@ -130,125 +204,43 @@
     <span class="hljs-comment">// do something here</span>
 });</code></pre>
 				<ol start="3">
-					<li>It is extremely important to unsubscribe. Implement ngOnDestroy() in your component and unsubscribe.</li>
+					<li>SSO-related events (<code>ssoSilent()</code>)</li>
+				</ol>
+				<pre><code class="language-js"><span class="hljs-keyword">this</span>.broadcastService.subscribe(<span class="hljs-string">"msal:ssoSuccess"</span>, payload =&gt; {
+    <span class="hljs-comment">// do something here</span>
+});
+
+<span class="hljs-keyword">this</span>.broadcastService.subscribe(<span class="hljs-string">"msal:ssoFailure"</span>, payload =&gt; {
+    <span class="hljs-comment">// do something here</span>
+});</code></pre>
+				<ol start="4">
+					<li>It is extremely important to unsubscribe. Implement <code>ngOnDestroy()</code> in your component and unsubscribe.</li>
 				</ol>
 				<pre><code class="language-js"> private subscription: Subscription;
 
- <span class="hljs-keyword">this</span>.subscription=  <span class="hljs-keyword">this</span>.broadcastService.subscribe(<span class="hljs-string">"msal:acquireTokenFailure"</span>, (payload) =&gt; {
- });
+ <span class="hljs-keyword">this</span>.subscription = <span class="hljs-keyword">this</span>.broadcastService.subscribe(<span class="hljs-string">"msal:acquireTokenFailure"</span>, (payload) =&gt; {});
 
  ngOnDestroy() {
     <span class="hljs-keyword">this</span>.broadcastService.getMSALSubject().next(<span class="hljs-number">1</span>);
-    <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.subscription) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.subscription) {
       <span class="hljs-keyword">this</span>.subscription.unsubscribe();
     }
   }</code></pre>
-				<h2 id="msal-angular-public-api">MSAL Angular public API</h2>
-				<h4 id="login-and-acquiretoken-apis">Login and AcquireToken APIs</h4>
+				<h2 id="msal-angular-public-api">MSAL Angular Public API</h2>
+				<h3 id="login-and-acquiretoken-apis">Login and AcquireToken APIs</h3>
 				<p>The wrapper exposes APIs for login, logout, acquiring access token and more.</p>
 				<ol>
 					<li><code>loginRedirect()</code></li>
 					<li><code>loginPopup()</code></li>
 					<li><code>logOut()</code></li>
-					<li><code>acquireTokenSilent()</code> - This will try to acquire the token silently. If the scope is not already consented then user will get a callback at <code>msal:acquireTokenFailure</code> event. User can call either <code>acquireTokenPopup()</code> or <code>acquireTokenRedirect(</code>) there to acquire the token interactively.</li>
+					<li><code>acquireTokenSilent()</code></li>
 					<li><code>acquireTokenPopup()</code></li>
 					<li><code>acquireTokenRedirect()</code></li>
 					<li><code>getAccount()</code></li>
+					<li><code>ssoSilent()</code></li>
 				</ol>
-				<blockquote>
-					<p>Note: Since MSAL Angular wrapper is inheriting from UserAgentApplication of msal-core, all the public APIs of msal-core are still accessible from msal-angular. But it is recommended not to use
-					any of the msal-core APIs like acquireTokenSilent(), acquireTokenPopup(), acquireTokenRedirect() etc from Angular application and use only the APIs which are exposed directly from the msal-angular wrapper itself.</p>
-				</blockquote>
-				<h4 id="config-options-for-msal-initialization">Config options for MSAL initialization</h4>
-				<p>Besides the required clientID, you can optionally pass the following config options to MSAL module during initialization. For example:</p>
-				<pre><code class="language-js">@NgModule({
-    <span class="hljs-attr">imports</span>: [
-        MsalModule.forRoot({
-            <span class="hljs-attr">auth</span>: {
-                <span class="hljs-attr">clientId</span>: <span class="hljs-string">'clientid'</span>,
-                <span class="hljs-attr">authority</span>: <span class="hljs-string">"https://login.microsoftonline.com/common/"</span>,
-                <span class="hljs-attr">validateAuthority</span>: <span class="hljs-literal">true</span>,
-                <span class="hljs-attr">redirectUri</span>: <span class="hljs-string">"http://localhost:4200/"</span>,
-                <span class="hljs-attr">postLogoutRedirectUri</span>: <span class="hljs-string">"http://localhost:4200/"</span>,
-                <span class="hljs-attr">navigateToLoginRequestUrl</span>: <span class="hljs-literal">true</span>,
-            },
-            <span class="hljs-attr">cache</span>: {
-                <span class="hljs-attr">cacheLocation</span> : <span class="hljs-string">"localStorage"</span>,
-                <span class="hljs-attr">storeAuthStateInCookie</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// set to true for IE 11</span>
-            },
-            <span class="hljs-attr">framework</span>: {
-                <span class="hljs-attr">unprotectedResources</span>: [<span class="hljs-string">"https://www.microsoft.com/en-us/"</span>],
-                <span class="hljs-attr">protectedResourceMap</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>(protectedResourceMap)
-            },
-            <span class="hljs-attr">system</span>: {
-                <span class="hljs-attr">logger</span>: <span class="hljs-keyword">new</span> Logger(loggerCallback, options)
-            }
-        }, {
-            <span class="hljs-attr">popUp</span>: !isIE,
-            <span class="hljs-attr">consentScopes</span>: [ <span class="hljs-string">"user.read"</span>, <span class="hljs-string">"openid"</span>, <span class="hljs-string">"profile"</span>, <span class="hljs-string">"api://a88bb933-319c-41b5-9f04-eff36d985612/access_as_user"</span>],
-            <span class="hljs-attr">extraQueryParameters</span>: {}
-        })
-    ]
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}</code></pre>
-				<ul>
-					<li><p><strong>redirectUri</strong> : The redirect URI of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirect URIs you registered in the portal, except that it must be URL encoded.
-						Defaults to <code>window.location.href</code>.</p>
-					</li>
-					<li><p><strong>authority</strong> : A URL indicating a directory that MSAL can use to obtain tokens.</p>
-						<ul>
-							<li><ul>
-									<li>In Azure AD, it is of the form https://&lt;instance&gt;/&lt;tenant&gt;, where &lt;instance&gt; is the directory host (e.g. <a href="https://login.microsoftonline.com">https://login.microsoftonline.com</a>) and &lt;tenant&gt; is a identifier within the directory itself (e.g. a domain associated to the tenant, such as contoso.onmicrosoft.com, or the GUID representing the TenantID property of the directory)</li>
-								</ul>
-							</li>
-							<li><ul>
-									<li>In Azure B2C, it is of the form https://&lt;instance&gt;/tfp/&lt;tenantId&gt;/&lt;policyName&gt;/</li>
-								</ul>
-							</li>
-							<li><ul>
-									<li>Default value is: &quot;<a href="https://login.microsoftonline.com/common&quot;">https://login.microsoftonline.com/common&quot;</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li><p><strong>validateAuthority</strong> : Validate the issuer of tokens. Default is true.</p>
-					</li>
-					<li><p><strong>cacheLocation</strong> : Sets browser storage to either <code>localStorage</code> or <code>sessionStorage</code>. Defaults to <code>sessionStorage</code>.</p>
-					</li>
-					<li><p><strong>storeAuthStateInCookie</strong> : Stores auth state in a browser cookie instead of local storage. Needs to be set to true when a user is on IE11, which may clear local storage contents when redirecting between websites in different zones. Defaults is <code>false</code>.</p>
-					</li>
-					<li><p><strong>postLogoutRedirectUri</strong> : Redirects the user to postLogoutRedirectUri after logout. Defaults is &#39;redirectUri&#39;.</p>
-					</li>
-					<li><p><strong>loadFrameTimeout</strong> : The number of milliseconds of inactivity before a token renewal response from AAD should be considered timed out. Default is 6 seconds.</p>
-					</li>
-					<li><p><strong>navigateToLoginRequestUrl</strong> :Ability to turn off default navigation to start page after login. Default is true. This is used only for redirect flows.</p>
-					</li>
-					<li><p><strong>popup</strong> : Show login popup or redirect. Default:Redirect</p>
-					</li>
-					<li><p><strong>consentScopes</strong> : Allows the client to express the desired scopes that should be consented. Scopes can be from multiple resources/endpoints. Passing scope here will
-						only consent it and no access token will be acquired till the time client actually calls the API. This is optional if you are using MSAL for only login(Authentication).</p>
-					</li>
-					<li><p><strong>unprotectedResources</strong> : Array of URI&#39;s. Msal will not attach a token to outgoing requests that have these uri. Defaults to &#39;null&#39;.</p>
-					</li>
-					<li><p><strong>protectedResourceMap</strong> : Mapping of resources to scopes {&quot;<a href="https://graph.microsoft.com/v1.0/me&quot;">https://graph.microsoft.com/v1.0/me&quot;</a>, [&quot;user.read&quot;, &quot;mail.send&quot;]}. Used internally by the MSAL for automatically attaching tokens in webApi calls.
-						This is required only for CORS calls.</p>
-					</li>
-				</ul>
-				<p>export const protectedResourceMap:[string, string[]][]=[ [&#39;<a href="https://buildtodoservice.azurewebsites.net/api/todolist&#39;,%5B&#39;api://a88bb933-319c-41b5-9f04-eff36d985612/access_as_user&#39;%5D%5D">https://buildtodoservice.azurewebsites.net/api/todolist&#39;,[&#39;api://a88bb933-319c-41b5-9f04-eff36d985612/access_as_user&#39;]]</a> , [&#39;<a href="https://graph.microsoft.com/v1.0/me&#39;">https://graph.microsoft.com/v1.0/me&#39;</a>, [&#39;user.read&#39;]] ];</p>
-				<ul>
-					<li><p><strong>level</strong> : Configurable log level. Default value is Info. Passed in options object as the second argument to <code>Logger</code>.</p>
-					</li>
-					<li><p><strong>logger</strong> : Callback instance that can be provided by the developer to consume and publish logs in a custom manner. Callback method must follow this signature.
-						<code>loggerCallback(logLevel, message, piiEnabled) { }</code></p>
-					</li>
-					<li><p><strong>piiLoggingEnabled</strong> : PII stands for Personal Identifiable Information. By default, MSAL does not capture or log any PII. By turning on PII, the app takes responsibility for safely handling highly-sensitive data and complying with any regulatory requirements. Passed in options object as the second argument to <code>Logger</code>.
-						This flag is to enable/disable logging of PII data. PII logs are never written to default outputs like Console, Logcat or NSLog. Default is set to false.</p>
-					</li>
-					<li><p><strong>correlationId</strong> : Unique identifier used to map the request with the response. Defaults to RFC4122 version 4 guid (128 bits). Passed in options object as the second argument to <code>Logger</code>.</p>
-					</li>
-				</ul>
 				<h2 id="advanced-topics">Advanced Topics</h2>
-				<h4 id="logging">Logging</h4>
+				<h3 id="logging">Logging</h3>
 				<p>The logger definition has the following properties. Please see the config section for more details on their use:</p>
 				<ol>
 					<li>correlationId</li>
@@ -270,18 +262,18 @@
                 <span class="hljs-attr">correlationId</span>: <span class="hljs-string">'1234'</span>,
                 <span class="hljs-attr">level</span>: LogLevel.Verbose,
                 <span class="hljs-attr">piiLoggingEnabled</span>: <span class="hljs-literal">true</span>,
-            }
+            }),
         }
     })]
 })</code></pre>
-				<h4 id="multi-tenant">Multi-Tenant</h4>
+				<h3 id="multi-tenant">Multi-Tenant</h3>
 				<p>By default, you have multi-tenant support since MSAL sets the tenant in the authority to &#39;common&#39; if it is not specified in the config. This allows any Microsoft account to authenticate to your application. If you are not interested in multi-tenant behavior, you will need to set the <code>authority</code> config property as shown above.</p>
 				<p>If you allow multi-tenant authentication, and you do not wish to allow all Microsoft account users to use your application, you must provide your own method of filtering the token issuers to only those tenants who are allowed to login.</p>
-				<h4 id="security">Security</h4>
+				<h3 id="security">Security</h3>
 				<p>Tokens are accessible from Javascript since MSAL is using HTML5 storage. Default storage option is sessionStorage, which keeps the tokens per session. You should ask user to login again for important operations on your app.
 				You should protect your site for XSS. Please check the article here: <a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet">https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet</a></p>
-				<h4 id="cors-api-usage">CORS API usage</h4>
-				<p>MSAL will get access tokens using a hidden Iframe for given CORS API endpoints in the config. To make CORS API call, you need to specify your CORS API endpoints as a map in the config.</p>
+				<h3 id="cors-api-usage">CORS API usage</h3>
+				<p>MSAL will get access tokens using a hidden Iframe for given CORS API endpoints in the config. To make CORS API call, you need to specify your CORS API endpoints as a map in the Angular config.</p>
 				<pre><code class="language-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> protectedResourceMap:[string, string[]][]= [
     [<span class="hljs-string">'https://buildtodoservice.azurewebsites.net/api/todolist'</span>, [ <span class="hljs-string">'api://a88bb933-319c-41b5-9f04-eff36d985612/access_as_user'</span> ]],
     [<span class="hljs-string">'https://graph.microsoft.com/v1.0/me'</span>, [<span class="hljs-string">'user.read'</span>]]
@@ -292,15 +284,14 @@
         MsalModule.forRoot({
             <span class="hljs-attr">auth</span>: {
                 <span class="hljs-attr">clientId</span>: <span class="hljs-string">'Your client ID'</span>,
-            },
-            <span class="hljs-attr">framework</span>: {
-                <span class="hljs-attr">protectedResourceMap</span> : protectedResourceMap
             }
+        }, {
+            <span class="hljs-attr">protectedResourceMap</span> : protectedResourceMap
         })
     ]
 })</code></pre>
 				<p>In your API project, you need to enable CORS API requests to receive flight requests.</p>
-				<h4 id="internet-explorer-support">Internet Explorer support</h4>
+				<h3 id="internet-explorer-support">Internet Explorer support</h3>
 				<p>This library supports Internet Explorer 11 with the following configuration:</p>
 				<ul>
 					<li>For CORS API calls, the Iframe needs to access the cookies for the same domain that you did the initial sign in on. IE does not allow to access cookies in Iframe for localhost. Your URL needs to be fully qualified domain i.e <a href="http://yoursite.azurewebsites.com">http://yoursite.azurewebsites.com</a>. Chrome does not have this restriction.</li>
@@ -315,26 +306,19 @@
 
 MsalModule.forRoot({
     <span class="hljs-comment">// ...</span>
-    cache: {
+    <span class="hljs-attr">cache</span>: {
         <span class="hljs-attr">storeAuthStateInCookie</span>: ieIE
     }
-    framework: {
-        <span class="hljs-attr">popUp</span>: !isIE
-    }
+}, {
+    <span class="hljs-attr">popUp</span>: !isIE
 });</code></pre>
-				<h2 id="samples">Samples</h2>
-				<p>You can find a quickstart and detailed sample under the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-angular/samples">sample directory</a>.</p>
 				<h2 id="community-help-and-support">Community Help and Support</h2>
 				<ul>
-					<li><p><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki/FAQs">FAQs</a> for access to our frequently asked questions</p>
-					</li>
-					<li><p><a href="http://stackoverflow.com/questions/tagged/msal">Stack Overflow</a> using tag &quot;msal&quot;.
-						We highly recommend you ask your questions on Stack Overflow first and browse existing issues to see if someone has asked your question before.</p>
-					</li>
-					<li><p><a href="../../issues">GitHub Issues</a> for reporting a bug or feature requests</p>
-					</li>
-					<li><p><a href="https://feedback.azure.com/forums/169401-azure-active-directory">User Voice page</a> to provide recommendations and/or feedback</p>
-					</li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki/FAQs">FAQs</a> for access to our frequently asked questions</li>
+					<li><a href="http://stackoverflow.com/questions/tagged/msal">Stack Overflow</a> using tag &quot;msal&quot;.
+					We highly recommend you ask your questions on Stack Overflow first and browse existing issues to see if someone has asked your question before.</li>
+					<li><a href="../../issues">GitHub Issues</a> for reporting a bug or feature requests</li>
+					<li><a href="https://feedback.azure.com/forums/169401-azure-active-directory">User Voice page</a> to provide recommendations and/or feedback</li>
 				</ul>
 				<h2 id="contribute">Contribute</h2>
 				<p>We enthusiastically welcome contributions and feedback. Please read the <a href="contributing.md">contributing guide</a> before you begin.</p>
@@ -342,12 +326,12 @@ MsalModule.forRoot({
 				<p>If you want to build the library and run all the unit tests, you can do the following.</p>
 				<p>First navigate to the root directory of the library(msal-angular) and install the dependencies:</p>
 				<pre><code>npm <span class="hljs-keyword">install</span></code></pre><p>Then use the following command to build the library and run all the unit tests:</p>
-				<pre><code>npm <span class="hljs-keyword">run</span><span class="bash"> ngcompile</span>
+				<pre><code>npm <span class="hljs-keyword">run</span><span class="bash"> build</span>
 
-npm <span class="hljs-keyword">run</span><span class="bash"> <span class="hljs-built_in">test</span></span></code></pre><h2 id="security-library">Security Library</h2>
+npm <span class="hljs-keyword">run</span><span class="bash"> <span class="hljs-built_in">test</span></span></code></pre><h2 id="versioning">Versioning</h2>
 				<p>This library controls how users sign-in and access services. We recommend you always take the latest version of our library in your app when possible. We use <a href="http://semver.org">semantic versioning</a> so you can control the risk associated with updating your app. As an example, always downloading the latest minor version number (e.g. x.<em>y</em>.x) ensures you get the latest security and feature enhanements but our API surface remains the same. You can always see the latest version and release notes under the Releases tab of GitHub.</p>
 				<h2 id="security-reporting">Security Reporting</h2>
-				<p>If you find a security issue with our libraries or services please report it to <a href="mailto:secure@microsoft.com">secure@microsoft.com</a> with as much detail as possible. Your submission may be eligible for a bounty through the <a href="http://aka.ms/bugbounty">Microsoft Bounty</a> program. Please do not post security issues to GitHub Issues or any other public site. We will contact you shortly upon receiving the information. We encourage you to get notifications of when security incidents occur by visiting <a href="https://technet.microsoft.com/en-us/security/dd252948">this page</a> and subscribing to Security Advisory Alerts.</p>
+				<p>If you find a security issue with our libraries or services please report it to <a href="mailto:secure@microsoft.com">secure@microsoft.com</a> with as much detail as possible. Your submission may be eligible for a bounty through the <a href="http://aka.ms/bugbounty">Microsoft Bounty</a> program. Please do not post security issues to GitHub Issues or any other public site. We will contact you shortly upon receiving the information. We encourage you to get notifications of when security incidents occur by visiting <a href="https://technet.microsoft.com/security/dd252948">this page</a> and subscribing to Security Advisory Alerts.</p>
 				<h2 id="license">License</h2>
 				<p>Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License (the &quot;License&quot;);</p>
 				<h2 id="we-value-and-adhere-to-the-microsoft-open-source-code-of-conduct">We Value and Adhere to the Microsoft Open Source Code of Conduct</h2>
@@ -367,7 +351,7 @@ npm <span class="hljs-keyword">run</span><span class="bash"> <span class="hljs-b
 						<a href="modules/_broadcast_service_.html">"broadcast.service"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_index_.html">"index"</a>
+						<a href="modules/_constants_.html">"constants"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_msal_angular_configuration_.html">"msal-<wbr>angular.configuration"</a>

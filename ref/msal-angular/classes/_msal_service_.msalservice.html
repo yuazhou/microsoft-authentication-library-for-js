@@ -108,7 +108,6 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_msal_service_.msalservice.html#getaccount" class="tsd-kind-icon">get<wbr>Account</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_msal_service_.msalservice.html#getallaccounts" class="tsd-kind-icon">get<wbr>All<wbr>Accounts</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_msal_service_.msalservice.html#getauthorityinstance" class="tsd-kind-icon">get<wbr>Authority<wbr>Instance</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_msal_service_.msalservice.html#getcachestorage" class="tsd-kind-icon">get<wbr>Cache<wbr>Storage</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_msal_service_.msalservice.html#getcurrentconfiguration" class="tsd-kind-icon">get<wbr>Current<wbr>Configuration</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_msal_service_.msalservice.html#getlogininprogress" class="tsd-kind-icon">get<wbr>Login<wbr>InProgress</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_msal_service_.msalservice.html#getpostlogoutredirecturi" class="tsd-kind-icon">get<wbr>Post<wbr>Logout<wbr>Redirect<wbr>Uri</a></li>
@@ -119,6 +118,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_msal_service_.msalservice.html#loginredirect" class="tsd-kind-icon">login<wbr>Redirect</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_msal_service_.msalservice.html#logout" class="tsd-kind-icon">logout</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_msal_service_.msalservice.html#setlogger" class="tsd-kind-icon">set<wbr>Logger</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_msal_service_.msalservice.html#ssosilent" class="tsd-kind-icon">sso<wbr>Silent</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_msal_service_.msalservice.html#urlcontainshash" class="tsd-kind-icon">url<wbr>Contains<wbr>Hash</a></li>
 							</ul>
 						</section>
@@ -138,7 +138,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides UserAgentApplication.__constructor</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L34">msal.service.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L37">msal.service.ts:37</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -170,19 +170,9 @@
 					<aside class="tsd-sources">
 						<p>Inherited from UserAgentApplication.authority</p>
 						<ul>
-							<li>Defined in C:/Users/janutter/Code/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:94</li>
+							<li>Defined in /home/runner/work/microsoft-authentication-library-for-js/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:97</li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Method to manage the authority URL.</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>returns</dt>
-							<dd><p>authority</p>
-							</dd>
-						</dl>
-					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -198,7 +188,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides UserAgentApplication.acquireTokenPopup</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L115">msal.service.ts:115</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L105">msal.service.ts:105</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -222,14 +212,9 @@
 							<aside class="tsd-sources">
 								<p>Inherited from UserAgentApplication.acquireTokenRedirect</p>
 								<ul>
-									<li>Defined in C:/Users/janutter/Code/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:151</li>
+									<li>Defined in /home/runner/work/microsoft-authentication-library-for-js/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:154</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Use when you want to obtain an access_token for your API by redirecting the user&#39;s browser window to the authorization endpoint.</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -251,7 +236,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides UserAgentApplication.acquireTokenSilent</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L101">msal.service.ts:101</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L91">msal.service.ts:91</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -274,7 +259,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L163">msal.service.ts:163</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L153">msal.service.ts:153</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -298,16 +283,9 @@
 							<aside class="tsd-sources">
 								<p>Inherited from UserAgentApplication.getAccount</p>
 								<ul>
-									<li>Defined in C:/Users/janutter/Code/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:345</li>
+									<li>Defined in /home/runner/work/microsoft-authentication-library-for-js/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:429</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Returns the signed in account
-										(the account object is created at the time of successful login)
-									or null when no state is found</p>
-								</div>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Account</span></h4>
 							<ul>
 								<li>the account object stored in MSAL</li>
@@ -326,14 +304,9 @@
 							<aside class="tsd-sources">
 								<p>Inherited from UserAgentApplication.getAllAccounts</p>
 								<ul>
-									<li>Defined in C:/Users/janutter/Code/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:359</li>
+									<li>Defined in /home/runner/work/microsoft-authentication-library-for-js/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:443</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Use to get a list of unique accounts in MSAL cache based on homeAccountIdentifier.</p>
-								</div>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Account</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -349,33 +322,11 @@
 							<aside class="tsd-sources">
 								<p>Inherited from UserAgentApplication.getAuthorityInstance</p>
 								<ul>
-									<li>Defined in C:/Users/janutter/Code/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:100</li>
+									<li>Defined in /home/runner/work/microsoft-authentication-library-for-js/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:103</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Get the current authority instance from the MSAL configuration object</p>
-								</div>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Authority</span></h4>
 							<p>authority instance</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getcachestorage" class="tsd-anchor"></a>
-					<h3>get<wbr>Cache<wbr>Storage</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Cache<wbr>Storage<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthCache</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L84">msal.service.ts:84</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">AuthCache</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -390,14 +341,9 @@
 							<aside class="tsd-sources">
 								<p>Inherited from UserAgentApplication.getCurrentConfiguration</p>
 								<ul>
-									<li>Defined in C:/Users/janutter/Code/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:460</li>
+									<li>Defined in /home/runner/work/microsoft-authentication-library-for-js/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:544</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Use to get the current {@link Configuration} object in MSAL</p>
-								</div>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Configuration</span></h4>
 						</li>
 					</ul>
@@ -413,14 +359,9 @@
 							<aside class="tsd-sources">
 								<p>Inherited from UserAgentApplication.getLoginInProgress</p>
 								<ul>
-									<li>Defined in C:/Users/janutter/Code/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:400</li>
+									<li>Defined in /home/runner/work/microsoft-authentication-library-for-js/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:484</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Return boolean flag to developer to help inform if login is in progress</p>
-								</div>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 							<p>true/false</p>
 						</li>
@@ -437,15 +378,9 @@
 							<aside class="tsd-sources">
 								<p>Inherited from UserAgentApplication.getPostLogoutRedirectUri</p>
 								<ul>
-									<li>Defined in C:/Users/janutter/Code/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:454</li>
+									<li>Defined in /home/runner/work/microsoft-authentication-library-for-js/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:538</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Use to get the post logout redirect uri configured in MSAL or null.
-									Evaluates postLogoutredirectUri if its a function, otherwise simply returns its value.</p>
-								</div>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 							<p>post logout redirect URL</p>
 						</li>
@@ -455,22 +390,16 @@
 					<a name="getredirecturi" class="tsd-anchor"></a>
 					<h3>get<wbr>Redirect<wbr>Uri</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Redirect<wbr>Uri<span class="tsd-signature-symbol">(</span>reqRedirectUri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Redirect<wbr>Uri<span class="tsd-signature-symbol">(</span>reqRedirectUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from UserAgentApplication.getRedirectUri</p>
 								<ul>
-									<li>Defined in C:/Users/janutter/Code/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:447</li>
+									<li>Defined in /home/runner/work/microsoft-authentication-library-for-js/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:531</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Use to get the redirect uri configured in MSAL or null.
-									Evaluates redirectUri if its a function, otherwise simply returns its value.</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -492,7 +421,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L167">msal.service.ts:167</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L157">msal.service.ts:157</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -517,7 +446,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides UserAgentApplication.handleRedirectCallback</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L128">msal.service.ts:128</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L118">msal.service.ts:118</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -535,7 +464,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides UserAgentApplication.handleRedirectCallback</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L129">msal.service.ts:129</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L119">msal.service.ts:119</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -552,14 +481,14 @@
 					<a name="loginpopup" class="tsd-anchor"></a>
 					<h3>login<wbr>Popup</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">login<wbr>Popup<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">AuthenticationParameters</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">login<wbr>Popup<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthenticationParameters</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides UserAgentApplication.loginPopup</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L88">msal.service.ts:88</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L65">msal.service.ts:65</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -576,21 +505,16 @@
 					<a name="loginredirect" class="tsd-anchor"></a>
 					<h3>login<wbr>Redirect</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">login<wbr>Redirect<span class="tsd-signature-symbol">(</span>userRequest<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">AuthenticationParameters</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">login<wbr>Redirect<span class="tsd-signature-symbol">(</span>userRequest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthenticationParameters</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from UserAgentApplication.loginRedirect</p>
 								<ul>
-									<li>Defined in C:/Users/janutter/Code/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:144</li>
+									<li>Defined in /home/runner/work/microsoft-authentication-library-for-js/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:147</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Use when initiating the login process by redirecting the user&#39;s browser to the authorization endpoint.</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -605,22 +529,22 @@
 					<a name="logout" class="tsd-anchor"></a>
 					<h3>logout</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">logout<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">logout<span class="tsd-signature-symbol">(</span>correlationId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from UserAgentApplication.logout</p>
 								<ul>
-									<li>Defined in C:/Users/janutter/Code/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:236</li>
+									<li>Defined in /home/runner/work/microsoft-authentication-library-for-js/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:244</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Use to log out the current user, and redirect the user to the postLogoutRedirectUri.
-									Default behaviour is to redirect the user to <code>window.location.href</code>.</p>
-								</div>
-							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> correlationId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -636,24 +560,40 @@
 							<aside class="tsd-sources">
 								<p>Inherited from UserAgentApplication.setLogger</p>
 								<ul>
-									<li>Defined in C:/Users/janutter/Code/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:440</li>
+									<li>Defined in /home/runner/work/microsoft-authentication-library-for-js/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:524</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Sets the logger callback.</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>logger: <span class="tsd-signature-type">Logger</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Logger callback</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="ssosilent" class="tsd-anchor"></a>
+					<h3>sso<wbr>Silent</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">sso<wbr>Silent<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthenticationParameters</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthResponse</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides UserAgentApplication.ssoSilent</p>
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.service.ts#L78">msal.service.ts:78</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>request: <span class="tsd-signature-type">AuthenticationParameters</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AuthResponse</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -668,20 +608,13 @@
 							<aside class="tsd-sources">
 								<p>Inherited from UserAgentApplication.urlContainsHash</p>
 								<ul>
-									<li>Defined in C:/Users/janutter/Code/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:137</li>
+									<li>Defined in /home/runner/work/microsoft-authentication-library-for-js/microsoft-authentication-library-for-js/lib/msal-angular/node_modules/msal/lib-commonjs/UserAgentApplication.d.ts:140</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Public API to verify if the URL contains the hash with known properties</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>hash: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -703,7 +636,7 @@
 						<a href="../modules/_broadcast_service_.html">"broadcast.service"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_index_.html">"index"</a>
+						<a href="../modules/_constants_.html">"constants"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_msal_angular_configuration_.html">"msal-<wbr>angular.configuration"</a>
@@ -756,9 +689,6 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_msal_service_.msalservice.html#getauthorityinstance" class="tsd-kind-icon">get<wbr>Authority<wbr>Instance</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_msal_service_.msalservice.html#getcachestorage" class="tsd-kind-icon">get<wbr>Cache<wbr>Storage</a>
-							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_msal_service_.msalservice.html#getcurrentconfiguration" class="tsd-kind-icon">get<wbr>Current<wbr>Configuration</a>
 							</li>
@@ -789,6 +719,9 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_msal_service_.msalservice.html#setlogger" class="tsd-kind-icon">set<wbr>Logger</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_msal_service_.msalservice.html#ssosilent" class="tsd-kind-icon">sso<wbr>Silent</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_msal_service_.msalservice.html#urlcontainshash" class="tsd-kind-icon">url<wbr>Contains<wbr>Hash</a>
 							</li>
@@ -796,12 +729,6 @@
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_msal_service_.html#msal_config" class="tsd-kind-icon">MSAL_<wbr>CONFIG</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_msal_service_.html#msal_config_angular" class="tsd-kind-icon">MSAL_<wbr>CONFIG_<wbr>ANGULAR</a>
-					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="../modules/_msal_service_.html#buildmsalconfig" class="tsd-kind-icon">build<wbr>Msal<wbr>Config</a>
 					</li>
