@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;src/request/BaseAuthRequest&quot; | @azure/msal-common</title>
+	<title>&quot;src/response/AuthorizationCodePayload&quot; | @azure/msal-common</title>
 	<meta name="description" content="Documentation for @azure/msal-common">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_src_request_baseauthrequest_.html">&quot;src/request/BaseAuthRequest&quot;</a>
+					<a href="_src_response_authorizationcodepayload_.html">&quot;src/response/AuthorizationCodePayload&quot;</a>
 				</li>
 			</ul>
-			<h1>Module &quot;src/request/BaseAuthRequest&quot;</h1>
+			<h1>Module &quot;src/response/AuthorizationCodePayload&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -71,7 +71,7 @@
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_src_request_baseauthrequest_.html#baseauthrequest" class="tsd-kind-icon">Base<wbr>Auth<wbr>Request</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_src_response_authorizationcodepayload_.html#authorizationcodepayload" class="tsd-kind-icon">Authorization<wbr>Code<wbr>Payload</a></li>
 							</ul>
 						</section>
 					</div>
@@ -80,47 +80,42 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
-					<a name="baseauthrequest" class="tsd-anchor"></a>
-					<h3>Base<wbr>Auth<wbr>Request</h3>
-					<div class="tsd-signature tsd-kind-icon">Base<wbr>Auth<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>authority<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>claims<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>correlationId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>resourceRequestMethod<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>resourceRequestUri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
+					<a name="authorizationcodepayload" class="tsd-anchor"></a>
+					<h3>Authorization<wbr>Code<wbr>Payload</h3>
+					<div class="tsd-signature tsd-kind-icon">Authorization<wbr>Code<wbr>Payload<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>cloud_graph_host_name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>cloud_instance_host_name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>cloud_instance_name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>msgraph_host<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>nonce<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>state<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/request/BaseAuthRequest.ts#L15">src/request/BaseAuthRequest.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/response/AuthorizationCodePayload.ts#L9">src/response/AuthorizationCodePayload.ts:9</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>BaseAuthRequest</p>
-							<ul>
-								<li>scopes                  - Array of scopes the application is requesting access to.</li>
-								<li>claims                  - A stringified claims request which will be added to all /authorize and /token calls</li>
-								<li>authority               - URL of the authority, the security token service (STS) from which MSAL will acquire tokens. Defaults to <a href="https://login.microsoftonline.com/common">https://login.microsoftonline.com/common</a>. If using the same authority for all request, authority should set on client application object and not request, to avoid resolving authority endpoints multiple times.</li>
-								<li>correlationId           - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
-								<li>resourceRequestMethod      - HTTP Request type used to request data from the resource (i.e. &quot;GET&quot;, &quot;POST&quot;, etc.).  Used for proof-of-possession flows.</li>
-								<li>resourceRequestUri         - URI that token will be used for. Used for proof-of-possession flows.</li>
-							</ul>
+							<p>Response returned after processing the code response query string or fragment.</p>
 						</div>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
-								<h5>authority<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> cloud_<wbr>graph_<wbr>host_<wbr>name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 							</li>
 							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> claims<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> cloud_<wbr>instance_<wbr>host_<wbr>name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 							</li>
 							<li class="tsd-parameter">
-								<h5>correlation<wbr>Id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> cloud_<wbr>instance_<wbr>name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 							</li>
 							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> resource<wbr>Request<wbr>Method<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								<h5>code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 							</li>
 							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> resource<wbr>Request<wbr>Uri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> msgraph_<wbr>host<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 							</li>
 							<li class="tsd-parameter">
-								<h5>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> nonce<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> state<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 							</li>
 						</ul>
 					</div>
@@ -134,14 +129,14 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="_src_request_baseauthrequest_.html">&quot;src/request/<wbr>Base<wbr>Auth<wbr>Request&quot;</a>
+						<a href="_src_response_authorizationcodepayload_.html">&quot;src/response/<wbr>Authorization<wbr>Code<wbr>Payload&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="_src_request_baseauthrequest_.html#baseauthrequest" class="tsd-kind-icon">Base<wbr>Auth<wbr>Request</a>
+						<a href="_src_response_authorizationcodepayload_.html#authorizationcodepayload" class="tsd-kind-icon">Authorization<wbr>Code<wbr>Payload</a>
 					</li>
 				</ul>
 			</nav>

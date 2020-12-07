@@ -98,6 +98,12 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_src_cache_cachemanager_.cachemanager.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_cache_cachemanager_.cachemanager.html#clear" class="tsd-kind-icon">clear</a></li>
@@ -142,6 +148,35 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Cache<wbr>Manager<span class="tsd-signature-symbol">(</span>clientId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cryptoImpl<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_cache_cachemanager_.cachemanager.html" class="tsd-signature-type">CacheManager</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L31">src/cache/CacheManager.ts:31</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>clientId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>cryptoImpl: <a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_src_cache_cachemanager_.cachemanager.html" class="tsd-signature-type">CacheManager</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="clear" class="tsd-anchor"></a>
@@ -153,7 +188,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L136">src/cache/CacheManager.ts:136</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L144">src/cache/CacheManager.ts:144</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -169,13 +204,13 @@
 					<a name="containskey" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> contains<wbr>Key</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">contains<wbr>Key<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">contains<wbr>Key<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L126">src/cache/CacheManager.ts:126</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L134">src/cache/CacheManager.ts:134</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -191,7 +226,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> type: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> type: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -209,7 +244,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#getaccesstokencredential">getAccessTokenCredential</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L58">src/cache/CacheManager.ts:58</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L66">src/cache/CacheManager.ts:66</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -240,7 +275,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#getaccount">getAccount</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L34">src/cache/CacheManager.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L42">src/cache/CacheManager.ts:42</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -271,7 +306,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#getaccountsfilteredby">getAccountsFilteredBy</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L219">src/cache/CacheManager.ts:219</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L233">src/cache/CacheManager.ts:233</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -301,7 +336,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#getallaccounts">getAllAccounts</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L141">src/cache/CacheManager.ts:141</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L149">src/cache/CacheManager.ts:149</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -324,7 +359,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#getappmetadata">getAppMetadata</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L82">src/cache/CacheManager.ts:82</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L90">src/cache/CacheManager.ts:90</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -354,7 +389,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L385">src/cache/CacheManager.ts:385</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L398">src/cache/CacheManager.ts:398</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -385,7 +420,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#getcredentialsfilteredby">getCredentialsFilteredBy</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L276">src/cache/CacheManager.ts:276</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L290">src/cache/CacheManager.ts:290</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -414,7 +449,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#getidtokencredential">getIdTokenCredential</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L46">src/cache/CacheManager.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L54">src/cache/CacheManager.ts:54</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -444,7 +479,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L131">src/cache/CacheManager.ts:131</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L139">src/cache/CacheManager.ts:139</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -467,7 +502,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#getrefreshtokencredential">getRefreshTokenCredential</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L70">src/cache/CacheManager.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L78">src/cache/CacheManager.ts:78</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -498,7 +533,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#getservertelemetry">getServerTelemetry</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L94">src/cache/CacheManager.ts:94</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L102">src/cache/CacheManager.ts:102</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -529,7 +564,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#getthrottlingcache">getThrottlingCache</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L107">src/cache/CacheManager.ts:107</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L115">src/cache/CacheManager.ts:115</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -559,7 +594,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L653">src/cache/CacheManager.ts:653</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L670">src/cache/CacheManager.ts:670</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -592,7 +627,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L575">src/cache/CacheManager.ts:575</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L592">src/cache/CacheManager.ts:592</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -626,7 +661,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L535">src/cache/CacheManager.ts:535</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L552">src/cache/CacheManager.ts:552</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -650,13 +685,13 @@
 					<a name="readappmetadatafromcache" class="tsd-anchor"></a>
 					<h3>read<wbr>App<wbr>Metadata<wbr>From<wbr>Cache</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>App<wbr>Metadata<wbr>From<wbr>Cache<span class="tsd-signature-symbol">(</span>environment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, clientId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_cache_entities_appmetadataentity_.appmetadataentity.html" class="tsd-signature-type">AppMetadataEntity</a></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>App<wbr>Metadata<wbr>From<wbr>Cache<span class="tsd-signature-symbol">(</span>environment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, clientId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_cache_entities_appmetadataentity_.appmetadataentity.html" class="tsd-signature-type">AppMetadataEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L629">src/cache/CacheManager.ts:629</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L646">src/cache/CacheManager.ts:646</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -673,7 +708,7 @@
 									<h5>clientId: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_src_cache_entities_appmetadataentity_.appmetadataentity.html" class="tsd-signature-type">AppMetadataEntity</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_src_cache_entities_appmetadataentity_.appmetadataentity.html" class="tsd-signature-type">AppMetadataEntity</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -687,7 +722,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L515">src/cache/CacheManager.ts:515</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L528">src/cache/CacheManager.ts:528</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -726,7 +761,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L546">src/cache/CacheManager.ts:546</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L563">src/cache/CacheManager.ts:563</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -757,7 +792,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L604">src/cache/CacheManager.ts:604</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L621">src/cache/CacheManager.ts:621</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -794,7 +829,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#removeaccount">removeAccount</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L453">src/cache/CacheManager.ts:453</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L466">src/cache/CacheManager.ts:466</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -823,7 +858,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#removeaccountcontext">removeAccountContext</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L465">src/cache/CacheManager.ts:465</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L478">src/cache/CacheManager.ts:478</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -854,7 +889,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#removeallaccounts">removeAllAccounts</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L436">src/cache/CacheManager.ts:436</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L449">src/cache/CacheManager.ts:449</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -876,7 +911,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L497">src/cache/CacheManager.ts:497</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L510">src/cache/CacheManager.ts:510</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -899,7 +934,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#removecredential">removeCredential</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L489">src/cache/CacheManager.ts:489</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L502">src/cache/CacheManager.ts:502</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -923,13 +958,13 @@
 					<a name="removeitem" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> remove<wbr>Item</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">remove<wbr>Item<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Item<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L120">src/cache/CacheManager.ts:120</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L128">src/cache/CacheManager.ts:128</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -945,7 +980,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> type: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> type: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -963,7 +998,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#savecacherecord">saveCacheRecord</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L161">src/cache/CacheManager.ts:161</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L175">src/cache/CacheManager.ts:175</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -994,7 +1029,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#setaccesstokencredential">setAccessTokenCredential</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L64">src/cache/CacheManager.ts:64</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L72">src/cache/CacheManager.ts:72</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1025,7 +1060,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#setaccount">setAccount</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L40">src/cache/CacheManager.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L48">src/cache/CacheManager.ts:48</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1056,7 +1091,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#setappmetadata">setAppMetadata</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L88">src/cache/CacheManager.ts:88</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L96">src/cache/CacheManager.ts:96</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1087,7 +1122,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#setidtokencredential">setIdTokenCredential</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L52">src/cache/CacheManager.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L60">src/cache/CacheManager.ts:60</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1118,7 +1153,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#setrefreshtokencredential">setRefreshTokenCredential</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L76">src/cache/CacheManager.ts:76</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L84">src/cache/CacheManager.ts:84</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1149,7 +1184,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#setservertelemetry">setServerTelemetry</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L101">src/cache/CacheManager.ts:101</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L109">src/cache/CacheManager.ts:109</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1183,7 +1218,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html">ICacheManager</a>.<a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html#setthrottlingcache">setThrottlingCache</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L114">src/cache/CacheManager.ts:114</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L122">src/cache/CacheManager.ts:122</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1216,7 +1251,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L779">src/cache/CacheManager.ts:779</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/cache/CacheManager.ts#L796">src/cache/CacheManager.ts:796</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1265,6 +1300,9 @@
 					<li class="current tsd-kind-class tsd-parent-kind-module">
 						<a href="_src_cache_cachemanager_.cachemanager.html" class="tsd-kind-icon">Cache<wbr>Manager</a>
 						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_src_cache_cachemanager_.cachemanager.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_cache_cachemanager_.cachemanager.html#clear" class="tsd-kind-icon">clear</a>
 							</li>
@@ -1398,6 +1436,7 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">

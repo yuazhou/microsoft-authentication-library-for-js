@@ -110,13 +110,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Response<wbr>Handler<span class="tsd-signature-symbol">(</span>clientId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cacheStorage<span class="tsd-signature-symbol">: </span><a href="_src_cache_cachemanager_.cachemanager.html" class="tsd-signature-type">CacheManager</a>, cryptoObj<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a>, logger<span class="tsd-signature-symbol">: </span><a href="_src_logger_logger_.logger.html" class="tsd-signature-type">Logger</a>, serializableCache<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_src_cache_interface_iserializabletokencache_.iserializabletokencache.html" class="tsd-signature-type">ISerializableTokenCache</a>, persistencePlugin<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_src_cache_interface_icacheplugin_.icacheplugin.html" class="tsd-signature-type">ICachePlugin</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_response_responsehandler_.responsehandler.html" class="tsd-signature-type">ResponseHandler</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Response<wbr>Handler<span class="tsd-signature-symbol">(</span>clientId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cacheStorage<span class="tsd-signature-symbol">: </span><a href="_src_cache_cachemanager_.cachemanager.html" class="tsd-signature-type">CacheManager</a>, cryptoObj<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a>, logger<span class="tsd-signature-symbol">: </span><a href="_src_logger_logger_.logger.html" class="tsd-signature-type">Logger</a>, serializableCache<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_cache_interface_iserializabletokencache_.iserializabletokencache.html" class="tsd-signature-type">ISerializableTokenCache</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span>, persistencePlugin<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_cache_interface_icacheplugin_.icacheplugin.html" class="tsd-signature-type">ICachePlugin</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_response_responsehandler_.responsehandler.html" class="tsd-signature-type">ResponseHandler</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/response/ResponseHandler.ts#L45">src/response/ResponseHandler.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/response/ResponseHandler.ts#L47">src/response/ResponseHandler.ts:47</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -134,10 +134,10 @@
 									<h5>logger: <a href="_src_logger_logger_.logger.html" class="tsd-signature-type">Logger</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> serializableCache: <a href="../interfaces/_src_cache_interface_iserializabletokencache_.iserializabletokencache.html" class="tsd-signature-type">ISerializableTokenCache</a></h5>
+									<h5>serializableCache: <a href="../interfaces/_src_cache_interface_iserializabletokencache_.iserializabletokencache.html" class="tsd-signature-type">ISerializableTokenCache</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> persistencePlugin: <a href="../interfaces/_src_cache_interface_icacheplugin_.icacheplugin.html" class="tsd-signature-type">ICachePlugin</a></h5>
+									<h5>persistencePlugin: <a href="../interfaces/_src_cache_interface_icacheplugin_.icacheplugin.html" class="tsd-signature-type">ICachePlugin</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_src_response_responsehandler_.responsehandler.html" class="tsd-signature-type">ResponseHandler</a></h4>
@@ -151,13 +151,13 @@
 					<a name="handleservertokenresponse" class="tsd-anchor"></a>
 					<h3>handle<wbr>Server<wbr>Token<wbr>Response</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Server<wbr>Token<wbr>Response<span class="tsd-signature-symbol">(</span>serverTokenResponse<span class="tsd-signature-symbol">: </span><a href="../modules/_src_response_serverauthorizationtokenresponse_.html#serverauthorizationtokenresponse" class="tsd-signature-type">ServerAuthorizationTokenResponse</a>, authority<span class="tsd-signature-symbol">: </span><a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a>, resourceRequestMethod<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, resourceRequestUri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, cachedNonce<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, cachedState<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, requestScopes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, oboAssertion<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, handlingRefreshTokenResponse<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_response_authenticationresult_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Server<wbr>Token<wbr>Response<span class="tsd-signature-symbol">(</span>serverTokenResponse<span class="tsd-signature-symbol">: </span><a href="../modules/_src_response_serverauthorizationtokenresponse_.html#serverauthorizationtokenresponse" class="tsd-signature-type">ServerAuthorizationTokenResponse</a>, authority<span class="tsd-signature-symbol">: </span><a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a>, resourceRequestMethod<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, resourceRequestUri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, authCodePayload<span class="tsd-signature-symbol">?: </span><a href="../modules/_src_response_authorizationcodepayload_.html#authorizationcodepayload" class="tsd-signature-type">AuthorizationCodePayload</a>, requestScopes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, oboAssertion<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, handlingRefreshTokenResponse<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_response_authenticationresult_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/response/ResponseHandler.ts#L102">src/response/ResponseHandler.ts:102</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/response/ResponseHandler.ts#L109">src/response/ResponseHandler.ts:109</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -176,28 +176,25 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> resourceRequestMethod: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> resourceRequestMethod: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> resourceRequestUri: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> resourceRequestUri: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> cachedNonce: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> cachedState: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> authCodePayload: <a href="../modules/_src_response_authorizationcodepayload_.html#authorizationcodepayload" class="tsd-signature-type">AuthorizationCodePayload</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> requestScopes: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> oboAssertion: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> oboAssertion: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> handlingRefreshTokenResponse: <span class="tsd-signature-type">boolean</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> handlingRefreshTokenResponse: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_response_authenticationresult_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_response_authenticationresult_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -211,7 +208,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/response/ResponseHandler.ts#L62">src/response/ResponseHandler.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/response/ResponseHandler.ts#L64">src/response/ResponseHandler.ts:64</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -247,7 +244,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/response/ResponseHandler.ts#L85">src/response/ResponseHandler.ts:85</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/response/ResponseHandler.ts#L92">src/response/ResponseHandler.ts:92</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -271,13 +268,13 @@
 					<a name="generateauthenticationresult" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> generate<wbr>Authentication<wbr>Result</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">generate<wbr>Authentication<wbr>Result<span class="tsd-signature-symbol">(</span>cryptoObj<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a>, cacheRecord<span class="tsd-signature-symbol">: </span><a href="_src_cache_entities_cacherecord_.cacherecord.html" class="tsd-signature-type">CacheRecord</a>, idTokenObj<span class="tsd-signature-symbol">: </span><a href="_src_account_authtoken_.authtoken.html" class="tsd-signature-type">AuthToken</a>, fromTokenCache<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, requestState<span class="tsd-signature-symbol">?: </span><a href="../modules/_src_utils_protocolutils_.html#requeststateobject" class="tsd-signature-type">RequestStateObject</a>, resourceRequestMethod<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, resourceRequestUri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_response_authenticationresult_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Authentication<wbr>Result<span class="tsd-signature-symbol">(</span>cryptoObj<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a>, authority<span class="tsd-signature-symbol">: </span><a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a>, cacheRecord<span class="tsd-signature-symbol">: </span><a href="_src_cache_entities_cacherecord_.cacherecord.html" class="tsd-signature-type">CacheRecord</a>, fromTokenCache<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, idTokenObj<span class="tsd-signature-symbol">?: </span><a href="_src_account_authtoken_.authtoken.html" class="tsd-signature-type">AuthToken</a>, requestState<span class="tsd-signature-symbol">?: </span><a href="../modules/_src_utils_protocolutils_.html#requeststateobject" class="tsd-signature-type">RequestStateObject</a>, resourceRequestMethod<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, resourceRequestUri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_response_authenticationresult_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/response/ResponseHandler.ts#L288">src/response/ResponseHandler.ts:288</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/response/ResponseHandler.ts#L296">src/response/ResponseHandler.ts:296</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -292,22 +289,25 @@
 									<h5>cryptoObj: <a href="../interfaces/_src_crypto_icrypto_.icrypto.html" class="tsd-signature-type">ICrypto</a></h5>
 								</li>
 								<li>
-									<h5>cacheRecord: <a href="_src_cache_entities_cacherecord_.cacherecord.html" class="tsd-signature-type">CacheRecord</a></h5>
+									<h5>authority: <a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a></h5>
 								</li>
 								<li>
-									<h5>idTokenObj: <a href="_src_account_authtoken_.authtoken.html" class="tsd-signature-type">AuthToken</a></h5>
+									<h5>cacheRecord: <a href="_src_cache_entities_cacherecord_.cacherecord.html" class="tsd-signature-type">CacheRecord</a></h5>
 								</li>
 								<li>
 									<h5>fromTokenCache: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> idTokenObj: <a href="_src_account_authtoken_.authtoken.html" class="tsd-signature-type">AuthToken</a></h5>
+								</li>
+								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> requestState: <a href="../modules/_src_utils_protocolutils_.html#requeststateobject" class="tsd-signature-type">RequestStateObject</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> resourceRequestMethod: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> resourceRequestMethod: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> resourceRequestUri: <span class="tsd-signature-type">string</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> resourceRequestUri: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_response_authenticationresult_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
