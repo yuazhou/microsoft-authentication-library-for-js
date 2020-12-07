@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;src/request/PopupRequest&quot; | @azure/msal-browser</title>
+	<title>&quot;src/request/EndSessionRequest&quot; | @azure/msal-browser</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_src_request_popuprequest_.html">&quot;src/request/PopupRequest&quot;</a>
+					<a href="_src_request_endsessionrequest_.html">&quot;src/request/EndSessionRequest&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;src/request/PopupRequest&quot;</h1>
+			<h1>External module &quot;src/request/EndSessionRequest&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +73,7 @@
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_src_request_popuprequest_.html#popuprequest" class="tsd-kind-icon">Popup<wbr>Request</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_src_request_endsessionrequest_.html#endsessionrequest" class="tsd-kind-icon">End<wbr>Session<wbr>Request</a></li>
 							</ul>
 						</section>
 					</div>
@@ -82,37 +82,26 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
-					<a name="popuprequest" class="tsd-anchor"></a>
-					<h3>Popup<wbr>Request</h3>
-					<div class="tsd-signature tsd-kind-icon">Popup<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="_src_request_authorizationurlrequest_.html#authorizationurlrequest" class="tsd-signature-type">AuthorizationUrlRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"responseMode"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"scopes"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"codeChallenge"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"codeChallengeMethod"</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
+					<a name="endsessionrequest" class="tsd-anchor"></a>
+					<h3>End<wbr>Session<wbr>Request</h3>
+					<div class="tsd-signature tsd-kind-icon">End<wbr>Session<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">CommonEndSessionRequest</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>authority<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>onRedirectNavigate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/request/PopupRequest.ts#L30">msal-browser/src/request/PopupRequest.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/request/EndSessionRequest.ts#L17">msal-browser/src/request/EndSessionRequest.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>PopupRequest: Request object passed by user to retrieve a Code from the
-							server (first leg of authorization code grant flow) with a popup window.</p>
+							<p>EndSessionRequest</p>
+							<ul>
+								<li>account                - Account object that will be logged out of. All tokens tied to this account will be cleared.</li>
+								<li>postLogoutRedirectUri  - URI to navigate to after logout page.</li>
+								<li>authority              - Authority to send logout request to.</li>
+								<li>correlationId          - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
+								<li>idTokenHint            - ID Token used by B2C to validate logout if required by the policy</li>
+								<li>onRedirectNavigate     - Callback that will be passed the url that MSAL will navigate to. Returning false in the callback will stop navigation.</li>
+							</ul>
 						</div>
-						<ul>
-							<li>scopes                     - Array of scopes the application is requesting access to.</li>
-							<li>authority                  - Url of the authority which the application acquires tokens from.</li>
-							<li>correlationId              - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
-							<li>redirectUri                - The redirect URI where authentication responses can be received by your application. It must exactly match one of the redirect URIs registered in the Azure portal.</li>
-							<li>extraScopesToConsent       - Scopes for a different resource when the user needs consent upfront.</li>
-							<li>state                      - A value included in the request that is also returned in the token response. A randomly generated unique value is typically used for preventing cross site request forgery attacks. The state is also used to encode information about the user&#39;s state in the app before the authentication request occurred.</li>
-							<li>prompt                     - Indicates the type of user interaction that is required.<pre><code>   login: will force the<span class="hljs-built_in"> user </span><span class="hljs-keyword">to</span> enter their credentials on that request, negating single-sign on
-   none:  will ensure that the<span class="hljs-built_in"> user </span>isn<span class="hljs-string">'t presented with any interactive prompt. if request can'</span>t be completed via single-sign on, the endpoint will return an interaction_required <span class="hljs-builtin-name">error</span>
-   consent: will the trigger the OAuth consent dialog after the<span class="hljs-built_in"> user </span>signs <span class="hljs-keyword">in</span>, asking the<span class="hljs-built_in"> user </span><span class="hljs-keyword">to</span> grant permissions <span class="hljs-keyword">to</span> the app
-   select_account: will interrupt single <span class="hljs-attribute">sign-</span>=on providing account selection experience listing all the accounts <span class="hljs-keyword">in</span> session <span class="hljs-keyword">or</span> any remembered accounts <span class="hljs-keyword">or</span> an option <span class="hljs-keyword">to</span> choose <span class="hljs-keyword">to</span> use a different account</code></pre></li>
-							<li>loginHint                  - Can be used to pre-fill the username/email address field of the sign-in page for the user, if you know the username/email address ahead of time. Often apps use this parameter during re-authentication, having already extracted the username from a previous sign-in using the preferred_username claim.</li>
-							<li>sid                        - Session ID, unique identifier for the session. Available as an optional claim on ID tokens.</li>
-							<li>domainHint                 - Provides a hint about the tenant or domain that the user should use to sign in. The value of the domain hint is a registered domain for the tenant.</li>
-							<li>extraQueryParameters       - String to string map of custom query parameters.</li>
-							<li>claims                     - In cases where Azure AD tenant admin has enabled conditional access policies, and the policy has not been met, exceptions will contain claims that need to be consented to.</li>
-							<li>nonce                      - A value included in the request that is returned in the id token. A randomly generated unique value is typically used to mitigate replay attacks.</li>
-						</ul>
 					</div>
 				</section>
 			</section>
@@ -124,14 +113,14 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_src_request_popuprequest_.html">&quot;src/request/<wbr>Popup<wbr>Request&quot;</a>
+						<a href="_src_request_endsessionrequest_.html">&quot;src/request/<wbr>End<wbr>Session<wbr>Request&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="_src_request_popuprequest_.html#popuprequest" class="tsd-kind-icon">Popup<wbr>Request</a>
+						<a href="_src_request_endsessionrequest_.html#endsessionrequest" class="tsd-kind-icon">End<wbr>Session<wbr>Request</a>
 					</li>
 				</ul>
 			</nav>

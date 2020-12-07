@@ -80,7 +80,8 @@
 				<ol>
 					<li><a href="#about">About</a></li>
 					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/FAQ.md">FAQ</a></li>
-					<li><a href="#releases">Releases</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/changelog.md">Changelog</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/roadmap.md">Roadmap</a></li>
 					<li><a href="#prerequisites">Prerequisites</a></li>
 					<li><a href="#installation">Installation</a></li>
 					<li><a href="#usage">Usage</a><ul>
@@ -92,6 +93,7 @@
 					<li><a href="#samples">Samples</a></li>
 					<li><a href="#build-and-test">Build and Test</a></li>
 					<li><a href="#implicit-flow-vs-authorization-code-flow-with-pkce">Authorization Code vs Implicit</a></li>
+					<li><a href="#framework-wrappers">Framework Wrappers</a></li>
 					<li><a href="#security-reporting">Security Reporting</a></li>
 					<li><a href="#license">License</a></li>
 					<li><a href="#we-value-and-adhere-to-the-microsoft-open-source-code-of-conduct">Code of Conduct</a></li>
@@ -106,44 +108,10 @@
 					<h2>FAQ</h2>
 				</a>
 				<p>See <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/FAQ.md">here</a>.</p>
-				<a href="#releases" id="releases" style="color: inherit; text-decoration: none;">
-					<h2>Releases</h2>
+				<a href="#roadmap" id="roadmap" style="color: inherit; text-decoration: none;">
+					<h2>Roadmap</h2>
 				</a>
-				<p><em>Expect us to detail our major and minor releases moving forward, while leaving out our patch releases.  Patch release notes can be found in our change log.</em></p>
-				<table>
-					<thead>
-						<tr>
-							<th>Date</th>
-							<th>Release</th>
-							<th>Announcement</th>
-							<th>Main features</th>
-						</tr>
-					</thead>
-					<tbody><tr>
-							<td></td>
-							<td>@azure/msal-browser v2.1.0</td>
-							<td></td>
-							<td>Throttling, Client and Server Telemetry, Access Token Proof-of-Possession (Tentative)</td>
-						</tr>
-						<tr>
-							<td>July 20th, 2020</td>
-							<td>@azure/msal-browser v2.0.0</td>
-							<td><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/releases/tag/msal-browser-v2.0.0">Release Notes</a></td>
-							<td>Full version of the <code>@azure/msal-browser</code> package; relies on <code>@azure/msal-common</code> v1.0.0</td>
-						</tr>
-						<tr>
-							<td>May 11, 2020</td>
-							<td>@azure/msal-browser v2.0.0-beta</td>
-							<td>No release notes</td>
-							<td>Beta version of the <code>@azure/msal-browser</code> package; relies on <code>@azure/msal-common</code> v1.0.0-beta</td>
-						</tr>
-						<tr>
-							<td>January 17, 2020</td>
-							<td>@azure/msal-browser v2.0.0-alpha</td>
-							<td>No release notes</td>
-							<td>Alpha version of the <code>@azure/msal-browser</code> package with authorization code flow for SPAs working in dev; relies on msal-common v1.0.0-alpha</td>
-						</tr>
-				</tbody></table>
+				<p>See <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/roadmap.md">here</a>.</p>
 				<a href="#prerequisites" id="prerequisites" style="color: inherit; text-decoration: none;">
 					<h2>Prerequisites</h2>
 				</a>
@@ -157,14 +125,14 @@
 					<h2>Installation</h2>
 				</a>
 				<a href="#via-npm" id="via-npm" style="color: inherit; text-decoration: none;">
-					<h3>Via NPM:</h3>
+					<h3>Via NPM</h3>
 				</a>
 				<pre><code class="language-javascript">npm install @azure/msal-browser</code></pre>
 				<a href="#via-cdn" id="via-cdn" style="color: inherit; text-decoration: none;">
-					<h3>Via CDN:</h3>
+					<h3>Via CDN</h3>
 				</a>
 				<!-- CDN_LATEST -->
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msauth.net/browser/2.6.1/js/msal-browser.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://alcdn.msauth.net/browser/2.7.0/js/msal-browser.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 				<p>See <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/cdn-usage.md">here</a> for more info on how to use this package from the Microsoft CDN.</p>
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
@@ -192,16 +160,17 @@
 					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/request-response-object.md">Request and Response Details</a></li>
 					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/caching.md">Cache Storage</a></li>
 					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/performance.md">Performance Enhancements</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/instance-aware.md">Instance Aware Flow</a></li>
 				</ul>
 				<a href="#samples" id="samples" style="color: inherit; text-decoration: none;">
 					<h2>Samples</h2>
 				</a>
-				<p>The <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-browser-samples"><code>msal-browser-samples</code> folder</a> contains sample applications for our libraries. </p>
+				<p>The <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-browser-samples"><code>msal-browser-samples</code> folder</a> contains sample applications for our libraries.</p>
 				<ul>
-					<li>You can run any VanillaJSTestApp2.0 sample by changing the <code>authConfig.js</code> file in the respective folder to match your app registration and running the <code>npm</code> command <code>npm start -- -s &lt;sample-name&gt; -p &lt;port&gt;</code> in the VanillaJSTestApp2.0 folder. </li>
+					<li>You can run any VanillaJSTestApp2.0 sample by changing the <code>authConfig.js</code> file in the respective folder to match your app registration and running the <code>npm</code> command <code>npm start -- -s &lt;sample-name&gt; -p &lt;port&gt;</code> in the VanillaJSTestApp2.0 folder.</li>
 					<li>You can run the TypescriptTestApp2.0 sample by changing the <code>AuthModule.ts</code> file to match your app registration and running the <code>npm</code> command <code>npm start</code> in the TypescriptTestApp2.0 folder.</li>
 				</ul>
-				<p>Additionally, the <code>msal-angular-v2-samples</code> folder contains an Angular 10 sample app that uses msal-browser. </p>
+				<p>Additionally, the <code>msal-angular-v2-samples</code> folder contains an Angular 10 sample app that uses msal-browser.</p>
 				<ul>
 					<li>You can run the angular10-browser sample by changing the <code>app.module.ts</code> file to match your app registration and running the <code>npm</code> command <code>npm start</code> in the angular-10-browser-sample folder.</li>
 				</ul>
@@ -254,7 +223,7 @@
 				<a href="#build-and-test" id="build-and-test" style="color: inherit; text-decoration: none;">
 					<h2>Build and Test</h2>
 				</a>
-				<p>See the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/contributing.md"><code>contributing.md</code></a> file for more information. </p>
+				<p>See the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/contributing.md"><code>contributing.md</code></a> file for more information.</p>
 				<a href="#linking-local-package-dependencies" id="linking-local-package-dependencies" style="color: inherit; text-decoration: none;">
 					<h3>Linking local package dependencies</h3>
 				</a>
@@ -294,6 +263,14 @@ npm run build:all</code></pre>
 npm <span class="hljs-built_in">test</span>
 // To run tests with code coverage
 npm run <span class="hljs-built_in">test</span>:coverage:only</code></pre>
+				<a href="#framework-wrappers" id="framework-wrappers" style="color: inherit; text-decoration: none;">
+					<h2>Framework Wrappers</h2>
+				</a>
+				<p>If you are using a framework such as Angular or React you may be interested in using one of our wrapper libraries:</p>
+				<ul>
+					<li>Angular: <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/msal-angular-v2/lib/msal-angular">@azure/msal-angular v2 (Alpha)</a></li>
+					<li>React: <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-react">@azure/msal-react (Alpha)</a></li>
+				</ul>
 				<a href="#implicit-flow-vs-authorization-code-flow-with-pkce" id="implicit-flow-vs-authorization-code-flow-with-pkce" style="color: inherit; text-decoration: none;">
 					<h2>Implicit Flow vs Authorization Code Flow with PKCE</h2>
 				</a>
@@ -402,6 +379,12 @@ npm run <span class="hljs-built_in">test</span>:coverage:only</code></pre>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_src_network_xhrclient_.html">&quot;src/network/<wbr>Xhr<wbr>Client&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_src_request_authorizationurlrequest_.html">&quot;src/request/<wbr>Authorization<wbr>Url<wbr>Request&quot;</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_src_request_endsessionrequest_.html">&quot;src/request/<wbr>End<wbr>Session<wbr>Request&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_src_request_popuprequest_.html">&quot;src/request/<wbr>Popup<wbr>Request&quot;</a>

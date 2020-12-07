@@ -84,10 +84,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
 					<a name="ssosilentrequest" class="tsd-anchor"></a>
 					<h3>Sso<wbr>Silent<wbr>Request</h3>
-					<div class="tsd-signature tsd-kind-icon">Sso<wbr>Silent<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="_src_index_.html#authorizationurlrequest" class="tsd-signature-type">AuthorizationUrlRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"scopes"</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>scopes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">Sso<wbr>Silent<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="_src_request_authorizationurlrequest_.html#authorizationurlrequest" class="tsd-signature-type">AuthorizationUrlRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"responseMode"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"codeChallenge"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"codeChallengeMethod"</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/request/SsoSilentRequest.ts#L32">msal-browser/src/request/SsoSilentRequest.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/request/SsoSilentRequest.ts#L29">msal-browser/src/request/SsoSilentRequest.ts:29</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -101,9 +101,6 @@
 							<li>correlationId              - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
 							<li>redirectUri                - The redirect URI where authentication responses can be received by your application. It must exactly match one of the redirect URIs registered in the Azure portal.</li>
 							<li>extraScopesToConsent       - Scopes for a different resource when the user needs consent upfront.</li>
-							<li>responseMode               - Specifies the method that should be used to send the authentication result to your app. Fragment is the only valid option for msal-browser.</li>
-							<li>codeChallenge              - Used to secure authorization code grant via Proof of Key for Code Exchange (PKCE). For more information, see the PKCE RCF:<a href="https://tools.ietf.org/html/rfc7636">https://tools.ietf.org/html/rfc7636</a></li>
-							<li>codeChallengeMethod        - The method used to encode the code verifier for the code challenge parameter. Can be &quot;plain&quot; or &quot;S256&quot;. If excluded, code challenge is assumed to be plaintext. For more information, see the PKCE RCF: <a href="https://tools.ietf.org/html/rfc7636">https://tools.ietf.org/html/rfc7636</a></li>
 							<li>state                      - A value included in the request that is also returned in the token response. A randomly generated unique value is typically used for preventing cross site request forgery attacks. The state is also used to encode information about the user&#39;s state in the app before the authentication request occurred.</li>
 							<li>prompt                     - Indicates the type of user interaction that is required.<pre><code>   login: will force the<span class="hljs-built_in"> user </span><span class="hljs-keyword">to</span> enter their credentials on that request, negating single-sign on
    none:  will ensure that the<span class="hljs-built_in"> user </span>isn<span class="hljs-string">'t presented with any interactive prompt. if request can'</span>t be completed via single-sign on, the endpoint will return an interaction_required <span class="hljs-builtin-name">error</span>

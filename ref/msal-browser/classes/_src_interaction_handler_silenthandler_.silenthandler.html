@@ -142,14 +142,14 @@
 					<a name="handlecoderesponse" class="tsd-anchor"></a>
 					<h3>handle<wbr>Code<wbr>Response</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Code<wbr>Response<span class="tsd-signature-symbol">(</span>locationHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Code<wbr>Response<span class="tsd-signature-symbol">(</span>locationHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, authority<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Authority</span>, networkModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">INetworkModule</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_src_interaction_handler_interactionhandler_.interactionhandler.html">InteractionHandler</a>.<a href="_src_interaction_handler_interactionhandler_.interactionhandler.html#handlecoderesponse">handleCodeResponse</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/interaction_handler/InteractionHandler.ts#L35">msal-browser/src/interaction_handler/InteractionHandler.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/interaction_handler/InteractionHandler.ts#L37">msal-browser/src/interaction_handler/InteractionHandler.ts:37</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -163,6 +163,12 @@
 									<h5>locationHash: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 									</div>
+								</li>
+								<li>
+									<h5>authority: <span class="tsd-signature-type">Authority</span></h5>
+								</li>
+								<li>
+									<h5>networkModule: <span class="tsd-signature-type">INetworkModule</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
