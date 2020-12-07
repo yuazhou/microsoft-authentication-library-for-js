@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;src/client/PublicClientApplication&quot; | @azure/msal-node</title>
+	<title>&quot;src/request/SilentFlowRequest&quot; | @azure/msal-node</title>
 	<meta name="description" content="Documentation for @azure/msal-node">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_src_client_publicclientapplication_.html">&quot;src/client/PublicClientApplication&quot;</a>
+					<a href="_src_request_silentflowrequest_.html">&quot;src/request/SilentFlowRequest&quot;</a>
 				</li>
 			</ul>
-			<h1>Module &quot;src/client/PublicClientApplication&quot;</h1>
+			<h1>Module &quot;src/request/SilentFlowRequest&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -69,11 +69,37 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Classes</h3>
+							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_src_client_publicclientapplication_.publicclientapplication.html" class="tsd-kind-icon">Public<wbr>Client<wbr>Application</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_src_request_silentflowrequest_.html#silentflowrequest" class="tsd-kind-icon">Silent<wbr>Flow<wbr>Request</a></li>
 							</ul>
 						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="silentflowrequest" class="tsd-anchor"></a>
+					<h3>Silent<wbr>Flow<wbr>Request</h3>
+					<div class="tsd-signature tsd-kind-icon">Silent<wbr>Flow<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">CommonSilentFlowRequest</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"account"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"scopes"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"resourceRequestMethod"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"resourceRequestUri"</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>account<span class="tsd-signature-symbol">: </span><a href="_src_index_.html#accountinfo" class="tsd-signature-type">AccountInfo</a><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/request/SilentFlowRequest.ts#L17">msal-node/src/request/SilentFlowRequest.ts:17</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>SilentFlow parameters passed by the user to retrieve credentials silently</p>
+							<ul>
+								<li>scopes                 - Array of scopes the application is requesting access to.</li>
+								<li>claims                 - A stringified claims request which will be added to all /authorize and /token calls. When included on a silent request, cache lookup will be skipped and token will be refreshed.</li>
+								<li>authority              - Url of the authority which the application acquires tokens from.</li>
+								<li>correlationId          - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
+								<li>account                - Account entity to lookup the credentials.</li>
+								<li>forceRefresh           - Forces silent requests to make network calls if true.</li>
+							</ul>
+						</div>
 					</div>
 				</section>
 			</section>
@@ -85,14 +111,14 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="_src_client_publicclientapplication_.html">&quot;src/client/<wbr>Public<wbr>Client<wbr>Application&quot;</a>
+						<a href="_src_request_silentflowrequest_.html">&quot;src/request/<wbr>Silent<wbr>Flow<wbr>Request&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_src_client_publicclientapplication_.publicclientapplication.html" class="tsd-kind-icon">Public<wbr>Client<wbr>Application</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_src_request_silentflowrequest_.html#silentflowrequest" class="tsd-kind-icon">Silent<wbr>Flow<wbr>Request</a>
 					</li>
 				</ul>
 			</nav>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>&quot;src/request/AuthorizationUrlRequest&quot; | @azure/msal-node</title>
+	<meta name="description" content="Documentation for @azure/msal-node">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@azure/msal-node</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="_src_request_authorizationurlrequest_.html">&quot;src/request/AuthorizationUrlRequest&quot;</a>
+				</li>
+			</ul>
+			<h1>Module &quot;src/request/AuthorizationUrlRequest&quot;</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_src_request_authorizationurlrequest_.html#authorizationurlrequest" class="tsd-kind-icon">Authorization<wbr>Url<wbr>Request</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="authorizationurlrequest" class="tsd-anchor"></a>
+					<h3>Authorization<wbr>Url<wbr>Request</h3>
+					<div class="tsd-signature tsd-kind-icon">Authorization<wbr>Url<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">CommonAuthorizationUrlRequest</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"scopes"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"redirectUri"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"resourceRequestMethod"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"resourceRequestUri"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"authenticationScheme"</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>redirectUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/src/request/AuthorizationUrlRequest.ts#L33">msal-node/src/request/AuthorizationUrlRequest.ts:33</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Request object passed by user to retrieve a Code from the server (first leg of authorization code grant flow)</p>
+						</div>
+						<ul>
+							<li>scopes                     - Array of scopes the application is requesting access to.</li>
+							<li>claims                     - A stringified claims request which will be added to all /authorize and /token calls</li>
+							<li>authority                  - Url of the authority which the application acquires tokens from.</li>
+							<li>correlationId              - Unique GUID set per request to trace a request end-to-end for telemetry purposes.</li>
+							<li>redirectUri                - The redirect URI where authentication responses can be received by your application. It must exactly match one of the redirect URIs registered in the Azure portal.</li>
+							<li>extraScopesToConsent       - Scopes for a different resource when the user needs consent upfront.</li>
+							<li>responseMode               - Specifies the method that should be used to send the authentication result to your app. Can be query, form_post, or fragment. If no value is passed in, it defaults to query.</li>
+							<li>codeChallenge              - Used to secure authorization code grant via Proof of Key for Code Exchange (PKCE). For more information, see the PKCE RCF:<a href="https://tools.ietf.org/html/rfc7636">https://tools.ietf.org/html/rfc7636</a></li>
+							<li>codeChallengeMethod        - The method used to encode the code verifier for the code challenge parameter. Can be &quot;plain&quot; or &quot;S256&quot;. If excluded, code challenge is assumed to be plaintext. For more information, see the PKCE RCF: <a href="https://tools.ietf.org/html/rfc7636">https://tools.ietf.org/html/rfc7636</a></li>
+							<li>state                      - A value included in the request that is also returned in the token response. A randomly generated unique value is typically used for preventing cross site request forgery attacks. The state is also used to encode information about the user&#39;s state in the app before the authentication request occurred.</li>
+							<li>prompt                     - Indicates the type of user interaction that is required.<pre><code>   login: will force the<span class="hljs-built_in"> user </span><span class="hljs-keyword">to</span> enter their credentials on that request, negating single-sign on
+   none:  will ensure that the<span class="hljs-built_in"> user </span>isn<span class="hljs-string">&#x27;t presented with any interactive prompt. if request can&#x27;</span>t be completed via single-sign on, the endpoint will return an interaction_required <span class="hljs-builtin-name">error</span>
+   consent: will the trigger the OAuth consent dialog after the<span class="hljs-built_in"> user </span>signs <span class="hljs-keyword">in</span>, asking the<span class="hljs-built_in"> user </span><span class="hljs-keyword">to</span> grant permissions <span class="hljs-keyword">to</span> the app
+   select_account: will interrupt single <span class="hljs-attribute">sign-</span>=on providing account selection experience listing all the accounts <span class="hljs-keyword">in</span> session <span class="hljs-keyword">or</span> any remembered accounts <span class="hljs-keyword">or</span> an option <span class="hljs-keyword">to</span> choose <span class="hljs-keyword">to</span> use a different account</code></pre></li>
+							<li>account                    - AccountInfo obtained from a getAccount API. Will be used in certain scenarios to generate login_hint if both loginHint and sid params are not provided.</li>
+							<li>loginHint                  - Can be used to pre-fill the username/email address field of the sign-in page for the user, if you know the username/email address ahead of time. Often apps use this parameter during re-authentication, having already extracted the username from a previous sign-in using the preferred_username claim.</li>
+							<li>sid                        - Session ID, unique identifier for the session. Available as an optional claim on ID tokens.</li>
+							<li>domainHint                 - Provides a hint about the tenant or domain that the user should use to sign in. The value of the domain hint is a registered domain for the tenant.</li>
+							<li>extraQueryParameters       - String to string map of custom query parameters.</li>
+							<li>nonce                      - A value included in the request that is returned in the id token. A randomly generated unique value is typically used to mitigate replay attacks.</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="_src_request_authorizationurlrequest_.html">&quot;src/request/<wbr>Authorization<wbr>Url<wbr>Request&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_src_request_authorizationurlrequest_.html#authorizationurlrequest" class="tsd-kind-icon">Authorization<wbr>Url<wbr>Request</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
