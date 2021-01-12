@@ -119,7 +119,7 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Popup<wbr>Handler<span class="tsd-signature-symbol">(</span>authCodeModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthorizationCodeClient</span>, storageImpl<span class="tsd-signature-symbol">: </span><a href="_src_cache_browsercachemanager_.browsercachemanager.html" class="tsd-signature-type">BrowserCacheManager</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_interaction_handler_popuphandler_.popuphandler.html" class="tsd-signature-type">PopupHandler</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Popup<wbr>Handler<span class="tsd-signature-symbol">(</span>authCodeModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthorizationCodeClient</span>, storageImpl<span class="tsd-signature-symbol">: </span><a href="_src_cache_browsercachemanager_.browsercachemanager.html" class="tsd-signature-type">BrowserCacheManager</a>, authCodeRequest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthorizationCodeRequest</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_interaction_handler_popuphandler_.popuphandler.html" class="tsd-signature-type">PopupHandler</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -137,6 +137,9 @@
 								<li>
 									<h5>storageImpl: <a href="_src_cache_browsercachemanager_.browsercachemanager.html" class="tsd-signature-type">BrowserCacheManager</a></h5>
 								</li>
+								<li>
+									<h5>authCodeRequest: <span class="tsd-signature-type">AuthorizationCodeRequest</span></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_src_interaction_handler_popuphandler_.popuphandler.html" class="tsd-signature-type">PopupHandler</a></h4>
 						</li>
@@ -149,7 +152,7 @@
 					<a name="handlecoderesponse" class="tsd-anchor"></a>
 					<h3>handle<wbr>Code<wbr>Response</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Code<wbr>Response<span class="tsd-signature-symbol">(</span>locationHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, authority<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Authority</span>, networkModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">INetworkModule</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Code<wbr>Response<span class="tsd-signature-symbol">(</span>locationHash<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, state<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, authority<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Authority</span>, networkModule<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">INetworkModule</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_src_index_.html#authenticationresult" class="tsd-signature-type">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -172,6 +175,9 @@
 									</div>
 								</li>
 								<li>
+									<h5>state: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
 									<h5>authority: <span class="tsd-signature-type">Authority</span></h5>
 								</li>
 								<li>
@@ -186,7 +192,7 @@
 					<a name="initiateauthrequest" class="tsd-anchor"></a>
 					<h3>initiate<wbr>Auth<wbr>Request</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">initiate<wbr>Auth<wbr>Request<span class="tsd-signature-symbol">(</span>requestUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, authCodeRequest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthorizationCodeRequest</span>, params<span class="tsd-signature-symbol">: </span><a href="../modules/_src_interaction_handler_popuphandler_.html#popupparams" class="tsd-signature-type">PopupParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Window</span></li>
+						<li class="tsd-signature tsd-kind-icon">initiate<wbr>Auth<wbr>Request<span class="tsd-signature-symbol">(</span>requestUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, params<span class="tsd-signature-symbol">: </span><a href="../modules/_src_interaction_handler_popuphandler_.html#popupparams" class="tsd-signature-type">PopupParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Window</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -209,9 +215,6 @@
 									</div>
 								</li>
 								<li>
-									<h5>authCodeRequest: <span class="tsd-signature-type">AuthorizationCodeRequest</span></h5>
-								</li>
-								<li>
 									<h5>params: <a href="../modules/_src_interaction_handler_popuphandler_.html#popupparams" class="tsd-signature-type">PopupParams</a></h5>
 								</li>
 							</ul>
@@ -229,7 +232,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/interaction_handler/PopupHandler.ts#L59">msal-browser/src/interaction_handler/PopupHandler.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/interaction_handler/PopupHandler.ts#L57">msal-browser/src/interaction_handler/PopupHandler.ts:57</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -266,7 +269,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/interaction_handler/PopupHandler.ts#L176">msal-browser/src/interaction_handler/PopupHandler.ts:176</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/interaction_handler/PopupHandler.ts#L174">msal-browser/src/interaction_handler/PopupHandler.ts:174</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -294,7 +297,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/interaction_handler/PopupHandler.ts#L154">msal-browser/src/interaction_handler/PopupHandler.ts:154</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/src/interaction_handler/PopupHandler.ts#L152">msal-browser/src/interaction_handler/PopupHandler.ts:152</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
