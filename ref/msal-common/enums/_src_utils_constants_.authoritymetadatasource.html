@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>AuthenticationScheme | @azure/msal-common</title>
+	<title>AuthorityMetadataSource | @azure/msal-common</title>
 	<meta name="description" content="Documentation for @azure/msal-common">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,23 +57,16 @@
 					<a href="../modules/_src_utils_constants_.html">&quot;src/utils/Constants&quot;</a>
 				</li>
 				<li>
-					<a href="_src_utils_constants_.authenticationscheme.html">AuthenticationScheme</a>
+					<a href="_src_utils_constants_.authoritymetadatasource.html">AuthorityMetadataSource</a>
 				</li>
 			</ul>
-			<h1>Enumeration AuthenticationScheme</h1>
+			<h1>Enumeration AuthorityMetadataSource</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Type of the authentication request</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -81,8 +74,9 @@
 						<section class="tsd-index-section ">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.authenticationscheme.html#bearer" class="tsd-kind-icon">BEARER</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.authenticationscheme.html#pop" class="tsd-kind-icon">POP</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.authoritymetadatasource.html#cache" class="tsd-kind-icon">CACHE</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.authoritymetadatasource.html#config" class="tsd-kind-icon">CONFIG</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_src_utils_constants_.authoritymetadatasource.html#network" class="tsd-kind-icon">NETWORK</a></li>
 							</ul>
 						</section>
 					</div>
@@ -91,22 +85,32 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="bearer" class="tsd-anchor"></a>
-					<h3>BEARER</h3>
-					<div class="tsd-signature tsd-kind-icon">BEARER<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;Bearer&quot;</span></div>
+					<a name="cache" class="tsd-anchor"></a>
+					<h3>CACHE</h3>
+					<div class="tsd-signature tsd-kind-icon">CACHE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;cache&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L295">src/utils/Constants.ts:295</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L275">src/utils/Constants.ts:275</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="pop" class="tsd-anchor"></a>
-					<h3>POP</h3>
-					<div class="tsd-signature tsd-kind-icon">POP<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;pop&quot;</span></div>
+					<a name="config" class="tsd-anchor"></a>
+					<h3>CONFIG</h3>
+					<div class="tsd-signature tsd-kind-icon">CONFIG<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;config&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L294">src/utils/Constants.ts:294</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L274">src/utils/Constants.ts:274</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="network" class="tsd-anchor"></a>
+					<h3>NETWORK</h3>
+					<div class="tsd-signature tsd-kind-icon">NETWORK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;network&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/utils/Constants.ts#L276">src/utils/Constants.ts:276</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -131,24 +135,27 @@
 					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="_src_utils_constants_.aadserverparamkeys.html" class="tsd-kind-icon">AADServer<wbr>Param<wbr>Keys</a>
 					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="_src_utils_constants_.authenticationscheme.html" class="tsd-kind-icon">Authentication<wbr>Scheme</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-enum tsd-parent-kind-module">
-						<a href="_src_utils_constants_.authenticationscheme.html" class="tsd-kind-icon">Authentication<wbr>Scheme</a>
+						<a href="_src_utils_constants_.authoritymetadatasource.html" class="tsd-kind-icon">Authority<wbr>Metadata<wbr>Source</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_src_utils_constants_.authenticationscheme.html#bearer" class="tsd-kind-icon">BEARER</a>
+								<a href="_src_utils_constants_.authoritymetadatasource.html#cache" class="tsd-kind-icon">CACHE</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_src_utils_constants_.authenticationscheme.html#pop" class="tsd-kind-icon">POP</a>
+								<a href="_src_utils_constants_.authoritymetadatasource.html#config" class="tsd-kind-icon">CONFIG</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_src_utils_constants_.authoritymetadatasource.html#network" class="tsd-kind-icon">NETWORK</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="_src_utils_constants_.authoritymetadatasource.html" class="tsd-kind-icon">Authority<wbr>Metadata<wbr>Source</a>
-					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-module">
 						<a href="_src_utils_constants_.cacheaccounttype.html" class="tsd-kind-icon">Cache<wbr>Account<wbr>Type</a>
 					</li>

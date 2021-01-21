@@ -102,6 +102,8 @@
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#canonicalauthorityurlcomponents" class="tsd-kind-icon">canonical<wbr>Authority<wbr>Url<wbr>Components</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#devicecodeendpoint" class="tsd-kind-icon">device<wbr>Code<wbr>Endpoint</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#endsessionendpoint" class="tsd-kind-icon">end<wbr>Session<wbr>Endpoint</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#hostnameandport" class="tsd-kind-icon">hostname<wbr>And<wbr>Port</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#options" class="tsd-kind-icon">options</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#protocolmode" class="tsd-kind-icon">protocol<wbr>Mode</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#selfsignedjwtaudience" class="tsd-kind-icon">self<wbr>Signed<wbr>Jwt<wbr>Audience</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#tenant" class="tsd-kind-icon">tenant</a></li>
@@ -112,9 +114,11 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#discoverycomplete" class="tsd-kind-icon">discovery<wbr>Complete</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#isauthorityalias" class="tsd-kind-icon">is<wbr>Authority<wbr>Alias</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#getpreferredcache" class="tsd-kind-icon">get<wbr>Preferred<wbr>Cache</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#isalias" class="tsd-kind-icon">is<wbr>Alias</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_src_authority_authority_.authority.html#resolveendpointsasync" class="tsd-kind-icon">resolve<wbr>Endpoints<wbr>Async</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_authority_authority_.authority.html#generateenvironmentfromauthority" class="tsd-kind-icon">generate<wbr>Environment<wbr>From<wbr>Authority</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_authority_authority_.authority.html#createclouddiscoverymetadatafromhost" class="tsd-kind-icon">create<wbr>Cloud<wbr>Discovery<wbr>Metadata<wbr>From<wbr>Host</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_src_authority_authority_.authority.html#getclouddiscoverymetadatafromnetworkresponse" class="tsd-kind-icon">get<wbr>Cloud<wbr>Discovery<wbr>Metadata<wbr>From<wbr>Network<wbr>Response</a></li>
 							</ul>
 						</section>
 					</div>
@@ -126,13 +130,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Authority<span class="tsd-signature-symbol">(</span>authority<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, networkInterface<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">INetworkModule</span>, protocolMode<span class="tsd-signature-symbol">: </span><a href="../enums/_src_authority_protocolmode_.protocolmode.html" class="tsd-signature-type">ProtocolMode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Authority<span class="tsd-signature-symbol">(</span>authority<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, networkInterface<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">INetworkModule</span>, cacheManager<span class="tsd-signature-symbol">: </span><a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html" class="tsd-signature-type">ICacheManager</a>, authorityOptions<span class="tsd-signature-symbol">: </span><a href="../modules/_src_authority_authorityoptions_.html#authorityoptions" class="tsd-signature-type">AuthorityOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L33">src/authority/Authority.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L38">src/authority/Authority.ts:38</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -144,7 +148,10 @@
 									<h5>networkInterface: <span class="tsd-signature-type">INetworkModule</span></h5>
 								</li>
 								<li>
-									<h5>protocolMode: <a href="../enums/_src_authority_protocolmode_.protocolmode.html" class="tsd-signature-type">ProtocolMode</a></h5>
+									<h5>cacheManager: <a href="../interfaces/_src_cache_interface_icachemanager_.icachemanager.html" class="tsd-signature-type">ICacheManager</a></h5>
+								</li>
+								<li>
+									<h5>authorityOptions: <a href="../modules/_src_authority_authorityoptions_.html#authorityoptions" class="tsd-signature-type">AuthorityOptions</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a></h4>
@@ -164,7 +171,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L43">src/authority/Authority.ts:43</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L49">src/authority/Authority.ts:49</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../enums/_src_authority_authoritytype_.authoritytype.html" class="tsd-signature-type">AuthorityType</a></h4>
@@ -181,7 +188,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L97">src/authority/Authority.ts:97</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L117">src/authority/Authority.ts:117</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -204,7 +211,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L63">src/authority/Authority.ts:63</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L76">src/authority/Authority.ts:76</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -217,7 +224,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L70">src/authority/Authority.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L83">src/authority/Authority.ts:83</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -245,7 +252,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L79">src/authority/Authority.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L92">src/authority/Authority.ts:92</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -267,7 +274,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L116">src/authority/Authority.ts:116</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L136">src/authority/Authority.ts:136</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -284,7 +291,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L127">src/authority/Authority.ts:127</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L147">src/authority/Authority.ts:147</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -293,6 +300,50 @@
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="hostnameandport" class="tsd-anchor"></a>
+					<h3>hostname<wbr>And<wbr>Port</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> hostnameAndPort<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L103">src/authority/Authority.ts:103</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get hostname and port i.e. login.microsoftonline.com</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="options" class="tsd-anchor"></a>
+					<h3>options</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> options<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_src_authority_authorityoptions_.html#authorityoptions" class="tsd-signature-type">AuthorityOptions</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L69">src/authority/Authority.ts:69</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns authorityOptions which can be used to reinstantiate a new authority instance</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_src_authority_authorityoptions_.html#authorityoptions" class="tsd-signature-type">AuthorityOptions</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -306,7 +357,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L56">src/authority/Authority.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L62">src/authority/Authority.ts:62</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -328,7 +379,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L138">src/authority/Authority.ts:138</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L158">src/authority/Authority.ts:158</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -350,7 +401,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L90">src/authority/Authority.ts:90</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L110">src/authority/Authority.ts:110</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -372,7 +423,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L108">src/authority/Authority.ts:108</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L128">src/authority/Authority.ts:128</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -397,7 +448,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L167">src/authority/Authority.ts:167</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L187">src/authority/Authority.ts:187</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -410,21 +461,43 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="isauthorityalias" class="tsd-anchor"></a>
-					<h3>is<wbr>Authority<wbr>Alias</h3>
+					<a name="getpreferredcache" class="tsd-anchor"></a>
+					<h3>get<wbr>Preferred<wbr>Cache</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Authority<wbr>Alias<span class="tsd-signature-symbol">(</span>host<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Preferred<wbr>Cache<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L212">src/authority/Authority.ts:212</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L384">src/authority/Authority.ts:384</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Determine if given hostname is alias of this authority</p>
+									<p>helper function to generate environment from authority object</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isalias" class="tsd-anchor"></a>
+					<h3>is<wbr>Alias</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Alias<span class="tsd-signature-symbol">(</span>host<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L396">src/authority/Authority.ts:396</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns whether or not the provided host is an alias of this authority instance</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -449,12 +522,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L201">src/authority/Authority.ts:201</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L195">src/authority/Authority.ts:195</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Perform endpoint discovery to discover the /authorize, /token and logout endpoints.</p>
+									<p>Perform endpoint discovery to discover aliases, preferred_cache, preferred_network
+									and the /authorize, /token and logout endpoints.</p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -462,32 +536,65 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="generateenvironmentfromauthority" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> generate<wbr>Environment<wbr>From<wbr>Authority</h3>
+					<a name="createclouddiscoverymetadatafromhost" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>Cloud<wbr>Discovery<wbr>Metadata<wbr>From<wbr>Host</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">generate<wbr>Environment<wbr>From<wbr>Authority<span class="tsd-signature-symbol">(</span>authority<span class="tsd-signature-symbol">: </span><a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Cloud<wbr>Discovery<wbr>Metadata<wbr>From<wbr>Host<span class="tsd-signature-symbol">(</span>host<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_src_authority_clouddiscoverymetadata_.html#clouddiscoverymetadata" class="tsd-signature-type">CloudDiscoveryMetadata</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L224">src/authority/Authority.ts:224</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L357">src/authority/Authority.ts:357</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>helper function to generate environment from authority object</p>
+									<p>Creates cloud discovery metadata object from a given host</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>authority: <a href="_src_authority_authority_.authority.html" class="tsd-signature-type">Authority</a></h5>
+									<h5>host: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_src_authority_clouddiscoverymetadata_.html#clouddiscoverymetadata" class="tsd-signature-type">CloudDiscoveryMetadata</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="getclouddiscoverymetadatafromnetworkresponse" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Cloud<wbr>Discovery<wbr>Metadata<wbr>From<wbr>Network<wbr>Response</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Cloud<wbr>Discovery<wbr>Metadata<wbr>From<wbr>Network<wbr>Response<span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><a href="../modules/_src_authority_clouddiscoverymetadata_.html#clouddiscoverymetadata" class="tsd-signature-type">CloudDiscoveryMetadata</a><span class="tsd-signature-symbol">[]</span>, authority<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_src_authority_clouddiscoverymetadata_.html#clouddiscoverymetadata" class="tsd-signature-type">CloudDiscoveryMetadata</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/authority/Authority.ts#L370">src/authority/Authority.ts:370</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Searches instance discovery network response for the entry that contains the host in the aliases list</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>response: <a href="../modules/_src_authority_clouddiscoverymetadata_.html#clouddiscoverymetadata" class="tsd-signature-type">CloudDiscoveryMetadata</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>authority: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_src_authority_clouddiscoverymetadata_.html#clouddiscoverymetadata" class="tsd-signature-type">CloudDiscoveryMetadata</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -533,6 +640,12 @@
 								<a href="_src_authority_authority_.authority.html#endsessionendpoint" class="tsd-kind-icon">end<wbr>Session<wbr>Endpoint</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="_src_authority_authority_.authority.html#hostnameandport" class="tsd-kind-icon">hostname<wbr>And<wbr>Port</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="_src_authority_authority_.authority.html#options" class="tsd-kind-icon">options</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="_src_authority_authority_.authority.html#protocolmode" class="tsd-kind-icon">protocol<wbr>Mode</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
@@ -548,13 +661,19 @@
 								<a href="_src_authority_authority_.authority.html#discoverycomplete" class="tsd-kind-icon">discovery<wbr>Complete</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_src_authority_authority_.authority.html#isauthorityalias" class="tsd-kind-icon">is<wbr>Authority<wbr>Alias</a>
+								<a href="_src_authority_authority_.authority.html#getpreferredcache" class="tsd-kind-icon">get<wbr>Preferred<wbr>Cache</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_src_authority_authority_.authority.html#isalias" class="tsd-kind-icon">is<wbr>Alias</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_src_authority_authority_.authority.html#resolveendpointsasync" class="tsd-kind-icon">resolve<wbr>Endpoints<wbr>Async</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="_src_authority_authority_.authority.html#generateenvironmentfromauthority" class="tsd-kind-icon">generate<wbr>Environment<wbr>From<wbr>Authority</a>
+								<a href="_src_authority_authority_.authority.html#createclouddiscoverymetadatafromhost" class="tsd-kind-icon">create<wbr>Cloud<wbr>Discovery<wbr>Metadata<wbr>From<wbr>Host</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_src_authority_authority_.authority.html#getclouddiscoverymetadatafromnetworkresponse" class="tsd-kind-icon">get<wbr>Cloud<wbr>Discovery<wbr>Metadata<wbr>From<wbr>Network<wbr>Response</a>
 							</li>
 						</ul>
 					</li>
