@@ -1,0 +1,291 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@azure/msal-react</title>
+	<meta name="description" content="Documentation for @azure/msal-react">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@azure/msal-react</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>Project @azure/msal-react</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#microsoft-authentication-library-for-react-msal-react" id="microsoft-authentication-library-for-react-msal-react" style="color: inherit; text-decoration: none;">
+					<h1>Microsoft Authentication Library for React (msal-react)</h1>
+				</a>
+				<p><a href="https://www.npmjs.com/package/@azure/msal-react/"><img src="https://img.shields.io/npm/v/@azure/msal-react.svg?style=flat" alt="npm version"></a><a href="https://nodei.co/npm/@azure/msal-react/"><img src="https://img.shields.io/npm/dm/@azure/msal-react.svg" alt="npm version"></a></p>
+				<p><code>msal-react</code> is under development. <strong>We do not recommend using this in a production environment yet</strong>.</p>
+				<table>
+					<thead>
+						<tr>
+							<th><a href="https://aka.ms/aaddevv2">AAD Docs</a></th>
+							<th><a href="README.md#community-help-and-support">Support</a></th>
+							<th><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples">Samples</a></th>
+						</tr>
+					</thead>
+				</table>
+				<ol>
+					<li><a href="#about">About</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/FAQ.md">FAQ</a></li>
+					<li><a href="#prerequisites">Prerequisites</a></li>
+					<li><a href="#installation">Installation</a></li>
+					<li><a href="#build-and-test">Build and Test</a></li>
+					<li><a href="#usage">Usage</a><ul>
+							<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-react/docs/getting-started.md">Getting Started</a></li>
+							<li><a href="#msal-basics">Msal Basics</a></li>
+							<li><a href="#advanced-topics">Advanced Topics</a></li>
+							<li><a href="#msal-react-specific-concepts">MSAL React Specific Concepts</a></li>
+						</ul>
+					</li>
+					<li><a href="#samples">Samples</a></li>
+					<li><a href="#security-reporting">Security Reporting</a></li>
+					<li><a href="#license">License</a></li>
+					<li><a href="#we-value-and-adhere-to-the-microsoft-open-source-code-of-conduct">Code of Conduct</a></li>
+				</ol>
+				<a href="#about" id="about" style="color: inherit; text-decoration: none;">
+					<h2>About</h2>
+				</a>
+				<p>The MSAL library for JavaScript enables client-side JavaScript applications to authenticate users using <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-overview">Azure AD</a> work and school accounts (AAD), Microsoft personal accounts (MSA) and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through <a href="https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-overview#identity-providers">Azure AD B2C</a> service. It also enables your app to get tokens to access <a href="https://www.microsoft.com/enterprise">Microsoft Cloud</a> services such as <a href="https://graph.microsoft.io">Microsoft Graph</a>.</p>
+				<p>The <code>@azure/msal-react</code> package described by the code in this folder uses the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-browser"><code>@azure/msal-browser</code> package</a> as a peer dependency to enable authentication in Javascript Single-Page Applications without backend servers. This version of the library uses the OAuth 2.0 Authorization Code Flow with PKCE. To read more about this protocol, as well as the differences between implicit flow and authorization code flow, see the section in the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/README.md#implicit-flow-vs-authorization-code-flow-with-pkce">msal-browser readme</a>.</p>
+				<a href="#prerequisites" id="prerequisites" style="color: inherit; text-decoration: none;">
+					<h2>Prerequisites</h2>
+				</a>
+				<ul>
+					<li><p><code>@azure/msal-react</code> is meant to be used in <a href="https://docs.microsoft.com/azure/active-directory/develop/scenario-spa-overview">Single-Page Application scenarios</a>.</p>
+					</li>
+					<li><p>Before using <code>@azure/msal-react</code> you will need to <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-app-registration">register a Single Page Application in Azure AD</a> to get a valid <code>clientId</code> for configuration, and to register the routes that your app will accept redirect traffic on.</p>
+					</li>
+				</ul>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h2>Installation</h2>
+				</a>
+				<p>The MSAL React package is available on NPM.</p>
+				<pre><code class="language-sh"><span style="color: #000000">npm install react react-dom</span>
+<span style="color: #000000">npm install @azure/msal-react @azure/msal-browser</span>
+</code></pre>
+				<a href="#build-and-test" id="build-and-test" style="color: inherit; text-decoration: none;">
+					<h2>Build and Test</h2>
+				</a>
+				<p>See the <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/contributing.md"><code>contributing.md</code></a> file for more information.</p>
+				<a href="#building-the-package-locally" id="building-the-package-locally" style="color: inherit; text-decoration: none;">
+					<h3>Building the package locally</h3>
+				</a>
+				<p>To build the <code>@azure/msal-react</code> library, you can do the following:</p>
+				<pre><code class="language-bash"><span style="color: #000000">// Install dev dependencies from root of repo</span>
+<span style="color: #000000">npm install</span>
+<span style="color: #000000">// Change to the msal-react package directory</span>
+<span style="color: #795E26">cd</span><span style="color: #000000"> lib/msal-react/</span>
+<span style="color: #000000">// To run build only </span><span style="color: #AF00DB">for</span><span style="color: #000000"> react package</span>
+<span style="color: #000000">npm run build</span>
+</code></pre>
+				<p>To build both the <code>@azure/msal-react</code> library and <code>@azure/msal-browser</code> libraries, you can do the following:</p>
+				<pre><code class="language-bash"><span style="color: #000000">// Install dev dependencies from root of repo</span>
+<span style="color: #000000">npm install</span>
+<span style="color: #000000">// Change to the msal-react package directory</span>
+<span style="color: #795E26">cd</span><span style="color: #000000"> lib/msal-react/</span>
+<span style="color: #000000">// To run build </span><span style="color: #AF00DB">for</span><span style="color: #000000"> react and browser packages</span>
+<span style="color: #000000">npm run build:all</span>
+</code></pre>
+				<a href="#running-tests" id="running-tests" style="color: inherit; text-decoration: none;">
+					<h3>Running Tests</h3>
+				</a>
+				<p><code>@azure/msal-react</code> uses <a href="https://jestjs.io/">jest</a> to run unit tests and coverage.</p>
+				<pre><code class="language-bash"><span style="color: #000000">// To run tests</span>
+<span style="color: #000000">npm </span><span style="color: #795E26">test</span>
+<span style="color: #000000">// To run tests with code coverage</span>
+<span style="color: #000000">npm run test:coverage</span>
+</code></pre>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage</h2>
+				</a>
+				<p>For help getting started with <code>msal-react</code> please see our <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-react/docs/getting-started.md">getting started</a> doc.</p>
+				<a href="#msal-basics" id="msal-basics" style="color: inherit; text-decoration: none;">
+					<h3>MSAL Basics</h3>
+				</a>
+				<p>Since <code>msal-react</code> is built on top of <code>@azure/msal-browser</code> a lot of the same docs are relevant. For concepts specific to <code>msal-react</code> please see <a href="#msal-react-specific-concepts">below</a></p>
+				<ol>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/initialization.md">Initialization</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/acquire-token.md">Acquiring and using an access token</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/token-lifetimes.md">Managing token lifetimes</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/Accounts.md">Managing Accounts</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/logout.md">Logging out</a></li>
+				</ol>
+				<a href="#advanced-topics" id="advanced-topics" style="color: inherit; text-decoration: none;">
+					<h3>Advanced Topics</h3>
+				</a>
+				<ul>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/configuration.md">Configuration Options</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/request-response-object.md">Request and Response Details</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/caching.md">Cache Storage</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/performance.md">Performance Enhancements</a></li>
+				</ul>
+				<a href="#msal-react-specific-concepts" id="msal-react-specific-concepts" style="color: inherit; text-decoration: none;">
+					<h3>MSAL React Specific Concepts</h3>
+				</a>
+				<ol>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-react/docs/hooks.md">Hooks</a></li>
+				</ol>
+				<a href="#samples" id="samples" style="color: inherit; text-decoration: none;">
+					<h2>Samples</h2>
+				</a>
+				<p>Our <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-react-samples">samples directory</a> contains several example apps you can spin up to see how this library can be used in different contexts.</p>
+				<ul>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-react-samples/react-router-sample">Create React App (JS) Sample</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-react-samples/typescript-sample">Create React App (TS) Sample</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-react-samples/nextjs-sample">Next.js Sample</a></li>
+					<li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-react-samples/gatsby-sample">Gatsby Sample</a></li>
+				</ul>
+				<a href="#security-reporting" id="security-reporting" style="color: inherit; text-decoration: none;">
+					<h2>Security Reporting</h2>
+				</a>
+				<p>If you find a security issue with our libraries or services please report it to <a href="mailto:secure@microsoft.com">secure@microsoft.com</a> with as much detail as possible. Your submission may be eligible for a bounty through the <a href="http://aka.ms/bugbounty">Microsoft Bounty</a> program. Please do not post security issues to GitHub Issues or any other public site. We will contact you shortly upon receiving the information. We encourage you to get notifications of when security incidents occur by visiting <a href="https://technet.microsoft.com/security/dd252948">this page</a> and subscribing to Security Advisory Alerts.</p>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>Copyright (c) Microsoft Corporation.  All rights reserved. Licensed under the MIT License.</p>
+				<a href="#we-value-and-adhere-to-the-microsoft-open-source-code-of-conduct" id="we-value-and-adhere-to-the-microsoft-open-source-code-of-conduct" style="color: inherit; text-decoration: none;">
+					<h2>We Value and Adhere to the Microsoft Open Source Code of Conduct</h2>
+				</a>
+				<p>This project has adopted the <a href="https://opensource.microsoft.com/codeofconduct/">Microsoft Open Source Code of Conduct</a>. For more information see the <a href="https://opensource.microsoft.com/codeofconduct/faq/">Code of Conduct FAQ</a> or contact <a href="mailto:opencode@microsoft.com">opencode@microsoft.com</a> with any additional questions or comments.</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="enums/interactionstatus.html" class="tsd-kind-icon">Interaction<wbr>Status</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/imsalcontext.html" class="tsd-kind-icon">IMsal<wbr>Context</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#accountidentifiers" class="tsd-kind-icon">Account<wbr>Identifiers</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#authenticatedtemplateprops" class="tsd-kind-icon">Authenticated<wbr>Template<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#msalauthenticationprops" class="tsd-kind-icon">Msal<wbr>Authentication<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#msalauthenticationresult" class="tsd-kind-icon">Msal<wbr>Authentication<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#msalproviderprops" class="tsd-kind-icon">Msal<wbr>Provider<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#unauthenticatedtemplateprops" class="tsd-kind-icon">Unauthenticated<wbr>Template<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#withmsalprops" class="tsd-kind-icon">With<wbr>Msal<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#msalconsumer" class="tsd-kind-icon">Msal<wbr>Consumer</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#msalcontext" class="tsd-kind-icon">Msal<wbr>Context</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#authenticatedtemplate" class="tsd-kind-icon">Authenticated<wbr>Template</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#msalauthenticationtemplate" class="tsd-kind-icon">Msal<wbr>Authentication<wbr>Template</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#msalprovider" class="tsd-kind-icon">Msal<wbr>Provider</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#unauthenticatedtemplate" class="tsd-kind-icon">Unauthenticated<wbr>Template</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#useaccount" class="tsd-kind-icon">use<wbr>Account</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#useisauthenticated" class="tsd-kind-icon">use<wbr>IsAuthenticated</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#usemsal" class="tsd-kind-icon">use<wbr>Msal</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#usemsalauthentication" class="tsd-kind-icon">use<wbr>Msal<wbr>Authentication</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#withmsal" class="tsd-kind-icon">with<wbr>Msal</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
