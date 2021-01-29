@@ -1,0 +1,561 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@azure/msal | microsoft-authentication-libraries-for-js</title>
+	<meta name="description" content="Documentation for microsoft-authentication-libraries-for-js">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">microsoft-authentication-libraries-for-js</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">microsoft-authentication-libraries-for-js</a>
+				</li>
+				<li>
+					<a href="_azure_msal.html">@azure/msal</a>
+				</li>
+			</ul>
+			<h1>Module @azure/msal</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Enumerations</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_azure_msal.loglevel.html" class="tsd-kind-icon">Log<wbr>Level</a></li>
+								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/_azure_msal.serverhashparamkeys.html" class="tsd-kind-icon">Server<wbr>Hash<wbr>Param<wbr>Keys</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal.account.html" class="tsd-kind-icon">Account</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal.autherror.html" class="tsd-kind-icon">Auth<wbr>Error</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal.clientautherror.html" class="tsd-kind-icon">Client<wbr>Auth<wbr>Error</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal.clientconfigurationerror.html" class="tsd-kind-icon">Client<wbr>Configuration<wbr>Error</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal.interactionrequiredautherror.html" class="tsd-kind-icon">Interaction<wbr>Required<wbr>Auth<wbr>Error</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal.logger.html" class="tsd-kind-icon">Logger</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal.servererror.html" class="tsd-kind-icon">Server<wbr>Error</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal.useragentapplication.html" class="tsd-kind-icon">User<wbr>Agent<wbr>Application</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal.windowutils.html" class="tsd-kind-icon">Window<wbr>Utils</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_azure_msal.html#authresponse" class="tsd-kind-icon">Auth<wbr>Response</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_azure_msal.html#authenticationparameters" class="tsd-kind-icon">Authentication<wbr>Parameters</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_azure_msal.html#cachelocation" class="tsd-kind-icon">Cache<wbr>Location</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_azure_msal.html#configuration" class="tsd-kind-icon">Configuration</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_azure_msal.html#authresponsecallback" class="tsd-kind-icon">auth<wbr>Response<wbr>Callback</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_azure_msal.html#errorreceivedcallback" class="tsd-kind-icon">error<wbr>Received<wbr>Callback</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_azure_msal.html#tokenreceivedcallback" class="tsd-kind-icon">token<wbr>Received<wbr>Callback</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="authresponse" class="tsd-anchor"></a>
+					<h3>Auth<wbr>Response</h3>
+					<div class="tsd-signature tsd-kind-icon">Auth<wbr>Response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>accessToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>account<span class="tsd-signature-symbol">: </span><a href="../classes/_azure_msal.account.html" class="tsd-signature-type" data-tsd-kind="Class">Account</a><span class="tsd-signature-symbol">; </span>accountState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>expiresOn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">; </span>fromCache<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>idToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IdToken</span><span class="tsd-signature-symbol">; </span>idTokenClaims<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">StringDict</span><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>tenantId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>tokenType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>uniqueId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/99ba7e536/lib/msal-core/src/AuthResponse.ts#L10">lib/msal-core/src/AuthResponse.ts:10</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>access<wbr>Token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>account<span class="tsd-signature-symbol">: </span><a href="../classes/_azure_msal.account.html" class="tsd-signature-type" data-tsd-kind="Class">Account</a></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>account<wbr>State<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>expires<wbr>On<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>from<wbr>Cache<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>id<wbr>Token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IdToken</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>id<wbr>Token<wbr>Claims<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">StringDict</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>tenant<wbr>Id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>token<wbr>Type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>unique<wbr>Id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="authenticationparameters" class="tsd-anchor"></a>
+					<h3>Authentication<wbr>Parameters</h3>
+					<div class="tsd-signature tsd-kind-icon">Authentication<wbr>Parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>account<span class="tsd-signature-symbol">?: </span><a href="../classes/_azure_msal.account.html" class="tsd-signature-type" data-tsd-kind="Class">Account</a><span class="tsd-signature-symbol">; </span>authority<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>authorityMetadata<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>claimsRequest<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>correlationId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>extraQueryParameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">StringDict</span><span class="tsd-signature-symbol">; </span>extraScopesToConsent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>forceRefresh<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>loginHint<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>onRedirectNavigate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>prompt<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>redirectStartPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>redirectUri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>sid<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>state<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/99ba7e536/lib/msal-core/src/AuthenticationParameters.ts#L13">lib/msal-core/src/AuthenticationParameters.ts:13</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>link</dt>
+							<dd><p>AuthenticationParameters}AuthenticationParameters</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> account<span class="tsd-signature-symbol">?: </span><a href="../classes/_azure_msal.account.html" class="tsd-signature-type" data-tsd-kind="Class">Account</a></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> authority<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> authority<wbr>Metadata<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> claims<wbr>Request<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> correlation<wbr>Id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> extra<wbr>Query<wbr>Parameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">StringDict</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> extra<wbr>Scopes<wbr>ToConsent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> force<wbr>Refresh<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> login<wbr>Hint<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Redirect<wbr>Navigate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-signature">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-literal">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>url: <span class="tsd-signature-type">string</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> prompt<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> redirect<wbr>Start<wbr>Page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> redirect<wbr>Uri<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> scopes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> sid<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> state<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="cachelocation" class="tsd-anchor"></a>
+					<h3>Cache<wbr>Location</h3>
+					<div class="tsd-signature tsd-kind-icon">Cache<wbr>Location<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;localStorage&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;sessionStorage&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/99ba7e536/lib/msal-core/src/Configuration.ts#L15">lib/msal-core/src/Configuration.ts:15</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Cache location options supported by MSAL are:</p>
+							<ul>
+								<li>local storage: MSAL uses browsers local storage to store its cache</li>
+								<li>session storage: MSAL uses the browsers session storage to store its cache</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="configuration" class="tsd-anchor"></a>
+					<h3>Configuration</h3>
+					<div class="tsd-signature tsd-kind-icon">Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>auth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthOptions</span><span class="tsd-signature-symbol">; </span>cache<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">CacheOptions</span><span class="tsd-signature-symbol">; </span>framework<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">FrameworkOptions</span><span class="tsd-signature-symbol">; </span>system<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SystemOptions</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/99ba7e536/lib/msal-core/src/Configuration.ts#L111">lib/msal-core/src/Configuration.ts:111</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Use the configuration object to configure MSAL and initialize the UserAgentApplication.</p>
+						</div>
+						<p>This object allows you to configure important elements of MSAL functionality:</p>
+						<ul>
+							<li>auth: this is where you configure auth elements like clientID,  authority used for authenticating against the Microsoft Identity Platform</li>
+							<li>cache: this is where you configure cache location and whether to store cache in cookies</li>
+							<li>system: this is where you can configure the logger, frame timeout etc.</li>
+							<li>framework: this is where you can configure the running mode of angular. More to come here soon.</li>
+						</ul>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>auth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AuthOptions</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> cache<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">CacheOptions</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> framework<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">FrameworkOptions</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> system<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SystemOptions</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="authresponsecallback" class="tsd-anchor"></a>
+					<h3>auth<wbr>Response<wbr>Callback</h3>
+					<div class="tsd-signature tsd-kind-icon">auth<wbr>Response<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>authErr<span class="tsd-signature-symbol">: </span><a href="../classes/_azure_msal.autherror.html" class="tsd-signature-type" data-tsd-kind="Class">AuthError</a>, response<span class="tsd-signature-symbol">?: </span><a href="_azure_msal.html#authresponse" class="tsd-signature-type" data-tsd-kind="Type alias">AuthResponse</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/99ba7e536/lib/msal-core/src/UserAgentApplication.ts#L100">lib/msal-core/src/UserAgentApplication.ts:100</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A type alias for an authResponseCallback function.
+							{@link (authResponseCallback:type)}</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd><p>error created for failure cases</p>
+							</dd>
+							<dt>param</dt>
+							<dd><p>response containing token strings in success cases, or just state value in error cases</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>authErr<span class="tsd-signature-symbol">: </span><a href="../classes/_azure_msal.autherror.html" class="tsd-signature-type" data-tsd-kind="Class">AuthError</a>, response<span class="tsd-signature-symbol">?: </span><a href="_azure_msal.html#authresponse" class="tsd-signature-type" data-tsd-kind="Type alias">AuthResponse</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>authErr: <a href="../classes/_azure_msal.autherror.html" class="tsd-signature-type" data-tsd-kind="Class">AuthError</a></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> response: <a href="_azure_msal.html#authresponse" class="tsd-signature-type" data-tsd-kind="Type alias">AuthResponse</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="errorreceivedcallback" class="tsd-anchor"></a>
+					<h3>error<wbr>Received<wbr>Callback</h3>
+					<div class="tsd-signature tsd-kind-icon">error<wbr>Received<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>authErr<span class="tsd-signature-symbol">: </span><a href="../classes/_azure_msal.autherror.html" class="tsd-signature-type" data-tsd-kind="Class">AuthError</a>, accountState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/99ba7e536/lib/msal-core/src/UserAgentApplication.ts#L116">lib/msal-core/src/UserAgentApplication.ts:116</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A type alias for a errorReceivedCallback function.
+							{@link (errorReceivedCallback:type)}</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>returns</dt>
+							<dd><p>response of type {@link (AuthError:class)}</p>
+							</dd>
+							<dt>returns</dt>
+							<dd><p>account state</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>authErr<span class="tsd-signature-symbol">: </span><a href="../classes/_azure_msal.autherror.html" class="tsd-signature-type" data-tsd-kind="Class">AuthError</a>, accountState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>authErr: <a href="../classes/_azure_msal.autherror.html" class="tsd-signature-type" data-tsd-kind="Class">AuthError</a></h5>
+											</li>
+											<li>
+												<h5>accountState: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="tokenreceivedcallback" class="tsd-anchor"></a>
+					<h3>token<wbr>Received<wbr>Callback</h3>
+					<div class="tsd-signature tsd-kind-icon">token<wbr>Received<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><a href="_azure_msal.html#authresponse" class="tsd-signature-type" data-tsd-kind="Type alias">AuthResponse</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/99ba7e536/lib/msal-core/src/UserAgentApplication.ts#L108">lib/msal-core/src/UserAgentApplication.ts:108</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A type alias for a tokenReceivedCallback function.
+							{@link (tokenReceivedCallback:type)}</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>returns</dt>
+							<dd><p>response of type {@link (AuthResponse:type)}
+								The function that will get the call back once this API is completed (either successfully or with a failure).</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><a href="_azure_msal.html#authresponse" class="tsd-signature-type" data-tsd-kind="Type alias">AuthResponse</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>response: <a href="_azure_msal.html#authresponse" class="tsd-signature-type" data-tsd-kind="Type alias">AuthResponse</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="_azure_msal.html">@azure/msal</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_azure_msal_angular.html">@azure/msal-<wbr>angular</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_azure_msal_browser.html">@azure/msal-<wbr>browser</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_azure_msal_common.html">@azure/msal-<wbr>common</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_azure_msal_node.html">@azure/msal-<wbr>node</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_azure_msal_react.html">@azure/msal-<wbr>react</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="../enums/_azure_msal.loglevel.html" class="tsd-kind-icon">Log<wbr>Level</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-parent-kind-module">
+						<a href="../enums/_azure_msal.serverhashparamkeys.html" class="tsd-kind-icon">Server<wbr>Hash<wbr>Param<wbr>Keys</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_azure_msal.account.html" class="tsd-kind-icon">Account</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_azure_msal.autherror.html" class="tsd-kind-icon">Auth<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_azure_msal.clientautherror.html" class="tsd-kind-icon">Client<wbr>Auth<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_azure_msal.clientconfigurationerror.html" class="tsd-kind-icon">Client<wbr>Configuration<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_azure_msal.interactionrequiredautherror.html" class="tsd-kind-icon">Interaction<wbr>Required<wbr>Auth<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_azure_msal.logger.html" class="tsd-kind-icon">Logger</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_azure_msal.servererror.html" class="tsd-kind-icon">Server<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_azure_msal.useragentapplication.html" class="tsd-kind-icon">User<wbr>Agent<wbr>Application</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_azure_msal.windowutils.html" class="tsd-kind-icon">Window<wbr>Utils</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_azure_msal.html#authresponse" class="tsd-kind-icon">Auth<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_azure_msal.html#authenticationparameters" class="tsd-kind-icon">Authentication<wbr>Parameters</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_azure_msal.html#cachelocation" class="tsd-kind-icon">Cache<wbr>Location</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_azure_msal.html#configuration" class="tsd-kind-icon">Configuration</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_azure_msal.html#authresponsecallback" class="tsd-kind-icon">auth<wbr>Response<wbr>Callback</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_azure_msal.html#errorreceivedcallback" class="tsd-kind-icon">error<wbr>Received<wbr>Callback</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_azure_msal.html#tokenreceivedcallback" class="tsd-kind-icon">token<wbr>Received<wbr>Callback</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
