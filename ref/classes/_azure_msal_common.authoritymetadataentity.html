@@ -90,6 +90,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_azure_msal_common.authoritymetadataentity.html#aliases" class="tsd-kind-icon">aliases</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_azure_msal_common.authoritymetadataentity.html#aliasesfromnetwork" class="tsd-kind-icon">aliases<wbr>From<wbr>Network</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_azure_msal_common.authoritymetadataentity.html#authorization_endpoint" class="tsd-kind-icon">authorization_<wbr>endpoint</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_azure_msal_common.authoritymetadataentity.html#canonical_authority" class="tsd-kind-icon">canonical_<wbr>authority</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_azure_msal_common.authoritymetadataentity.html#end_session_endpoint" class="tsd-kind-icon">end_<wbr>session_<wbr>endpoint</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_azure_msal_common.authoritymetadataentity.html#endpointsfromnetwork" class="tsd-kind-icon">endpoints<wbr>From<wbr>Network</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_azure_msal_common.authoritymetadataentity.html#expiresat" class="tsd-kind-icon">expires<wbr>At</a></li>
@@ -104,6 +105,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_msal_common.authoritymetadataentity.html#isexpired" class="tsd-kind-icon">is<wbr>Expired</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_msal_common.authoritymetadataentity.html#resetexpiresat" class="tsd-kind-icon">reset<wbr>Expires<wbr>At</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_msal_common.authoritymetadataentity.html#updatecanonicalauthority" class="tsd-kind-icon">update<wbr>Canonical<wbr>Authority</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_msal_common.authoritymetadataentity.html#updateclouddiscoverymetadata" class="tsd-kind-icon">update<wbr>Cloud<wbr>Discovery<wbr>Metadata</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_msal_common.authoritymetadataentity.html#updateendpointmetadata" class="tsd-kind-icon">update<wbr>Endpoint<wbr>Metadata</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_azure_msal_common.authoritymetadataentity.html#isauthoritymetadataentity" class="tsd-kind-icon">is<wbr>Authority<wbr>Metadata<wbr>Entity</a></li>
@@ -124,7 +126,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L21">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L22">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_azure_msal_common.authoritymetadataentity.html" class="tsd-signature-type" data-tsd-kind="Class">AuthorityMetadataEntity</a></h4>
@@ -140,7 +142,7 @@
 					<div class="tsd-signature tsd-kind-icon">aliases<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L12">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L12">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -150,7 +152,7 @@
 					<div class="tsd-signature tsd-kind-icon">aliases<wbr>From<wbr>Network<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L19">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L20">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -160,7 +162,17 @@
 					<div class="tsd-signature tsd-kind-icon">authorization_<wbr>endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L15">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L16">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:16</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="canonical_authority" class="tsd-anchor"></a>
+					<h3>canonical_<wbr>authority</h3>
+					<div class="tsd-signature tsd-kind-icon">canonical_<wbr>authority<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L15">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:15</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -170,7 +182,7 @@
 					<div class="tsd-signature tsd-kind-icon">end_<wbr>session_<wbr>endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L17">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L18">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:18</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -180,7 +192,7 @@
 					<div class="tsd-signature tsd-kind-icon">endpoints<wbr>From<wbr>Network<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L20">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L21">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -190,7 +202,7 @@
 					<div class="tsd-signature tsd-kind-icon">expires<wbr>At<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L21">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L22">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -200,7 +212,7 @@
 					<div class="tsd-signature tsd-kind-icon">issuer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L18">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L19">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:19</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -210,7 +222,7 @@
 					<div class="tsd-signature tsd-kind-icon">preferred_<wbr>cache<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L13">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L13">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -220,7 +232,7 @@
 					<div class="tsd-signature tsd-kind-icon">preferred_<wbr>network<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L14">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L14">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -230,7 +242,7 @@
 					<div class="tsd-signature tsd-kind-icon">token_<wbr>endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L16">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L17">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -247,7 +259,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L62">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L71">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:71</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -269,7 +281,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L55">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L64">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:64</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -277,6 +289,36 @@
 									<p>Reset the exiresAt value</p>
 								</div>
 							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updatecanonicalauthority" class="tsd-anchor"></a>
+					<h3>update<wbr>Canonical<wbr>Authority</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Canonical<wbr>Authority<span class="tsd-signature-symbol">(</span>authority<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L57">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:57</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Save the authority that was used to create this cache entry</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>authority: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -291,7 +333,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L32">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L33">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:33</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -324,7 +366,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L44">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:44</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L45">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:45</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -357,7 +399,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/d4a94d228/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L70">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:70</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/4c19441df/lib/msal-common/src/cache/entities/AuthorityMetadataEntity.ts#L79">msal-common/src/cache/entities/AuthorityMetadataEntity.ts:79</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -428,6 +470,9 @@
 								<a href="_azure_msal_common.authoritymetadataentity.html#authorization_endpoint" class="tsd-kind-icon">authorization_<wbr>endpoint</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_azure_msal_common.authoritymetadataentity.html#canonical_authority" class="tsd-kind-icon">canonical_<wbr>authority</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_azure_msal_common.authoritymetadataentity.html#end_session_endpoint" class="tsd-kind-icon">end_<wbr>session_<wbr>endpoint</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
@@ -453,6 +498,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_azure_msal_common.authoritymetadataentity.html#resetexpiresat" class="tsd-kind-icon">reset<wbr>Expires<wbr>At</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_azure_msal_common.authoritymetadataentity.html#updatecanonicalauthority" class="tsd-kind-icon">update<wbr>Canonical<wbr>Authority</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_azure_msal_common.authoritymetadataentity.html#updateclouddiscoverymetadata" class="tsd-kind-icon">update<wbr>Cloud<wbr>Discovery<wbr>Metadata</a>
