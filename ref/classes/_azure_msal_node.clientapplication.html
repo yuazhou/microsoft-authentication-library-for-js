@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ConfidentialClientApplication | microsoft-authentication-libraries-for-js</title>
+	<title>ClientApplication | microsoft-authentication-libraries-for-js</title>
 	<meta name="description" content="Documentation for microsoft-authentication-libraries-for-js">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../modules/_azure_msal_node.html">@azure/msal-node</a>
 				</li>
 				<li>
-					<a href="_azure_msal_node.confidentialclientapplication.html">ConfidentialClientApplication</a>
+					<a href="_azure_msal_node.clientapplication.html">ClientApplication</a>
 				</li>
 			</ul>
-			<h1>Class ConfidentialClientApplication</h1>
+			<h1>Class ClientApplication</h1>
 		</div>
 	</div>
 </header>
@@ -69,8 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p> This class is to be used to acquire tokens for confidential client applications (webApp, webAPI). Confidential client applications
-						will configure application secrets, client certificates/assertions as applicable</p>
+						<p>Base abstract class for all ClientApplications - public and confidential</p>
 					</div>
 				</div>
 			</section>
@@ -78,19 +77,16 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="_azure_msal_node.clientapplication.html" class="tsd-signature-type" data-tsd-kind="Class">ClientApplication</a>
+						<span class="target">ClientApplication</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">ConfidentialClientApplication</span>
+								<a href="_azure_msal_node.publicclientapplication.html" class="tsd-signature-type" data-tsd-kind="Class">PublicClientApplication</a>
+							</li>
+							<li>
+								<a href="_azure_msal_node.confidentialclientapplication.html" class="tsd-signature-type" data-tsd-kind="Class">ConfidentialClientApplication</a>
 							</li>
 						</ul>
 					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html" class="tsd-signature-type" data-tsd-kind="Interface">IConfidentialClientApplication</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -98,114 +94,31 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Constructors</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_azure_msal_node.confidentialclientapplication.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_msal_node.confidentialclientapplication.html#acquiretokenbyclientcredential" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByClient<wbr>Credential</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_azure_msal_node.confidentialclientapplication.html#acquiretokenbycode" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByCode</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_azure_msal_node.confidentialclientapplication.html#acquiretokenbyrefreshtoken" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByRefresh<wbr>Token</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_msal_node.confidentialclientapplication.html#acquiretokenonbehalfof" class="tsd-kind-icon">acquire<wbr>Token<wbr>OnBehalf<wbr>Of</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_azure_msal_node.confidentialclientapplication.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_azure_msal_node.confidentialclientapplication.html#getauthcodeurl" class="tsd-kind-icon">get<wbr>Auth<wbr>Code<wbr>Url</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_azure_msal_node.confidentialclientapplication.html#getlogger" class="tsd-kind-icon">get<wbr>Logger</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_azure_msal_node.confidentialclientapplication.html#gettokencache" class="tsd-kind-icon">get<wbr>Token<wbr>Cache</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_azure_msal_node.confidentialclientapplication.html#setlogger" class="tsd-kind-icon">set<wbr>Logger</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_msal_node.clientapplication.html#acquiretokenbycode" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByCode</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_msal_node.clientapplication.html#acquiretokenbyrefreshtoken" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByRefresh<wbr>Token</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_msal_node.clientapplication.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_msal_node.clientapplication.html#getauthcodeurl" class="tsd-kind-icon">get<wbr>Auth<wbr>Code<wbr>Url</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_msal_node.clientapplication.html#getlogger" class="tsd-kind-icon">get<wbr>Logger</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_msal_node.clientapplication.html#gettokencache" class="tsd-kind-icon">get<wbr>Token<wbr>Cache</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_msal_node.clientapplication.html#setlogger" class="tsd-kind-icon">set<wbr>Logger</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-					<a name="constructor" class="tsd-anchor"></a>
-					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Confidential<wbr>Client<wbr>Application<span class="tsd-signature-symbol">(</span>configuration<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_msal_node.html#configuration" class="tsd-signature-type" data-tsd-kind="Type alias">Configuration</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_azure_msal_node.confidentialclientapplication.html" class="tsd-signature-type" data-tsd-kind="Class">ConfidentialClientApplication</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/client/ConfidentialClientApplication.ts#L27">msal-node/src/client/ConfidentialClientApplication.ts:27</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Constructor for the ConfidentialClientApplication</p>
-								</div>
-								<p>Required attributes in the Configuration object are:</p>
-								<ul>
-									<li>clientID: the application ID of your application. You can obtain one by registering your application with our application registration portal</li>
-									<li>authority: the authority URL for your application.</li>
-									<li>client credential: Must set either client secret, certificate, or assertion for confidential clients. You can obtain a client secret from the application registration portal.</li>
-								</ul>
-								<p>In Azure AD, authority is a URL indicating of the form <a href="https://login.microsoftonline.com/%5C%7BEnter_the_Tenant_Info_Here%5C%7D">https://login.microsoftonline.com/\{Enter_the_Tenant_Info_Here\}</a>.
-									If your application supports Accounts in one organizational directory, replace &quot;Enter_the_Tenant_Info_Here&quot; value with the Tenant Id or Tenant name (for example, contoso.microsoft.com).
-									If your application supports Accounts in any organizational directory, replace &quot;Enter_the_Tenant_Info_Here&quot; value with organizations.
-									If your application supports Accounts in any organizational directory and personal Microsoft accounts, replace &quot;Enter_the_Tenant_Info_Here&quot; value with common.
-								To restrict support to Personal Microsoft accounts only, replace &quot;Enter_the_Tenant_Info_Here&quot; value with consumers.</p>
-								<p>In Azure B2C, authority is of the form https://{instance}/tfp/{tenant}/{policyName}/
-								Full B2C functionality will be available in this library in future versions.</p>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>configuration: <a href="../modules/_azure_msal_node.html#configuration" class="tsd-signature-type" data-tsd-kind="Type alias">Configuration</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_azure_msal_node.confidentialclientapplication.html" class="tsd-signature-type" data-tsd-kind="Class">ConfidentialClientApplication</a></h4>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="acquiretokenbyclientcredential" class="tsd-anchor"></a>
-					<h3>acquire<wbr>Token<wbr>ByClient<wbr>Credential</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>ByClient<wbr>Credential<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_msal_node.html#clientcredentialrequest" class="tsd-signature-type" data-tsd-kind="Type alias">ClientCredentialRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#authenticationresult" class="tsd-signature-type" data-tsd-kind="Type alias">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html">IConfidentialClientApplication</a>.<a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html#acquiretokenbyclientcredential">acquireTokenByClientCredential</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/client/ConfidentialClientApplication.ts#L56">msal-node/src/client/ConfidentialClientApplication.ts:56</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Acquires tokens from the authority for the application (not for an end user).</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>request: <a href="../modules/_azure_msal_node.html#clientcredentialrequest" class="tsd-signature-type" data-tsd-kind="Type alias">ClientCredentialRequest</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#authenticationresult" class="tsd-signature-type" data-tsd-kind="Type alias">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="acquiretokenbycode" class="tsd-anchor"></a>
 					<h3>acquire<wbr>Token<wbr>ByCode</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>ByCode<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_msal_node.html#authorizationcoderequest" class="tsd-signature-type" data-tsd-kind="Type alias">AuthorizationCodeRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#authenticationresult" class="tsd-signature-type" data-tsd-kind="Type alias">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html">IConfidentialClientApplication</a>.<a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html#acquiretokenbycode">acquireTokenByCode</a></p>
-								<p>Inherited from <a href="_azure_msal_node.clientapplication.html">ClientApplication</a>.<a href="_azure_msal_node.clientapplication.html#acquiretokenbycode">acquireTokenByCode</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/client/ClientApplication.ts#L119">msal-node/src/client/ClientApplication.ts:119</a></li>
 								</ul>
@@ -229,17 +142,15 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="acquiretokenbyrefreshtoken" class="tsd-anchor"></a>
 					<h3>acquire<wbr>Token<wbr>ByRefresh<wbr>Token</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>ByRefresh<wbr>Token<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_msal_node.html#refreshtokenrequest" class="tsd-signature-type" data-tsd-kind="Type alias">RefreshTokenRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#authenticationresult" class="tsd-signature-type" data-tsd-kind="Type alias">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html">IConfidentialClientApplication</a>.<a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html#acquiretokenbyrefreshtoken">acquireTokenByRefreshToken</a></p>
-								<p>Inherited from <a href="_azure_msal_node.clientapplication.html">ClientApplication</a>.<a href="_azure_msal_node.clientapplication.html#acquiretokenbyrefreshtoken">acquireTokenByRefreshToken</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/client/ClientApplication.ts#L150">msal-node/src/client/ClientApplication.ts:150</a></li>
 								</ul>
@@ -263,51 +174,14 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="acquiretokenonbehalfof" class="tsd-anchor"></a>
-					<h3>acquire<wbr>Token<wbr>OnBehalf<wbr>Of</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>OnBehalf<wbr>Of<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_msal_node.html#onbehalfofrequest" class="tsd-signature-type" data-tsd-kind="Type alias">OnBehalfOfRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#authenticationresult" class="tsd-signature-type" data-tsd-kind="Type alias">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html">IConfidentialClientApplication</a>.<a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html#acquiretokenonbehalfof">acquireTokenOnBehalfOf</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/client/ConfidentialClientApplication.ts#L88">msal-node/src/client/ConfidentialClientApplication.ts:88</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Acquires tokens from the authority for the application.</p>
-								</div>
-								<p>Used in scenarios where the current app is a middle-tier service which was called with a token
-									representing an end user. The current app can use the token (oboAssertion) to request another
-								token to access downstream web API, on behalf of that user.</p>
-								<p>The current middle-tier app has no user interaction to obtain consent.
-									See how to gain consent upfront for your middle-tier app from this article.
-								<a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#gaining-consent-for-the-middle-tier-application">https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#gaining-consent-for-the-middle-tier-application</a></p>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>request: <a href="../modules/_azure_msal_node.html#onbehalfofrequest" class="tsd-signature-type" data-tsd-kind="Type alias">OnBehalfOfRequest</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#authenticationresult" class="tsd-signature-type" data-tsd-kind="Type alias">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="acquiretokensilent" class="tsd-anchor"></a>
 					<h3>acquire<wbr>Token<wbr>Silent</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Silent<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_msal_node.html#silentflowrequest" class="tsd-signature-type" data-tsd-kind="Type alias">SilentFlowRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#authenticationresult" class="tsd-signature-type" data-tsd-kind="Type alias">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html">IConfidentialClientApplication</a>.<a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html#acquiretokensilent">acquireTokenSilent</a></p>
-								<p>Inherited from <a href="_azure_msal_node.clientapplication.html">ClientApplication</a>.<a href="_azure_msal_node.clientapplication.html#acquiretokensilent">acquireTokenSilent</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/client/ClientApplication.ts#L183">msal-node/src/client/ClientApplication.ts:183</a></li>
 								</ul>
@@ -331,17 +205,15 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getauthcodeurl" class="tsd-anchor"></a>
 					<h3>get<wbr>Auth<wbr>Code<wbr>Url</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Auth<wbr>Code<wbr>Url<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_msal_node.html#authorizationurlrequest" class="tsd-signature-type" data-tsd-kind="Type alias">AuthorizationUrlRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html">IConfidentialClientApplication</a>.<a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html#getauthcodeurl">getAuthCodeUrl</a></p>
-								<p>Inherited from <a href="_azure_msal_node.clientapplication.html">ClientApplication</a>.<a href="_azure_msal_node.clientapplication.html#getauthcodeurl">getAuthCodeUrl</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/client/ClientApplication.ts#L93">msal-node/src/client/ClientApplication.ts:93</a></li>
 								</ul>
@@ -366,17 +238,15 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getlogger" class="tsd-anchor"></a>
 					<h3>get<wbr>Logger</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Logger<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_azure_msal_common.logger.html" class="tsd-signature-type" data-tsd-kind="Class">Logger</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html">IConfidentialClientApplication</a>.<a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html#getlogger">getLogger</a></p>
-								<p>Inherited from <a href="_azure_msal_node.clientapplication.html">ClientApplication</a>.<a href="_azure_msal_node.clientapplication.html#getlogger">getLogger</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/client/ClientApplication.ts#L217">msal-node/src/client/ClientApplication.ts:217</a></li>
 								</ul>
@@ -390,17 +260,15 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="gettokencache" class="tsd-anchor"></a>
 					<h3>get<wbr>Token<wbr>Cache</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Token<wbr>Cache<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_azure_msal_node.tokencache.html" class="tsd-signature-type" data-tsd-kind="Class">TokenCache</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html">IConfidentialClientApplication</a>.<a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html#gettokencache">getTokenCache</a></p>
-								<p>Inherited from <a href="_azure_msal_node.clientapplication.html">ClientApplication</a>.<a href="_azure_msal_node.clientapplication.html#gettokencache">getTokenCache</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/client/ClientApplication.ts#L209">msal-node/src/client/ClientApplication.ts:209</a></li>
 								</ul>
@@ -414,17 +282,15 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="setlogger" class="tsd-anchor"></a>
 					<h3>set<wbr>Logger</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">set<wbr>Logger<span class="tsd-signature-symbol">(</span>logger<span class="tsd-signature-symbol">: </span><a href="_azure_msal_common.logger.html" class="tsd-signature-type" data-tsd-kind="Class">Logger</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of <a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html">IConfidentialClientApplication</a>.<a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html#setlogger">setLogger</a></p>
-								<p>Inherited from <a href="_azure_msal_node.clientapplication.html">ClientApplication</a>.<a href="_azure_msal_node.clientapplication.html#setlogger">setLogger</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/client/ClientApplication.ts#L225">msal-node/src/client/ClientApplication.ts:225</a></li>
 								</ul>
@@ -480,37 +346,28 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="_azure_msal_node.confidentialclientapplication.html" class="tsd-kind-icon">Confidential<wbr>Client<wbr>Application</a>
+						<a href="_azure_msal_node.clientapplication.html" class="tsd-kind-icon">Client<wbr>Application</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="_azure_msal_node.confidentialclientapplication.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_azure_msal_node.clientapplication.html#acquiretokenbycode" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByCode</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_azure_msal_node.confidentialclientapplication.html#acquiretokenbyclientcredential" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByClient<wbr>Credential</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_azure_msal_node.confidentialclientapplication.html#acquiretokenbycode" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByCode</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_azure_msal_node.confidentialclientapplication.html#acquiretokenbyrefreshtoken" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByRefresh<wbr>Token</a>
+								<a href="_azure_msal_node.clientapplication.html#acquiretokenbyrefreshtoken" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByRefresh<wbr>Token</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_azure_msal_node.confidentialclientapplication.html#acquiretokenonbehalfof" class="tsd-kind-icon">acquire<wbr>Token<wbr>OnBehalf<wbr>Of</a>
+								<a href="_azure_msal_node.clientapplication.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_azure_msal_node.confidentialclientapplication.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_azure_msal_node.clientapplication.html#getauthcodeurl" class="tsd-kind-icon">get<wbr>Auth<wbr>Code<wbr>Url</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_azure_msal_node.confidentialclientapplication.html#getauthcodeurl" class="tsd-kind-icon">get<wbr>Auth<wbr>Code<wbr>Url</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_azure_msal_node.clientapplication.html#getlogger" class="tsd-kind-icon">get<wbr>Logger</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_azure_msal_node.confidentialclientapplication.html#getlogger" class="tsd-kind-icon">get<wbr>Logger</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_azure_msal_node.clientapplication.html#gettokencache" class="tsd-kind-icon">get<wbr>Token<wbr>Cache</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_azure_msal_node.confidentialclientapplication.html#gettokencache" class="tsd-kind-icon">get<wbr>Token<wbr>Cache</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="_azure_msal_node.confidentialclientapplication.html#setlogger" class="tsd-kind-icon">set<wbr>Logger</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_azure_msal_node.clientapplication.html#setlogger" class="tsd-kind-icon">set<wbr>Logger</a>
 							</li>
 						</ul>
 					</li>
@@ -534,7 +391,6 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
@@ -542,9 +398,6 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
 			</ul>
 		</div>
 	</div>

@@ -85,7 +85,7 @@
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
 					<li><a href="../interfaces/_azure_msal_common.iserializabletokencache.html" class="tsd-signature-type" data-tsd-kind="Interface">ISerializableTokenCache</a></li>
-					<li><span class="tsd-signature-type">ITokenCache</span></li>
+					<li><a href="../interfaces/_azure_msal_node.itokencache.html" class="tsd-signature-type" data-tsd-kind="Interface">ITokenCache</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -120,19 +120,19 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Token<wbr>Cache<span class="tsd-signature-symbol">(</span>storage<span class="tsd-signature-symbol">: </span><a href="_azure_msal_node.storage.html" class="tsd-signature-type" data-tsd-kind="Class">Storage</a>, logger<span class="tsd-signature-symbol">: </span><a href="_azure_msal_common.logger.html" class="tsd-signature-type" data-tsd-kind="Class">Logger</a>, cachePlugin<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_azure_msal_common.icacheplugin.html" class="tsd-signature-type" data-tsd-kind="Interface">ICachePlugin</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_azure_msal_node.tokencache.html" class="tsd-signature-type" data-tsd-kind="Class">TokenCache</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Token<wbr>Cache<span class="tsd-signature-symbol">(</span>storage<span class="tsd-signature-symbol">: </span><a href="_azure_msal_node.nodestorage.html" class="tsd-signature-type" data-tsd-kind="Class">NodeStorage</a>, logger<span class="tsd-signature-symbol">: </span><a href="_azure_msal_common.logger.html" class="tsd-signature-type" data-tsd-kind="Class">Logger</a>, cachePlugin<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_azure_msal_common.icacheplugin.html" class="tsd-signature-type" data-tsd-kind="Interface">ICachePlugin</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_azure_msal_node.tokencache.html" class="tsd-signature-type" data-tsd-kind="Class">TokenCache</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/18d8bd5d4/lib/msal-node/src/cache/TokenCache.ts#L30">msal-node/src/cache/TokenCache.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/cache/TokenCache.ts#L31">msal-node/src/cache/TokenCache.ts:31</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>storage: <a href="_azure_msal_node.storage.html" class="tsd-signature-type" data-tsd-kind="Class">Storage</a></h5>
+									<h5>storage: <a href="_azure_msal_node.nodestorage.html" class="tsd-signature-type" data-tsd-kind="Class">NodeStorage</a></h5>
 								</li>
 								<li>
 									<h5>logger: <a href="_azure_msal_common.logger.html" class="tsd-signature-type" data-tsd-kind="Class">Logger</a></h5>
@@ -158,7 +158,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/18d8bd5d4/lib/msal-node/src/cache/TokenCache.ts#L77">msal-node/src/cache/TokenCache.ts:77</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/cache/TokenCache.ts#L78">msal-node/src/cache/TokenCache.ts:78</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -171,6 +171,7 @@
 								<li>
 									<h5>cache: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
+										<p>blob formatted cache</p>
 									</div>
 								</li>
 							</ul>
@@ -187,8 +188,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_azure_msal_node.itokencache.html">ITokenCache</a>.<a href="../interfaces/_azure_msal_node.itokencache.html#getaccountbyhomeid">getAccountByHomeId</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/18d8bd5d4/lib/msal-node/src/cache/TokenCache.ts#L122">msal-node/src/cache/TokenCache.ts:122</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/cache/TokenCache.ts#L126">msal-node/src/cache/TokenCache.ts:126</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -202,10 +204,12 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>homeAccountId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>unique identifier for an account (uid.utid)</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#accountinfo" class="tsd-signature-type" data-tsd-kind="Type alias">AccountInfo</a><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p><a href="../modules/_azure_msal_node.html#accountinfo">AccountInfo</a> - the account object stored in MSAL</p>
 						</li>
 					</ul>
 				</section>
@@ -218,8 +222,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_azure_msal_node.itokencache.html">ITokenCache</a>.<a href="../interfaces/_azure_msal_node.itokencache.html#getaccountbylocalid">getAccountByLocalId</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/18d8bd5d4/lib/msal-node/src/cache/TokenCache.ts#L137">msal-node/src/cache/TokenCache.ts:137</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/cache/TokenCache.ts#L141">msal-node/src/cache/TokenCache.ts:141</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -233,10 +238,12 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>localAccountId: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>unique identifier of an account (sub/obj when homeAccountId cannot be populated)</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#accountinfo" class="tsd-signature-type" data-tsd-kind="Type alias">AccountInfo</a><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p><a href="../modules/_azure_msal_node.html#accountinfo">AccountInfo</a> - the account object stored in MSAL</p>
 						</li>
 					</ul>
 				</section>
@@ -249,8 +256,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_azure_msal_node.itokencache.html">ITokenCache</a>.<a href="../interfaces/_azure_msal_node.itokencache.html#getallaccounts">getAllAccounts</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/18d8bd5d4/lib/msal-node/src/cache/TokenCache.ts#L99">msal-node/src/cache/TokenCache.ts:99</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/cache/TokenCache.ts#L103">msal-node/src/cache/TokenCache.ts:103</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -272,9 +280,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/18d8bd5d4/lib/msal-node/src/cache/TokenCache.ts#L92">msal-node/src/cache/TokenCache.ts:92</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/cache/TokenCache.ts#L96">msal-node/src/cache/TokenCache.ts:96</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Fetches the cache key-value map</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="../modules/_azure_msal_common.html#validcachetype" class="tsd-signature-type" data-tsd-kind="Type alias">ValidCacheType</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -289,7 +302,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/18d8bd5d4/lib/msal-node/src/cache/TokenCache.ts#L45">msal-node/src/cache/TokenCache.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/cache/TokenCache.ts#L46">msal-node/src/cache/TokenCache.ts:46</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -310,8 +323,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_azure_msal_node.itokencache.html">ITokenCache</a>.<a href="../interfaces/_azure_msal_node.itokencache.html#removeaccount">removeAccount</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/18d8bd5d4/lib/msal-node/src/cache/TokenCache.ts#L150">msal-node/src/cache/TokenCache.ts:150</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/cache/TokenCache.ts#L154">msal-node/src/cache/TokenCache.ts:154</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -324,6 +338,7 @@
 								<li>
 									<h5>account: <a href="../modules/_azure_msal_common.html#accountinfo" class="tsd-signature-type" data-tsd-kind="Type alias">AccountInfo</a></h5>
 									<div class="tsd-comment tsd-typography">
+										<p>AccountInfo passed by the user</p>
 									</div>
 								</li>
 							</ul>
@@ -341,7 +356,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/18d8bd5d4/lib/msal-node/src/cache/TokenCache.ts#L52">msal-node/src/cache/TokenCache.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a58a54972/lib/msal-node/src/cache/TokenCache.ts#L53">msal-node/src/cache/TokenCache.ts:53</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -383,84 +398,6 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#accountinfo" class="tsd-kind-icon">Account<wbr>Info</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#autherror" class="tsd-kind-icon">Auth<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#autherrormessage" class="tsd-kind-icon">Auth<wbr>Error<wbr>Message</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#authenticationresult" class="tsd-kind-icon">Authentication<wbr>Result</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#clientautherror" class="tsd-kind-icon">Client<wbr>Auth<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#clientautherrormessage" class="tsd-kind-icon">Client<wbr>Auth<wbr>Error<wbr>Message</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#clientconfigurationerror" class="tsd-kind-icon">Client<wbr>Configuration<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#clientconfigurationerrormessage" class="tsd-kind-icon">Client<wbr>Configuration<wbr>Error<wbr>Message</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#icacheplugin" class="tsd-kind-icon">ICache<wbr>Plugin</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#iserializabletokencache" class="tsd-kind-icon">ISerializable<wbr>Token<wbr>Cache</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#interactionrequiredautherror" class="tsd-kind-icon">Interaction<wbr>Required<wbr>Auth<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#loglevel" class="tsd-kind-icon">Log<wbr>Level</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#logger" class="tsd-kind-icon">Logger</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#networkrequestoptions" class="tsd-kind-icon">Network<wbr>Request<wbr>Options</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#networkresponse" class="tsd-kind-icon">Network<wbr>Response</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#promptvalue" class="tsd-kind-icon">Prompt<wbr>Value</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#protocolmode" class="tsd-kind-icon">Protocol<wbr>Mode</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#responsemode" class="tsd-kind-icon">Response<wbr>Mode</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#servererror" class="tsd-kind-icon">Server<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-reference tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#tokencachecontext" class="tsd-kind-icon">Token<wbr>Cache<wbr>Context</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_azure_msal_node.confidentialclientapplication.html" class="tsd-kind-icon">Confidential<wbr>Client<wbr>Application</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_azure_msal_node.cryptoprovider.html" class="tsd-kind-icon">Crypto<wbr>Provider</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_azure_msal_node.deserializer.html" class="tsd-kind-icon">Deserializer</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_azure_msal_node.publicclientapplication.html" class="tsd-kind-icon">Public<wbr>Client<wbr>Application</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_azure_msal_node.serializer.html" class="tsd-kind-icon">Serializer</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="_azure_msal_node.storage.html" class="tsd-kind-icon">Storage</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
@@ -497,42 +434,6 @@
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html" class="tsd-kind-icon">IConfidential<wbr>Client<wbr>Application</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/_azure_msal_node.ipublicclientapplication.html" class="tsd-kind-icon">IPublic<wbr>Client<wbr>Application</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#authorizationcoderequest" class="tsd-kind-icon">Authorization<wbr>Code<wbr>Request</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#authorizationurlrequest" class="tsd-kind-icon">Authorization<wbr>Url<wbr>Request</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#cachekvstore" class="tsd-kind-icon">CacheKVStore</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#clientcredentialrequest" class="tsd-kind-icon">Client<wbr>Credential<wbr>Request</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#configuration" class="tsd-kind-icon">Configuration</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#devicecoderequest" class="tsd-kind-icon">Device<wbr>Code<wbr>Request</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#onbehalfofrequest" class="tsd-kind-icon">On<wbr>Behalf<wbr>OfRequest</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#refreshtokenrequest" class="tsd-kind-icon">Refresh<wbr>Token<wbr>Request</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#silentflowrequest" class="tsd-kind-icon">Silent<wbr>Flow<wbr>Request</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="../modules/_azure_msal_node.html#buildappconfiguration" class="tsd-kind-icon">build<wbr>App<wbr>Configuration</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
