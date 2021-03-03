@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>InteractionStatus | microsoft-authentication-libraries-for-js</title>
+	<title>ApiId | microsoft-authentication-libraries-for-js</title>
 	<meta name="description" content="Documentation for microsoft-authentication-libraries-for-js">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../modules/_azure_msal_browser.html">@azure/msal-browser</a>
 				</li>
 				<li>
-					<a href="_azure_msal_browser.interactionstatus.html">InteractionStatus</a>
+					<a href="_azure_msal_browser.apiid.html">ApiId</a>
 				</li>
 			</ul>
-			<h1>Enumeration InteractionStatus</h1>
+			<h1>Enumeration ApiId</h1>
 		</div>
 	</div>
 </header>
@@ -69,8 +69,10 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Types of interaction currently in progress.
-						Used in events in wrapper libraries to invoke functions when certain interaction is in progress or all interactions are complete.</p>
+						<p>API Codes for Telemetry purposes.
+							Before adding a new code you must claim it in the MSAL Telemetry tracker as these number spaces are shared across all MSALs
+							0-99 Silent Flow
+						800-899 Auth Code Flow</p>
 					</div>
 				</div>
 			</section>
@@ -81,13 +83,13 @@
 						<section class="tsd-index-section ">
 							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_azure_msal_browser.interactionstatus.html#acquiretoken" class="tsd-kind-icon">Acquire<wbr>Token</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_azure_msal_browser.interactionstatus.html#handleredirect" class="tsd-kind-icon">Handle<wbr>Redirect</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_azure_msal_browser.interactionstatus.html#login" class="tsd-kind-icon">Login</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_azure_msal_browser.interactionstatus.html#logout" class="tsd-kind-icon">Logout</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_azure_msal_browser.interactionstatus.html#none" class="tsd-kind-icon">None</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_azure_msal_browser.interactionstatus.html#ssosilent" class="tsd-kind-icon">Sso<wbr>Silent</a></li>
-								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_azure_msal_browser.interactionstatus.html#startup" class="tsd-kind-icon">Startup</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_azure_msal_browser.apiid.html#acquiretokenpopup" class="tsd-kind-icon">acquire<wbr>Token<wbr>Popup</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_azure_msal_browser.apiid.html#acquiretokenredirect" class="tsd-kind-icon">acquire<wbr>Token<wbr>Redirect</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_azure_msal_browser.apiid.html#acquiretokensilent_authcode" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent_<wbr>auth<wbr>Code</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_azure_msal_browser.apiid.html#acquiretokensilent_silentflow" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent_<wbr>silent<wbr>Flow</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_azure_msal_browser.apiid.html#handleredirectpromise" class="tsd-kind-icon">handle<wbr>Redirect<wbr>Promise</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_azure_msal_browser.apiid.html#logout" class="tsd-kind-icon">logout</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_azure_msal_browser.apiid.html#ssosilent" class="tsd-kind-icon">sso<wbr>Silent</a></li>
 							</ul>
 						</section>
 					</div>
@@ -96,109 +98,74 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Enumeration members</h2>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="acquiretoken" class="tsd-anchor"></a>
-					<h3>Acquire<wbr>Token</h3>
-					<div class="tsd-signature tsd-kind-icon">Acquire<wbr>Token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;acquireToken&quot;</span></div>
+					<a name="acquiretokenpopup" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>Popup</h3>
+					<div class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Popup<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 862</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5f93f8c21/lib/msal-browser/src/utils/BrowserConstants.ts#L116">msal-browser/src/utils/BrowserConstants.ts:116</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5f93f8c21/lib/msal-browser/src/utils/BrowserConstants.ts#L79">msal-browser/src/utils/BrowserConstants.ts:79</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Status set for acquireToken calls</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="handleredirect" class="tsd-anchor"></a>
-					<h3>Handle<wbr>Redirect</h3>
-					<div class="tsd-signature tsd-kind-icon">Handle<wbr>Redirect<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;handleRedirect&quot;</span></div>
+					<a name="acquiretokenredirect" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>Redirect</h3>
+					<div class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Redirect<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 861</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5f93f8c21/lib/msal-browser/src/utils/BrowserConstants.ts#L124">msal-browser/src/utils/BrowserConstants.ts:124</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5f93f8c21/lib/msal-browser/src/utils/BrowserConstants.ts#L78">msal-browser/src/utils/BrowserConstants.ts:78</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Status set when handleRedirect in progress</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="login" class="tsd-anchor"></a>
-					<h3>Login</h3>
-					<div class="tsd-signature tsd-kind-icon">Login<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;login&quot;</span></div>
+					<a name="acquiretokensilent_authcode" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>Silent_<wbr>auth<wbr>Code</h3>
+					<div class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Silent_<wbr>auth<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 864</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5f93f8c21/lib/msal-browser/src/utils/BrowserConstants.ts#L108">msal-browser/src/utils/BrowserConstants.ts:108</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5f93f8c21/lib/msal-browser/src/utils/BrowserConstants.ts#L81">msal-browser/src/utils/BrowserConstants.ts:81</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Status set when all login calls occuring</p>
-						</div>
-					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="acquiretokensilent_silentflow" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>Silent_<wbr>silent<wbr>Flow</h3>
+					<div class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>Silent_<wbr>silent<wbr>Flow<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 61</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5f93f8c21/lib/msal-browser/src/utils/BrowserConstants.ts#L83">msal-browser/src/utils/BrowserConstants.ts:83</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="handleredirectpromise" class="tsd-anchor"></a>
+					<h3>handle<wbr>Redirect<wbr>Promise</h3>
+					<div class="tsd-signature tsd-kind-icon">handle<wbr>Redirect<wbr>Promise<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 865</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5f93f8c21/lib/msal-browser/src/utils/BrowserConstants.ts#L82">msal-browser/src/utils/BrowserConstants.ts:82</a></li>
+						</ul>
+					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
 					<a name="logout" class="tsd-anchor"></a>
-					<h3>Logout</h3>
-					<div class="tsd-signature tsd-kind-icon">Logout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;logout&quot;</span></div>
+					<h3>logout</h3>
+					<div class="tsd-signature tsd-kind-icon">logout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 961</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5f93f8c21/lib/msal-browser/src/utils/BrowserConstants.ts#L112">msal-browser/src/utils/BrowserConstants.ts:112</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5f93f8c21/lib/msal-browser/src/utils/BrowserConstants.ts#L84">msal-browser/src/utils/BrowserConstants.ts:84</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Status set when logout call occuring</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="none" class="tsd-anchor"></a>
-					<h3>None</h3>
-					<div class="tsd-signature tsd-kind-icon">None<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;none&quot;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5f93f8c21/lib/msal-browser/src/utils/BrowserConstants.ts#L128">msal-browser/src/utils/BrowserConstants.ts:128</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Status set when interaction is complete</p>
-						</div>
-					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
 					<a name="ssosilent" class="tsd-anchor"></a>
-					<h3>Sso<wbr>Silent</h3>
-					<div class="tsd-signature tsd-kind-icon">Sso<wbr>Silent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;ssoSilent&quot;</span></div>
+					<h3>sso<wbr>Silent</h3>
+					<div class="tsd-signature tsd-kind-icon">sso<wbr>Silent<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = 863</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5f93f8c21/lib/msal-browser/src/utils/BrowserConstants.ts#L120">msal-browser/src/utils/BrowserConstants.ts:120</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5f93f8c21/lib/msal-browser/src/utils/BrowserConstants.ts#L80">msal-browser/src/utils/BrowserConstants.ts:80</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Status set for ssoSilent calls</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-					<a name="startup" class="tsd-anchor"></a>
-					<h3>Startup</h3>
-					<div class="tsd-signature tsd-kind-icon">Startup<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;startup&quot;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5f93f8c21/lib/msal-browser/src/utils/BrowserConstants.ts#L104">msal-browser/src/utils/BrowserConstants.ts:104</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Initial status before interaction occurs</p>
-						</div>
-					</div>
 				</section>
 			</section>
 		</div>
@@ -233,28 +200,28 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-enum tsd-parent-kind-module">
-						<a href="_azure_msal_browser.interactionstatus.html" class="tsd-kind-icon">Interaction<wbr>Status</a>
+						<a href="_azure_msal_browser.apiid.html" class="tsd-kind-icon">Api<wbr>Id</a>
 						<ul>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_azure_msal_browser.interactionstatus.html#acquiretoken" class="tsd-kind-icon">Acquire<wbr>Token</a>
+								<a href="_azure_msal_browser.apiid.html#acquiretokenpopup" class="tsd-kind-icon">acquire<wbr>Token<wbr>Popup</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_azure_msal_browser.interactionstatus.html#handleredirect" class="tsd-kind-icon">Handle<wbr>Redirect</a>
+								<a href="_azure_msal_browser.apiid.html#acquiretokenredirect" class="tsd-kind-icon">acquire<wbr>Token<wbr>Redirect</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_azure_msal_browser.interactionstatus.html#login" class="tsd-kind-icon">Login</a>
+								<a href="_azure_msal_browser.apiid.html#acquiretokensilent_authcode" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent_<wbr>auth<wbr>Code</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_azure_msal_browser.interactionstatus.html#logout" class="tsd-kind-icon">Logout</a>
+								<a href="_azure_msal_browser.apiid.html#acquiretokensilent_silentflow" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent_<wbr>silent<wbr>Flow</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_azure_msal_browser.interactionstatus.html#none" class="tsd-kind-icon">None</a>
+								<a href="_azure_msal_browser.apiid.html#handleredirectpromise" class="tsd-kind-icon">handle<wbr>Redirect<wbr>Promise</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_azure_msal_browser.interactionstatus.html#ssosilent" class="tsd-kind-icon">Sso<wbr>Silent</a>
+								<a href="_azure_msal_browser.apiid.html#logout" class="tsd-kind-icon">logout</a>
 							</li>
 							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-								<a href="_azure_msal_browser.interactionstatus.html#startup" class="tsd-kind-icon">Startup</a>
+								<a href="_azure_msal_browser.apiid.html#ssosilent" class="tsd-kind-icon">sso<wbr>Silent</a>
 							</li>
 						</ul>
 					</li>
