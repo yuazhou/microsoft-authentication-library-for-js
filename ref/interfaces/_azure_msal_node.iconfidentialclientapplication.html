@@ -97,6 +97,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_node.iconfidentialclientapplication.html#acquiretokenbyclientcredential" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByClient<wbr>Credential</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_node.iconfidentialclientapplication.html#acquiretokenbycode" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByCode</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_node.iconfidentialclientapplication.html#acquiretokenbyrefreshtoken" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByRefresh<wbr>Token</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_node.iconfidentialclientapplication.html#acquiretokenbyusernamepassword" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByUsername<wbr>Password</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_node.iconfidentialclientapplication.html#acquiretokenonbehalfof" class="tsd-kind-icon">acquire<wbr>Token<wbr>OnBehalf<wbr>Of</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_node.iconfidentialclientapplication.html#acquiretokensilent" class="tsd-kind-icon">acquire<wbr>Token<wbr>Silent</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_node.iconfidentialclientapplication.html#getauthcodeurl" class="tsd-kind-icon">get<wbr>Auth<wbr>Code<wbr>Url</a></li>
@@ -120,7 +121,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/02bf32071/lib/msal-node/src/client/IConfidentialClientApplication.ts#L34">msal-node/src/client/IConfidentialClientApplication.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/8e76ae0b4/lib/msal-node/src/client/IConfidentialClientApplication.ts#L35">msal-node/src/client/IConfidentialClientApplication.ts:35</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -148,7 +149,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/02bf32071/lib/msal-node/src/client/IConfidentialClientApplication.ts#L25">msal-node/src/client/IConfidentialClientApplication.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/8e76ae0b4/lib/msal-node/src/client/IConfidentialClientApplication.ts#L26">msal-node/src/client/IConfidentialClientApplication.ts:26</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -176,7 +177,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/02bf32071/lib/msal-node/src/client/IConfidentialClientApplication.ts#L31">msal-node/src/client/IConfidentialClientApplication.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/8e76ae0b4/lib/msal-node/src/client/IConfidentialClientApplication.ts#L32">msal-node/src/client/IConfidentialClientApplication.ts:32</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -195,6 +196,34 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="acquiretokenbyusernamepassword" class="tsd-anchor"></a>
+					<h3>acquire<wbr>Token<wbr>ByUsername<wbr>Password</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">acquire<wbr>Token<wbr>ByUsername<wbr>Password<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_msal_node.html#usernamepasswordrequest" class="tsd-signature-type" data-tsd-kind="Type alias">UsernamePasswordRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#authenticationresult" class="tsd-signature-type" data-tsd-kind="Type alias">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/8e76ae0b4/lib/msal-node/src/client/IConfidentialClientApplication.ts#L41">msal-node/src/client/IConfidentialClientApplication.ts:41</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Acquires tokens with password grant by exchanging client applications username and password for credentials</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>request: <a href="../modules/_azure_msal_node.html#usernamepasswordrequest" class="tsd-signature-type" data-tsd-kind="Type alias">UsernamePasswordRequest</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#authenticationresult" class="tsd-signature-type" data-tsd-kind="Type alias">AuthenticationResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="acquiretokenonbehalfof" class="tsd-anchor"></a>
 					<h3>acquire<wbr>Token<wbr>OnBehalf<wbr>Of</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -204,7 +233,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/02bf32071/lib/msal-node/src/client/IConfidentialClientApplication.ts#L37">msal-node/src/client/IConfidentialClientApplication.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/8e76ae0b4/lib/msal-node/src/client/IConfidentialClientApplication.ts#L38">msal-node/src/client/IConfidentialClientApplication.ts:38</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -232,7 +261,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/02bf32071/lib/msal-node/src/client/IConfidentialClientApplication.ts#L28">msal-node/src/client/IConfidentialClientApplication.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/8e76ae0b4/lib/msal-node/src/client/IConfidentialClientApplication.ts#L29">msal-node/src/client/IConfidentialClientApplication.ts:29</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -260,7 +289,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/02bf32071/lib/msal-node/src/client/IConfidentialClientApplication.ts#L22">msal-node/src/client/IConfidentialClientApplication.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/8e76ae0b4/lib/msal-node/src/client/IConfidentialClientApplication.ts#L23">msal-node/src/client/IConfidentialClientApplication.ts:23</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -288,7 +317,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/02bf32071/lib/msal-node/src/client/IConfidentialClientApplication.ts#L43">msal-node/src/client/IConfidentialClientApplication.ts:43</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/8e76ae0b4/lib/msal-node/src/client/IConfidentialClientApplication.ts#L47">msal-node/src/client/IConfidentialClientApplication.ts:47</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -310,7 +339,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/02bf32071/lib/msal-node/src/client/IConfidentialClientApplication.ts#L40">msal-node/src/client/IConfidentialClientApplication.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/8e76ae0b4/lib/msal-node/src/client/IConfidentialClientApplication.ts#L44">msal-node/src/client/IConfidentialClientApplication.ts:44</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -332,7 +361,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/02bf32071/lib/msal-node/src/client/IConfidentialClientApplication.ts#L46">msal-node/src/client/IConfidentialClientApplication.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/8e76ae0b4/lib/msal-node/src/client/IConfidentialClientApplication.ts#L50">msal-node/src/client/IConfidentialClientApplication.ts:50</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -393,6 +422,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="_azure_msal_node.iconfidentialclientapplication.html#acquiretokenbyrefreshtoken" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByRefresh<wbr>Token</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_azure_msal_node.iconfidentialclientapplication.html#acquiretokenbyusernamepassword" class="tsd-kind-icon">acquire<wbr>Token<wbr>ByUsername<wbr>Password</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="_azure_msal_node.iconfidentialclientapplication.html#acquiretokenonbehalfof" class="tsd-kind-icon">acquire<wbr>Token<wbr>OnBehalf<wbr>Of</a>
