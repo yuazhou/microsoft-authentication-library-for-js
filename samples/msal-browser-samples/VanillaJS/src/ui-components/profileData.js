@@ -1,6 +1,26 @@
 import { graphConfig } from "../authConfig.js";
 
+function renderContainers() {
+    const mainContent = document.getElementById("main-content");
+    mainContent.innerHTML = "";
+    const row = document.createElement("div");
+    row.setAttribute("class", "row");
+    row.setAttribute("style", "margin-auto");
+    mainContent.appendChild(row);
+
+    const card1 = document.createElement("div");
+    card1.setAttribute("class", "col-md-3 card text-center card-body");
+    card1.setAttribute("id", "card-div");
+    row.appendChild(card1);
+
+    const profileDiv = document.createElement("div");
+    profileDiv.setAttribute("id", "profile-div");
+
+    card1.appendChild(profileDiv);
+}
+
 export function renderProfileData(data, endpoint) {
+    renderContainers();
     const profileDiv = document.getElementById("profile-div");
 
     if (endpoint === graphConfig.graphMeEndpoint) {
