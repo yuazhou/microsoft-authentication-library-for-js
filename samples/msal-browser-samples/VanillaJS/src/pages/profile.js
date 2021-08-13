@@ -8,7 +8,11 @@ function signedInLogic() {
 	renderSignOutButton((interactionType) => {
 		// This callback is called when the button is clicked
 		if (interactionType === "popup") {
-			msalInstance.logoutPopup(logoutRequest).then(() => {
+			const popupRequest = {
+				...logoutRequest,
+				redirectUri: "/blank" // This page will be rendered briefly in the popup after sign-out is complete. It's best if it contains no content or logic
+			};
+			msalInstance.logoutPopup(popupRequest).then(() => {
 				signedOutLogic();
 			});
 		} else if (interactionType === "redirect") {
@@ -18,7 +22,7 @@ function signedInLogic() {
 	msalInstance.setActiveAccount(msalInstance.getAllAccounts()[0]);
     const silentRequest = {
         ...loginRequest,
-        redirectUri: "/blank"
+        redirectUri: "/blank" // This page will be rendered in a hidden iframe when the refresh token is expired. It's best if it contains no content or logic
     }
     msalInstance.acquireTokenSilent(silentRequest).then((response) => {
         callMSGraph(graphConfig.graphMeEndpoint, response.accessToken).then((response) => {
@@ -29,16 +33,13 @@ function signedInLogic() {
 
 function signedOutLogic() {
 	// Things to do when no user is signed in
-	const popupRequest = {
-        ...loginRequest,
-        redirectUri: "/blank" // This page will be rendered briefly in the popup after sign-in is complete. It's best if it contains no content or logic
-    };
-    msalInstance.loginPopup(popupRequest).then(() => {
-        signedInLogic();
-    });
+    msalInstance.loginRedirect(loginRequest);
 }
 
 export default function profile() {
+    // If you use loginRedirect or acquireTokenRedirect you must await handleRedirectPromise on every page **before** invoking any other msal APIs
+	await msalInstance.handleRedirectPromise();
+
 	if (msalInstance.getAllAccounts().length > 0) {
         signedInLogic();
 	} else {

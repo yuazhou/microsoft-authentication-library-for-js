@@ -8,7 +8,11 @@ function signedInLogic() {
 	renderSignOutButton((interactionType) => {
 		// This callback is called when the button is clicked
 		if (interactionType === "popup") {
-			msalInstance.logoutPopup(logoutRequest).then(() => {
+			const popupRequest = {
+				...logoutRequest,
+				redirectUri: "/blank" // This page will be rendered briefly in the popup after sign-out is complete. It's best if it contains no content or logic
+			};
+			msalInstance.logoutPopup(popupRequest).then(() => {
 				signedOutLogic();
 			});
 		} else if (interactionType === "redirect") {
@@ -23,7 +27,11 @@ function signedOutLogic() {
 	renderSignInButton((interactionType) => {
 		// This callback is called when the button is clicked
 		if (interactionType === "popup") {
-			msalInstance.loginPopup(loginRequest).then(() => {
+			const popupRequest = {
+				...loginRequest,
+				redirectUri: "/blank" // This page will be rendered briefly in the popup after sign-in is complete. It's best if it contains no content or logic
+			};
+			msalInstance.loginPopup(popupRequest).then(() => {
 				signedInLogic();
 			});
 		} else if (interactionType === "redirect") {
