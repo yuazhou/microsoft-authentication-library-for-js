@@ -36,7 +36,7 @@ function signedOutLogic() {
     msalInstance.loginRedirect(loginRequest);
 }
 
-export default function profile() {
+export default async function profile() {
     // If you use loginRedirect or acquireTokenRedirect you must await handleRedirectPromise on every page **before** invoking any other msal APIs
 	await msalInstance.handleRedirectPromise();
 
