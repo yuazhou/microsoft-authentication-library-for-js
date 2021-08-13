@@ -1,5 +1,3 @@
-import { graphConfig } from "../authConfig.js";
-
 function renderContainers() {
     const mainContent = document.getElementById("main-content");
     mainContent.innerHTML = "";

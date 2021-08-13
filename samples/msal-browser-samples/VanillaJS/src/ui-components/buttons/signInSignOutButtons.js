@@ -1,16 +1,6 @@
-import { msalInstance, loginRequest, logoutRequest } from "../../authConfig.js";
-
-export function updateSignInSignOutButton() {
+export function renderSignInButton(callback) {
     const buttonGroup = document.getElementById("signInButtonGroup");
     buttonGroup.innerHTML = "";
-    if (msalInstance.getAllAccounts().length > 0) {
-        renderSignOutButton(buttonGroup);
-    } else {
-        renderSignInButton(buttonGroup);
-    }
-}
-
-export function renderSignInButton(buttonGroup) {
     const dropdownButton = document.createElement('button');
     dropdownButton.setAttribute("class", "btn btn-secondary dropdown-toggle");
     dropdownButton.setAttribute("data-toggle", "dropdown");
@@ -25,9 +15,7 @@ export function renderSignInButton(buttonGroup) {
     popupButton.innerHTML = "Sign in using Popup";
     popupButton.setAttribute("class", "dropdown-item");
     popupButton.addEventListener('click', () => {
-        msalInstance.loginPopup(loginRequest).then(() => {
-            updateSignInSignOutButton();
-        });
+        callback("popup");
     });
     dropdownMenu.appendChild(popupButton);
 
@@ -35,12 +23,14 @@ export function renderSignInButton(buttonGroup) {
     redirectButton.innerHTML = "Sign in using Redirect";
     redirectButton.setAttribute("class", "dropdown-item");
     redirectButton.addEventListener('click', () => {
-        msalInstance.loginRedirect(loginRequest);
+        callback("redirect");
     });
     dropdownMenu.appendChild(redirectButton);
 }
 
-export function renderSignOutButton(buttonGroup) {
+export function renderSignOutButton(callback) {
+    const buttonGroup = document.getElementById("signInButtonGroup");
+    buttonGroup.innerHTML = "";
     const dropdownButton = document.createElement('button');
     dropdownButton.setAttribute("class", "btn btn-secondary dropdown-toggle");
     dropdownButton.setAttribute("data-toggle", "dropdown");
@@ -55,9 +45,7 @@ export function renderSignOutButton(buttonGroup) {
     popupButton.innerHTML = "Sign Out using Popup";
     popupButton.setAttribute("class", "dropdown-item");
     popupButton.addEventListener('click', () => {
-        msalInstance.logoutPopup(logoutRequest).then(() => {
-            updateSignInSignOutButton();
-        });
+        callback("popup");
     });
     dropdownMenu.appendChild(popupButton);
 
@@ -65,7 +53,7 @@ export function renderSignOutButton(buttonGroup) {
     redirectButton.innerHTML = "Sign Out using Redirect";
     redirectButton.setAttribute("class", "dropdown-item");
     redirectButton.addEventListener('click', () => {
-        msalInstance.logoutRedirect(logoutRequest);
+        callback("redirect");
     });
     dropdownMenu.appendChild(redirectButton);
 }
