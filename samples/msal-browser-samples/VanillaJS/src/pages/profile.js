@@ -12,13 +12,12 @@ function signedInLogic() {
 				...logoutRequest,
 				redirectUri: "/blank" // This page will be rendered briefly in the popup after sign-out is complete. It's best if it contains no content or logic
 			};
-			msalInstance.logoutPopup(popupRequest).then(() => {
-				signedOutLogic();
-			});
+			msalInstance.logoutPopup(popupRequest);
 		} else if (interactionType === "redirect") {
 			msalInstance.logoutRedirect(logoutRequest);
 		}
 	});
+    
 	msalInstance.setActiveAccount(msalInstance.getAllAccounts()[0]);
     const silentRequest = {
         ...loginRequest,
