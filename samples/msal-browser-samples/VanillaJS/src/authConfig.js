@@ -50,13 +50,9 @@ export const graphConfig = {
 };
 
 // Add here scopes for access token to be used at MS Graph API endpoints.
-export const tokenRequest = {
+export const mailTokenRequest = {
     scopes: ["Mail.Read"],
     forceRefresh: false // Set this to "true" to skip a cached token and go to the server to get a new token
-};
-
-export const silentRequest = {
-    scopes: ["openid", "profile", "User.Read", "Mail.Read"]
 };
 
 export const logoutRequest = {

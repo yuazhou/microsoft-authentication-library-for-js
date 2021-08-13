@@ -1,6 +1,6 @@
-import { msalInstance, loginRequest, logoutRequest } from "../authConfig.js";
+import { msalInstance, loginRequest, logoutRequest } from "../../authConfig.js";
 
-export function updateButton() {
+export function updateSignInSignOutButton() {
     const buttonGroup = document.getElementById("signInButtonGroup");
     buttonGroup.innerHTML = "";
     if (msalInstance.getAllAccounts().length > 0) {
@@ -26,7 +26,7 @@ export function renderSignInButton(buttonGroup) {
     popupButton.setAttribute("class", "dropdown-item");
     popupButton.addEventListener('click', () => {
         msalInstance.loginPopup(loginRequest).then(() => {
-            updateButton();
+            updateSignInSignOutButton();
         });
     });
     dropdownMenu.appendChild(popupButton);
@@ -56,7 +56,7 @@ export function renderSignOutButton(buttonGroup) {
     popupButton.setAttribute("class", "dropdown-item");
     popupButton.addEventListener('click', () => {
         msalInstance.logoutPopup(logoutRequest).then(() => {
-            updateButton();
+            updateSignInSignOutButton();
         });
     });
     dropdownMenu.appendChild(popupButton);

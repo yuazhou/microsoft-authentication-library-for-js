@@ -1,6 +1,6 @@
 // Helper function to call MS Graph API endpoint 
 // using authorization bearer token scheme
-export function callMSGraph(endpoint, accessToken, callback) {
+export async function callMSGraph(endpoint, accessToken) {
     const headers = new Headers();
     const bearer = `Bearer ${accessToken}`;
 
@@ -13,8 +13,7 @@ export function callMSGraph(endpoint, accessToken, callback) {
 
     console.log('request made to Graph API at: ' + new Date().toString());
 
-    fetch(endpoint, options)
+    return fetch(endpoint, options)
         .then(response => response.json())
-        .then(response => callback(response, endpoint))
         .catch(error => console.log(error));
 }

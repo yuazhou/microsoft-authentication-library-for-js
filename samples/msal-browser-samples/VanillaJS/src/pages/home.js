@@ -1,12 +1,16 @@
-import { msalInstance, graphConfig, loginRequest } from "../authConfig.js";
-import { callMSGraph } from "../externalApi/callMsGraph.js";
-import { renderProfileData } from "../ui-components/profileData.js";
+import { msalInstance } from "../authConfig.js";
+import { updateSignInSignOutButton } from "../ui-components/buttons/signInSignOutButtons.js";
+import { renderSeeProfileButton } from "../ui-components/buttons/seeProfileButton.js";
+import { renderUnauthenticatedMessage } from "../ui-components/unauthenticatedMessage.js";
 
-export default function home() {
+export default async function home() {
+	// If you use loginRedirect or acquireTokenRedirect you must call and await handleRedirectPromise on every page that uses msal APIs
+	await msalInstance.handleRedirectPromise();
+
+	updateSignInSignOutButton();
 	if (msalInstance.getAllAccounts().length > 0) {
-		msalInstance.setActiveAccount(msalInstance.getAllAccounts()[0]);
-		msalInstance.acquireTokenSilent({...loginRequest}).then((response) => {
-			callMSGraph(graphConfig.graphMeEndpoint, response.accessToken, renderProfileData);
-		});
+		renderSeeProfileButton();
+	} else {
+		renderUnauthenticatedMessage();
 	}
 }

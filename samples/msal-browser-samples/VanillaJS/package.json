@@ -10,12 +10,13 @@
   },
   "dependencies": {
     "@azure/msal-browser": "^2.16.1",
-    "date-fns": "^2.16.1"
+    "date-fns": "^2.16.1",
+    "express": "^4.17.1"
   },
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "dev": "npm-run-all --parallel start watch",
-    "start": "serve public -l 3000 -s"
+    "start": "node server.js"
   }
 }

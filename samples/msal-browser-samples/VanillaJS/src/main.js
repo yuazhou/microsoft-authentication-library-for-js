@@ -1,16 +1,9 @@
 import home from './pages/home.js';
-import testPage from './pages/testPage.js'
-import { msalInstance } from "./authConfig.js";
-import { updateButton } from "./ui-components/updateButton.js";
-
-
-msalInstance.handleRedirectPromise().then(() => {
-    updateButton();
-});
+import profile from './pages/profile.js'
 
 const routes = {
     '/': home,
-    '/testPage': testPage
+    '/profile': profile
 }
 
 routes[window.location.pathname]();
