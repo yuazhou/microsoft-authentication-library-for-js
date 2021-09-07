@@ -96,9 +96,11 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_common.icrypto.html#base64decode" class="tsd-kind-icon">base64<wbr>Decode</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_common.icrypto.html#base64encode" class="tsd-kind-icon">base64<wbr>Encode</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_common.icrypto.html#clearkeystore" class="tsd-kind-icon">clear<wbr>Keystore</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_common.icrypto.html#createnewguid" class="tsd-kind-icon">create<wbr>New<wbr>Guid</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_common.icrypto.html#generatepkcecodes" class="tsd-kind-icon">generate<wbr>Pkce<wbr>Codes</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_common.icrypto.html#getpublickeythumbprint" class="tsd-kind-icon">get<wbr>Public<wbr>Key<wbr>Thumbprint</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_common.icrypto.html#removetokenbindingkey" class="tsd-kind-icon">remove<wbr>Token<wbr>Binding<wbr>Key</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_azure_msal_common.icrypto.html#signjwt" class="tsd-kind-icon">sign<wbr>Jwt</a></li>
 							</ul>
 						</section>
@@ -117,7 +119,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/6b257b717/lib/msal-common/src/crypto/ICrypto.ts#L37">msal-common/src/crypto/ICrypto.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5407db60d/lib/msal-common/src/crypto/ICrypto.ts#L39">msal-common/src/crypto/ICrypto.ts:39</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -147,7 +149,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/6b257b717/lib/msal-common/src/crypto/ICrypto.ts#L32">msal-common/src/crypto/ICrypto.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5407db60d/lib/msal-common/src/crypto/ICrypto.ts#L34">msal-common/src/crypto/ICrypto.ts:34</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -168,6 +170,28 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="clearkeystore" class="tsd-anchor"></a>
+					<h3>clear<wbr>Keystore</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Keystore<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5407db60d/lib/msal-common/src/crypto/ICrypto.ts#L57">msal-common/src/crypto/ICrypto.ts:57</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes all cryptographic keys from IndexedDB storage</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="createnewguid" class="tsd-anchor"></a>
 					<h3>create<wbr>New<wbr>Guid</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -177,7 +201,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/6b257b717/lib/msal-common/src/crypto/ICrypto.ts#L27">msal-common/src/crypto/ICrypto.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5407db60d/lib/msal-common/src/crypto/ICrypto.ts#L29">msal-common/src/crypto/ICrypto.ts:29</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -199,7 +223,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/6b257b717/lib/msal-common/src/crypto/ICrypto.ts#L41">msal-common/src/crypto/ICrypto.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5407db60d/lib/msal-common/src/crypto/ICrypto.ts#L43">msal-common/src/crypto/ICrypto.ts:43</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -215,13 +239,13 @@
 					<a name="getpublickeythumbprint" class="tsd-anchor"></a>
 					<h3>get<wbr>Public<wbr>Key<wbr>Thumbprint</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Public<wbr>Key<wbr>Thumbprint<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_msal_common.html#baseauthrequest" class="tsd-signature-type" data-tsd-kind="Type alias">BaseAuthRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Public<wbr>Key<wbr>Thumbprint<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#baseauthrequest" class="tsd-signature-type" data-tsd-kind="Type alias">BaseAuthRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrClaims&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/6b257b717/lib/msal-common/src/crypto/ICrypto.ts#L46">msal-common/src/crypto/ICrypto.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5407db60d/lib/msal-common/src/crypto/ICrypto.ts#L48">msal-common/src/crypto/ICrypto.ts:48</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -232,12 +256,42 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>request: <a href="../modules/_azure_msal_common.html#baseauthrequest" class="tsd-signature-type" data-tsd-kind="Type alias">BaseAuthRequest</a></h5>
+									<h5>request: <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#baseauthrequest" class="tsd-signature-type" data-tsd-kind="Type alias">BaseAuthRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrClaims&quot;</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="removetokenbindingkey" class="tsd-anchor"></a>
+					<h3>remove<wbr>Token<wbr>Binding<wbr>Key</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Token<wbr>Binding<wbr>Key<span class="tsd-signature-symbol">(</span>kid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5407db60d/lib/msal-common/src/crypto/ICrypto.ts#L53">msal-common/src/crypto/ICrypto.ts:53</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes cryptographic keypair from key store matching the keyId passed in</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>kid: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -251,7 +305,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/6b257b717/lib/msal-common/src/crypto/ICrypto.ts#L51">msal-common/src/crypto/ICrypto.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5407db60d/lib/msal-common/src/crypto/ICrypto.ts#L62">msal-common/src/crypto/ICrypto.ts:62</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -314,6 +368,9 @@
 								<a href="_azure_msal_common.icrypto.html#base64encode" class="tsd-kind-icon">base64<wbr>Encode</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_azure_msal_common.icrypto.html#clearkeystore" class="tsd-kind-icon">clear<wbr>Keystore</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="_azure_msal_common.icrypto.html#createnewguid" class="tsd-kind-icon">create<wbr>New<wbr>Guid</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
@@ -321,6 +378,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="_azure_msal_common.icrypto.html#getpublickeythumbprint" class="tsd-kind-icon">get<wbr>Public<wbr>Key<wbr>Thumbprint</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_azure_msal_common.icrypto.html#removetokenbindingkey" class="tsd-kind-icon">remove<wbr>Token<wbr>Binding<wbr>Key</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="_azure_msal_common.icrypto.html#signjwt" class="tsd-kind-icon">sign<wbr>Jwt</a>

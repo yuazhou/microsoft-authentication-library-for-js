@@ -59,16 +59,16 @@
 				<a href="#microsoft-authentication-library-for-javascript-msaljs" id="microsoft-authentication-library-for-javascript-msaljs" style="color: inherit; text-decoration: none;">
 					<h1>Microsoft Authentication Library for JavaScript (MSAL.js)</h1>
 				</a>
-				<p>The Microsoft Authentication Library for JavaScript enables client-side JavaScript web applications, running in a web browser, to authenticate users using <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-overview">Azure AD</a> for work and school accounts (AAD), Microsoft personal accounts (MSA), and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through <a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-overview#identity-providers">Azure AD B2C</a> service. It also enables your app to get tokens to access <a href="https://www.microsoft.com/enterprise">Microsoft Cloud</a> services such as <a href="https://graph.microsoft.io">Microsoft Graph</a>.</p>
+				<p>The Microsoft Authentication Library for JavaScript enables both client-side and server-side JavaScript applications to authenticate users using <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-overview">Azure AD</a> for work and school accounts (AAD), Microsoft personal accounts (MSA), and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through <a href="https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-overview#identity-providers">Azure AD B2C</a> service. It also enables your app to get tokens to access <a href="https://www.microsoft.com/enterprise">Microsoft Cloud</a> services such as <a href="https://graph.microsoft.io">Microsoft Graph</a>.</p>
 				<a href="#repository" id="repository" style="color: inherit; text-decoration: none;">
 					<h2>Repository</h2>
 				</a>
-				<a href="#core-and-wrapper-libaries" id="core-and-wrapper-libaries" style="color: inherit; text-decoration: none;">
-					<h3>Core and wrapper libaries</h3>
+				<a href="#core-and-wrapper-libraries" id="core-and-wrapper-libraries" style="color: inherit; text-decoration: none;">
+					<h3>Core and wrapper libraries</h3>
 				</a>
 				<p>The <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib"><code>lib</code></a> folder contains the source code for our libraries in active development. You will also find all the details about <strong>installing the libraries</strong> in their respective README.md.</p>
 				<ul>
-					<li><p><a href="lib/msal-node/">Microsoft Authentication Library for Node.js v1.x</a>: A <a href="https://nodejs.org/en/">Node.js</a> library that enables authentication and token acquisition with the Microsoft Identity platform in JavaScript applications. Implements the following OAuth 2.0 protocols and is <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc">OpenID-compliant</a>:</p>
+					<li><p><a href="lib/msal-node/">Microsoft Authentication Library for Node.js v1.x</a>: A <a href="https://nodejs.org/en/">Node.js</a> library that enables authentication and token acquisition with the Microsoft Identity platform in JavaScript applications. Implements the following OAuth 2.0 protocols and is <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-protocols-oidc">OpenID-compliant</a>:</p>
 						<ul>
 							<li><a href="https://oauth.net/2/grant-types/authorization-code/">Authorization Code Grant</a> with <a href="https://oauth.net/2/pkce/">PKCE</a></li>
 							<li><a href="https://oauth.net/2/grant-types/device-code/">Device Code Grant</a></li>
@@ -76,19 +76,15 @@
 							<li><a href="https://oauth.net/2/grant-types/client-credentials/">Client Credential Grant</a></li>
 						</ul>
 					</li>
-					<li><p><a href="lib/msal-browser/">Microsoft Authentication Library for JavaScript v2.x</a>: A browser-based, framework-agnostic browser library that enables authentication and token acquisition with the Microsoft Identity platform in JavaScript applications. Implements the OAuth 2.0 <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow">Authorization Code Flow with PKCE</a>, and is <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc">OpenID-compliant</a>.</p>
+					<li><p><a href="lib/msal-browser/">Microsoft Authentication Library for JavaScript v2.x</a>: A browser-based, framework-agnostic browser library that enables authentication and token acquisition with the Microsoft Identity platform in JavaScript applications. Implements the OAuth 2.0 <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-auth-code-flow">Authorization Code Flow with PKCE</a>, and is <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-protocols-oidc">OpenID-compliant</a>.</p>
 					</li>
 					<li><p><a href="lib/msal-react/">Microsoft Authentication Library for React v1.x</a>: A wrapper of the msal-browser 2.x library for apps using React.</p>
 					</li>
 					<li><p><a href="lib/msal-angular/">Microsoft Authentication Library for Angular v2.x</a>: A wrapper of the msal-browser 2.x library for apps using Angular framework.</p>
 					</li>
-					<li><p><a href="lib/msal-core/">Microsoft Authentication Library for JavaScript v1.x</a>: A browser-based, framework-agnostic core library that enables authentication and token acquisition with the Microsoft Identity platform in JavaScript applications. Implements the OAuth 2.0 <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-implicit-grant-flow">Implicit Grant Flow</a>, and is <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc">OpenID-compliant</a>.</p>
+					<li><p><a href="lib/msal-core/">Microsoft Authentication Library for JavaScript v1.x</a>: A browser-based, framework-agnostic core library that enables authentication and token acquisition with the Microsoft Identity platform in JavaScript applications. Implements the OAuth 2.0 <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-implicit-grant-flow">Implicit Grant Flow</a>, and is <a href="https://docs.microsoft.com/azure/active-directory/develop/v2-protocols-oidc">OpenID-compliant</a>.</p>
 					</li>
-					<li><p><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/msal-angular-v1/lib/msal-angular">Microsoft Authentication Library for Angular</a> :
-						A wrapper of the core 1.x library for apps using Angular framework.</p>
-					</li>
-					<li><p><a href="maintenance/msal-angularjs/">Microsoft Authentication Library for AngularJS</a> :
-						A wrapper of the core 1.x library for apps using AngularJS framework.</p>
+					<li><p><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/msal-angular-v1/lib/msal-angular">Microsoft Authentication Library for Angular</a>: A wrapper of the core 1.x library for apps using Angular framework.</p>
 					</li>
 				</ul>
 				<a href="#libraries-in-maintenance" id="libraries-in-maintenance" style="color: inherit; text-decoration: none;">
@@ -96,7 +92,14 @@
 				</a>
 				<p>The <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/maintenance"><code>maintenance</code></a> folder contains the source code for our libraries that are in maintenance mode (only receiving security fixes).</p>
 				<ul>
-					<li><a href="maintenance/adal-angular">Active Directory Authentication Library for JavaScript</a>: A browser-based, framework-agnostic core library that enables authentication and token acquisition with the Microsoft Identity platform in JavaScript applications. Implements the OAuth 1.0 Implicit Grant Flow.</li>
+					<li><p><a href="maintenance/adal-node">Active Directory Authentication Library for Node.js</a>: A <a href="https://nodejs.org/en/">Node.js</a> library that enables authentication and token acquisition with the Microsoft Identity platform in Node.js applications.</p>
+					</li>
+					<li><p><a href="maintenance/adal-angular">Active Directory Authentication Library for JavaScript</a>: A browser-based, framework-agnostic core library that enables authentication and token acquisition with the Microsoft Identity platform in JavaScript applications. Implements the OAuth 1.0 Implicit Grant Flow.</p>
+					</li>
+					<li><p><a href="maintenance/msal-angularjs">Microsoft Authentication Library for AngularJS</a>: A wrapper of the core 1.x library for apps using the AngularJS framework.</p>
+					</li>
+					<li><p><a href="maintenance/passport-azure-ad">Azure Active Directory Passport.js Plug-In</a>: a collection of <a href="http://passportjs.org/">Passport</a> strategies to help you integrate with Azure Active Directory. It includes OpenID Connect, WS-Federation, and SAML-P authentication and authorization.</p>
+					</li>
 				</ul>
 				<a href="#package-structure" id="package-structure" style="color: inherit; text-decoration: none;">
 					<h3>Package Structure</h3>
@@ -106,11 +109,11 @@
 				<a href="#samples" id="samples" style="color: inherit; text-decoration: none;">
 					<h3>Samples</h3>
 				</a>
-				<p>The <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples"><code>samples</code></a> folder contains sample applications for our libaries. A complete list of samples can be found in the respective package folders or <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki/Samples">on our wiki</a>.</p>
+				<p>The <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples"><code>samples</code></a> folder contains sample applications for our libraries. A complete list of samples can be found in the respective package folders or <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki/Samples">on our wiki</a>.</p>
 				<a href="#package-versioning" id="package-versioning" style="color: inherit; text-decoration: none;">
 					<h2>Package versioning</h2>
 				</a>
-				<p>All of our libraries follow <a href="https://semver.org">semantic versioning</a>. We recommend using the latest version of each libary to ensure you have the latest security patches and bug fixes.</p>
+				<p>All of our libraries follow <a href="https://semver.org">semantic versioning</a>. We recommend using the latest version of each library to ensure you have the latest security patches and bug fixes.</p>
 				<a href="#roadmap" id="roadmap" style="color: inherit; text-decoration: none;">
 					<h2>Roadmap</h2>
 				</a>
@@ -124,8 +127,6 @@
 					<li><p><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki/FAQs">FAQs</a> for access to our frequently asked questions.</p>
 					</li>
 					<li><p><a href="http://stackoverflow.com/questions/tagged/msal">Stack Overflow</a> using &quot;msal&quot; and &quot;msal.js&quot; tag.</p>
-					</li>
-					<li><p><a href="https://feedback.azure.com/forums/169401-azure-active-directory">User Voice page</a> to provide recommendations and/or feedback.</p>
 					</li>
 				</ul>
 				<a href="#contribute" id="contribute" style="color: inherit; text-decoration: none;">
