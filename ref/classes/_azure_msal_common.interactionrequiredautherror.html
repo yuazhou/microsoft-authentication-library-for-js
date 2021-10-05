@@ -69,7 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Error thrown when user interaction is required at the auth server.</p>
+						<p>Error thrown when user interaction is required.</p>
 					</div>
 				</div>
 			</section>
@@ -77,7 +77,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="_azure_msal_common.servererror.html" class="tsd-signature-type" data-tsd-kind="Class">ServerError</a>
+						<a href="_azure_msal_common.autherror.html" class="tsd-signature-type" data-tsd-kind="Class">AuthError</a>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">InteractionRequiredAuthError</span>
@@ -109,6 +109,7 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_azure_msal_common.interactionrequiredautherror.html#setcorrelationid" class="tsd-kind-icon">set<wbr>Correlation<wbr>Id</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_azure_msal_common.interactionrequiredautherror.html#createnotokensfounderror" class="tsd-kind-icon">create<wbr>NoTokens<wbr>Found<wbr>Error</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_azure_msal_common.interactionrequiredautherror.html#createunexpectederror" class="tsd-kind-icon">create<wbr>Unexpected<wbr>Error</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_azure_msal_common.interactionrequiredautherror.html#isinteractionrequirederror" class="tsd-kind-icon">is<wbr>Interaction<wbr>Required<wbr>Error</a></li>
 							</ul>
@@ -127,9 +128,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="_azure_msal_common.servererror.html">ServerError</a>.<a href="_azure_msal_common.servererror.html#constructor">constructor</a></p>
+								<p>Overrides <a href="_azure_msal_common.autherror.html">AuthError</a>.<a href="_azure_msal_common.autherror.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a653fab25/lib/msal-common/src/error/InteractionRequiredAuthError.ts#L28">msal-common/src/error/InteractionRequiredAuthError.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a62c1741c/lib/msal-common/src/error/InteractionRequiredAuthError.ts#L38">msal-common/src/error/InteractionRequiredAuthError.ts:38</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -156,9 +157,9 @@
 					<h3>correlation<wbr>Id</h3>
 					<div class="tsd-signature tsd-kind-icon">correlation<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_azure_msal_common.servererror.html">ServerError</a>.<a href="_azure_msal_common.servererror.html#correlationid">correlationId</a></p>
+						<p>Inherited from <a href="_azure_msal_common.autherror.html">AuthError</a>.<a href="_azure_msal_common.autherror.html#correlationid">correlationId</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a653fab25/lib/msal-common/src/error/AuthError.ts#L41">msal-common/src/error/AuthError.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a62c1741c/lib/msal-common/src/error/AuthError.ts#L41">msal-common/src/error/AuthError.ts:41</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -172,9 +173,9 @@
 					<h3>error<wbr>Code</h3>
 					<div class="tsd-signature tsd-kind-icon">error<wbr>Code<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_azure_msal_common.servererror.html">ServerError</a>.<a href="_azure_msal_common.servererror.html#errorcode">errorCode</a></p>
+						<p>Inherited from <a href="_azure_msal_common.autherror.html">AuthError</a>.<a href="_azure_msal_common.autherror.html#errorcode">errorCode</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a653fab25/lib/msal-common/src/error/AuthError.ts#L26">msal-common/src/error/AuthError.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a62c1741c/lib/msal-common/src/error/AuthError.ts#L26">msal-common/src/error/AuthError.ts:26</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -188,9 +189,9 @@
 					<h3>error<wbr>Message</h3>
 					<div class="tsd-signature tsd-kind-icon">error<wbr>Message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_azure_msal_common.servererror.html">ServerError</a>.<a href="_azure_msal_common.servererror.html#errormessage">errorMessage</a></p>
+						<p>Inherited from <a href="_azure_msal_common.autherror.html">AuthError</a>.<a href="_azure_msal_common.autherror.html#errormessage">errorMessage</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a653fab25/lib/msal-common/src/error/AuthError.ts#L31">msal-common/src/error/AuthError.ts:31</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a62c1741c/lib/msal-common/src/error/AuthError.ts#L31">msal-common/src/error/AuthError.ts:31</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -204,9 +205,9 @@
 					<h3>sub<wbr>Error</h3>
 					<div class="tsd-signature tsd-kind-icon">sub<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="_azure_msal_common.servererror.html">ServerError</a>.<a href="_azure_msal_common.servererror.html#suberror">subError</a></p>
+						<p>Inherited from <a href="_azure_msal_common.autherror.html">AuthError</a>.<a href="_azure_msal_common.autherror.html#suberror">subError</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a653fab25/lib/msal-common/src/error/AuthError.ts#L36">msal-common/src/error/AuthError.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a62c1741c/lib/msal-common/src/error/AuthError.ts#L36">msal-common/src/error/AuthError.ts:36</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -227,9 +228,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="_azure_msal_common.servererror.html">ServerError</a>.<a href="_azure_msal_common.servererror.html#setcorrelationid">setCorrelationId</a></p>
+								<p>Inherited from <a href="_azure_msal_common.autherror.html">AuthError</a>.<a href="_azure_msal_common.autherror.html#setcorrelationid">setCorrelationId</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a653fab25/lib/msal-common/src/error/AuthError.ts#L54">msal-common/src/error/AuthError.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a62c1741c/lib/msal-common/src/error/AuthError.ts#L54">msal-common/src/error/AuthError.ts:54</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -242,6 +243,28 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="createnotokensfounderror" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>NoTokens<wbr>Found<wbr>Error</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>NoTokens<wbr>Found<wbr>Error<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_azure_msal_common.interactionrequiredautherror.html" class="tsd-signature-type" data-tsd-kind="Class">InteractionRequiredAuthError</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a62c1741c/lib/msal-common/src/error/InteractionRequiredAuthError.ts#L66">msal-common/src/error/InteractionRequiredAuthError.ts:66</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates an error thrown when the authorization code required for a token request is null or empty.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="_azure_msal_common.interactionrequiredautherror.html" class="tsd-signature-type" data-tsd-kind="Class">InteractionRequiredAuthError</a></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 					<a name="createunexpectederror" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>Unexpected<wbr>Error</h3>
@@ -251,9 +274,9 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="_azure_msal_common.servererror.html">ServerError</a>.<a href="_azure_msal_common.servererror.html#createunexpectederror">createUnexpectedError</a></p>
+								<p>Inherited from <a href="_azure_msal_common.autherror.html">AuthError</a>.<a href="_azure_msal_common.autherror.html#createunexpectederror">createUnexpectedError</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a653fab25/lib/msal-common/src/error/AuthError.ts#L62">msal-common/src/error/AuthError.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a62c1741c/lib/msal-common/src/error/AuthError.ts#L62">msal-common/src/error/AuthError.ts:62</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -283,9 +306,14 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a653fab25/lib/msal-common/src/error/InteractionRequiredAuthError.ts#L37">msal-common/src/error/InteractionRequiredAuthError.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/a62c1741c/lib/msal-common/src/error/InteractionRequiredAuthError.ts#L53">msal-common/src/error/InteractionRequiredAuthError.ts:53</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Helper function used to determine if an error thrown by the server requires interaction to resolve</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -296,6 +324,8 @@
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> subError: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -354,6 +384,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="_azure_msal_common.interactionrequiredautherror.html#setcorrelationid" class="tsd-kind-icon">set<wbr>Correlation<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_azure_msal_common.interactionrequiredautherror.html#createnotokensfounderror" class="tsd-kind-icon">create<wbr>NoTokens<wbr>Found<wbr>Error</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 								<a href="_azure_msal_common.interactionrequiredautherror.html#createunexpectederror" class="tsd-kind-icon">create<wbr>Unexpected<wbr>Error</a>
