@@ -138,8 +138,9 @@ export class WamInteractionClient extends BaseInteractionClient {
         const idTokenObj = new AuthToken(response.id_token || Constants.EMPTY_STRING, this.browserCrypto);
 
         // Save account in browser storage
+        const env = UrlString.getDomainFromUrl(request.authority);
         const homeAccountIdentifier = AccountEntity.generateHomeAccountId(response.client_info || Constants.EMPTY_STRING, AuthorityType.Default, this.logger, this.browserCrypto, idTokenObj);
-        const accountEntity = AccountEntity.createAccount(response.client_info, homeAccountIdentifier, idTokenObj, undefined, undefined, undefined, undefined, request.authority, response.account.id);
+        const accountEntity = AccountEntity.createAccount(response.client_info, homeAccountIdentifier, idTokenObj, undefined, undefined, undefined, undefined, env, response.account.id);
         this.browserStorage.setAccount(accountEntity);
 
         const responseScopes = ScopeSet.fromString(response.scopes);
@@ -167,7 +168,7 @@ export class WamInteractionClient extends BaseInteractionClient {
 
         const idToken = IdTokenEntity.createIdTokenEntity(
             homeAccountIdentifier,
-            request.authority,
+            env,
             response.id_token,
             this.config.auth.clientId,
             tid
@@ -176,7 +177,7 @@ export class WamInteractionClient extends BaseInteractionClient {
         
         const accessToken = AccessTokenEntity.createAccessTokenEntity(
             homeAccountIdentifier,
-            request.authority,
+            env,
             response.access_token,
             this.config.auth.clientId,
             tid,
