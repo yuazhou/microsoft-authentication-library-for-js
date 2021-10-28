@@ -3,7 +3,7 @@
  * Licensed under the MIT License.
  */
 
-import { AuthenticationResult, Logger, ICrypto, PromptValue, AuthToken, Constants, AccountEntity, AuthorityType, ScopeSet, TimeUtils, AuthenticationScheme, UrlString, OIDC_DEFAULT_SCOPES } from "@azure/msal-common";
+import { AuthenticationResult, Logger, ICrypto, PromptValue, AuthToken, Constants, AccountEntity, AuthorityType, ScopeSet, TimeUtils, AuthenticationScheme, UrlString, OIDC_DEFAULT_SCOPES, IdTokenEntity, AccessTokenEntity } from "@azure/msal-common";
 import { BaseInteractionClient } from "./BaseInteractionClient";
 import { BrowserConfiguration } from "../config/Configuration";
 import { BrowserCacheManager } from "../cache/BrowserCacheManager";
@@ -142,11 +142,12 @@ export class WamInteractionClient extends BaseInteractionClient {
         const accountEntity = AccountEntity.createAccount(response.client_info, homeAccountIdentifier, idTokenObj, undefined, undefined, undefined, undefined, request.authority, response.account.id);
         this.browserStorage.setAccount(accountEntity);
 
-        // If scopes not returned in server response, use request scopes
-        const responseScopes = response.scopes ? ScopeSet.fromString(response.scopes) : ScopeSet.fromString(request.scopes);
+        const responseScopes = ScopeSet.fromString(response.scopes);
 
         const uid = response.account.properties["UID"] || idTokenObj.claims.oid || idTokenObj.claims.sub || Constants.EMPTY_STRING;
         const tid = response.account.properties["TenantId"] || idTokenObj.claims.tid || Constants.EMPTY_STRING;
+
+        const tokenExpirationSeconds = Number(reqTimestamp + response.expires_in);
 
         const result: AuthenticationResult = {
             authority: request.authority,
@@ -158,11 +159,35 @@ export class WamInteractionClient extends BaseInteractionClient {
             idTokenClaims: idTokenObj.claims,
             accessToken: response.access_token,
             fromCache: false,
-            expiresOn: new Date(Number(reqTimestamp + response.expires_in) * 1000),
+            expiresOn: new Date(Number(tokenExpirationSeconds) * 1000),
             tokenType: AuthenticationScheme.BEARER,
             correlationId: this.correlationId,
             state: response.state
         };
+
+        const idToken = IdTokenEntity.createIdTokenEntity(
+            homeAccountIdentifier,
+            request.authority,
+            response.id_token,
+            this.config.auth.clientId,
+            tid
+        );
+        this.browserStorage.setIdTokenCredential(idToken);
+        
+        const accessToken = AccessTokenEntity.createAccessTokenEntity(
+            homeAccountIdentifier,
+            request.authority,
+            response.access_token,
+            this.config.auth.clientId,
+            tid,
+            responseScopes.printScopes(),
+            tokenExpirationSeconds,
+            tokenExpirationSeconds,
+            this.browserCrypto,
+            undefined,
+            AuthenticationScheme.BEARER
+        );
+        this.browserStorage.setAccessTokenCredential(accessToken);
 
         return result;
     }

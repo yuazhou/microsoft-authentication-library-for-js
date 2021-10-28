@@ -132,27 +132,24 @@ export class PublicClientApplication extends ClientApplication implements IPubli
     private async acquireTokenSilentAsync(request: SilentRequest, account: AccountInfo): Promise<AuthenticationResult>{
         this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_START, InteractionType.Silent, request);
 
-        let result: Promise<AuthenticationResult>;
-        if (this.config.system.platformSSO && this.wamExtensionProvider) {
-            result = this.acquireTokenNative(request).catch((e: AuthError) => {
-                // If native token acquisition fails for availability reasons fallback to standard flow
-                if (e instanceof WamAuthError && e.isFatal()) {
-                    this.wamExtensionProvider = undefined; // Prevent future requests from continuing to attempt 
-                    const silentCacheClient = this.createSilentCacheClient(request.correlationId);
-                    const silentRequest = silentCacheClient.initializeSilentRequest(request, account);
-                    result = silentCacheClient.acquireToken(silentRequest).catch(async () => {
-                        return this.acquireTokenByRefreshToken(silentRequest);
-                    });
+        const silentCacheClient = this.createSilentCacheClient(request.correlationId);
+        const silentRequest = silentCacheClient.initializeSilentRequest(request, account);
+        const result = silentCacheClient.acquireToken(silentRequest).catch(async () => {
+            if (this.config.system.platformSSO && this.wamExtensionProvider) {
+                try {
+                    return await this.acquireTokenNative(request);
+                } catch (e) {
+                    // If native token acquisition fails for availability reasons fallback to standard flow
+                    if (e instanceof WamAuthError && e.isFatal()) {
+                        this.wamExtensionProvider = undefined; // Prevent future requests from continuing to attempt 
+                    } else {
+                        throw e;
+                    }
                 }
-                throw e;
-            });     
-        } else {
-            const silentCacheClient = this.createSilentCacheClient(request.correlationId);
-            const silentRequest = silentCacheClient.initializeSilentRequest(request, account);
-            result = silentCacheClient.acquireToken(silentRequest).catch(async () => {
-                return this.acquireTokenByRefreshToken(silentRequest);
-            });
-        }
+            }
+
+            return this.acquireTokenByRefreshToken(silentRequest);
+        });
 
         return result.then((response) => {
             this.eventHandler.emitEvent(EventType.ACQUIRE_TOKEN_SUCCESS, InteractionType.Silent, response);
