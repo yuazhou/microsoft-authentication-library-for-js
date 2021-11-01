@@ -61,6 +61,8 @@
     "prepack": "npm run build:all"
   },
   "devDependencies": {
+    "@azure/identity": "^2.0.1",
+    "@azure/keyvault-secrets": "^4.3.0",
     "@azure/storage-blob": "^12.2.1",
     "@babel/core": "^7.7.2",
     "@babel/plugin-proposal-class-properties": "^7.7.0",
