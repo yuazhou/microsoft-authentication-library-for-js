@@ -19,6 +19,7 @@ import {
     validateCacheLocation} from "../../testUtils";
 
 import { PublicClientApplication, TokenCache } from "../../../../lib/msal-node/dist";
+import { NodeStorage } from "../../../../lib/msal-node/src/cache/NodeStorage";
 
 // Set test cache name/location
 const TEST_CACHE_LOCATION = `${__dirname}/data/aad.cache.json`;
@@ -48,6 +49,8 @@ describe("Silent Flow AAD PPE Tests", () => {
     let username: string;
     let accountPwd: string;
 
+    let cacheKVStore: NodeStorage;
+
     const screenshotFolder = `${SCREENSHOT_BASE_FOLDER_NAME}/silent-flow/aad`;
 
     beforeAll(async () => {
@@ -72,7 +75,7 @@ describe("Silent Flow AAD PPE Tests", () => {
         publicClientApplication = new PublicClientApplication({ auth: config.authOptions, cache: { cachePlugin }});
         msalTokenCache = publicClientApplication.getTokenCache();
         server = getTokenSilent(config, publicClientApplication, port, msalTokenCache);
-        await NodeCacheTestUtils.resetCache(TEST_CACHE_LOCATION);
+        await NodeCacheTestUtils.resetCache(TEST_CACHE_LOCATION, cacheKVStore);
     });
 
     afterAll(async () => {
@@ -93,7 +96,7 @@ describe("Silent Flow AAD PPE Tests", () => {
         afterEach(async () => {
             await page.close();
             await context.close();
-            await NodeCacheTestUtils.resetCache(TEST_CACHE_LOCATION);
+            await NodeCacheTestUtils.resetCache(TEST_CACHE_LOCATION, cacheKVStore);
         });
 
         it("Performs acquire token with Auth Code flow", async () => {
@@ -158,7 +161,7 @@ describe("Silent Flow AAD PPE Tests", () => {
             afterEach(async () => {
                 await page.close();
                 await context.close();
-                await NodeCacheTestUtils.resetCache(TEST_CACHE_LOCATION);
+                await NodeCacheTestUtils.resetCache(TEST_CACHE_LOCATION, cacheKVStore);
             });
     
             it("Gets all cached accounts", async () => {
@@ -187,7 +190,7 @@ describe("Silent Flow AAD PPE Tests", () => {
             afterEach(async () => {
                 await page.close();
                 await context.close();
-                await NodeCacheTestUtils.resetCache(TEST_CACHE_LOCATION);
+                await NodeCacheTestUtils.resetCache(TEST_CACHE_LOCATION, cacheKVStore);
             });
 
             it("Returns empty account array", async () => {

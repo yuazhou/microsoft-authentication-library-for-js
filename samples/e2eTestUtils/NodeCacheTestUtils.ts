@@ -3,6 +3,7 @@ import { IdTokenEntity } from "../../lib/msal-common/src/cache/entities/IdTokenE
 import { AccessTokenEntity } from "../../lib/msal-common/src/cache/entities/AccessTokenEntity";
 import { RefreshTokenEntity } from "../../lib/msal-common/src/cache/entities/RefreshTokenEntity";
 import { InMemoryCache } from '../../lib/msal-node/dist/cache/serializer/SerializerTypes';
+import { NodeStorage } from "../../lib/msal-node/src/cache/NodeStorage";
 
 import { Serializer } from "../../lib/msal-node/src/cache/serializer/Serializer";
 import { Deserializer } from "../../lib/msal-node/src/cache/serializer/Deserializer";
@@ -99,9 +100,13 @@ export class NodeCacheTestUtils {
         });
     }
 
-    static async resetCache(cacheLocation: string) {
+    static async resetCache(cacheLocation: string, cacheKVStore?: NodeStorage) {
         const emptyCache = this.getCacheSchema();
         await NodeCacheTestUtils.writeToCacheFile(cacheLocation, emptyCache);
+
+        if (cacheKVStore) {
+            cacheKVStore.setCache({});
+        }
     }
 
     private static getCacheSchema(): any {
