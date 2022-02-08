@@ -74,6 +74,8 @@
 								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_azure_msal_node.html#autherror" class="tsd-kind-icon">Auth<wbr>Error</a></li>
 								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_azure_msal_node.html#autherrormessage" class="tsd-kind-icon">Auth<wbr>Error<wbr>Message</a></li>
 								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_azure_msal_node.html#authenticationresult" class="tsd-kind-icon">Authentication<wbr>Result</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_azure_msal_node.html#azurecloudinstance" class="tsd-kind-icon">Azure<wbr>Cloud<wbr>Instance</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_azure_msal_node.html#azurecloudoptions" class="tsd-kind-icon">Azure<wbr>Cloud<wbr>Options</a></li>
 								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_azure_msal_node.html#clientautherror" class="tsd-kind-icon">Client<wbr>Auth<wbr>Error</a></li>
 								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_azure_msal_node.html#clientautherrormessage" class="tsd-kind-icon">Client<wbr>Auth<wbr>Error<wbr>Message</a></li>
 								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="_azure_msal_node.html#clientconfigurationerror" class="tsd-kind-icon">Client<wbr>Configuration<wbr>Error</a></li>
@@ -102,6 +104,7 @@
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal_node.clientassertion.html" class="tsd-kind-icon">Client<wbr>Assertion</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal_node.confidentialclientapplication.html" class="tsd-kind-icon">Confidential<wbr>Client<wbr>Application</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal_node.cryptoprovider.html" class="tsd-kind-icon">Crypto<wbr>Provider</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal_node.distributedcacheplugin.html" class="tsd-kind-icon">Distributed<wbr>Cache<wbr>Plugin</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal_node.nodestorage.html" class="tsd-kind-icon">Node<wbr>Storage</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal_node.publicclientapplication.html" class="tsd-kind-icon">Public<wbr>Client<wbr>Application</a></li>
 								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_azure_msal_node.tokencache.html" class="tsd-kind-icon">Token<wbr>Cache</a></li>
@@ -110,7 +113,9 @@
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_azure_msal_node.icacheclient.html" class="tsd-kind-icon">ICache<wbr>Client</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html" class="tsd-kind-icon">IConfidential<wbr>Client<wbr>Application</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_azure_msal_node.ipartitionmanager.html" class="tsd-kind-icon">IPartition<wbr>Manager</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_azure_msal_node.ipublicclientapplication.html" class="tsd-kind-icon">IPublic<wbr>Client<wbr>Application</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_azure_msal_node.itokencache.html" class="tsd-kind-icon">IToken<wbr>Cache</a></li>
 							</ul>
@@ -176,6 +181,16 @@
 					<a name="authenticationresult" class="tsd-anchor"></a>
 					<h3>Authentication<wbr>Result</h3>
 					Re-exports <a href="_azure_msal_common.html#authenticationresult">AuthenticationResult</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="azurecloudinstance" class="tsd-anchor"></a>
+					<h3>Azure<wbr>Cloud<wbr>Instance</h3>
+					Re-exports <a href="../enums/_azure_msal_common.azurecloudinstance.html">AzureCloudInstance</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="azurecloudoptions" class="tsd-anchor"></a>
+					<h3>Azure<wbr>Cloud<wbr>Options</h3>
+					Re-exports <a href="_azure_msal_common.html#azurecloudoptions-1">AzureCloudOptions</a>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
 					<a name="clientautherror" class="tsd-anchor"></a>
@@ -281,7 +296,7 @@
 					<div class="tsd-signature tsd-kind-icon">Authorization<wbr>Code<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="_azure_msal_common.html#commonauthorizationcoderequest" class="tsd-signature-type" data-tsd-kind="Type alias">CommonAuthorizationCodeRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;scopes&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;redirectUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;code&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;authenticationScheme&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;requestedClaimsHash&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>redirectUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/request/AuthorizationCodeRequest.ts#L21">msal-node/src/request/AuthorizationCodeRequest.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/request/AuthorizationCodeRequest.ts#L21">msal-node/src/request/AuthorizationCodeRequest.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -306,7 +321,7 @@
 					<div class="tsd-signature tsd-kind-icon">Authorization<wbr>Url<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="_azure_msal_common.html#commonauthorizationurlrequest" class="tsd-signature-type" data-tsd-kind="Type alias">CommonAuthorizationUrlRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;scopes&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;redirectUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;authenticationScheme&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;requestedClaimsHash&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>redirectUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/request/AuthorizationUrlRequest.ts#L36">msal-node/src/request/AuthorizationUrlRequest.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/request/AuthorizationUrlRequest.ts#L36">msal-node/src/request/AuthorizationUrlRequest.ts:36</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -347,7 +362,7 @@
 					<div class="tsd-signature tsd-kind-icon">CacheKVStore<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="_azure_msal_common.html#validcachetype" class="tsd-signature-type" data-tsd-kind="Type alias">ValidCacheType</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L12">msal-node/src/cache/serializer/SerializerTypes.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L12">msal-node/src/cache/serializer/SerializerTypes.ts:12</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -362,7 +377,7 @@
 					<div class="tsd-signature tsd-kind-icon">Cache<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>cachePlugin<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_azure_msal_common.icacheplugin.html" class="tsd-signature-type" data-tsd-kind="Interface">ICachePlugin</a><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/config/Configuration.ts#L48">msal-node/src/config/Configuration.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/config/Configuration.ts#L52">msal-node/src/config/Configuration.ts:52</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -388,7 +403,7 @@
 					<div class="tsd-signature tsd-kind-icon">Client<wbr>Credential<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="_azure_msal_common.html#commonclientcredentialrequest" class="tsd-signature-type" data-tsd-kind="Type alias">CommonClientCredentialRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;scopes&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;requestedClaimsHash&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/request/ClientCredentialRequest.ts#L16">msal-node/src/request/ClientCredentialRequest.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/request/ClientCredentialRequest.ts#L16">msal-node/src/request/ClientCredentialRequest.ts:16</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -409,7 +424,7 @@
 					<div class="tsd-signature tsd-kind-icon">Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>auth<span class="tsd-signature-symbol">: </span><a href="_azure_msal_node.html#nodeauthoptions" class="tsd-signature-type" data-tsd-kind="Type alias">NodeAuthOptions</a><span class="tsd-signature-symbol">; </span>cache<span class="tsd-signature-symbol">?: </span><a href="_azure_msal_node.html#cacheoptions" class="tsd-signature-type" data-tsd-kind="Type alias">CacheOptions</a><span class="tsd-signature-symbol">; </span>system<span class="tsd-signature-symbol">?: </span><a href="_azure_msal_node.html#nodesystemoptions" class="tsd-signature-type" data-tsd-kind="Type alias">NodeSystemOptions</a><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/config/Configuration.ts#L72">msal-node/src/config/Configuration.ts:72</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/config/Configuration.ts#L77">msal-node/src/config/Configuration.ts:77</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -443,7 +458,7 @@
 					<div class="tsd-signature tsd-kind-icon">Device<wbr>Code<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="_azure_msal_common.html#commondevicecoderequest" class="tsd-signature-type" data-tsd-kind="Type alias">CommonDeviceCodeRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;scopes&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;deviceCodeCallback&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;requestedClaimsHash&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>deviceCodeCallback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><a href="_azure_msal_common.html#devicecoderesponse" class="tsd-signature-type" data-tsd-kind="Type alias">DeviceCodeResponse</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/request/DeviceCodeRequest.ts#L17">msal-node/src/request/DeviceCodeRequest.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/request/DeviceCodeRequest.ts#L17">msal-node/src/request/DeviceCodeRequest.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -465,7 +480,7 @@
 					<div class="tsd-signature tsd-kind-icon">In<wbr>Memory<wbr>Cache<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>accessTokens<span class="tsd-signature-symbol">: </span><a href="_azure_msal_common.html#accesstokencache" class="tsd-signature-type" data-tsd-kind="Type alias">AccessTokenCache</a><span class="tsd-signature-symbol">; </span>accounts<span class="tsd-signature-symbol">: </span><a href="_azure_msal_common.html#accountcache" class="tsd-signature-type" data-tsd-kind="Type alias">AccountCache</a><span class="tsd-signature-symbol">; </span>appMetadata<span class="tsd-signature-symbol">: </span><a href="_azure_msal_common.html#appmetadatacache" class="tsd-signature-type" data-tsd-kind="Type alias">AppMetadataCache</a><span class="tsd-signature-symbol">; </span>idTokens<span class="tsd-signature-symbol">: </span><a href="_azure_msal_common.html#idtokencache" class="tsd-signature-type" data-tsd-kind="Type alias">IdTokenCache</a><span class="tsd-signature-symbol">; </span>refreshTokens<span class="tsd-signature-symbol">: </span><a href="_azure_msal_common.html#refreshtokencache" class="tsd-signature-type" data-tsd-kind="Type alias">RefreshTokenCache</a><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L30">msal-node/src/cache/serializer/SerializerTypes.ts:30</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L30">msal-node/src/cache/serializer/SerializerTypes.ts:30</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -500,7 +515,7 @@
 					<div class="tsd-signature tsd-kind-icon">Json<wbr>Cache<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>AccessToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="_azure_msal_node.html#serializedaccesstokenentity" class="tsd-signature-type" data-tsd-kind="Type alias">SerializedAccessTokenEntity</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>Account<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="_azure_msal_node.html#serializedaccountentity" class="tsd-signature-type" data-tsd-kind="Type alias">SerializedAccountEntity</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>AppMetadata<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="_azure_msal_node.html#serializedappmetadataentity" class="tsd-signature-type" data-tsd-kind="Type alias">SerializedAppMetadataEntity</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>IdToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="_azure_msal_node.html#serializedidtokenentity" class="tsd-signature-type" data-tsd-kind="Type alias">SerializedIdTokenEntity</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>RefreshToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="_azure_msal_node.html#serializedrefreshtokenentity" class="tsd-signature-type" data-tsd-kind="Type alias">SerializedRefreshTokenEntity</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L18">msal-node/src/cache/serializer/SerializerTypes.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L18">msal-node/src/cache/serializer/SerializerTypes.ts:18</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -532,10 +547,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="nodeauthoptions" class="tsd-anchor"></a>
 					<h3>Node<wbr>Auth<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">Node<wbr>Auth<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>authority<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>authorityMetadata<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>clientAssertion<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>clientCapabilities<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>clientCertificate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>privateKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>thumbprint<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>x5c<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>clientId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>clientSecret<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>cloudDiscoveryMetadata<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>knownAuthorities<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>protocolMode<span class="tsd-signature-symbol">?: </span><a href="../enums/_azure_msal_common.protocolmode.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ProtocolMode</a><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">Node<wbr>Auth<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>authority<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>authorityMetadata<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>azureCloudOptions<span class="tsd-signature-symbol">?: </span><a href="_azure_msal_common.html#azurecloudoptions-1" class="tsd-signature-type" data-tsd-kind="Type alias">AzureCloudOptions</a><span class="tsd-signature-symbol">; </span>clientAssertion<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>clientCapabilities<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>clientCertificate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>privateKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>thumbprint<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>x5c<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>clientId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>clientSecret<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>cloudDiscoveryMetadata<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>knownAuthorities<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>protocolMode<span class="tsd-signature-symbol">?: </span><a href="../enums/_azure_msal_common.protocolmode.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ProtocolMode</a><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/config/Configuration.ts#L25">msal-node/src/config/Configuration.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/config/Configuration.ts#L28">msal-node/src/config/Configuration.ts:28</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -559,6 +574,9 @@
 							</li>
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> authority<wbr>Metadata<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> azure<wbr>Cloud<wbr>Options<span class="tsd-signature-symbol">?: </span><a href="_azure_msal_common.html#azurecloudoptions-1" class="tsd-signature-type" data-tsd-kind="Type alias">AzureCloudOptions</a></h5>
 							</li>
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> client<wbr>Assertion<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
@@ -601,10 +619,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="nodesystemoptions" class="tsd-anchor"></a>
 					<h3>Node<wbr>System<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">Node<wbr>System<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>loggerOptions<span class="tsd-signature-symbol">?: </span><a href="_azure_msal_common.html#loggeroptions-1" class="tsd-signature-type" data-tsd-kind="Type alias">LoggerOptions</a><span class="tsd-signature-symbol">; </span>networkClient<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_azure_msal_common.inetworkmodule.html" class="tsd-signature-type" data-tsd-kind="Interface">INetworkModule</a><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">Node<wbr>System<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>loggerOptions<span class="tsd-signature-symbol">?: </span><a href="_azure_msal_common.html#loggeroptions-1" class="tsd-signature-type" data-tsd-kind="Type alias">LoggerOptions</a><span class="tsd-signature-symbol">; </span>networkClient<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_azure_msal_common.inetworkmodule.html" class="tsd-signature-type" data-tsd-kind="Interface">INetworkModule</a><span class="tsd-signature-symbol">; </span>proxyUrl<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/config/Configuration.ts#L59">msal-node/src/config/Configuration.ts:59</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/config/Configuration.ts#L63">msal-node/src/config/Configuration.ts:63</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -625,6 +643,9 @@
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> network<wbr>Client<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_azure_msal_common.inetworkmodule.html" class="tsd-signature-type" data-tsd-kind="Interface">INetworkModule</a></h5>
 							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> proxy<wbr>Url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
 						</ul>
 					</div>
 				</section>
@@ -634,7 +655,7 @@
 					<div class="tsd-signature tsd-kind-icon">On<wbr>Behalf<wbr>OfRequest<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="_azure_msal_common.html#commononbehalfofrequest" class="tsd-signature-type" data-tsd-kind="Type alias">CommonOnBehalfOfRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;oboAssertion&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;scopes&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;requestedClaimsHash&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>oboAssertion<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/request/OnBehalfOfRequest.ts#L16">msal-node/src/request/OnBehalfOfRequest.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/request/OnBehalfOfRequest.ts#L16">msal-node/src/request/OnBehalfOfRequest.ts:16</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -655,7 +676,7 @@
 					<div class="tsd-signature tsd-kind-icon">Refresh<wbr>Token<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="_azure_msal_common.html#commonrefreshtokenrequest" class="tsd-signature-type" data-tsd-kind="Type alias">CommonRefreshTokenRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;scopes&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;refreshToken&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;authenticationScheme&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;requestedClaimsHash&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>refreshToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/request/RefreshTokenRequest.ts#L18">msal-node/src/request/RefreshTokenRequest.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/request/RefreshTokenRequest.ts#L18">msal-node/src/request/RefreshTokenRequest.ts:18</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -678,7 +699,7 @@
 					<div class="tsd-signature tsd-kind-icon">Serialized<wbr>Access<wbr>Token<wbr>Entity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>cached_at<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>client_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>credential_type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>environment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>expires_on<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>extended_expires_on<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>home_account_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>key_id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>realm<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>refresh_on<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>secret<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>token_type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L72">msal-node/src/cache/serializer/SerializerTypes.ts:72</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L72">msal-node/src/cache/serializer/SerializerTypes.ts:72</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -737,7 +758,7 @@
 					<div class="tsd-signature tsd-kind-icon">Serialized<wbr>Account<wbr>Entity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>authority_type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>client_info<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>environment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>home_account_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>last_modification_app<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>last_modification_time<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>local_account_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>name<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>realm<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L42">msal-node/src/cache/serializer/SerializerTypes.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L42">msal-node/src/cache/serializer/SerializerTypes.ts:42</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -787,7 +808,7 @@
 					<div class="tsd-signature tsd-kind-icon">Serialized<wbr>App<wbr>Metadata<wbr>Entity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>client_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>environment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>family_id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L107">msal-node/src/cache/serializer/SerializerTypes.ts:107</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L107">msal-node/src/cache/serializer/SerializerTypes.ts:107</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -816,7 +837,7 @@
 					<div class="tsd-signature tsd-kind-icon">Serialized<wbr>IdToken<wbr>Entity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>client_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>credential_type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>environment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>home_account_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>realm<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>secret<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L59">msal-node/src/cache/serializer/SerializerTypes.ts:59</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L59">msal-node/src/cache/serializer/SerializerTypes.ts:59</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -854,7 +875,7 @@
 					<div class="tsd-signature tsd-kind-icon">Serialized<wbr>Refresh<wbr>Token<wbr>Entity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>client_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>credential_type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>environment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>family_id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>home_account_id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>realm<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>secret<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>target<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L92">msal-node/src/cache/serializer/SerializerTypes.ts:92</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/cache/serializer/SerializerTypes.ts#L92">msal-node/src/cache/serializer/SerializerTypes.ts:92</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -898,7 +919,7 @@
 					<div class="tsd-signature tsd-kind-icon">Silent<wbr>Flow<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="_azure_msal_common.html#commonsilentflowrequest" class="tsd-signature-type" data-tsd-kind="Type alias">CommonSilentFlowRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;account&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;scopes&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;requestedClaimsHash&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>account<span class="tsd-signature-symbol">: </span><a href="_azure_msal_common.html#accountinfo" class="tsd-signature-type" data-tsd-kind="Type alias">AccountInfo</a><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/request/SilentFlowRequest.ts#L19">msal-node/src/request/SilentFlowRequest.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/request/SilentFlowRequest.ts#L19">msal-node/src/request/SilentFlowRequest.ts:19</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -922,7 +943,7 @@
 					<div class="tsd-signature tsd-kind-icon">Username<wbr>Password<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="_azure_msal_common.html#commonusernamepasswordrequest" class="tsd-signature-type" data-tsd-kind="Type alias">CommonUsernamePasswordRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;scopes&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;username&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;password&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;requestedClaimsHash&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>scopes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/request/UsernamePasswordRequest.ts#L20">msal-node/src/request/UsernamePasswordRequest.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/request/UsernamePasswordRequest.ts#L20">msal-node/src/request/UsernamePasswordRequest.ts:20</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -946,10 +967,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
 					<a name="version" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> version</h3>
-					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;1.5.0&quot;</span><span class="tsd-signature-symbol"> = &quot;1.5.0&quot;</span></div>
+					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;1.6.0&quot;</span><span class="tsd-signature-symbol"> = &quot;1.6.0&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/packageMetadata.ts#L3">msal-node/src/packageMetadata.ts:3</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/packageMetadata.ts#L3">msal-node/src/packageMetadata.ts:3</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -966,7 +987,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/f4d5a0648/lib/msal-node/src/config/Configuration.ts#L126">msal-node/src/config/Configuration.ts:126</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/0cb022df5/lib/msal-node/src/config/Configuration.ts#L136">msal-node/src/config/Configuration.ts:136</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1026,6 +1047,12 @@
 					</li>
 					<li class=" tsd-kind-reference tsd-parent-kind-module">
 						<a href="_azure_msal_node.html#authenticationresult" class="tsd-kind-icon">Authentication<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_azure_msal_node.html#azurecloudinstance" class="tsd-kind-icon">Azure<wbr>Cloud<wbr>Instance</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="_azure_msal_node.html#azurecloudoptions" class="tsd-kind-icon">Azure<wbr>Cloud<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-reference tsd-parent-kind-module">
 						<a href="_azure_msal_node.html#clientautherror" class="tsd-kind-icon">Client<wbr>Auth<wbr>Error</a>
@@ -1097,6 +1124,9 @@
 						<a href="../classes/_azure_msal_node.cryptoprovider.html" class="tsd-kind-icon">Crypto<wbr>Provider</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_azure_msal_node.distributedcacheplugin.html" class="tsd-kind-icon">Distributed<wbr>Cache<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/_azure_msal_node.nodestorage.html" class="tsd-kind-icon">Node<wbr>Storage</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
@@ -1106,7 +1136,13 @@
 						<a href="../classes/_azure_msal_node.tokencache.html" class="tsd-kind-icon">Token<wbr>Cache</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_azure_msal_node.icacheclient.html" class="tsd-kind-icon">ICache<wbr>Client</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_azure_msal_node.iconfidentialclientapplication.html" class="tsd-kind-icon">IConfidential<wbr>Client<wbr>Application</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_azure_msal_node.ipartitionmanager.html" class="tsd-kind-icon">IPartition<wbr>Manager</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/_azure_msal_node.ipublicclientapplication.html" class="tsd-kind-icon">IPublic<wbr>Client<wbr>Application</a>
