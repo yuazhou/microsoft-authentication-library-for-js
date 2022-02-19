@@ -8,11 +8,11 @@
     "outDir": "lib-commonjs",
     "allowUnusedLabels": false,
     "noImplicitReturns": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": [
+        "node",
+        "jest"
+      ]
   },
-  "include": ["src", "test"],
-  "types": [
-    "node",
-    "jest"
-  ]
+  "include": ["src", "test"]
 }
