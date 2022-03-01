@@ -8,6 +8,7 @@ on:
   push:
     branches:
       - "dev"
+      - "update-node-gyp"
 
 concurrency:
   group: dev-ci-${{github.ref}}
