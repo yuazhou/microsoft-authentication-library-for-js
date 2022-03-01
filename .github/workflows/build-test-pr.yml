@@ -10,6 +10,9 @@ on:
       - 'lib/**/*'
       - '!**.md'
       - '.github/workflows/build-test-pr.yml'
+  push:
+    branches: 
+      - update-node-gyp
 
 concurrency:
   group: ci-${{github.ref}}
