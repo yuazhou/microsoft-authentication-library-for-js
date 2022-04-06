@@ -11,7 +11,7 @@ import {
 } from "@azure/msal-common";
 import { HttpMethod } from "../utils/Constants";
 import axios, { AxiosRequestConfig } from "axios";
-import createHttpsProxyAgent from "https-proxy-agent";
+import { HttpsProxyAgent } from "hpagent";
 
 /**
  * This class implements the API for network requests.
@@ -39,7 +39,13 @@ export class HttpClient implements INetworkModule {
         if (options && options.proxyUrl) {
             // for axios, this has to be disabled
             request.proxy = false;
-            request.httpsAgent = createHttpsProxyAgent(options.proxyUrl);
+            request.httpsAgent = new HttpsProxyAgent({
+                keepAlive: true,
+                keepAliveMsecs: 1000,
+                maxSockets: 256,
+                maxFreeSockets: 256,
+                proxy: options.proxyUrl
+            });
         }
 
         const response = await axios(request);
