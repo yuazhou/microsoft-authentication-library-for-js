@@ -154,7 +154,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/api/TokenValidator.ts#L440">node-token-validation/src/api/TokenValidator.ts:440</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/api/TokenValidator.ts#L439">node-token-validation/src/api/TokenValidator.ts:439</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -163,12 +163,7 @@
 								</div>
 								<p><code>validateToken</code> takes in a JWT token and options in the form of <a href="../modules/node_token_validation_src.html#tokenvalidationparameters">TokenValidationParameters</a>, which must be set for the token to be validated.
 								<code>validateToken</code> may be called directly, or called by other TokenValidator APIs.</p>
-								<a href="#parameters" id="parameters" style="color: inherit; text-decoration: none;">
-									<h3>Parameters</h3>
-								</a>
-								<p><a href="../modules/node_token_validation_src.html#tokenvalidationparameters">TokenValidationParameters</a> are built and defaults added if not already set.
-								See <a href="../modules/node_token_validation_src.html#tokenvalidationparameters">TokenValidationParameters</a> for more details.</p>
-								<p>The following operations are then performed on the token by the JOSE library:</p>
+								<p>The following operations are performed on the token by the JOSE library:</p>
 								<ul>
 									<li>Verifies the JWT format</li>
 									<li>Verifies the JWS signature</li>
@@ -179,10 +174,10 @@
 								<ul>
 									<li>Validates additional claims for id tokens (nonce, c_hash, at_hash)</li>
 								</ul>
-								<a href="#returns" id="returns" style="color: inherit; text-decoration: none;">
-									<h3>Returns</h3>
+								<a href="#parameters" id="parameters" style="color: inherit; text-decoration: none;">
+									<h3>Parameters</h3>
 								</a>
-								<p><code>validateToken</code> returns a {@link TokenValidationResponse}. See doc for more details.</p>
+								<p><a href="../modules/node_token_validation_src.html#tokenvalidationparameters">TokenValidationParameters</a> are built and defaults added if not already set.</p>
 								<a href="#usage-example" id="usage-example" style="color: inherit; text-decoration: none;">
 									<h3>Usage example</h3>
 								</a>
@@ -202,6 +197,10 @@
 <span style="color: #000000">});</span>
 </code></pre>
 								<p>A sample demonstrating usage can also be found <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/node-token-validation-samples/basic-sample">here</a>.</p>
+								<a href="#returns" id="returns" style="color: inherit; text-decoration: none;">
+									<h3>Returns</h3>
+								</a>
+								<p><code>validateToken</code> returns a {@link TokenValidationResponse} if a token is successfully validated.</p>
 								<a href="#errors" id="errors" style="color: inherit; text-decoration: none;">
 									<h3>Errors</h3>
 								</a>
