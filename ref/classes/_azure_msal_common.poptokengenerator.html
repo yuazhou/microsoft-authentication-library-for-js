@@ -108,7 +108,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-common/src/crypto/PopTokenGenerator.ts#L32">msal-common/src/crypto/PopTokenGenerator.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-common/src/crypto/PopTokenGenerator.ts#L35">msal-common/src/crypto/PopTokenGenerator.ts:35</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -128,22 +128,28 @@
 					<a name="generatecnf" class="tsd-anchor"></a>
 					<h3>generate<wbr>Cnf</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">generate<wbr>Cnf<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#baseauthrequest" class="tsd-signature-type" data-tsd-kind="Type alias">BaseAuthRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrClaims&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrNonce&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Cnf<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_msal_common.html#signedhttprequestparameters" class="tsd-signature-type" data-tsd-kind="Type alias">SignedHttpRequestParameters</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ReqCnfData</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-common/src/crypto/PopTokenGenerator.ts#L38">msal-common/src/crypto/PopTokenGenerator.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-common/src/crypto/PopTokenGenerator.ts#L47">msal-common/src/crypto/PopTokenGenerator.ts:47</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generates the req_cnf validated at the RP in the POP protocol for SHR parameters
+									and returns an object containing the keyid, the full req_cnf string and the req_cnf string hash</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>request: <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#baseauthrequest" class="tsd-signature-type" data-tsd-kind="Type alias">BaseAuthRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrClaims&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrNonce&quot;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>request: <a href="../modules/_azure_msal_common.html#signedhttprequestparameters" class="tsd-signature-type" data-tsd-kind="Type alias">SignedHttpRequestParameters</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ReqCnfData</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -151,19 +157,24 @@
 					<a name="generatekid" class="tsd-anchor"></a>
 					<h3>generate<wbr>Kid</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">generate<wbr>Kid<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#baseauthrequest" class="tsd-signature-type" data-tsd-kind="Type alias">BaseAuthRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrClaims&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrNonce&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ReqCnf</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Kid<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_msal_common.html#signedhttprequestparameters" class="tsd-signature-type" data-tsd-kind="Type alias">SignedHttpRequestParameters</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ReqCnf</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-common/src/crypto/PopTokenGenerator.ts#L43">msal-common/src/crypto/PopTokenGenerator.ts:43</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-common/src/crypto/PopTokenGenerator.ts#L63">msal-common/src/crypto/PopTokenGenerator.ts:63</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Generates key_id for a SHR token request</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>request: <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#baseauthrequest" class="tsd-signature-type" data-tsd-kind="Type alias">BaseAuthRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrClaims&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrNonce&quot;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>request: <a href="../modules/_azure_msal_common.html#signedhttprequestparameters" class="tsd-signature-type" data-tsd-kind="Type alias">SignedHttpRequestParameters</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ReqCnf</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -174,25 +185,30 @@
 					<a name="signpayload" class="tsd-anchor"></a>
 					<h3>sign<wbr>Payload</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">sign<wbr>Payload<span class="tsd-signature-symbol">(</span>payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, kid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#baseauthrequest" class="tsd-signature-type" data-tsd-kind="Type alias">BaseAuthRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrClaims&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrNonce&quot;</span><span class="tsd-signature-symbol">&gt;</span>, claims<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">sign<wbr>Payload<span class="tsd-signature-symbol">(</span>payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, keyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, request<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_msal_common.html#signedhttprequestparameters" class="tsd-signature-type" data-tsd-kind="Type alias">SignedHttpRequestParameters</a>, claims<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-common/src/crypto/PopTokenGenerator.ts#L61">msal-common/src/crypto/PopTokenGenerator.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-common/src/crypto/PopTokenGenerator.ts#L90">msal-common/src/crypto/PopTokenGenerator.ts:90</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Utility function to generate the signed JWT for an access_token</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>payload: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>kid: <span class="tsd-signature-type">string</span></h5>
+									<h5>keyId: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>request: <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#baseauthrequest" class="tsd-signature-type" data-tsd-kind="Type alias">BaseAuthRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrClaims&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrNonce&quot;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>request: <a href="../modules/_azure_msal_common.html#signedhttprequestparameters" class="tsd-signature-type" data-tsd-kind="Type alias">SignedHttpRequestParameters</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> claims: <span class="tsd-signature-type">object</span></h5>
@@ -206,22 +222,30 @@
 					<a name="signpoptoken" class="tsd-anchor"></a>
 					<h3>sign<wbr>Pop<wbr>Token</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">sign<wbr>Pop<wbr>Token<span class="tsd-signature-symbol">(</span>accessToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#baseauthrequest" class="tsd-signature-type" data-tsd-kind="Type alias">BaseAuthRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrClaims&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrNonce&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">sign<wbr>Pop<wbr>Token<span class="tsd-signature-symbol">(</span>accessToken<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, keyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, request<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_msal_common.html#signedhttprequestparameters" class="tsd-signature-type" data-tsd-kind="Type alias">SignedHttpRequestParameters</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-common/src/crypto/PopTokenGenerator.ts#L52">msal-common/src/crypto/PopTokenGenerator.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-common/src/crypto/PopTokenGenerator.ts#L78">msal-common/src/crypto/PopTokenGenerator.ts:78</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Signs the POP access_token with the local generated key-pair</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>accessToken: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>request: <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_msal_common.html#baseauthrequest" class="tsd-signature-type" data-tsd-kind="Type alias">BaseAuthRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;resourceRequestMethod&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;resourceRequestUri&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrClaims&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;shrNonce&quot;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>keyId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>request: <a href="../modules/_azure_msal_common.html#signedhttprequestparameters" class="tsd-signature-type" data-tsd-kind="Type alias">SignedHttpRequestParameters</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -295,6 +319,7 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>

@@ -72,6 +72,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="node_token_validation_src.html#loglevel" class="tsd-kind-icon">Log<wbr>Level</a></li>
 								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="node_token_validation_src.html#logger" class="tsd-kind-icon">Logger</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-module"><a href="node_token_validation_src.html#protocolmode" class="tsd-kind-icon">Protocol<wbr>Mode</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -102,26 +103,46 @@
 					<h3>Logger</h3>
 					Re-exports <a href="../classes/_azure_msal_common.logger.html">Logger</a>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-module">
+					<a name="protocolmode" class="tsd-anchor"></a>
+					<h3>Protocol<wbr>Mode</h3>
+					Re-exports <a href="../enums/_azure_msal_common.protocolmode.html">ProtocolMode</a>
+				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="configuration" class="tsd-anchor"></a>
 					<h3>Configuration</h3>
-					<div class="tsd-signature tsd-kind-icon">Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>auth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TokenValidationOptions</span><span class="tsd-signature-symbol">; </span>system<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SystemOptions</span><span class="tsd-signature-symbol"> }</span></div>
+					<div class="tsd-signature tsd-kind-icon">Configuration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>auth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TokenValidationOptions</span><span class="tsd-signature-symbol">; </span>system<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SystemOptions</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/node-token-validation/src/config/Configuration.ts#L10">node-token-validation/src/config/Configuration.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/config/Configuration.ts#L13">node-token-validation/src/config/Configuration.ts:13</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This object allows you to configure elements of the TokenValidator&#39;s functionality, and is passed into the constructor of TokenValidator.</p>
+						</div>
+					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
-								<h5>auth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TokenValidationOptions</span></h5>
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> auth<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">TokenValidationOptions</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>This is where you configure auth elements like the authority used, the protocol used, and whether there is a clock skew.</p>
+									</div>
+								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> system<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">SystemOptions</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>This is where you configure the logger and network client.</p>
+									</div>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -132,7 +153,7 @@
 					<div class="tsd-signature tsd-kind-icon">Token<wbr>Validation<wbr>Parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">BaseValidationParameters</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>validAudiences<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Required</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>validIssuers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Required</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/node-token-validation/src/config/TokenValidationParameters.ts#L27">node-token-validation/src/config/TokenValidationParameters.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/config/TokenValidationParameters.ts#L44">node-token-validation/src/config/TokenValidationParameters.ts:44</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -140,20 +161,34 @@
 							<p>Validation parameters object set by the user that contains options for the token to be validated against.
 							All claims are optional except for validIssuers and validAudiences, which are required.</p>
 						</div>
+						<p>The following OIDC-compliant claims on a JSON Web Token (JWT) are validated if set:</p>
 						<ul>
-							<li>validIssuers: Valid issuers used to check against the token&#39;s issuer.</li>
-							<li>validAudiences: Valid audiences used to check against the token&#39;s audience.</li>
-							<li>validAlgorithms: Valid algorithms used to check against the token&#39;s algorithm. Optional with default.</li>
-							<li>validTypes: Valid types used to check against the token <code>typ</code>. Optional with default.</li>
-							<li>issuerSigningKeys: Key store for token decryption.</li>
-							<li>issuerSigningJwksUri: Uri to retrieve the token signing keys.</li>
-							<li>requireExpirationTime: Boolean for whether tokens must have expiration value. Defaults to true.</li>
-							<li>requireSignedTokens: Boolean for whether tokens must be signed. Defaults to true.</li>
-							<li>subject: Subject used to check against token&#39;s <code>sub</code> value.</li>
-							<li>nonce: Nonce used to check against an id token&#39;s nonce value.</li>
-							<li>code: Authorization code used to check against an id token&#39;s c_hash.</li>
-							<li>accessTokenForAtHash: Access token used to check against an id token&#39;s at_hash.</li>
+							<li>validIssuers</li>
+							<li>validAudiences</li>
+							<li>subject</li>
 						</ul>
+						<p>The following additional claims are validated if set:</p>
+						<ul>
+							<li>nonce</li>
+							<li>code</li>
+							<li>accessTokenForAtHash</li>
+						</ul>
+						<p>The following parameters are for decoding and validating the JSON Web Signature (JWS):</p>
+						<ul>
+							<li>validAlgorithms</li>
+							<li>issuerSigningKeys</li>
+							<li>issuerSigningJwksUri</li>
+						</ul>
+						<p>The following are additional parameters that currently have defaults. These parameters will be used in future validation scenarios:</p>
+						<ul>
+							<li>validTypes</li>
+							<li>requireExpirationTime</li>
+							<li>requireSignedTokens</li>
+						</ul>
+						<p>Additional information about claims can be found here:
+							<a href="https://openid.net/specs/openid-connect-core-1_0.html#IDToken">https://openid.net/specs/openid-connect-core-1_0.html#IDToken</a>
+							<a href="https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation">https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation</a>
+						<a href="https://openid.net/specs/openid-connect-core-1_0.html#ImplicitTokenValidation">https://openid.net/specs/openid-connect-core-1_0.html#ImplicitTokenValidation</a></p>
 					</div>
 				</section>
 			</section>
@@ -195,6 +230,9 @@
 					<li class=" tsd-kind-reference tsd-parent-kind-module">
 						<a href="node_token_validation_src.html#logger" class="tsd-kind-icon">Logger</a>
 					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="node_token_validation_src.html#protocolmode" class="tsd-kind-icon">Protocol<wbr>Mode</a>
+					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/node_token_validation_src.tokenvalidator.html" class="tsd-kind-icon">Token<wbr>Validator</a>
 					</li>
@@ -214,6 +252,7 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>

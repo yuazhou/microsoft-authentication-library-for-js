@@ -95,6 +95,7 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_azure_msal_browser.browserutils.html#blockacquiretokeninpopups" class="tsd-kind-icon">block<wbr>Acquire<wbr>Token<wbr>InPopups</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_azure_msal_browser.browserutils.html#blocknativebrokercalledbeforeinitialized" class="tsd-kind-icon">block<wbr>Native<wbr>Broker<wbr>Called<wbr>Before<wbr>Initialized</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_azure_msal_browser.browserutils.html#blocknonbrowserenvironment" class="tsd-kind-icon">block<wbr>Non<wbr>Browser<wbr>Environment</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_azure_msal_browser.browserutils.html#blockredirectiniframe" class="tsd-kind-icon">block<wbr>Redirect<wbr>InIframe</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_azure_msal_browser.browserutils.html#blockreloadinhiddeniframes" class="tsd-kind-icon">block<wbr>Reload<wbr>InHidden<wbr>Iframes</a></li>
@@ -140,7 +141,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-browser/src/utils/BrowserUtils.ts#L114">msal-browser/src/utils/BrowserUtils.ts:114</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-browser/src/utils/BrowserUtils.ts#L114">msal-browser/src/utils/BrowserUtils.ts:114</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -148,6 +149,39 @@
 									<p>Block redirectUri loaded in popup from calling AcquireToken APIs</p>
 								</div>
 							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="blocknativebrokercalledbeforeinitialized" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> block<wbr>Native<wbr>Broker<wbr>Called<wbr>Before<wbr>Initialized</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">block<wbr>Native<wbr>Broker<wbr>Called<wbr>Before<wbr>Initialized<span class="tsd-signature-symbol">(</span>allowNativeBroker<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, initialized<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-browser/src/utils/BrowserUtils.ts#L136">msal-browser/src/utils/BrowserUtils.ts:136</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Throws error if native brokering is enabled but initialize hasn&#39;t been called</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>allowNativeBroker: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>initialized: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -162,7 +196,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-browser/src/utils/BrowserUtils.ts#L125">msal-browser/src/utils/BrowserUtils.ts:125</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-browser/src/utils/BrowserUtils.ts#L125">msal-browser/src/utils/BrowserUtils.ts:125</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -193,7 +227,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-browser/src/utils/BrowserUtils.ts#L103">msal-browser/src/utils/BrowserUtils.ts:103</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-browser/src/utils/BrowserUtils.ts#L103">msal-browser/src/utils/BrowserUtils.ts:103</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -230,7 +264,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-browser/src/utils/BrowserUtils.ts#L90">msal-browser/src/utils/BrowserUtils.ts:90</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-browser/src/utils/BrowserUtils.ts#L90">msal-browser/src/utils/BrowserUtils.ts:90</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -253,7 +287,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-browser/src/utils/BrowserUtils.ts#L22">msal-browser/src/utils/BrowserUtils.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-browser/src/utils/BrowserUtils.ts#L22">msal-browser/src/utils/BrowserUtils.ts:22</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -281,7 +315,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-browser/src/utils/BrowserUtils.ts#L134">msal-browser/src/utils/BrowserUtils.ts:134</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-browser/src/utils/BrowserUtils.ts#L145">msal-browser/src/utils/BrowserUtils.ts:145</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -303,7 +337,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-browser/src/utils/BrowserUtils.ts#L78">msal-browser/src/utils/BrowserUtils.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-browser/src/utils/BrowserUtils.ts#L78">msal-browser/src/utils/BrowserUtils.ts:78</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -325,7 +359,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-browser/src/utils/BrowserUtils.ts#L62">msal-browser/src/utils/BrowserUtils.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-browser/src/utils/BrowserUtils.ts#L62">msal-browser/src/utils/BrowserUtils.ts:62</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -347,7 +381,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-browser/src/utils/BrowserUtils.ts#L69">msal-browser/src/utils/BrowserUtils.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-browser/src/utils/BrowserUtils.ts#L69">msal-browser/src/utils/BrowserUtils.ts:69</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -369,7 +403,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-browser/src/utils/BrowserUtils.ts#L43">msal-browser/src/utils/BrowserUtils.ts:43</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-browser/src/utils/BrowserUtils.ts#L43">msal-browser/src/utils/BrowserUtils.ts:43</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -391,7 +425,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-browser/src/utils/BrowserUtils.ts#L50">msal-browser/src/utils/BrowserUtils.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-browser/src/utils/BrowserUtils.ts#L50">msal-browser/src/utils/BrowserUtils.ts:50</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -413,7 +447,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/5de601f14/lib/msal-browser/src/utils/BrowserUtils.ts#L34">msal-browser/src/utils/BrowserUtils.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/msal-browser/src/utils/BrowserUtils.ts#L34">msal-browser/src/utils/BrowserUtils.ts:34</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -476,6 +510,9 @@
 								<a href="_azure_msal_browser.browserutils.html#blockacquiretokeninpopups" class="tsd-kind-icon">block<wbr>Acquire<wbr>Token<wbr>InPopups</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_azure_msal_browser.browserutils.html#blocknativebrokercalledbeforeinitialized" class="tsd-kind-icon">block<wbr>Native<wbr>Broker<wbr>Called<wbr>Before<wbr>Initialized</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_azure_msal_browser.browserutils.html#blocknonbrowserenvironment" class="tsd-kind-icon">block<wbr>Non<wbr>Browser<wbr>Environment</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
@@ -522,6 +559,7 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
 				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
