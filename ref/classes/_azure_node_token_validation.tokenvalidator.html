@@ -1,0 +1,605 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TokenValidator | microsoft-authentication-libraries-for-js</title>
+	<meta name="description" content="Documentation for microsoft-authentication-libraries-for-js">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">microsoft-authentication-libraries-for-js</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">microsoft-authentication-libraries-for-js</a>
+				</li>
+				<li>
+					<a href="../modules/_azure_node_token_validation.html">@azure/node-token-validation</a>
+				</li>
+				<li>
+					<a href="_azure_node_token_validation.tokenvalidator.html">TokenValidator</a>
+				</li>
+			</ul>
+			<h1>Class TokenValidator</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The TokenValidator class is the object exposed by the library to perform token validation.
+						Use the TokenValidator class if you wish to validate id or access tokens for your app.</p>
+					</div>
+					<p>TokenValidator can be initialized as follows:</p>
+					<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">nodeTokenValidation</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;@azure/node-token-validation&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">tokenValidator</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">nodeTokenValidation</span><span style="color: #000000">.</span><span style="color: #795E26">TokenValidator</span><span style="color: #000000">();</span>
+</code></pre>
+					<p>Note that the TokenValidator may be initialized with optional configurations. When configurations are not provided, library defaults will be used. See <a href="../modules/_azure_node_token_validation.html#configuration">Configuration</a> for more details.</p>
+					<p>Once initialized, APIs for token validation are available for use.</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">TokenValidator</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_azure_node_token_validation.tokenvalidator.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_node_token_validation.tokenvalidator.html#validatetoken" class="tsd-kind-icon">validate<wbr>Token</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_node_token_validation.tokenvalidator.html#validatetokenfromrequest" class="tsd-kind-icon">validate<wbr>Token<wbr>From<wbr>Request</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_node_token_validation.tokenvalidator.html#validatetokenfromresponse" class="tsd-kind-icon">validate<wbr>Token<wbr>From<wbr>Response</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_azure_node_token_validation.tokenvalidator.html#validatetokenmiddleware" class="tsd-kind-icon">validate<wbr>Token<wbr>Middleware</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Token<wbr>Validator<span class="tsd-signature-symbol">(</span>configuration<span class="tsd-signature-symbol">?: </span><a href="../modules/_azure_node_token_validation.html#configuration" class="tsd-signature-type" data-tsd-kind="Type alias">Configuration</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_azure_node_token_validation.tokenvalidator.html" class="tsd-signature-type" data-tsd-kind="Class">TokenValidator</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/api/TokenValidator.ts#L45">node-token-validation/src/api/TokenValidator.ts:45</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Constructor for the TokenValidator class used to instantiate the TokenValidator object.</p>
+								</div>
+								<p>The Configuration object is optional, and default configuration options will be used when configurations are not passed in.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> configuration: <a href="../modules/_azure_node_token_validation.html#configuration" class="tsd-signature-type" data-tsd-kind="Type alias">Configuration</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_azure_node_token_validation.tokenvalidator.html" class="tsd-signature-type" data-tsd-kind="Class">TokenValidator</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="validatetoken" class="tsd-anchor"></a>
+					<h3>validate<wbr>Token</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">validate<wbr>Token<span class="tsd-signature-symbol">(</span>token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationParameters</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_node_token_validation.html#tokenvalidationresponse" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/api/TokenValidator.ts#L439">node-token-validation/src/api/TokenValidator.ts:439</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Base function for token validation.</p>
+								</div>
+								<p><code>validateToken</code> takes in a JWT token and options in the form of <a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters">TokenValidationParameters</a>, which must be set for the token to be validated.
+								<code>validateToken</code> may be called directly, or called by other TokenValidator APIs.</p>
+								<p>The following operations are performed on the token by the JOSE library:</p>
+								<ul>
+									<li>Verifies the JWT format</li>
+									<li>Verifies the JWS signature</li>
+									<li>Validates the JWT claims set</li>
+								</ul>
+								<p>See documentation for more details on JOSE: <a href="https://github.com/panva/jose">https://github.com/panva/jose</a></p>
+								<p><code>validateToken</code> also performs the following additional operations on the token:</p>
+								<ul>
+									<li>Validates additional claims for id tokens (nonce, c_hash, at_hash)</li>
+								</ul>
+								<a href="#parameters" id="parameters" style="color: inherit; text-decoration: none;">
+									<h3>Parameters</h3>
+								</a>
+								<p><a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters">TokenValidationParameters</a> are built and defaults added if not already set.</p>
+								<a href="#usage-example" id="usage-example" style="color: inherit; text-decoration: none;">
+									<h3>Usage example</h3>
+								</a>
+								<p>To validate a token using the <code>validateToken</code> API, pass in a token along with the <code>tokenValidationParams</code>.</p>
+								<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">nodeTokenValidation</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;@azure/node-token-validation&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">tokenValidator</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">nodeTokenValidation</span><span style="color: #000000">.</span><span style="color: #795E26">TokenValidator</span><span style="color: #000000">();</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">tokenValidationParams</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">   </span><span style="color: #001080">validIssuers:</span><span style="color: #000000"> [</span><span style="color: #A31515">&quot;issuer-here&quot;</span><span style="color: #000000">],</span>
+<span style="color: #000000">   </span><span style="color: #001080">validAudiences:</span><span style="color: #000000"> [</span><span style="color: #A31515">&quot;audience-here&quot;</span><span style="color: #000000">]</span>
+<span style="color: #000000">};</span>
+
+<span style="color: #001080">tokenValidator</span><span style="color: #000000">.</span><span style="color: #795E26">validateToken</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;token-here&quot;</span><span style="color: #000000">, </span><span style="color: #001080">tokenValidationParams</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">((</span><span style="color: #001080">response</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">   </span><span style="color: #008000">// Use token validation response</span>
+<span style="color: #000000">}).</span><span style="color: #795E26">catch</span><span style="color: #000000">((</span><span style="color: #001080">error</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">   </span><span style="color: #008000">// Handle error here</span>
+<span style="color: #000000">});</span>
+</code></pre>
+								<p>A sample demonstrating usage can also be found <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/node-token-validation-samples/basic-sample">here</a>.</p>
+								<a href="#returns" id="returns" style="color: inherit; text-decoration: none;">
+									<h3>Returns</h3>
+								</a>
+								<p><code>validateToken</code> returns a <a href="../modules/_azure_node_token_validation.html#tokenvalidationresponse">TokenValidationResponse</a> if a token is successfully validated.</p>
+								<a href="#errors" id="errors" style="color: inherit; text-decoration: none;">
+									<h3>Errors</h3>
+								</a>
+								<p>The following configuration errors from the Node Token Validation library may be thrown when validating a token.
+								Ensure the missing token/claims are present before validating.</p>
+								<ul>
+									<li>Missing token error</li>
+									<li>Empty issuer error</li>
+									<li>Empty audience error</li>
+									<li>Missing nonce error</li>
+									<li>Invalid metadata error</li>
+								</ul>
+								<p>The following validation errors from the Node Token Validation library may be thrown. This indicates an invalid token.</p>
+								<ul>
+									<li>Invalid nonce error</li>
+									<li>Invalid c_hash error</li>
+									<li>Invalid at_hash error</li>
+								</ul>
+								<p>Additional errors regarding the JWS signature or JWT claims may be thrown by the JOSE library. These errors indicate an invalid token.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>token: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>JWT token to be validated</p>
+									</div>
+								</li>
+								<li>
+									<h5>options: <a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationParameters</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_node_token_validation.html#tokenvalidationresponse" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="validatetokenfromrequest" class="tsd-anchor"></a>
+					<h3>validate<wbr>Token<wbr>From<wbr>Request</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">validate<wbr>Token<wbr>From<wbr>Request<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ExpressRequest</span>, options<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationParameters</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_node_token_validation.html#tokenvalidationresponse" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/api/TokenValidator.ts#L222">node-token-validation/src/api/TokenValidator.ts:222</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Function to validate token from request object.</p>
+								</div>
+								<p><code>validateTokenFromRequest</code> extracts the token from either the request authorization header or the request body, and calls <a href="_azure_node_token_validation.tokenvalidator.html#validatetoken">validateToken</a> to validate the token.</p>
+								<p><code>validateTokenFromRequest</code> may be called directly or called by other TokenValidator APIs.
+								See <a href="_azure_node_token_validation.tokenvalidator.html#validatetoken">validateToken</a> for details on claims validated and errors thrown.</p>
+								<a href="#parameters" id="parameters" style="color: inherit; text-decoration: none;">
+									<h3>Parameters</h3>
+								</a>
+								<p><code>validateTokenFromRequest</code> takes in a request in the form of {@link ExpressRequest}, with headers, and optional body and sessions. The token to be validated should be present in either the authorization header or the request body.</p>
+								<p>It also takes in options in the form of <a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters">TokenValidationParameters</a>, which must be set for the token to be validated.</p>
+								<a href="#usage-example" id="usage-example" style="color: inherit; text-decoration: none;">
+									<h3>Usage example</h3>
+								</a>
+								<p>The following code snippet demonstrates instantiating the TokenValidator and using <code>validateTokenFromRequest</code>.</p>
+								<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">validator</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;@azure/node-token-validation&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// Instantiate TokenValidator</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">tokenValidator</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">validator</span><span style="color: #000000">.</span><span style="color: #795E26">TokenValidator</span><span style="color: #000000">();</span>
+
+<span style="color: #008000">// Ensure token is present in request authorization header or body</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">request</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">   </span><span style="color: #008000">// Your request here</span>
+<span style="color: #000000">};</span>
+
+<span style="color: #008000">// Set token validation parameters</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">tokenValidationParams</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">   </span><span style="color: #001080">validIssuers:</span><span style="color: #000000"> [</span><span style="color: #A31515">&#039;valid-issuer-here]</span><span style="color: #CD3131">,</span>
+<span style="color: #000000">   </span><span style="color: #001080">validAudiences</span><span style="color: #000000">: [</span><span style="color: #A31515">&#039;valid-audience-here</span><span style="color: #CD3131">]</span>
+<span style="color: #000000">};</span>
+
+<span style="color: #008000">// Validate token</span>
+<span style="color: #001080">tokenValidator</span><span style="color: #000000">.</span><span style="color: #795E26">validateTokenFromRequest</span><span style="color: #000000">(</span><span style="color: #001080">request</span><span style="color: #000000">, </span><span style="color: #001080">tokenValidationParams</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">((</span><span style="color: #001080">response</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">   </span><span style="color: #008000">// Use token validation response</span>
+<span style="color: #000000">}).</span><span style="color: #795E26">catch</span><span style="color: #000000">((</span><span style="color: #001080">error</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">   </span><span style="color: #008000">// Handle error here</span>
+<span style="color: #000000">});</span>
+</code></pre>
+								<a href="#response" id="response" style="color: inherit; text-decoration: none;">
+									<h3>Response</h3>
+								</a>
+								<p>If a token is successfully validated, <code>validateTokenFromRequest</code> will return a <a href="../modules/_azure_node_token_validation.html#tokenvalidationresponse">TokenValidationResponse</a>.</p>
+								<a href="#errors" id="errors" style="color: inherit; text-decoration: none;">
+									<h3>Errors</h3>
+								</a>
+								<p><code>validateTokenFromRequest</code> may throw a Missing Token Error if a token is not found in the authorization header or request body.</p>
+								<p>At this time, <code>validateTokenFromRequest</code> is only validating tokens from the authorization header with the authorization scheme of &quot;Bearer&quot;.
+								Tokens extracted from the authorization header that are not &quot;Bearer&quot; tokens will be validated separately from the Node Token Validation library in the future.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>request: <span class="tsd-signature-type">ExpressRequest</span></h5>
+								</li>
+								<li>
+									<h5>options: <a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationParameters</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_node_token_validation.html#tokenvalidationresponse" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="validatetokenfromresponse" class="tsd-anchor"></a>
+					<h3>validate<wbr>Token<wbr>From<wbr>Response</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">validate<wbr>Token<wbr>From<wbr>Response<span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_msal_common.html#authenticationresult" class="tsd-signature-type" data-tsd-kind="Type alias">AuthenticationResult</a>, idTokenOptions<span class="tsd-signature-symbol">?: </span><a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationParameters</a>, accessTokenOptions<span class="tsd-signature-symbol">?: </span><a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationParameters</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_node_token_validation.html#tokenvalidationresponse" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationResponse</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/api/TokenValidator.ts#L316">node-token-validation/src/api/TokenValidator.ts:316</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Function to validate tokens from msal-node token acquisition response.</p>
+								</div>
+								<p><code>validateTokenFromResponse</code> is able to validate both the id token and the access token returned on an MSAL acquire token response and return an array of <a href="../modules/_azure_node_token_validation.html#tokenvalidationresponse">TokenValidationResponse</a>.
+								<code>validateTokenFromResponse</code> currently only validates tokens if the <code>tokenType</code> on the response is &#39;Bearer&#39;.</p>
+								<p><code>validateTokenFromResponse</code> calls <a href="_azure_node_token_validation.tokenvalidator.html#validatetoken">validateToken</a> to perform token validation. See <a href="_azure_node_token_validation.tokenvalidator.html#validatetoken">validateToken</a> for details on claims validated and errors thrown.</p>
+								<a href="#parameters" id="parameters" style="color: inherit; text-decoration: none;">
+									<h3>Parameters</h3>
+								</a>
+								<p><code>validateTokenFromResponse</code> takes in a response in the form of an <a href="../modules/_azure_msal_common.html#authenticationresult">AuthenticationResult</a>.
+								This is the response from MSAL&#39;s acquire token APIs, and can be passed into <code>validateTokenFromResponse</code> directly.</p>
+								<p>It also takes in optional <code>idTokenOptions</code> or <code>accessTokenOptions</code> in the form of <a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters">TokenValidationParameters</a>.
+								These are the parameters against which the id token or the access token from the response will be validated.</p>
+								<p>If options are not provided, but an id token or an access token is present in the response, validation will not occur, and a message indicating that the token was not validated will be logged.</p>
+								<a href="#usage-example" id="usage-example" style="color: inherit; text-decoration: none;">
+									<h3>Usage example</h3>
+								</a>
+								<p>See the below example for how to instantiate <code>TokenValidator</code> and use <code>validateTokenFromResponse</code>:</p>
+								<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">validator</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;@azure/node-token-validation&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// Instantiate TokenValidator</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">tokenValidator</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">validator</span><span style="color: #000000">.</span><span style="color: #795E26">TokenValidator</span><span style="color: #000000">();</span>
+
+<span style="color: #008000">// Additional steps are needed before this to acquire token using msal-node. Omitted for brevity. See full sample for details.</span>
+<span style="color: #001080">clientApplication</span><span style="color: #000000">.</span><span style="color: #795E26">acquireTokenByCode</span><span style="color: #000000">(</span><span style="color: #001080">tokenRequest</span><span style="color: #000000">, </span><span style="color: #001080">authCodeResponse</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">((</span><span style="color: #001080">response</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+
+<span style="color: #000000">     </span><span style="color: #008000">// Set id token options</span>
+<span style="color: #000000">     </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">idTokenOptions</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">         </span><span style="color: #001080">validIssuers:</span><span style="color: #000000"> [</span><span style="color: #A31515">&#039;valid-issuer-here]</span><span style="color: #CD3131">,</span>
+<span style="color: #000000">         </span><span style="color: #001080">validAudiences</span><span style="color: #000000">: [</span><span style="color: #A31515">&#039;valid-audience-here]</span><span style="color: #CD3131">,</span>
+<span style="color: #000000">         </span><span style="color: #008000">// Nonce should be validated against claims received from response</span>
+<span style="color: #000000">         </span><span style="color: #001080">nonce</span><span style="color: #000000">: </span><span style="color: #001080">response</span><span style="color: #000000">.</span><span style="color: #001080">idTokenClaims</span><span style="color: #000000">.</span><span style="color: #001080">nonce</span>
+<span style="color: #000000">     };</span>
+
+<span style="color: #000000">     </span><span style="color: #008000">// Validate token</span>
+<span style="color: #000000">     </span><span style="color: #001080">tokenValidator</span><span style="color: #000000">.</span><span style="color: #795E26">validateTokenFromResponse</span><span style="color: #000000">(</span><span style="color: #001080">response</span><span style="color: #000000">, </span><span style="color: #001080">idTokenOptions</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">((</span><span style="color: #001080">response</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">          </span><span style="color: #008000">// Use token validation response</span>
+<span style="color: #000000">     }).</span><span style="color: #795E26">catch</span><span style="color: #000000">((</span><span style="color: #001080">error</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">          </span><span style="color: #008000">// Handle token validation errors here</span>
+<span style="color: #000000">     });</span>
+
+<span style="color: #000000">}).</span><span style="color: #795E26">catch</span><span style="color: #000000">((</span><span style="color: #001080">error</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">     </span><span style="color: #008000">// Handle token acquisition errors here</span>
+<span style="color: #000000">});</span>
+</code></pre>
+								<p>A sample demonstrating acquiring a token using msal-node and validating the response can be found <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/node-token-validation-samples/response-sample">here</a>.
+								More information on how to acquire tokens using msal-node can be found <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-node">here</a>.</p>
+								<a href="#returns" id="returns" style="color: inherit; text-decoration: none;">
+									<h3>Returns</h3>
+								</a>
+								<p><code>validateTokenFromResponse</code> returns an array of <a href="../modules/_azure_node_token_validation.html#tokenvalidationresponse">TokenValidationResponse</a>, with separate responses for the id tokens and access tokens validated.</p>
+								<a href="#errors" id="errors" style="color: inherit; text-decoration: none;">
+									<h3>Errors</h3>
+								</a>
+								<p><code>validateTokenFromResponse</code> will currently throw an Invalid Authentication Scheme error if the <code>tokenType</code> on the response is not &quot;Bearer&quot;.
+									The Node Token Validation library is currently only handling bearer tokens.
+								Other types of tokens will be validated separately from the Node Token Validation library in the future.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>response: <a href="../modules/_azure_msal_common.html#authenticationresult" class="tsd-signature-type" data-tsd-kind="Type alias">AuthenticationResult</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> idTokenOptions: <a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationParameters</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> accessTokenOptions: <a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationParameters</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_azure_node_token_validation.html#tokenvalidationresponse" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationResponse</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="validatetokenmiddleware" class="tsd-anchor"></a>
+					<h3>validate<wbr>Token<wbr>Middleware</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">validate<wbr>Token<wbr>Middleware<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationParameters</a>, resource<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../modules/_azure_node_token_validation.html#tokenvalidationmiddlewareresponse" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationMiddlewareResponse</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/api/TokenValidator.ts#L132">node-token-validation/src/api/TokenValidator.ts:132</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Middleware-style function to validate token from request.</p>
+								</div>
+								<p><code>validateTokenMiddleware</code> is an Express.js-style middleware function that validates a token on an Express network request.
+								It can also optionally extract a token from the request session and add it to the authorization header before validating.</p>
+								<p><code>validateTokenMiddleware</code> calls {@link validateRequest} and <a href="_azure_node_token_validation.tokenvalidator.html#validatetoken">validateToken</a> to carry out token validation.
+									See {@link validateRequest} for details on token extraction from a request header or body.
+								See <a href="_azure_node_token_validation.tokenvalidator.html#validatetoken">validateToken</a> for details on claims validated and errors thrown.</p>
+								<a href="#parameters" id="parameters" style="color: inherit; text-decoration: none;">
+									<h3>Parameters</h3>
+								</a>
+								<p><code>validateTokenMiddleware</code> takes in options in the form of <a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters">TokenValidationParameters</a>, which must be set for the token to be validated.</p>
+								<p><code>validateTokenMiddleware</code> also takes in an optional <code>resource</code> string. This is the resource for which an access token should be extracted from req.sessions.protectedResources, and attached to the authorization header.</p>
+								<a href="#returns" id="returns" style="color: inherit; text-decoration: none;">
+									<h3>Returns</h3>
+								</a>
+								<p><code>validateTokenMiddleware</code> returns a <a href="../modules/_azure_node_token_validation.html#tokenvalidationmiddlewareresponse">TokenValidationMiddlewareResponse</a>, and will call next() when a token is found and successfully validated.</p>
+								<a href="#usage-example" id="usage-example" style="color: inherit; text-decoration: none;">
+									<h3>Usage example</h3>
+								</a>
+								<p>See the below example for how to instantiate <code>TokenValidator</code> and use <code>validateTokenMiddleware</code>.</p>
+								<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">validator</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;@azure/node-token-validation&#039;</span><span style="color: #000000">);</span>
+
+<span style="color: #008000">// Instantiate TokenValidator</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">tokenValidator</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">validator</span><span style="color: #000000">.</span><span style="color: #795E26">TokenValidator</span><span style="color: #000000">();</span>
+
+<span style="color: #008000">// Set token validation parameters</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">tokenValidationParams</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">     </span><span style="color: #001080">validIssuers:</span><span style="color: #000000"> [</span><span style="color: #A31515">&#039;valid-issuer-here]</span><span style="color: #CD3131">,</span>
+<span style="color: #000000">     </span><span style="color: #001080">validAudiences</span><span style="color: #000000">: [</span><span style="color: #A31515">&#039;valid-audience-here</span><span style="color: #CD3131">]</span>
+<span style="color: #000000">};</span>
+
+<span style="color: #008000">// Validate token</span>
+<span style="color: #001080">app</span><span style="color: #000000">.</span><span style="color: #795E26">get</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;/myRoute&#039;</span><span style="color: #000000">, </span>
+<span style="color: #000000">     </span><span style="color: #008000">// Write function or have some other way of putting token in req.session.protectedResources</span>
+<span style="color: #000000">     </span><span style="color: #001080">mainController</span><span style="color: #000000">.</span><span style="color: #795E26">getToken</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;custom&#039;</span><span style="color: #000000">, </span><span style="color: #001080">appSettings</span><span style="color: #000000">, </span><span style="color: #001080">msalClient</span><span style="color: #000000">, </span><span style="color: #001080">cryptoProvider</span><span style="color: #000000">),</span>
+<span style="color: #000000">     </span><span style="color: #008000">// Use validateTokenMiddleware</span>
+<span style="color: #000000">     </span><span style="color: #001080">tokenValidator</span><span style="color: #000000">.</span><span style="color: #795E26">validateTokenMiddleware</span><span style="color: #000000">(</span><span style="color: #001080">tokenValidationParams</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;custom&#039;</span><span style="color: #000000">), </span>
+<span style="color: #000000">     (</span><span style="color: #001080">req</span><span style="color: #000000">, </span><span style="color: #001080">res</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">         </span><span style="color: #008000">// Call function with validated access token stored in req.session.protectedResources.custom</span>
+<span style="color: #000000">         </span><span style="color: #001080">res</span><span style="color: #000000">.</span><span style="color: #795E26">status</span><span style="color: #000000">(</span><span style="color: #098658">200</span><span style="color: #000000">);  </span>
+<span style="color: #000000">     });</span>
+</code></pre>
+								<p>A sample demonstrating this usage can also be found <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/node-token-validation-samples/express-sample">here</a>.</p>
+								<a href="#errors" id="errors" style="color: inherit; text-decoration: none;">
+									<h3>Errors</h3>
+								</a>
+								<p>The <code>next</code> function may be called with a missing token error for the following reasons:</p>
+								<ul>
+									<li>The resource provided is not a protectedResource in req.session. As the resource is not found, a token is unable to be found and added.</li>
+									<li>The resource provided is found in req.session.protectedResource, but no access token was in the resource.</li>
+								</ul>
+								<p>You should ensure that a token is available in req.sessions.protectedResource[YOUR-RESOURCE] before calling validateTokenMiddleware again.</p>
+								<p><code>validateTokenMiddleware</code> will also call next with any other errors that are thrown in <code>validateRequest</code> and <code>validateToken</code>.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationParameters</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> resource: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Optional resource to retrieve access token from session</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../modules/_azure_node_token_validation.html#tokenvalidationmiddlewareresponse" class="tsd-signature-type" data-tsd-kind="Type alias">TokenValidationMiddlewareResponse</a></h4>
+							<p>{@link (TokenValidationMiddlewareResponse:type)}</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_azure_msal.html">@azure/msal</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_azure_msal_angular.html">@azure/msal-<wbr>angular</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_azure_msal_browser.html">@azure/msal-<wbr>browser</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_azure_msal_common.html">@azure/msal-<wbr>common</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_azure_msal_node.html">@azure/msal-<wbr>node</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_azure_msal_react.html">@azure/msal-<wbr>react</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/_azure_node_token_validation.html">@azure/node-<wbr>token-<wbr>validation</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_azure_node_token_validation.html#loglevel" class="tsd-kind-icon">Log<wbr>Level</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_azure_node_token_validation.html#logger" class="tsd-kind-icon">Logger</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-module">
+						<a href="../modules/_azure_node_token_validation.html#protocolmode" class="tsd-kind-icon">Protocol<wbr>Mode</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module">
+						<a href="_azure_node_token_validation.tokenvalidator.html" class="tsd-kind-icon">Token<wbr>Validator</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_azure_node_token_validation.tokenvalidator.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_azure_node_token_validation.tokenvalidator.html#validatetoken" class="tsd-kind-icon">validate<wbr>Token</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_azure_node_token_validation.tokenvalidator.html#validatetokenfromrequest" class="tsd-kind-icon">validate<wbr>Token<wbr>From<wbr>Request</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_azure_node_token_validation.tokenvalidator.html#validatetokenfromresponse" class="tsd-kind-icon">validate<wbr>Token<wbr>From<wbr>Response</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_azure_node_token_validation.tokenvalidator.html#validatetokenmiddleware" class="tsd-kind-icon">validate<wbr>Token<wbr>Middleware</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_azure_node_token_validation.html#configuration" class="tsd-kind-icon">Configuration</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_azure_node_token_validation.html#tokenvalidationmiddlewareresponse" class="tsd-kind-icon">Token<wbr>Validation<wbr>Middleware<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_azure_node_token_validation.html#tokenvalidationparameters" class="tsd-kind-icon">Token<wbr>Validation<wbr>Parameters</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/_azure_node_token_validation.html#tokenvalidationresponse" class="tsd-kind-icon">Token<wbr>Validation<wbr>Response</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
