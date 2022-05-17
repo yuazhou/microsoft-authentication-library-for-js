@@ -101,10 +101,6 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="node_token_validation_src.tokenvalidator.html#checkhashvalue" class="tsd-kind-icon">check<wbr>Hash<wbr>Value</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="node_token_validation_src.tokenvalidator.html#getjwks" class="tsd-kind-icon">getJWKS</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="node_token_validation_src.tokenvalidator.html#setclocktolerance" class="tsd-kind-icon">set<wbr>Clock<wbr>Tolerance</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="node_token_validation_src.tokenvalidator.html#validateclaims" class="tsd-kind-icon">validate<wbr>Claims</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="node_token_validation_src.tokenvalidator.html#validatetoken" class="tsd-kind-icon">validate<wbr>Token</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="node_token_validation_src.tokenvalidator.html#validatetokenfromrequest" class="tsd-kind-icon">validate<wbr>Token<wbr>From<wbr>Request</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="node_token_validation_src.tokenvalidator.html#validatetokenfromresponse" class="tsd-kind-icon">validate<wbr>Token<wbr>From<wbr>Response</a></li>
@@ -148,131 +144,6 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="checkhashvalue" class="tsd-anchor"></a>
-					<h3>check<wbr>Hash<wbr>Value</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">check<wbr>Hash<wbr>Value<span class="tsd-signature-symbol">(</span>content<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, hashProvided<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/api/TokenValidator.ts#L617">node-token-validation/src/api/TokenValidator.ts:617</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Function to check hash for c_hash and at_hash per OIDC spec, section 3.3.2.11 <a href="https://openid.net/specs/openid-connect-core-1_0.html#HybridTokenValidation">https://openid.net/specs/openid-connect-core-1_0.html#HybridTokenValidation</a></p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>content: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>hashProvided: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getjwks" class="tsd-anchor"></a>
-					<h3>getJWKS</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">getJWKS<span class="tsd-signature-symbol">(</span>validationParams<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BaseValidationParameters</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/api/TokenValidator.ts#L486">node-token-validation/src/api/TokenValidator.ts:486</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>internal</dt>
-									<dd><p>Function to return JWKS (JSON Web Key Set) from parameters provided, jwks_uri provided, or from well-known endpoint.</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>validationParams: <span class="tsd-signature-type">BaseValidationParameters</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="setclocktolerance" class="tsd-anchor"></a>
-					<h3>set<wbr>Clock<wbr>Tolerance</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Clock<wbr>Tolerance<span class="tsd-signature-symbol">(</span>clockSkew<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/api/TokenValidator.ts#L547">node-token-validation/src/api/TokenValidator.ts:547</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Function to check that the clockSkew configuration is a positive integer. Throws negativeClockSkew error if not.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>clockSkew: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="validateclaims" class="tsd-anchor"></a>
-					<h3>validate<wbr>Claims</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">validate<wbr>Claims<span class="tsd-signature-symbol">(</span>payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">JWTPayload</span>, validationParams<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BaseValidationParameters</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/api/TokenValidator.ts#L568">node-token-validation/src/api/TokenValidator.ts:568</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Function to validate additional claims on token, including nonce, c_hash, and at_hash. No return, throws error if invalid.</p>
-								</div>
-								<p>OIDC specification for validating nonce on id tokens: <a href="https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation">https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation</a></p>
-								<p>OIDC specification for c_hash and at_hash validation: <a href="https://openid.net/specs/openid-connect-core-1_0.html#HybridTokenValidation">https://openid.net/specs/openid-connect-core-1_0.html#HybridTokenValidation</a></p>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>payload: <span class="tsd-signature-type">JWTPayload</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>JWT payload</p>
-									</div>
-								</li>
-								<li>
-									<h5>validationParams: <span class="tsd-signature-type">BaseValidationParameters</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="validatetoken" class="tsd-anchor"></a>
 					<h3>validate<wbr>Token</h3>
@@ -666,18 +537,6 @@
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="node_token_validation_src.tokenvalidator.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="node_token_validation_src.tokenvalidator.html#checkhashvalue" class="tsd-kind-icon">check<wbr>Hash<wbr>Value</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="node_token_validation_src.tokenvalidator.html#getjwks" class="tsd-kind-icon">getJWKS</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="node_token_validation_src.tokenvalidator.html#setclocktolerance" class="tsd-kind-icon">set<wbr>Clock<wbr>Tolerance</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="node_token_validation_src.tokenvalidator.html#validateclaims" class="tsd-kind-icon">validate<wbr>Claims</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="node_token_validation_src.tokenvalidator.html#validatetoken" class="tsd-kind-icon">validate<wbr>Token</a>
