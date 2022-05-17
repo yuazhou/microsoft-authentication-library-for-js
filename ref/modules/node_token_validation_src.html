@@ -85,7 +85,9 @@
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="node_token_validation_src.html#configuration" class="tsd-kind-icon">Configuration</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="node_token_validation_src.html#tokenvalidationmiddlewareresponse" class="tsd-kind-icon">Token<wbr>Validation<wbr>Middleware<wbr>Response</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="node_token_validation_src.html#tokenvalidationparameters" class="tsd-kind-icon">Token<wbr>Validation<wbr>Parameters</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="node_token_validation_src.html#tokenvalidationresponse" class="tsd-kind-icon">Token<wbr>Validation<wbr>Response</a></li>
 							</ul>
 						</section>
 					</div>
@@ -148,6 +150,53 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="tokenvalidationmiddlewareresponse" class="tsd-anchor"></a>
+					<h3>Token<wbr>Validation<wbr>Middleware<wbr>Response</h3>
+					<div class="tsd-signature tsd-kind-icon">Token<wbr>Validation<wbr>Middleware<wbr>Response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ExpressRequest</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ExpressResponse</span>, next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ExpressNextFunction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/response/TokenValidationMiddlewareResponse.ts#L14">node-token-validation/src/response/TokenValidationMiddlewareResponse.ts:14</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Response object for token validation middleware API</p>
+							<ul>
+								<li>req          - Express Request object</li>
+								<li>res          - Express Response object</li>
+								<li>next         - Express Next function</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ExpressRequest</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ExpressResponse</span>, next<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ExpressNextFunction</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>req: <span class="tsd-signature-type">ExpressRequest</span></h5>
+											</li>
+											<li>
+												<h5>res: <span class="tsd-signature-type">ExpressResponse</span></h5>
+											</li>
+											<li>
+												<h5>next: <span class="tsd-signature-type">ExpressNextFunction</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="tokenvalidationparameters" class="tsd-anchor"></a>
 					<h3>Token<wbr>Validation<wbr>Parameters</h3>
 					<div class="tsd-signature tsd-kind-icon">Token<wbr>Validation<wbr>Parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">BaseValidationParameters</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>validAudiences<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Required</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>validIssuers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Required</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
@@ -189,6 +238,44 @@
 							<a href="https://openid.net/specs/openid-connect-core-1_0.html#IDToken">https://openid.net/specs/openid-connect-core-1_0.html#IDToken</a>
 							<a href="https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation">https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation</a>
 						<a href="https://openid.net/specs/openid-connect-core-1_0.html#ImplicitTokenValidation">https://openid.net/specs/openid-connect-core-1_0.html#ImplicitTokenValidation</a></p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="tokenvalidationresponse" class="tsd-anchor"></a>
+					<h3>Token<wbr>Validation<wbr>Response</h3>
+					<div class="tsd-signature tsd-kind-icon">Token<wbr>Validation<wbr>Response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>payload<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">JWTPayload</span><span class="tsd-signature-symbol">; </span>protectedHeader<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">JWTHeaderParameters</span><span class="tsd-signature-symbol">; </span>token<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>tokenType<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/response/TokenValidationResponse.ts#L17">node-token-validation/src/response/TokenValidationResponse.ts:17</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Response object for token validation responses</p>
+							<ul>
+								<li>protectedHeader: Header of JWT token</li>
+								<li>payload: Payload of JWT token</li>
+								<li>token: Original token sent in for validation</li>
+								<li>tokenType: Type of token, defaults to JWT</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> payload<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">JWTPayload</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> protected<wbr>Header<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">JWTHeaderParameters</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> token<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> token<wbr>Type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
 					</div>
 				</section>
 			</section>
@@ -240,7 +327,13 @@
 						<a href="node_token_validation_src.html#configuration" class="tsd-kind-icon">Configuration</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="node_token_validation_src.html#tokenvalidationmiddlewareresponse" class="tsd-kind-icon">Token<wbr>Validation<wbr>Middleware<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="node_token_validation_src.html#tokenvalidationparameters" class="tsd-kind-icon">Token<wbr>Validation<wbr>Parameters</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="node_token_validation_src.html#tokenvalidationresponse" class="tsd-kind-icon">Token<wbr>Validation<wbr>Response</a>
 					</li>
 				</ul>
 			</nav>
