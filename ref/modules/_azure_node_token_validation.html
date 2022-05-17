@@ -246,18 +246,12 @@
 					<div class="tsd-signature tsd-kind-icon">Token<wbr>Validation<wbr>Response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>payload<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">JWTPayload</span><span class="tsd-signature-symbol">; </span>protectedHeader<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">JWTHeaderParameters</span><span class="tsd-signature-symbol">; </span>token<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>tokenType<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/response/TokenValidationResponse.ts#L17">node-token-validation/src/response/TokenValidationResponse.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/response/TokenValidationResponse.ts#L11">node-token-validation/src/response/TokenValidationResponse.ts:11</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Response object for token validation responses</p>
-							<ul>
-								<li>protectedHeader: Header of JWT token</li>
-								<li>payload: Payload of JWT token</li>
-								<li>token: Original token sent in for validation</li>
-								<li>tokenType: Type of token, defaults to JWT</li>
-							</ul>
 						</div>
 					</div>
 					<div class="tsd-type-declaration">
@@ -265,15 +259,35 @@
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> payload<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">JWTPayload</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Payload of JWT token</p>
+									</div>
+								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> protected<wbr>Header<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">JWTHeaderParameters</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Header of JWT token</p>
+									</div>
+								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> token<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Original token sent in for validation</p>
+									</div>
+								</div>
 							</li>
 							<li class="tsd-parameter">
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> token<wbr>Type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Type of token, defaults to JWT</p>
+									</div>
+								</div>
 							</li>
 						</ul>
 					</div>
