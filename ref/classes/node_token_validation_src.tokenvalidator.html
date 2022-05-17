@@ -154,7 +154,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/api/TokenValidator.ts#L439">node-token-validation/src/api/TokenValidator.ts:439</a></li>
+									<li>Defined in <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/60c4aafa5/lib/node-token-validation/src/api/TokenValidator.ts#L440">node-token-validation/src/api/TokenValidator.ts:440</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -166,6 +166,61 @@
 								<a href="#parameters" id="parameters" style="color: inherit; text-decoration: none;">
 									<h3>Parameters</h3>
 								</a>
+								<p><a href="../modules/node_token_validation_src.html#tokenvalidationparameters">TokenValidationParameters</a> are built and defaults added if not already set.
+								See <a href="../modules/node_token_validation_src.html#tokenvalidationparameters">TokenValidationParameters</a> for more details.</p>
+								<p>The following operations are then performed on the token by the JOSE library:</p>
+								<ul>
+									<li>Verifies the JWT format</li>
+									<li>Verifies the JWS signature</li>
+									<li>Validates the JWT claims set</li>
+								</ul>
+								<p>See documentation for more details on JOSE: <a href="https://github.com/panva/jose">https://github.com/panva/jose</a></p>
+								<p><code>validateToken</code> also performs the following additional operations on the token:</p>
+								<ul>
+									<li>Validates additional claims for id tokens (nonce, c_hash, at_hash)</li>
+								</ul>
+								<a href="#returns" id="returns" style="color: inherit; text-decoration: none;">
+									<h3>Returns</h3>
+								</a>
+								<p><code>validateToken</code> returns a {@link TokenValidationResponse}. See doc for more details.</p>
+								<a href="#usage-example" id="usage-example" style="color: inherit; text-decoration: none;">
+									<h3>Usage example</h3>
+								</a>
+								<p>To validate a token using the <code>validateToken</code> API, pass in a token along with the <code>tokenValidationParams</code>.</p>
+								<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">nodeTokenValidation</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;@azure/node-token-validation&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">tokenValidator</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #001080">nodeTokenValidation</span><span style="color: #000000">.</span><span style="color: #795E26">TokenValidator</span><span style="color: #000000">();</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">tokenValidationParams</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">   </span><span style="color: #001080">validIssuers:</span><span style="color: #000000"> [</span><span style="color: #A31515">&quot;issuer-here&quot;</span><span style="color: #000000">],</span>
+<span style="color: #000000">   </span><span style="color: #001080">validAudiences:</span><span style="color: #000000"> [</span><span style="color: #A31515">&quot;audience-here&quot;</span><span style="color: #000000">]</span>
+<span style="color: #000000">};</span>
+
+<span style="color: #001080">tokenValidator</span><span style="color: #000000">.</span><span style="color: #795E26">validateToken</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;token-here&quot;</span><span style="color: #000000">, </span><span style="color: #001080">tokenValidationParams</span><span style="color: #000000">).</span><span style="color: #795E26">then</span><span style="color: #000000">((</span><span style="color: #001080">response</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">   </span><span style="color: #008000">// Use token validation response</span>
+<span style="color: #000000">}).</span><span style="color: #795E26">catch</span><span style="color: #000000">((</span><span style="color: #001080">error</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">   </span><span style="color: #008000">// Handle error here</span>
+<span style="color: #000000">});</span>
+</code></pre>
+								<p>A sample demonstrating usage can also be found <a href="https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/node-token-validation-samples/basic-sample">here</a>.</p>
+								<a href="#errors" id="errors" style="color: inherit; text-decoration: none;">
+									<h3>Errors</h3>
+								</a>
+								<p>The following configuration errors from the Node Token Validation library may be thrown when validating a token.
+								Ensure the missing token/claims are present before validating.</p>
+								<ul>
+									<li>Missing token error</li>
+									<li>Empty issuer error</li>
+									<li>Empty audience error</li>
+									<li>Missing nonce error</li>
+									<li>Invalid metadata error</li>
+								</ul>
+								<p>The following validation errors from the Node Token Validation library may be thrown. This indicates an invalid token.</p>
+								<ul>
+									<li>Invalid nonce error</li>
+									<li>Invalid c_hash error</li>
+									<li>Invalid at_hash error</li>
+								</ul>
+								<p>Additional errors regarding the JWS signature or JWT claims may be thrown by the JOSE library. These errors indicate an invalid token.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
