@@ -1,8 +1,19 @@
 # Change Log - @azure/msal-node
 
-This log was last generated on Mon, 02 May 2022 22:23:33 GMT and should not be manually modified.
+This log was last generated on Thu, 02 Jun 2022 20:35:11 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 1.9.1
+
+Thu, 02 Jun 2022 20:35:11 GMT
+
+### Patches
+
+- Use native http modules instead of axios for regular and proxied network requests #4744 (rginsburg@microsoft.com)
+- Updated the regex and added a test for detecting public cert for SNI #4790 (email not defined)
+- export AuthorizationCodePayload type from msal-common #4803 (git@hens.by)
+- Bump @azure/msal-common to v6.4.0
 
 ## 1.9.0
 
